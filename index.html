@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meemaw - Talk to Learn</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <style>
+        :root {
+            --warm-orange: #FF8C42;
+            --trust-blue: #4A90E2;
+            --bg-gray: #F5F5F5;
+            --text-dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 15px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #999;
+            transition: color 0.2s;
+        }
+
+        .lang-btn.active {
+            color: var(--trust-blue);
+            text-decoration: underline;
+        }
+
+        .lang-btn:hover {
+            color: var(--trust-blue);
+        }
+
+        .header-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        .header-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+        }
+
+        .hero {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 4rem 1rem 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        .logo-text {
+            color: var(--warm-orange);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .badge {
+            background: #e3f2fd;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            color: var(--trust-blue);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-image-container {
+            margin-top: 2rem;
+            margin-bottom: -2rem; /* Pull into next section slightly or just spacing */
+            position: relative;
+            z-index: 1;
+            max-width: 280px;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            /* drop shadow for the character */
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+            border-radius: 20px; /* Optional, depending on if image has transparency */
+        }
+        
+        /* If the image uses transparency we might not want border-radius on the img tag if it's not a rectangular crop */
+        .hero-image.transparent {
+            border-radius: 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            color: var(--trust-blue);
+        }
+
+        .cta-container {
+            text-align: center;
+            margin: 4rem auto;
+            padding: 4rem 1rem;
+            background: white;
+            max-width: 800px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            margin-bottom: 4rem;
+        }
+
+        .cta-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .primary-button {
+            background-color: var(--warm-orange);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 140, 66, 0.4);
+        }
+
+        .primary-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 140, 66, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            background: white;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .hero-image-container { max-width: 240px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <img src="assets/icon.png" alt="Meemaw Logo" class="header-logo">
+            <span class="header-title">MEEMAW</span>
+        </div>
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
+            <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <span class="badge" data-i18n="badge">Coming Soon to iOS</span>
+        <h1 data-i18n="title">Talk to <span class="logo-text">Meemaw</span>.<br>Learn Without Fear.</h1>
+        <p data-i18n="subtitle">Your AI companion listens, teaches, and encourages.<br>No judgment. Just wisdom.</p>
+        
+        <a href="#waitlist" class="primary-button" data-i18n="hero_btn">Join the Waitlist</a>
+
+        <div class="hero-image-container">
+            <img src="assets/meemaw-phone.png" alt="Meemaw using phone" class="hero-image">
+        </div>
+    </section>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <span class="feature-icon">🎤</span>
+            <div class="feature-title" data-i18n="feat1_title">Speak Freely</div>
+            <p data-i18n="feat1_desc">Practice English, French, or Spanish. Meemaw listens and learns from you.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="feature-icon">🎮</span>
+            <div class="feature-title" data-i18n="feat2_title">Play & Learn</div>
+            <p data-i18n="feat2_desc">Master vocabulary with 4 voice-based games like Forbidden Words & Riddles.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="feature-icon">❤️</span>
+            <div class="feature-title" data-i18n="feat3_title">Feel Supported</div>
+            <p data-i18n="feat3_desc">Emotional AI that detects your mood and responds with genuine empathy.</p>
+        </div>
+    </div>
+
+    <div class="cta-container" id="waitlist">
+        <img src="assets/icon.png" alt="Meemaw App Icon" class="cta-icon">
+        <h2 data-i18n="cta_title">Ready for a new kind of teacher?</h2>
+        <p style="margin: 1rem 0 2rem 0; color: #666; font-size: 1.1rem;" data-i18n="cta_desc">Be the first to get access. Limited spots available.</p>
+        
+        <!-- Mailto Link for Waitlist -->
+        <div style="margin-top: 1.5rem;">
+            <a href="mailto:xlarrodeapp+meemaw@gmail.com?subject=Add%20me%20on%20the%20Waitlist&body=Hello%2C%20I%20want%20to%20join%20the%20Meemaw%20beta%20waitlist%21" class="primary-button" style="padding: 1.2rem 3rem;" data-i18n="cta_btn">
+                Join Waitlist via Email
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p data-i18n="footer">&copy; 2026 Meemaw AI. Made with ❤️ for language learners everywhere.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                badge: "Coming Soon to iOS",
+                title: "Talk to <span class='logo-text'>Meemaw</span>.<br>Learn Without Fear.",
+                subtitle: "Your AI companion listens, teaches, and encourages.<br>No judgment. Just wisdom.",
+                hero_btn: "Join the Waitlist",
+                feat1_title: "Speak Freely",
+                feat1_desc: "Practice English, French, or Spanish. Meemaw listens and learns from you.",
+                feat2_title: "Play & Learn",
+                feat2_desc: "Master vocabulary with 4 voice-based games like Forbidden Words & Riddles.",
+                feat3_title: "Feel Supported",
+                feat3_desc: "Emotional AI that detects your mood and responds with genuine empathy.",
+                cta_title: "Ready for a new kind of teacher?",
+                cta_desc: "Be the first to get access. Limited spots available.",
+                cta_btn: "Join Waitlist via Email",
+                footer: "&copy; 2026 Meemaw AI. Made with ❤️ for language learners everywhere."
+            },
+            fr: {
+                badge: "Bientôt sur iOS",
+                title: "Parlez avec <span class='logo-text'>Mamie</span>.<br>Apprenez sans peur.",
+                subtitle: "Votre compagnon IA écoute, enseigne et encourage.<br>Sans jugement. Juste de la sagesse.",
+                hero_btn: "Rejoindre la liste d'attente",
+                feat1_title: "Parlez Librement",
+                feat1_desc: "Pratiquez l'anglais, le français ou l'espagnol. Mamie écoute et apprend de vous.",
+                feat2_title: "Jouez & Apprenez",
+                feat2_desc: "Maîtrisez le vocabulaire avec 4 jeux vocaux comme Ni Oui Ni Non & Devinettes.",
+                feat3_title: "Soutien Émotionnel",
+                feat3_desc: "Une IA émotionnelle qui détecte votre humeur et répond avec empathie.",
+                cta_title: "Prêt pour un nouveau genre de prof ?",
+                cta_desc: "Soyez les premiers à y accéder. Places limitées.",
+                cta_btn: "Rejoindre via Email",
+                footer: "&copy; 2026 Meemaw AI. Fait avec ❤️ pour les amoureux des langues."
+            },
+            es: {
+                badge: "Pronto en iOS",
+                title: "Habla con la <span class='logo-text'>Abuela</span>.<br>Aprende sin miedo.",
+                subtitle: "Tu compañera IA escucha, enseña y anima.<br>Sin juicios. Solo sabiduría.",
+                hero_btn: "Unirse a la lista",
+                feat1_title: "Habla Libremente",
+                feat1_desc: "Practica inglés, francés o español. La Abuela te escucha y aprende de ti.",
+                feat2_title: "Juega y Aprende",
+                feat2_desc: "Domina el vocabulario con 4 juegos de voz como Palabras Prohibidas y Adivinanzas.",
+                feat3_title: "Siéntete Apoyado",
+                feat3_desc: "IA emocional que detecta tu estado de ánimo y responde con empatía genuina.",
+                cta_title: "¿Listo para un nuevo tipo de profesor?",
+                cta_desc: "Sé el primero en acceder. Plazas limitadas.",
+                cta_btn: "Unirse por Email",
+                footer: "&copy; 2026 Meemaw AI. Hecho con ❤️ para los amantes de los idiomas."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === lang) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        const userLang = navigator.language || navigator.userLanguage; 
+        if (userLang.startsWith('fr')) {
+            setLanguage('fr');
+        } else if (userLang.startsWith('es')) {
+            setLanguage('es');
+        } else {
+            setLanguage('en');
+        }
+    </script>
+</body>
+</html>
