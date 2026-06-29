@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xabila.github.io/meemaw-website/sitemap.xml

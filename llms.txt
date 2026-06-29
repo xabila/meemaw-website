@@ -1,0 +1,16 @@
+# Meemaw - French Dictation App
+
+Meemaw is an iOS application designed to make learning French spelling and grammar fun, stress-free, and engaging for kids, students, and language learners.
+
+## Core Philosophy
+- Positive reinforcement instead of punishing red ink.
+- A vibrant Neo-Brutalist / Pop-Art aesthetic.
+- Gamified learning with an expansive database covering levels from Apprentice to Master.
+
+## Features
+- 8 Exclusive Game Modes (Quick Dictation, Marathon, Grammar Rules, Detective, Anagrams, Crazy Dictation, etc.)
+- Offline speech recognition and localized rules explanation.
+- Progress tracking with XP and leveling system.
+
+## Availability
+Coming soon to iOS. Join the waitlist at xabila.github.io/meemaw-website.
