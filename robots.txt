@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xabila.github.io/meemaw-website/sitemap.xml
+Sitemap: https://meemaw.app/sitemap.xml

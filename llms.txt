@@ -13,4 +13,4 @@ Meemaw is an iOS application designed to make learning French spelling and gramm
 - Progress tracking with XP and leveling system.
 
 ## Availability
-Coming soon to iOS. Join the waitlist at xabila.github.io/meemaw-website.
+Available on iOS. Download on the App Store via https://meemaw.app/
