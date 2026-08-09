@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["5WJLNQMPLH.com.xlarrodeapp.meemaw"],
+        "paths": ["/challenge", "/challenge/*"]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["5WJLNQMPLH.com.xlarrodeapp.meemaw"]
+  }
+}
