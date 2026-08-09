@@ -4,7 +4,11 @@
     "details": [
       {
         "appIDs": ["5WJLNQMPLH.com.xlarrodeapp.meemaw"],
-        "paths": ["/challenge", "/challenge/*"]
+        "paths": ["/challenge", "/challenge/*"],
+        "components": [
+          { "/": "/challenge", "?": { "dictationId": "*" } },
+          { "/": "/challenge/*" }
+        ]
       }
     ]
   },

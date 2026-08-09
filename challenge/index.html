@@ -139,22 +139,14 @@
         // Try to open the app via custom scheme
         function openApp() {
             window.location.href = buildDeepLink();
-
-            // If app doesn't open after 1.5s, redirect to App Store
-            setTimeout(function() {
-                window.location.href = 'https://apps.apple.com/app/id6757681331';
-            }, 1500);
         }
 
-        // On page load, try to open the app immediately
+        // On page load, fill dynamic content (but don't auto-redirect)
         window.addEventListener('DOMContentLoaded', function() {
             // Fill dynamic content
             document.getElementById('challengerName').textContent = challenger;
             document.getElementById('challengerScore').textContent = score + ' PTS';
             document.getElementById('dictationTitle').textContent = '📖 ' + title;
-
-            // Auto-attempt to open the app after a short delay
-            setTimeout(openApp, 500);
         });
     </script>
 </head>
