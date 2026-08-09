@@ -1,349 +1,463 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WBGX66HB');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meemaw - Dictées Vocales & Jeux d'Orthographe avec Mamie</title>
+    <title>Meemaw - Dictées Vocales & Jeux d'Orthographe</title>
     <link rel="icon" type="image/png" href="assets/icon.png">
-
+    
+    <!-- Google Fonts for Heavy/Comic look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Meemaw - Apprends l'orthographe en t'amusant avec Mamie ! 👵" />
+    <meta property="og:title" content="Meemaw - Apprends l'orthographe en t'amusant ! 👵" />
     <meta property="og:description" content="Dictées vocales, duels entre amis, 5 modes de jeux et explications de grammaire. 100% privé et sans cloud." />
     <meta property="og:image" content="assets/icon.png" />
     <meta property="og:type" content="website" />
 
     <style>
         :root {
+            /* PopArt Theme Colors */
             --orange: #FF8C42;
-            --dark-red: #D9381E;
-            --ink: #1A1A2E;
+            --orange-light: #FFA64D;
             --cream: #FFF8F0;
+            --ink: #1A1A1A;
             --white: #FFFFFF;
-            --green: #2ECC71;
+            --green-success: #1B7A3D;
+            --red-error: #C0392B;
             --yellow: #F1C40F;
+            
+            /* Structural */
+            --border-width: 3px;
+            --thick-border: 4px;
+            --radius-card: 20px;
+            --radius-btn: 14px;
+            --radius-pill: 999px;
+            
+            /* Hard Shadows (Neobrutalism) */
+            --shadow-sm: 3px 3px 0px var(--ink);
+            --shadow-md: 5px 5px 0px var(--ink);
+            --shadow-lg: 8px 8px 0px var(--ink);
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
             background-color: var(--cream);
             color: var(--ink);
-            line-height: 1.6;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            line-height: 1.5;
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            background-image: radial-gradient(var(--orange) 10%, transparent 11%), 
+                              radial-gradient(var(--orange) 10%, transparent 11%);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            background-attachment: fixed;
+        }
+        
+        .halftone-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(0,0,0,0.06) 15%, transparent 16%);
+            background-size: 16px 16px;
+            z-index: -1;
+            pointer-events: none;
         }
 
-        /* HEADER */
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 900;
+            color: var(--ink);
+            text-transform: uppercase;
+        }
+
+        /* Header */
         header {
-            padding: 1.2rem 2rem;
+            padding: 1.2rem 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: var(--white);
-            border-bottom: 3px solid var(--ink);
-            box-shadow: 0 4px 0 var(--ink);
+            border-bottom: var(--border-width) solid var(--ink);
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 4px 0px rgba(0,0,0,0.05);
         }
 
         .header-left {
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
         }
 
         .header-logo {
             width: 44px;
             height: 44px;
             border-radius: 12px;
-            border: 2px solid var(--ink);
+            border: var(--border-width) solid var(--ink);
         }
 
         .header-title {
+            font-size: 1.8rem;
             font-weight: 900;
-            font-size: 1.4rem;
             color: var(--ink);
-            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            text-shadow: 2px 2px 0px var(--orange);
         }
 
+        /* Language Switcher */
         .lang-switch {
             display: flex;
-            gap: 8px;
-            background: var(--cream);
+            background: var(--white);
             padding: 4px;
-            border-radius: 12px;
-            border: 2px solid var(--ink);
+            border-radius: var(--radius-pill);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
         }
 
         .lang-btn {
-            background: none;
+            background: transparent;
             border: none;
-            cursor: pointer;
-            font-size: 0.85rem;
+            padding: 6px 16px;
+            font-family: 'Outfit', sans-serif;
             font-weight: 800;
-            padding: 4px 10px;
-            border-radius: 8px;
+            font-size: 0.9rem;
             color: var(--ink);
-            opacity: 0.5;
+            border-radius: var(--radius-pill);
+            cursor: pointer;
+            text-transform: uppercase;
             transition: all 0.2s;
         }
 
         .lang-btn.active {
             background: var(--orange);
-            color: var(--white);
-            opacity: 1;
+            color: var(--ink);
+            border: 2px solid var(--ink);
         }
 
-        /* HERO */
+        /* Hero Section */
         .hero {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            text-align: center;
-            padding: 4rem 1.5rem 2rem 1.5rem;
+            padding: 4rem 5% 3rem;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
         }
 
         .badge {
-            background: var(--orange);
-            color: var(--white);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-weight: 900;
-            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--ink);
+            padding: 8px 18px;
+            border-radius: var(--radius-pill);
+            font-weight: 800;
+            font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 2px solid var(--ink);
-            box-shadow: 3px 3px 0 var(--ink);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
+            transform: rotate(-2deg);
         }
 
         .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            color: var(--ink);
-            line-height: 1.15;
-            margin-bottom: 1.2rem;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            text-shadow: 4px 4px 0px var(--orange);
+            letter-spacing: -0.03em;
         }
 
-        .logo-text {
-            color: var(--orange);
+        .hero h1 .logo-text {
+            color: var(--white);
+            -webkit-text-stroke: 2px var(--ink);
+            text-shadow: 4px 4px 0px var(--ink);
         }
 
         .hero p {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--ink);
-            opacity: 0.85;
-            margin-bottom: 2rem;
-            max-width: 680px;
+            font-size: 1.25rem;
+            margin-bottom: 2.2rem;
+            background: var(--white);
+            padding: 1.2rem 1.6rem;
+            border-radius: 18px;
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
+            font-weight: 700;
+            position: relative;
+        }
+        
+        .hero p::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 30px;
+            width: 0; height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid var(--ink);
+        }
+        .hero p::before {
+            content: '';
+            position: absolute;
+            bottom: -9px;
+            left: 32px;
+            width: 0; height: 0;
+            border-left: 11px solid transparent;
+            border-right: 11px solid transparent;
+            border-top: 11px solid var(--white);
+            z-index: 1;
         }
 
-        .hero-avatar {
-            width: 220px;
-            height: 220px;
-            object-fit: contain;
-            margin: 1rem 0 2rem 0;
-            filter: drop-shadow(4px 4px 0 var(--ink));
-        }
-
-        /* BUTTONS */
         .primary-button {
-            background-color: var(--orange);
-            color: var(--white);
-            padding: 1rem 2.2rem;
-            font-size: 1.2rem;
-            font-weight: 900;
-            border: 3px solid var(--ink);
-            border-radius: 16px;
-            cursor: pointer;
-            text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            box-shadow: 4px 4px 0 var(--ink);
-            transition: all 0.15s ease;
+            justify-content: center;
+            background: var(--orange);
+            color: var(--ink);
+            padding: 1.2rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: var(--radius-btn);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-md);
+            transition: all 0.1s;
+            cursor: pointer;
         }
 
         .primary-button:hover {
             transform: translate(-2px, -2px);
-            box-shadow: 6px 6px 0 var(--ink);
+            box-shadow: var(--shadow-lg);
         }
 
         .primary-button:active {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0 var(--ink);
+            transform: translate(3px, 3px);
+            box-shadow: 2px 2px 0px var(--ink);
         }
 
-        /* FEATURES SECTION */
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            border-radius: 32px;
+            border: var(--thick-border) solid var(--ink);
+            box-shadow: 12px 12px 0px var(--orange);
+            transform: rotate(3deg);
+            background: var(--white);
+            transition: transform 0.3s;
+        }
+        
+        .hero-image:hover {
+            transform: rotate(0deg);
+        }
+
+        /* Features Section */
         .features-section {
-            max-width: 1050px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
+            padding: 4rem 5% 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            font-size: 2.2rem;
-            font-weight: 900;
-            color: var(--ink);
-            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 3.2rem;
+            margin-bottom: 0.8rem;
+            text-shadow: 3px 3px 0px var(--white);
+            -webkit-text-stroke: 1.5px var(--ink);
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.8rem;
+            gap: 2.2rem;
         }
 
-        .feature-card {
+        .popart-card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 20px;
-            border: 3px solid var(--ink);
-            box-shadow: 5px 5px 0 var(--ink);
+            padding: 2.2rem 1.8rem;
+            border-radius: var(--radius-card);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s, box-shadow 0.2s;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-            transition: transform 0.2s ease;
         }
 
-        .feature-card:hover {
-            transform: translateY(-4px);
+        .popart-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .feature-img {
-            width: 88px;
-            height: 88px;
+        .feature-icon-img {
+            width: 80px;
+            height: 80px;
             object-fit: contain;
-            border-radius: 16px;
-            border: 2px solid var(--ink);
-            box-shadow: 3px 3px 0 var(--ink);
+            border-radius: var(--radius-btn);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
             margin-bottom: 1.2rem;
             background: var(--cream);
         }
 
-        .feature-title {
-            font-size: 1.3rem;
+        .popart-card h3 {
+            font-size: 1.35rem;
             font-weight: 900;
             margin-bottom: 0.6rem;
             color: var(--ink);
         }
 
-        .feature-desc {
-            font-size: 0.95rem;
+        .popart-card p {
+            font-size: 1rem;
             font-weight: 600;
             color: var(--ink);
-            opacity: 0.75;
+            opacity: 0.8;
         }
 
-        /* PRIVACY BANNER */
-        .privacy-banner {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 2.5rem 2rem;
+        /* Privacy Box */
+        .privacy-box {
+            max-width: 1200px;
+            margin: 2rem auto 4rem auto;
             background: var(--white);
-            border-radius: 24px;
-            border: 3px solid var(--ink);
-            box-shadow: 6px 6px 0 var(--ink);
+            padding: 2.5rem;
+            border-radius: var(--radius-card);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-md);
             display: flex;
             align-items: center;
             gap: 2rem;
         }
 
         .privacy-icon {
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
-        .privacy-text h3 {
-            font-size: 1.5rem;
+        .privacy-content h3 {
+            font-size: 1.6rem;
             font-weight: 900;
-            color: var(--ink);
             margin-bottom: 0.4rem;
         }
 
-        .privacy-text p {
-            font-size: 1rem;
+        .privacy-content p {
+            font-size: 1.05rem;
             font-weight: 600;
-            color: var(--ink);
-            opacity: 0.75;
+            opacity: 0.8;
         }
 
-        /* CTA BOX */
-        .cta-container {
+        /* Bottom CTA */
+        .bottom-cta {
             text-align: center;
-            margin: 4rem auto 5rem auto;
+            max-width: 850px;
+            margin: 2rem auto 5rem;
             padding: 3.5rem 2rem;
             background: var(--white);
-            max-width: 800px;
-            border-radius: 24px;
-            border: 3px solid var(--ink);
-            box-shadow: 6px 6px 0 var(--ink);
+            border-radius: 32px;
+            border: var(--thick-border) solid var(--ink);
+            box-shadow: 10px 10px 0px var(--orange);
         }
 
-        .cta-icon {
-            width: 88px;
-            height: 88px;
+        .bottom-cta-icon {
+            width: 80px;
+            height: 80px;
             border-radius: 20px;
-            border: 3px solid var(--ink);
-            box-shadow: 4px 4px 0 var(--ink);
-            margin-bottom: 1.5rem;
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 1.2rem;
         }
 
-        .cta-container h2 {
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--ink);
+        .bottom-cta h2 {
+            font-size: 2.4rem;
             margin-bottom: 0.8rem;
         }
 
-        .cta-container p {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--ink);
-            opacity: 0.75;
+        .bottom-cta p {
+            font-size: 1.15rem;
+            font-weight: 700;
+            opacity: 0.8;
             margin-bottom: 2rem;
         }
 
-        /* FOOTER */
+        /* Footer */
         footer {
-            text-align: center;
-            padding: 2.5rem;
             background: var(--white);
-            border-top: 3px solid var(--ink);
-            color: var(--ink);
+            border-top: var(--border-width) solid var(--ink);
+            padding: 3rem 5%;
+            text-align: center;
             font-weight: 700;
-            font-size: 0.9rem;
         }
 
         footer a {
             color: var(--orange);
             text-decoration: none;
-            font-weight: 800;
+            font-weight: 900;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.4rem; }
-            .hero p { font-size: 1.1rem; }
-            .privacy-banner { flex-direction: column; text-align: center; }
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 2.5rem;
+            }
+            .hero-content { max-width: 100%; }
+            .hero h1 { font-size: 3.2rem; }
+            .privacy-box { flex-direction: column; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBGX66HB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="halftone-overlay"></div>
+
+    <!-- Header -->
     <header>
-        <div class="header-left">
+        <a href="#" class="header-left">
             <img src="assets/icon.png" alt="Meemaw Logo" class="header-logo">
             <span class="header-title">MEEMAW</span>
-        </div>
+        </a>
         <div class="lang-switch">
             <button class="lang-btn active" onclick="setLanguage('fr')">FR</button>
             <button class="lang-btn" onclick="setLanguage('en')">EN</button>
@@ -351,75 +465,78 @@
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- Hero Section -->
     <section class="hero">
-        <span class="badge" data-i18n="badge">Disponible sur iOS 🍏</span>
-        <h1 data-i18n="title">Pratique avec <span class="logo-text">Mamie</span>.<br>Maîtrise l'Orthographe.</h1>
-        <p data-i18n="subtitle">Ta grand-mère IA dicte à haute voix avec sa vraie voix française, corrige et t'explique chaque règle sans jugement.</p>
-
-        <img src="assets/meemaw-hero.png" alt="Meemaw Grand-mère IA" class="hero-avatar">
-
-        <a href="https://apps.apple.com/app/meemaw/id6744076879" target="_blank" class="primary-button" data-i18n="hero_btn">
-             Télécharger sur l'App Store
-        </a>
+        <div class="hero-content">
+            <div class="badge" data-i18n="badge">Disponible sur l'App Store 🍏</div>
+            <h1 data-i18n="title">Pratique avec <span class="logo-text">MEEMAW</span>.<br>Maîtrise l'Orthographe.</h1>
+            <p data-i18n="subtitle">Ta grand-mère IA Meemaw dicte à haute voix avec sa vraie voix française, corrige et t'explique chaque règle sans aucun jugement.</p>
+            <a href="https://apps.apple.com/app/meemaw/id6744076879" target="_blank" class="primary-button" data-i18n="hero_btn">
+                 Télécharger sur l'App Store
+            </a>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="assets/meemaw-hero.png" alt="Meemaw Grand-mère IA" class="hero-image">
+        </div>
     </section>
 
-    <!-- FEATURES GRID -->
+    <!-- Features Section -->
     <section class="features-section">
-        <h2 class="section-title" data-i18n="sec_title">Ce qui rend Meemaw unique ✨</h2>
+        <div class="section-header">
+            <h2 data-i18n="sec_title">Ce qui rend Meemaw unique ✨</h2>
+        </div>
 
         <div class="features-grid">
-            <!-- 1. Voice Dictation -->
-            <div class="feature-card">
-                <img src="assets/score.png" alt="Dictées Vocales" class="feature-img">
-                <div class="feature-title" data-i18n="feat1_title">Dictées Vocales IA</div>
-                <p class="feature-desc" data-i18n="feat1_desc">Mamie dicte à voix haute avec sa synthèse vocale naturelle embarquée. Ajuste la vitesse de parole et la pause entre les phrases.</p>
+            <!-- 1. Voice Dictations -->
+            <div class="popart-card">
+                <img src="assets/score.png" alt="Dictées Vocales" class="feature-icon-img">
+                <h3 data-i18n="feat1_title">Dictées Vocales IA</h3>
+                <p data-i18n="feat1_desc">Meemaw dicte à voix haute avec sa vraie voix française. Ajuste la vitesse de diction et la durée des pauses à ton rythme.</p>
             </div>
 
             <!-- 2. Duels & Challenges -->
-            <div class="feature-card">
-                <img src="assets/duel.png" alt="Duels entre Amis" class="feature-img">
-                <div class="feature-title" data-i18n="feat2_title">Duels entre Amis ⚔️</div>
-                <p class="feature-desc" data-i18n="feat2_desc">Défie tes proches sur la même dictée via WhatsApp ou iMessage ! Comparez vos scores, votre temps et votre précision.</p>
+            <div class="popart-card">
+                <img src="assets/duel.png" alt="Duels entre Amis" class="feature-icon-img">
+                <h3 data-i18n="feat2_title">Duels entre Amis ⚔️</h3>
+                <p data-i18n="feat2_desc">Défie tes proches sur la même dictée via WhatsApp ou iMessage ! Comparez vos scores, votre temps et votre précision.</p>
             </div>
 
             <!-- 3. Grammar Rules -->
-            <div class="feature-card">
-                <img src="assets/rules.png" alt="Règles de Grammaire" class="feature-img">
-                <div class="feature-title" data-i18n="feat3_title">L'Astuce de Mamie 📚</div>
-                <p class="feature-desc" data-i18n="feat3_desc">Après chaque dictée, Mamie t'explique exactement pourquoi tu as fait une faute et comment ne plus la refaire (accord, homophones, participe passé...).</p>
+            <div class="popart-card">
+                <img src="assets/rules.png" alt="L'Astuce de Meemaw" class="feature-icon-img">
+                <h3 data-i18n="feat3_title">L'Astuce de Meemaw 📚</h3>
+                <p data-i18n="feat3_desc">Après chaque dictée, Meemaw t'explique exactement pourquoi tu as fait une faute et comment ne plus jamais la refaire.</p>
             </div>
 
             <!-- 4. 5 Game Modes -->
-            <div class="feature-card">
-                <img src="assets/meemaw-salut.png" alt="5 Modes de Jeux" class="feature-img">
-                <div class="feature-title" data-i18n="feat4_title">5 Modes de Jeux 🎮</div>
-                <p class="feature-desc" data-i18n="feat4_desc">Dictée Longue, Dictée Express, Détective des Mots, Dictée Folle et Anagrammes. Il y en a pour tous les goûts !</p>
+            <div class="popart-card">
+                <img src="assets/meemaw-salut.png" alt="5 Modes de Jeux" class="feature-icon-img">
+                <h3 data-i18n="feat4_title">5 Modes de Jeux 🎮</h3>
+                <p data-i18n="feat4_desc">Dictée Longue, Dictée Express, Détective des Mots, Dictée Folle et Anagrammes. De quoi progresser en s'amusant !</p>
+            </div>
+        </div>
+
+        <!-- Privacy Box -->
+        <div class="privacy-box">
+            <div class="privacy-icon">🔒</div>
+            <div class="privacy-content">
+                <h3 data-i18n="priv_title">100% Privé & Sans Cloud</h3>
+                <p data-i18n="priv_desc">Pas de compte requis, aucune donnée personnelle stockée sur serveur. Tout le traitement vocal et la correction tournent directement sur ton iPhone.</p>
             </div>
         </div>
     </section>
 
-    <!-- PRIVACY BANNER -->
-    <div class="privacy-banner">
-        <div class="privacy-icon">🔒</div>
-        <div class="privacy-text">
-            <h3 data-i18n="priv_title">100% Privé & Sans Cloud</h3>
-            <p data-i18n="priv_desc">Pas de compte requis, aucune donnée personnelle stockée sur un serveur distant. Tout le traitement vocal et l'intelligence tournent directement sur ton iPhone.</p>
-        </div>
-    </div>
-
-    <!-- CTA FOOTER BOX -->
-    <div class="cta-container">
-        <img src="assets/icon.png" alt="Meemaw App Icon" class="cta-icon">
+    <!-- Bottom CTA -->
+    <div class="bottom-cta">
+        <img src="assets/icon.png" alt="Meemaw Icon" class="bottom-cta-icon">
         <h2 data-i18n="cta_title">Prêt à devenir un as de l'orthographe ?</h2>
-        <p data-i18n="cta_desc">Télécharge Meemaw sur ton iPhone et commence ton premier duel dès aujourd'hui !</p>
-
+        <p data-i18n="cta_desc">Télécharge Meemaw sur ton iPhone et commence ton premier duel aujourd'hui !</p>
         <a href="https://apps.apple.com/app/meemaw/id6744076879" target="_blank" class="primary-button" data-i18n="cta_btn">
              Télécharger sur l'App Store
         </a>
     </div>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer>
         <p data-i18n="footer">&copy; 2026 Meemaw AI. Fait avec ❤️ pour les amoureux de la langue.</p>
         <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 20px;">
@@ -428,36 +545,36 @@
         </div>
     </footer>
 
-    <!-- TRANSLATIONS JS -->
+    <!-- Translations JS -->
     <script>
         const translations = {
             fr: {
-                badge: "Disponible sur iOS 🍏",
-                title: "Pratique avec <span class='logo-text'>Mamie</span>.<br>Maîtrise l'Orthographe.",
-                subtitle: "Ta grand-mère IA dicte à haute voix avec sa vraie voix française, corrige et t'explique chaque règle sans jugement.",
+                badge: "Disponible sur l'App Store 🍏",
+                title: "Pratique avec <span class='logo-text'>MEEMAW</span>.<br>Maîtrise l'Orthographe.",
+                subtitle: "Ta grand-mère IA Meemaw dicte à haute voix avec sa vraie voix française, corrige et t'explique chaque règle sans aucun jugement.",
                 hero_btn: " Télécharger sur l'App Store",
                 sec_title: "Ce qui rend Meemaw unique ✨",
                 feat1_title: "Dictées Vocales IA",
-                feat1_desc: "Mamie dicte à voix haute avec sa synthèse vocale naturelle embarquée. Ajuste la vitesse de parole et la pause entre les phrases.",
+                feat1_desc: "Meemaw dicte à voix haute avec sa vraie voix française. Ajuste la vitesse de diction et la durée des pauses à ton rythme.",
                 feat2_title: "Duels entre Amis ⚔️",
                 feat2_desc: "Défie tes proches sur la même dictée via WhatsApp ou iMessage ! Comparez vos scores, votre temps et votre précision.",
-                feat3_title: "L'Astuce de Mamie 📚",
-                feat3_desc: "Après chaque dictée, Mamie t'explique exactement pourquoi tu as fait une faute et comment ne plus la refaire.",
+                feat3_title: "L'Astuce de Meemaw 📚",
+                feat3_desc: "Après chaque dictée, Meemaw t'explique exactement pourquoi tu as fait une faute et comment ne plus jamais la refaire.",
                 feat4_title: "5 Modes de Jeux 🎮",
-                feat4_desc: "Dictée Longue, Dictée Express, Détective des Mots, Dictée Folle et Anagrammes. De quoi progresser sans jamais s'ennuyer !",
+                feat4_desc: "Dictée Longue, Dictée Express, Détective des Mots, Dictée Folle et Anagrammes. De quoi progresser en s'amusant !",
                 priv_title: "100% Privé & Sans Cloud 🔒",
-                priv_desc: "Pas de compte requis, aucune donnée personnelle stockée. La synthèse vocale et la correction tournent directement sur ton iPhone.",
+                priv_desc: "Pas de compte requis, aucune donnée personnelle stockée sur serveur. Tout le traitement vocal et la correction tournent directement sur ton iPhone.",
                 cta_title: "Prêt à devenir un as de l'orthographe ?",
-                cta_desc: "Télécharge Meemaw sur ton iPhone et commence ton premier duel dès aujourd'hui !",
+                cta_desc: "Télécharge Meemaw sur ton iPhone et commence ton premier duel aujourd'hui !",
                 cta_btn: " Télécharger sur l'App Store",
                 footer: "&copy; 2026 Meemaw AI. Fait avec ❤️ pour les amoureux de la langue.",
                 footer_contact: "Nous Contacter",
                 footer_privacy: "Politique de Confidentialité"
             },
             en: {
-                badge: "Available on iOS 🍏",
-                title: "Practice with <span class='logo-text'>Meemaw</span>.<br>Master Spelling.",
-                subtitle: "Your AI grandmother dictates aloud with her voice, corrects your mistakes, and explains grammar rules warmly.",
+                badge: "Available on the App Store 🍏",
+                title: "Practice with <span class='logo-text'>MEEMAW</span>.<br>Master Spelling.",
+                subtitle: "Your AI grandmother Meemaw dictates aloud with her voice, corrects your mistakes, and explains grammar rules warmly.",
                 hero_btn: " Download on the App Store",
                 sec_title: "What Makes Meemaw Unique ✨",
                 feat1_title: "AI Voice Dictations",
@@ -466,7 +583,7 @@
                 feat2_desc: "Challenge your friends to the exact same dictation via WhatsApp or iMessage! Compare scores, speed, and accuracy.",
                 feat3_title: "Meemaw's Grammar Tips 📚",
                 feat3_desc: "After every session, Meemaw breaks down why a mistake was made and teaches you the exact grammar rule.",
-                feat4_title: "5 Engaging Game Modes 🎮",
+                feat4_title: "5 Game Modes 🎮",
                 feat4_desc: "Full Dictation, Quick Express, Word Detective, Crazy Dictation, and Anagrams. Learning spelling has never been this fun!",
                 priv_title: "100% Private & On-Device 🔒",
                 priv_desc: "No account required, no cloud data tracking. All voice processing and scoring run strictly on your iPhone.",
@@ -478,17 +595,17 @@
                 footer_privacy: "Privacy Policy"
             },
             es: {
-                badge: "Disponible en iOS 🍏",
-                title: "Practica con la <span class='logo-text'>Abuela</span>.<br>Domina la Ortografía.",
-                subtitle: "Tu abuela de IA dicta en voz alta, corrige y te explica cada regla gramatical con cariño.",
+                badge: "Disponible en la App Store 🍏",
+                title: "Practica con <span class='logo-text'>MEEMAW</span>.<br>Domina la Ortografía.",
+                subtitle: "Tu abuela de IA Meemaw dicta en voz alta, corrige y te explica cada regla gramatical con cariño.",
                 hero_btn: " Descargar en la App Store",
                 sec_title: "Lo que hace única a Meemaw ✨",
                 feat1_title: "Dictados de Voz IA",
-                feat1_desc: "La Abuela dicta en voz alta con síntesis vocal integrada. Ajusta la velocidad de voz y la pausa entre frases.",
+                feat1_desc: "Meemaw dicta en voz alta con síntesis vocal integrada. Ajusta la velocidad de voz y la pausa entre frases.",
                 feat2_title: "Duelos con Amigos ⚔️",
                 feat2_desc: "¡Desafía a tus amigos al mismo dictado por WhatsApp o iMessage! Compara tus puntos, tiempo y precisión.",
-                feat3_title: "El Consejo de la Abuela 📚",
-                feat3_desc: "Tras cada dictado, la Abuela te explica exactamente por qué cometiste un error y cómo evitarlo.",
+                feat3_title: "El Consejo de Meemaw 📚",
+                feat3_desc: "Tras cada dictado, Meemaw te explica exactamente por qué cometiste un error y cómo evitarlo.",
                 feat4_title: "5 Modos de Juego 🎮",
                 feat4_desc: "Dictado Largo, Dictado Exprés, Detective de Palabras, Dictado Loco y Anagramas. ¡Aprender ortografía nunca fue tan divertido!",
                 priv_title: "100% Privado y Sin Nube 🔒",
