@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat du Défi Meemaw ⚔️</title>
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+
+    <!-- Apple Smart App Banner for automatic iOS native app header -->
+    <meta name="apple-itunes-app" content="app-id=6757681331">
+
+    <!-- Open Graph for WhatsApp / Telegram / iMessage preview -->
+    <meta property="og:title" content="🏆 Résultat du Défi Meemaw" />
+    <meta property="og:description" content="Découvre qui a remporté le défi en dictée sur Meemaw !" />
+    <meta property="og:image" content="https://meemaw.app/assets/icon.png" />
+    <meta property="og:type" content="website" />
+
+    <style>
+        :root {
+            --orange: #FF8C42;
+            --ink: #1A1A2E;
+            --cream: #FFF8F0;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: var(--cream);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            border: 3px solid var(--ink);
+            box-shadow: 6px 6px 0 var(--ink);
+            max-width: 400px;
+            width: 100%;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .emoji { font-size: 64px; margin-bottom: 16px; }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: var(--ink);
+            opacity: 0.6;
+            margin-bottom: 24px;
+        }
+
+        .challenger-info {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 24px;
+            border: 2px solid var(--ink);
+        }
+
+        .challenger-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--orange);
+        }
+
+        .score {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--ink);
+            margin: 8px 0 4px;
+        }
+
+        .score-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--ink);
+            opacity: 0.5;
+            text-transform: uppercase;
+        }
+
+        .btn-open {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: var(--orange);
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 800;
+            border: 3px solid var(--ink);
+            border-radius: 14px;
+            text-decoration: none;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+
+        .btn-download {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--white);
+            color: var(--ink);
+            font-size: 14px;
+            font-weight: 700;
+            border: 2px solid var(--ink);
+            border-radius: 14px;
+            text-decoration: none;
+        }
+    </style>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const defender = params.get('defender') || 'Un ami';
+        const score = params.get('score') || '0';
+        const title = params.get('title') || 'Dictée';
+
+        function buildDeepLink() {
+            return 'meemaw://result' + window.location.search;
+        }
+
+        function openApp() {
+            window.location.href = buildDeepLink();
+        }
+
+        window.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('defenderName').textContent = defender;
+            document.getElementById('defenderScore').textContent = score + ' PTS';
+            document.getElementById('dictationTitle').textContent = '📖 ' + title;
+        });
+    </script>
+</head>
+<body>
+    <div class="card">
+        <div class="emoji">🏆</div>
+        <h1>RÉSULTAT DU DÉFI</h1>
+        <p class="subtitle">Ton adversaire a répondu à ton défi Meemaw !</p>
+
+        <div class="challenger-info">
+            <p id="dictationTitle" class="score-label" style="margin-bottom: 8px;">📖 Dictée</p>
+            <p class="challenger-name" id="defenderName">Un ami</p>
+            <p class="score" id="defenderScore">0 PTS</p>
+            <p class="score-label">Score réalisé</p>
+        </div>
+
+        <a href="javascript:openApp()" class="btn-open">🏆 VOIR LE DÉTAIL DANS L'APP</a>
+        <a href="https://apps.apple.com/app/id6757681331" class="btn-download">📲 Télécharger Meemaw</a>
+    </div>
+</body>
+</html>
