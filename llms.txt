@@ -1,16 +1,28 @@
-# Meemaw - French Dictation App
+# Meemaw - French Dictation & Spelling App (iOS)
 
-Meemaw is an iOS application designed to make learning French spelling and grammar fun, stress-free, and engaging for kids, students, and language learners.
+Meemaw is a premier iOS educational application designed to make learning French spelling, grammar, and conjugation fun, positive, and stress-free for children (CP to Brevet des Collèges), students, and adult learners (FLE & Voltaire Certification).
 
 ## Core Philosophy
-- Positive reinforcement instead of punishing red ink.
-- A vibrant Neo-Brutalist / Pop-Art aesthetic.
-- Gamified learning with an expansive database covering levels from Apprentice to Master.
+- Positive reinforcement instead of red-ink school punishment.
+- Vibrant Neo-Brutalist & Pop-Art comic aesthetic.
+- 100% on-device local neural French voice synthesis (no privacy invasion, works offline).
+- Apple Family Sharing: 1 single purchase or subscription for the whole household.
 
-## Features
-- 8 Exclusive Game Modes (Quick Dictation, Marathon, Grammar Rules, Detective, Anagrams, Crazy Dictation, etc.)
-- Offline speech recognition and localized rules explanation.
-- Progress tracking with XP and leveling system.
+## Educational Levels (CP to Brevet & Adultes)
+- Primaire (CP, CE1, CE2, CM1, CM2): fundamental sounds, silent letters, plural agreements, basic conjugations.
+- Collège (6ème, 5ème, 4ème, 3ème): past participle rules, grammatical homophones (ses/ces, c'est/s'est), official Brevet dictation preparation.
+- Adultes & FLE (Français Langue Étrangère): professional correspondence without errors, Certificat Voltaire training.
 
-## Availability
-Available on iOS. Download on the App Store via https://meemaw.app/
+## Key Features & Game Modes
+- Voice Dictations (Dictée Longue & Dictée Express) with customizable speech speed and pauses.
+- Kids vs Parents Duels (Duels Enfants vs Parents): challenge parents or friends via SMS/WhatsApp with instant score comparison.
+- Gamification & Meemaw Coins 🪙: earn gold coins on perfect 20/20 scores, climb Game Center global leaderboards.
+- Detective Mode (Détective): find traps and errors hidden in passages.
+- Anagrams, Crosswords, and QCM grammar quizzes.
+- Meemaw's Rules & Tips (L'Astuce de Meemaw): concise, memorable grammatical explanations.
+
+## Availability & Downloads
+- Platform: iOS (iPhone & iPad)
+- App Store URL: https://apps.apple.com/app/id6757681331
+- Official Website: https://meemaw.app/
+- In-App Events: "Défi Dictée : Rentrée 20/20" (Fall 2026 Challenge)

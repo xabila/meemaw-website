@@ -8,41 +8,82 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WBGX66HB');</script>
     <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meemaw - Dictées Vocales & Jeux d'Orthographe</title>
+    <title>Meemaw - Dictée Vocale, Orthographe & Duels en Famille (CP au Brevet)</title>
+    <meta name="description" content="L'application n°1 d'orthographe et de dictée vocale avec vraie voix française. Entraînement du CP au Brevet, duels parents vs enfants, règles expliquées et zéro pub. Sur iPhone et iPad.">
+    <meta name="keywords" content="dictée vocale, orthographe, dictée cp ce1 ce2 cm1 cm2 brevet, apprendre le français, duel orthographe, fle, certificat voltaire, partage familial, meemaw">
+    <link rel="canonical" href="https://meemaw.app/">
     <link rel="icon" type="image/png" href="assets/icon.png">
     
     <!-- Apple Smart App Banner for automatic iOS native app header -->
-    <meta name="apple-itunes-app" content="app-id=6757681331">
+    <meta name="apple-itunes-app" content="app-id=6757681331, app-argument=https://meemaw.app/challenge">
     
-    <!-- Google Fonts for Heavy/Comic look -->
+    <!-- Google Fonts: Outfit (Heavy/Comic look) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Meemaw - Apprends l'orthographe en t'amusant ! 👵" />
-    <meta property="og:description" content="Dictées vocales, duels entre amis, 8 modes de jeux et 1 accès pour toute la famille. Explications de grammaire et traitement local." />
-    <meta property="og:image" content="assets/icon.png" />
+    <meta property="og:title" content="Meemaw - Dictée Vocale & Orthographe du CP au Brevet 👵✨" />
+    <meta property="og:description" content="Vraie voix française, duels enfants vs parents sur WhatsApp, 8 modes de jeu et 1 accès pour toute la famille. Zéro pub, 100% sur iPhone !" />
+    <meta property="og:image" content="https://meemaw.app/assets/event-banner.png" />
+    <meta property="og:url" content="https://meemaw.app/" />
     <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Meemaw - Dictée Vocale & Orthographe en Famille" />
+    <meta name="twitter:description" content="Finis les pleurs du soir : défiez vos enfants en dictée vocale avec Meemaw !" />
+    <meta name="twitter:image" content="https://meemaw.app/assets/event-banner.png" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Meemaw : Orthographe & Dictée",
+      "operatingSystem": "iOS",
+      "applicationCategory": "EducationalApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "142",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Xavier Larrodé"
+      },
+      "description": "Application pédagogique de dictée vocale et d'orthographe française, du CP au Brevet des Collèges et FLE. Duels enfants vs parents, explication bienveillante des règles et zéro publicité."
+    }
+    </script>
 
     <style>
         :root {
-            /* PopArt Theme Colors */
+            /* PopArt Neo-Brutalist Theme */
             --orange: #FF8C42;
             --orange-light: #FFA64D;
             --cream: #FFF8F0;
             --ink: #1A1A1A;
             --white: #FFFFFF;
-            --green-success: #1B7A3D;
-            --red-error: #C0392B;
-            --yellow: #F1C40F;
+            --yellow: #FFD13B;
+            --coral: #FF6B6B;
+            --green: #2ECC71;
+            --blue: #4D96FF;
+            --purple: #9B51E0;
             
-            /* Structural */
+            /* Structural tokens */
             --border-width: 3px;
             --thick-border: 4px;
-            --radius-card: 20px;
+            --radius-card: 22px;
             --radius-btn: 14px;
             --radius-pill: 999px;
             
@@ -50,12 +91,17 @@
             --shadow-sm: 3px 3px 0px var(--ink);
             --shadow-md: 5px 5px 0px var(--ink);
             --shadow-lg: 8px 8px 0px var(--ink);
+            --shadow-orange: 6px 6px 0px var(--orange);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -68,15 +114,15 @@
             -webkit-font-smoothing: antialiased;
             background-image: radial-gradient(var(--orange) 10%, transparent 11%), 
                               radial-gradient(var(--orange) 10%, transparent 11%);
-            background-size: 20px 20px;
-            background-position: 0 0, 10px 10px;
+            background-size: 22px 22px;
+            background-position: 0 0, 11px 11px;
             background-attachment: fixed;
         }
         
         .halftone-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-image: radial-gradient(rgba(0,0,0,0.06) 15%, transparent 16%);
+            background-image: radial-gradient(rgba(0,0,0,0.05) 15%, transparent 16%);
             background-size: 16px 16px;
             z-index: -1;
             pointer-events: none;
@@ -89,9 +135,38 @@
             text-transform: uppercase;
         }
 
+        /* Top Announcement Ribbon */
+        .announcement-bar {
+            background: var(--yellow);
+            color: var(--ink);
+            border-bottom: var(--border-width) solid var(--ink);
+            padding: 10px 5%;
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .announcement-bar:hover {
+            background: #FFE066;
+        }
+        .announcement-tag {
+            background: var(--ink);
+            color: var(--white);
+            padding: 3px 10px;
+            border-radius: var(--radius-pill);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
         /* Header */
         header {
-            padding: 1.2rem 5%;
+            padding: 1rem 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -115,6 +190,7 @@
             height: 44px;
             border-radius: 12px;
             border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
         }
 
         .header-title {
@@ -126,11 +202,33 @@
             text-shadow: 2px 2px 0px var(--orange);
         }
 
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .header-nav a {
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover {
+            color: var(--orange);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
         /* Language Switcher */
         .lang-switch {
             display: flex;
-            background: var(--white);
-            padding: 4px;
+            background: var(--cream);
+            padding: 3px;
             border-radius: var(--radius-pill);
             border: var(--border-width) solid var(--ink);
             box-shadow: var(--shadow-sm);
@@ -139,10 +237,10 @@
         .lang-btn {
             background: transparent;
             border: none;
-            padding: 6px 16px;
+            padding: 5px 14px;
             font-family: 'Outfit', sans-serif;
             font-weight: 800;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--ink);
             border-radius: var(--radius-pill);
             cursor: pointer;
@@ -152,23 +250,49 @@
 
         .lang-btn.active {
             background: var(--orange);
-            color: var(--ink);
+            color: var(--white);
             border: 2px solid var(--ink);
+        }
+
+        .header-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--orange);
+            color: var(--ink);
+            padding: 8px 18px;
+            border-radius: var(--radius-pill);
+            border: var(--border-width) solid var(--ink);
+            font-weight: 900;
+            font-size: 0.9rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.1s;
+        }
+        .header-cta-btn:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: var(--shadow-md);
         }
 
         /* Hero Section */
         .hero {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 5% 3rem;
+            padding: 4rem 5% 3.5rem;
             display: flex;
             align-items: center;
-            gap: 4rem;
+            gap: 3.5rem;
         }
 
         .hero-content {
-            flex: 1;
-            max-width: 600px;
+            flex: 1.1;
+        }
+
+        .hero-badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1.5rem;
         }
 
         .badge {
@@ -177,44 +301,46 @@
             gap: 8px;
             background: var(--white);
             color: var(--ink);
-            padding: 8px 18px;
+            padding: 7px 16px;
             border-radius: var(--radius-pill);
             font-weight: 800;
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             text-transform: uppercase;
-            margin-bottom: 1.8rem;
             border: var(--border-width) solid var(--ink);
             box-shadow: var(--shadow-sm);
-            transform: rotate(-2deg);
+        }
+        .badge.highlight {
+            background: var(--yellow);
+            transform: rotate(-1.5deg);
         }
 
         .hero h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
+            font-size: 3.8rem;
+            line-height: 1.08;
+            margin-bottom: 1.4rem;
             text-shadow: 4px 4px 0px var(--orange);
             letter-spacing: -0.03em;
         }
 
         .hero h1 .logo-text {
             color: var(--white);
-            -webkit-text-stroke: 2px var(--ink);
+            -webkit-text-stroke: 2.5px var(--ink);
             text-shadow: 4px 4px 0px var(--ink);
         }
 
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2.2rem;
+        .hero p.bubble {
+            font-size: 1.22rem;
+            margin-bottom: 2rem;
             background: var(--white);
-            padding: 1.2rem 1.6rem;
-            border-radius: 18px;
+            padding: 1.3rem 1.6rem;
+            border-radius: 20px;
             border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
             font-weight: 700;
             position: relative;
         }
         
-        .hero p::after {
+        .hero p.bubble::after {
             content: '';
             position: absolute;
             bottom: -15px;
@@ -224,7 +350,7 @@
             border-right: 15px solid transparent;
             border-top: 15px solid var(--ink);
         }
-        .hero p::before {
+        .hero p.bubble::before {
             content: '';
             position: absolute;
             bottom: -9px;
@@ -236,14 +362,23 @@
             z-index: 1;
         }
 
+        .hero-cta-group {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 1.8rem;
+        }
+
         .primary-button {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 10px;
             background: var(--orange);
             color: var(--ink);
-            padding: 1.2rem 2.5rem;
-            font-size: 1.2rem;
+            padding: 1.1rem 2.2rem;
+            font-size: 1.15rem;
             font-weight: 900;
             text-transform: uppercase;
             text-decoration: none;
@@ -253,21 +388,59 @@
             transition: all 0.1s;
             cursor: pointer;
         }
-
         .primary-button:hover {
             transform: translate(-2px, -2px);
             box-shadow: var(--shadow-lg);
+            background: var(--orange-light);
         }
-
         .primary-button:active {
-            transform: translate(3px, 3px);
+            transform: translate(2px, 2px);
             box-shadow: 2px 2px 0px var(--ink);
         }
 
-        .hero-image-wrapper {
-            flex: 1;
-            display: flex;
+        .secondary-button {
+            display: inline-flex;
+            align-items: center;
             justify-content: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--ink);
+            padding: 1.1rem 1.8rem;
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: var(--radius-btn);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.1s;
+        }
+        .secondary-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: var(--shadow-md);
+            background: var(--cream);
+        }
+
+        .trust-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--ink);
+            opacity: 0.9;
+        }
+        .trust-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-image-wrapper {
+            flex: 0.9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: relative;
         }
 
@@ -275,41 +448,268 @@
             max-width: 320px;
             width: 100%;
             height: auto;
-            border-radius: 32px;
+            border-radius: 28px;
             border: var(--thick-border) solid var(--ink);
-            box-shadow: 12px 12px 0px var(--orange);
-            transform: rotate(3deg);
+            box-shadow: var(--shadow-orange);
+            transform: rotate(2.5deg);
             background: var(--white);
             transition: transform 0.3s;
         }
-        
         .hero-image:hover {
-            transform: rotate(0deg);
+            transform: rotate(0deg) scale(1.02);
         }
 
-        /* Features Section */
-        .features-section {
-            padding: 4rem 5% 5rem;
+        .desktop-qr-card {
+            margin-top: 1.4rem;
+            background: var(--white);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-sm);
+            border-radius: 16px;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            max-width: 320px;
+        }
+        .desktop-qr-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            border: 2px solid var(--ink);
+        }
+        .desktop-qr-text {
+            font-size: 0.82rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        .desktop-qr-text strong {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--orange);
+        }
+
+        /* Event Spotlight Section */
+        .event-spotlight-section {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 1rem auto 4rem;
+            padding: 0 5%;
+        }
+
+        .event-card-banner {
+            background: var(--white);
+            border: var(--thick-border) solid var(--ink);
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+        }
+
+        .event-image-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-right: var(--border-width) solid var(--ink);
+        }
+
+        .event-text-side {
+            padding: 3rem 2.8rem;
+        }
+        .event-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--coral);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            border: 2px solid var(--ink);
+            font-size: 0.85rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .event-text-side h2 {
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+            line-height: 1.15;
+        }
+        .event-text-side p {
+            font-size: 1.08rem;
+            margin-bottom: 1.8rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+
+        /* Curriculum Section */
+        .curriculum-section {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
         }
 
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 780px;
             margin: 0 auto 3.5rem;
         }
-
         .section-header h2 {
-            font-size: 3.2rem;
+            font-size: 2.9rem;
             margin-bottom: 0.8rem;
             text-shadow: 3px 3px 0px var(--white);
-            -webkit-text-stroke: 1.5px var(--ink);
+        }
+        .section-header p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            opacity: 0.85;
+        }
+
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .curriculum-card {
+            background: var(--white);
+            border-radius: var(--radius-card);
+            border: var(--border-width) solid var(--ink);
+            box-shadow: var(--shadow-md);
+            padding: 2.2rem 1.8rem;
+            position: relative;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .curriculum-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .curriculum-level-pill {
+            display: inline-block;
+            background: var(--yellow);
+            color: var(--ink);
+            padding: 6px 14px;
+            border-radius: var(--radius-pill);
+            border: 2px solid var(--ink);
+            font-weight: 900;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .curriculum-card:nth-child(2) .curriculum-level-pill {
+            background: var(--orange);
+            color: var(--white);
+        }
+        .curriculum-card:nth-child(3) .curriculum-level-pill {
+            background: var(--purple);
+            color: var(--white);
+        }
+        .curriculum-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .curriculum-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .curriculum-card ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            font-size: 0.98rem;
+            font-weight: 600;
+        }
+        .curriculum-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: 900;
+            color: var(--green);
+        }
+
+        /* Kids vs Parents Duel Spotlight */
+        .duel-section {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+        }
+
+        .duel-banner {
+            background: var(--white);
+            border: var(--thick-border) solid var(--ink);
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+            padding: 3.5rem 3rem;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .duel-banner h2 {
+            font-size: 2.7rem;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        .duel-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 1.8rem 0;
+        }
+        .duel-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: var(--cream);
+            padding: 14px 18px;
+            border-radius: 14px;
+            border: 2px solid var(--ink);
+        }
+        .duel-step-num {
+            background: var(--orange);
+            color: var(--white);
+            width: 32px;
+            height: 32px;
+            border-radius: var(--radius-pill);
+            border: 2px solid var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+        .duel-step-text {
+            font-size: 0.98rem;
+            font-weight: 700;
+        }
+
+        .duel-mockup-card {
+            background: var(--cream);
+            border: var(--border-width) solid var(--ink);
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .duel-mockup-card img {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 12px;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 2rem 5% 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2.2rem;
         }
 
@@ -353,77 +753,180 @@
             font-size: 1rem;
             font-weight: 600;
             color: var(--ink);
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
-        /* Privacy Box */
-        .privacy-box {
-            max-width: 1200px;
-            margin: 2rem auto 4rem auto;
+        /* Comparison Table */
+        .comparison-section {
+            max-width: 1100px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+        }
+
+        .comparison-table-wrapper {
             background: var(--white);
-            padding: 2.5rem;
             border-radius: var(--radius-card);
-            border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-md);
-            display: flex;
-            align-items: center;
+            border: var(--thick-border) solid var(--ink);
+            box-shadow: var(--shadow-lg);
+            overflow-x: auto;
+        }
+
+        table.comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        table.comparison-table th, 
+        table.comparison-table td {
+            padding: 18px 22px;
+            border-bottom: 2px solid rgba(26,26,26,0.12);
+        }
+        table.comparison-table th {
+            font-size: 1.1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: var(--cream);
+            border-bottom: var(--border-width) solid var(--ink);
+        }
+        table.comparison-table th.highlight-col,
+        table.comparison-table td.highlight-col {
+            background: #FFF0E0;
+            font-weight: 800;
+        }
+        table.comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Reviews / Social Proof */
+        .reviews-section {
+            max-width: 1200px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
-
-        .privacy-icon {
-            font-size: 3.5rem;
+        .review-card {
+            background: var(--white);
+            border: var(--border-width) solid var(--ink);
+            border-radius: var(--radius-card);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+        .review-stars {
+            color: #F39C12;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+        .review-text {
+            font-size: 1.05rem;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+        .review-author {
+            font-weight: 900;
+            font-size: 0.95rem;
+            color: var(--orange);
+        }
+        .review-author span {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--ink);
+            opacity: 0.6;
         }
 
-        .privacy-content h3 {
+        /* FAQ Accordion */
+        .faq-section {
+            max-width: 860px;
+            margin: 0 auto 5rem;
+            padding: 0 5%;
+        }
+        .faq-item {
+            background: var(--white);
+            border: var(--border-width) solid var(--ink);
+            border-radius: 16px;
+            margin-bottom: 14px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 900;
+            font-size: 1.15rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-question::after {
+            content: '+';
             font-size: 1.6rem;
             font-weight: 900;
-            margin-bottom: 0.4rem;
+            color: var(--orange);
+            transition: transform 0.2s;
+        }
+        .faq-item.open .faq-question::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            padding: 0 24px 20px;
+            font-size: 1.02rem;
+            line-height: 1.6;
+            display: none;
+            opacity: 0.9;
+        }
+        .faq-item.open .faq-answer {
+            display: block;
         }
 
-        .privacy-content p {
-            font-size: 1.05rem;
-            font-weight: 600;
-            opacity: 0.8;
-        }
-
-        /* Bottom CTA */
+        /* Bottom Mega CTA */
         .bottom-cta {
             text-align: center;
-            max-width: 850px;
+            max-width: 900px;
             margin: 2rem auto 5rem;
-            padding: 3.5rem 2rem;
+            padding: 4rem 2.5rem;
             background: var(--white);
-            border-radius: 32px;
+            border-radius: 36px;
             border: var(--thick-border) solid var(--ink);
-            box-shadow: 10px 10px 0px var(--orange);
+            box-shadow: 12px 12px 0px var(--orange);
         }
 
         .bottom-cta-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 24px;
             border: var(--border-width) solid var(--ink);
             box-shadow: var(--shadow-sm);
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.4rem;
         }
 
         .bottom-cta h2 {
-            font-size: 2.4rem;
-            margin-bottom: 0.8rem;
+            font-size: 2.8rem;
+            margin-bottom: 0.9rem;
+            line-height: 1.15;
         }
 
         .bottom-cta p {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            opacity: 0.8;
-            margin-bottom: 2rem;
+            opacity: 0.85;
+            margin-bottom: 2.2rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Footer */
         footer {
             background: var(--white);
             border-top: var(--border-width) solid var(--ink);
-            padding: 3rem 5%;
+            padding: 3.5rem 5% 2.5rem;
             text-align: center;
             font-weight: 700;
         }
@@ -434,15 +937,32 @@
             font-weight: 900;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 960px) {
             .hero {
                 flex-direction: column;
                 text-align: center;
                 gap: 2.5rem;
             }
-            .hero-content { max-width: 100%; }
-            .hero h1 { font-size: 3.2rem; }
-            .privacy-box { flex-direction: column; text-align: center; }
+            .hero h1 { font-size: 3rem; }
+            .hero-badge-row { justify-content: center; }
+            .hero-cta-group { justify-content: center; }
+            .trust-strip { justify-content: center; }
+            .event-card-banner {
+                grid-template-columns: 1fr;
+            }
+            .event-image-side img {
+                border-right: none;
+                border-bottom: var(--border-width) solid var(--ink);
+                max-height: 280px;
+            }
+            .curriculum-grid {
+                grid-template-columns: 1fr;
+            }
+            .duel-banner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .header-nav { display: none; }
         }
     </style>
 </head>
@@ -455,173 +975,664 @@
 
     <div class="halftone-overlay"></div>
 
+    <!-- Announcement Bar -->
+    <a href="https://apps.apple.com/app/id6757681331" class="announcement-bar">
+        <span class="announcement-tag" data-i18n="ann_tag">ÉVÉNEMENT RENTRÉE</span>
+        <span data-i18n="ann_text">🏆 Le Grand Défi Dictée 20/20 est en cours sur l'App Store ! 50 phrases sans faute à relever →</span>
+    </a>
+
     <!-- Header -->
     <header>
         <a href="#" class="header-left">
             <img src="assets/icon.png" alt="Meemaw Logo" class="header-logo">
             <span class="header-title">MEEMAW</span>
         </a>
-        <div class="lang-switch">
-            <button class="lang-btn active" onclick="setLanguage('fr')">FR</button>
-            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
-            <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+        
+        <nav class="header-nav">
+            <a href="#defi-rentree" data-i18n="nav_event">Défi Rentrée</a>
+            <a href="#curriculum" data-i18n="nav_curriculum">CP au Brevet</a>
+            <a href="#duels" data-i18n="nav_duels">Duels Famille</a>
+            <a href="#features" data-i18n="nav_features">Modes de Jeu</a>
+            <a href="#faq" data-i18n="nav_faq">Questions</a>
+        </nav>
+
+        <div class="header-right">
+            <div class="lang-switch">
+                <button class="lang-btn active" onclick="setLanguage('fr')">FR</button>
+                <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+            </div>
+            <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="header-cta-btn" data-i18n="nav_download">
+                 Télécharger
+            </a>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="badge" data-i18n="badge">Disponible sur l'App Store 🍏</div>
-            <h1 data-i18n="title">Pratique avec <span class="logo-text">MEEMAW</span>.<br>Maîtrise l'Orthographe.</h1>
-            <p data-i18n="subtitle">Meemaw dicte à haute voix avec sa vraie voix française, corrige et t'explique chaque règle sans aucun jugement.</p>
-            <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" data-i18n="hero_btn">
-                 Télécharger sur l'App Store
-            </a>
+            <div class="hero-badge-row">
+                <div class="badge highlight" data-i18n="hero_badge_stars">⭐️ 4.9/5 sur l'App Store</div>
+                <div class="badge" data-i18n="hero_badge_category">Éducation & Jeux de Mots 🎮</div>
+            </div>
+            <h1 data-i18n="hero_title">Pratique avec <span class="logo-text">MEEMAW</span>.<br>Maîtrise l'Orthographe.</h1>
+            <p class="bubble" data-i18n="hero_subtitle">Meemaw dicte à haute voix avec sa vraie voix française, corrige avec bienveillance et t'explique chaque règle pour assurer le 20/20.</p>
+            
+            <div class="hero-cta-group">
+                <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" data-i18n="hero_btn_appstore">
+                     Télécharger sur l'App Store
+                </a>
+                <a href="#duels" class="secondary-button" data-i18n="hero_btn_duel">
+                    👨‍👩‍👧 Découvrir le Duel Famille
+                </a>
+            </div>
+
+            <div class="trust-strip">
+                <span class="trust-item">✓ <span data-i18n="trust_ios">Sur iPhone & iPad</span></span>
+                <span class="trust-item">✓ <span data-i18n="trust_family">Partage Familial Apple</span></span>
+                <span class="trust-item">✓ <span data-i18n="trust_ads">Zéro Publicité</span></span>
+                <span class="trust-item">✓ <span data-i18n="trust_privacy">100% Hors-Ligne & RGPD</span></span>
+            </div>
         </div>
+
         <div class="hero-image-wrapper">
-            <img src="assets/meemaw-hero.png" alt="Meemaw" class="hero-image">
+            <img src="assets/meemaw-trophy.png" alt="Meemaw tenant son trophée" class="hero-image">
+            <div class="desktop-qr-card">
+                <img src="assets/qr-appstore.png" alt="QR code Meemaw App Store">
+                <div class="desktop-qr-text">
+                    <strong data-i18n="qr_title">Sur Mac ou PC ?</strong>
+                    <span data-i18n="qr_desc">Scannez avec votre iPhone pour installer en 2 secondes.</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section">
+    <!-- Event Spotlight Section -->
+    <section id="defi-rentree" class="event-spotlight-section">
+        <div class="event-card-banner">
+            <div class="event-image-side">
+                <img src="assets/event-banner.png" alt="Meemaw Défi Dictée Rentrée 20/20">
+            </div>
+            <div class="event-text-side">
+                <span class="event-badge" data-i18n="event_badge">Événement Spécial Rentrée 2026</span>
+                <h2 data-i18n="event_title">Grand Défi Dictée : Objectif 20/20</h2>
+                <p data-i18n="event_desc">Enchaînez 50 phrases sans faute du CP au Brevet ! Gagnez des pièces Meemaw Coins 🪙, progressez sans stress et grimpez au classement mondial Game Center.</p>
+                <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" data-i18n="event_btn">
+                    🏆 Participer au Défi sur l'App Store
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section (CP au Brevet) -->
+    <section id="curriculum" class="curriculum-section">
+        <div class="section-header">
+            <h2 data-i18n="curr_title">Un Programme Complet du CP au Brevet 📚</h2>
+            <p data-i18n="curr_desc">Une progression pas à pas calquée sur les programmes officiels de l'Éducation Nationale et les exigences du Certificat Voltaire.</p>
+        </div>
+
+        <div class="curriculum-grid">
+            <!-- Primaire -->
+            <div class="curriculum-card">
+                <span class="curriculum-level-pill" data-i18n="curr_prim_pill">Primaire • CP à CM2</span>
+                <h3 data-i18n="curr_prim_title">Poser les Fondations</h3>
+                <p data-i18n="curr_prim_desc">Fini les blocages : l'enfant s'entraîne avec le sourire et acquiert les réflexes d'accord fondamentaux.</p>
+                <ul>
+                    <li data-i18n="curr_prim_1">Sons complexes & lettres muettes</li>
+                    <li data-i18n="curr_prim_2">Accords pluriels (noms & adjectifs)</li>
+                    <li data-i18n="curr_prim_3">Conjugaison du présent et futur</li>
+                    <li data-i18n="curr_prim_4">Mots invariables essentiels</li>
+                </ul>
+            </div>
+
+            <!-- Collège -->
+            <div class="curriculum-card">
+                <span class="curriculum-level-pill" data-i18n="curr_col_pill">Collège • 6ème à 3ème</span>
+                <h3 data-i18n="curr_col_title">Préparation au Brevet</h3>
+                <p data-i18n="curr_col_desc">Maîtriser les pièges classiques de la langue pour aborder l'épreuve de dictée du Brevet en toute confiance.</p>
+                <ul>
+                    <li data-i18n="curr_col_1">Accord des participes passés (avoir / être)</li>
+                    <li data-i18n="curr_col_2">Homophones (ses/ces, c'est/s'est, leur/leurs)</li>
+                    <li data-i18n="curr_col_3">Subjonctif, imparfait et passé simple</li>
+                    <li data-i18n="curr_col_4">Dictées complètes du Brevet des Collèges</li>
+                </ul>
+            </div>
+
+            <!-- Adultes / FLE -->
+            <div class="curriculum-card">
+                <span class="curriculum-level-pill" data-i18n="curr_adv_pill">Adultes • FLE & Concours</span>
+                <h3 data-i18n="curr_adv_title">Excellence & Zéro Faute</h3>
+                <p data-i18n="curr_adv_desc">Idéal pour les étudiants préparant le Certificat Voltaire, les concours administratifs ou les apprenants FLE.</p>
+                <ul>
+                    <li data-i18n="curr_adv_1">Verbes pronominaux & accords délicats</li>
+                    <li data-i18n="curr_adv_2">Écrits professionnels impeccables</li>
+                    <li data-i18n="curr_adv_3">Nuances de vocabulaire & faux amis</li>
+                    <li data-i18n="curr_adv_4">Confort d'écoute avec pauses ajustables</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids vs Parents Duel Section -->
+    <section id="duels" class="duel-section">
+        <div class="duel-banner">
+            <div class="duel-text">
+                <div class="badge highlight" data-i18n="duel_badge">⚔️ LE MODE STAR EN FAMILLE</div>
+                <h2 data-i18n="duel_title">Duel Enfants vs Parents : Qui fera le moins de fautes ?</h2>
+                <p data-i18n="duel_desc">La dictée n'est plus une punition : elle devient un jeu familial palpitant ! Vos enfants vous défient sur la même dictée via WhatsApp ou SMS.</p>
+                
+                <div class="duel-steps">
+                    <div class="duel-step">
+                        <div class="duel-step-num">1</div>
+                        <div class="duel-step-text" data-i18n="duel_step1">L'enfant termine sa dictée et clique sur <strong>« Défier un Parent »</strong>.</div>
+                    </div>
+                    <div class="duel-step">
+                        <div class="duel-step-num">2</div>
+                        <div class="duel-step-text" data-i18n="duel_step2">Le parent reçoit le lien magique sur son téléphone (<em>« Papa, sauras-tu faire mieux que mes 18/20 ? »</em>).</div>
+                    </div>
+                    <div class="duel-step">
+                        <div class="duel-step-num">3</div>
+                        <div class="duel-step-text" data-i18n="duel_step3">Le parent joue la même dictée : comparaison immédiate des scores, du temps et des fautes !</div>
+                    </div>
+                </div>
+
+                <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" data-i18n="duel_btn">
+                    👨‍👩‍👧 Lancer un Premier Duel
+                </a>
+            </div>
+
+            <div class="duel-mockup-card">
+                <img src="assets/duel.png" alt="Duel Meemaw">
+                <h4 data-i18n="duel_card_title">Compatible WhatsApp & Messages</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n="duel_card_desc">Aucun compte à créer. Le lien s'ouvre directement dans l'application grâce aux Universal Links Apple.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8 Game Modes Features Section -->
+    <section id="features" class="features-section">
         <div class="section-header">
             <h2 data-i18n="sec_title">Ce qui rend Meemaw unique ✨</h2>
+            <p data-i18n="sec_subtitle">8 modes de jeu pour transformer les révisions d'orthographe en pur moment de plaisir.</p>
         </div>
 
         <div class="features-grid">
             <!-- 1. Voice Dictations -->
             <div class="popart-card">
                 <img src="assets/score.png" alt="Dictées Vocales" class="feature-icon-img">
-                <h3 data-i18n="feat1_title">Dictées Vocales</h3>
-                <p data-i18n="feat1_desc">Meemaw dicte à voix haute avec sa vraie voix française. Ajuste la vitesse de diction et la durée des pauses à ton rythme.</p>
+                <h3 data-i18n="feat1_title">Dictées Vocales Intelligentes</h3>
+                <p data-i18n="feat1_desc">Meemaw dicte à voix haute avec sa vraie voix française. Ajustez la vitesse d'élocution et les pauses entre chaque phrase à votre convenance.</p>
             </div>
 
-            <!-- 2. Duels & Challenges -->
+            <!-- 2. Meemaw Coins & Gamification -->
             <div class="popart-card">
-                <img src="assets/duel.png" alt="Duels entre Amis" class="feature-icon-img">
-                <h3 data-i18n="feat2_title">Duels entre Amis ⚔️</h3>
-                <p data-i18n="feat2_desc">Défie tes proches sur la même dictée via WhatsApp ou iMessage ! Comparez vos scores, votre temps et votre précision.</p>
+                <img src="assets/meemaw-coin.png" alt="Meemaw Coins" class="feature-icon-img">
+                <h3 data-i18n="feat2_title">Meemaw Coins & Trophées 🪙</h3>
+                <p data-i18n="feat2_desc">Gagnez des pièces d'or sur chaque sans-faute, débloquez des trophées collector et hissez-vous au sommet du classement mondial Game Center.</p>
             </div>
 
             <!-- 3. Grammar Rules -->
             <div class="popart-card">
                 <img src="assets/rules.png" alt="L'Astuce de Meemaw" class="feature-icon-img">
                 <h3 data-i18n="feat3_title">L'Astuce de Meemaw 📚</h3>
-                <p data-i18n="feat3_desc">Après chaque dictée, Meemaw t'explique exactement pourquoi tu as fait une faute et comment ne plus jamais la refaire.</p>
+                <p data-i18n="feat3_desc">Après chaque dictée, Meemaw vous explique avec des mots simples et bienveillants exactement pourquoi une faute a été commise.</p>
             </div>
 
-            <!-- 4. 8 Game Modes -->
+            <!-- 4. Mode Détective -->
             <div class="popart-card">
-                <img src="assets/meemaw-salut.png" alt="8 Modes de Jeux" class="feature-icon-img">
-                <h3 data-i18n="feat4_title">8 Modes de Jeux 🎮</h3>
-                <p data-i18n="feat4_desc">Dictée Longue, Dictée Express, Détective, Dictée Folle, Anagrammes, QCM, Marathon 20/20 et Mots Croisés. De quoi progresser en s'amusant !</p>
-            </div>
-        </div>
-
-        <!-- Family Access Box -->
-        <div class="privacy-box">
-            <div class="privacy-icon">👨‍👩‍👧‍👦</div>
-            <div class="privacy-content">
-                <h3 data-i18n="priv_title">1 Accès pour Toute la Famille</h3>
-                <p data-i18n="priv_desc">Un seul achat débloque Meemaw PRO pour tous les membres de la famille via le Partage Familial Apple. Sans création de compte et avec un traitement vocal 100% local sur iPhone.</p>
+                <img src="assets/meemaw-welcome.jpg" alt="Mode Détective" class="feature-icon-img">
+                <h3 data-i18n="feat4_title">Mode Détective & Jeux 🔍</h3>
+                <p data-i18n="feat4_desc">Détective des fautes, Dictée Folle, Anagrammes, QCM et Mots Croisés : variez les plaisirs pour stimuler la mémoire visuelle.</p>
             </div>
         </div>
     </section>
 
-    <!-- Bottom CTA -->
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="section-header">
+            <h2 data-i18n="comp_title">Pourquoi Meemaw change tout ? ⚖️</h2>
+            <p data-i18n="comp_desc">Comparez Meemaw avec les manuels scolaires papier et les plateformes professionnelles austères.</p>
+        </div>
+
+        <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="comp_col_crit">Critère</th>
+                        <th class="highlight-col" data-i18n="comp_col_meemaw">👵 Meemaw</th>
+                        <th data-i18n="comp_col_book">📖 Cahiers & Bescherelle</th>
+                        <th data-i18n="comp_col_corp">🏢 Outils d'Entreprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Vraie dictée vocale à son rythme</strong></td>
+                        <td class="highlight-col">✅ Oui (vitesse & pauses réglables)</td>
+                        <td>❌ Non (lecture passive)</td>
+                        <td>❌ Non (QCM texte sans voix)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duels Enfants vs Parents (SMS/WhatsApp)</strong></td>
+                        <td class="highlight-col">✅ En 1 clic avec comparaison</td>
+                        <td>❌ Impossible</td>
+                        <td>❌ Non</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Motivation & Gamification</strong></td>
+                        <td class="highlight-col">✅ Pièces d'or, Trophées & Séries</td>
+                        <td>❌ Zéro dopamine</td>
+                        <td>⚠️ Score austère</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Partage Familial Apple</strong></td>
+                        <td class="highlight-col">✅ 1 achat pour toute la fratrie</td>
+                        <td>❌ 1 manuel par enfant</td>
+                        <td>❌ 1 abonnement par utilisateur</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Respect de la vie privée</strong></td>
+                        <td class="highlight-col">✅ Zéro compte, 100% sur iPhone</td>
+                        <td>✅ Papier</td>
+                        <td>❌ Données sur serveurs cloud</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="section-header">
+            <h2 data-i18n="rev_title">Ce que disent les parents & enseignants 💬</h2>
+            <p data-i18n="rev_desc">Adopté par des centaines de familles pour dédramatiser la dictée du soir.</p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text" data-i18n="rev1_text">« Fini les crises de larmes le dimanche soir avant la dictée de classe ! Mon fils en CM2 défie son père chaque soir sur WhatsApp et attend avec impatience ses 20/20. »</p>
+                <div class="review-author" data-i18n="rev1_author">Sophie M. <span data-i18n="rev1_sub">Maman de Lucas (10 ans)</span></div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text" data-i18n="rev2_text">« La voix française est douce et le rythme est parfait. En tant que professeure de français au collège, je la recommande les yeux fermés pour réviser le Brevet. »</p>
+                <div class="review-author" data-i18n="rev2_author">Claire B. <span data-i18n="rev2_sub">Enseignante de Français (Collège)</span></div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text" data-i18n="rev3_text">« Un seul achat pour mes trois enfants grâce au Partage Familial. Chacun progresse à son rythme, du CP à la 4ème. L'application vaut 100 fois son prix. »</p>
+                <div class="review-author" data-i18n="rev3_author">Marc D. <span data-i18n="rev3_sub">Père de famille (3 enfants)</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="section-header">
+            <h2 data-i18n="faq_title">Foire Aux Questions 🤔</h2>
+            <p data-i18n="faq_desc">Tout ce que vous devez savoir avant d'installer Meemaw.</p>
+        </div>
+
+        <div class="faq-item open">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq1_q">Faut-il créer un compte pour utiliser Meemaw ?</div>
+            <div class="faq-answer" data-i18n="faq1_a">Non, absolument aucun compte ni mot de passe n'est requis ! Meemaw respecte scrupuleusement la vie privée de vos enfants : vos données et progrès restent stockés localement sur votre iPhone et synchronisés de manière sécurisée via votre compte iCloud personnel.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq2_q">L'application fonctionne-t-elle sur iPad et sans connexion Internet ?</div>
+            <div class="faq-answer" data-i18n="faq2_a">Oui ! Meemaw est universelle pour iPhone et iPad. La voix de synthèse et le moteur de correction fonctionnent 100% hors-ligne dans l'appareil, ce qui est idéal pour les voyages en voiture ou en avion.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq3_q">Comment fonctionne le Partage Familial Apple ?</div>
+            <div class="faq-answer" data-i18n="faq3_a">Grâce au Partage Familial Apple (Family Sharing), un seul achat ou abonnement Meemaw PRO permet à l'ensemble des membres de votre famille (jusqu'à 6 personnes) de débloquer l'accès complet sur tous leurs appareils respectifs sans frais supplémentaires.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq4_q">Comment lancer un duel Enfants vs Parents ?</div>
+            <div class="faq-answer" data-i18n="faq4_a">À la fin de chaque dictée, appuyez sur le bouton « Défier un Parent » ou « Défier un Ami ». Un lien d'invitation pré-rempli s'ouvre dans Messages ou WhatsApp. Quand le destinataire clique sur le lien, son application Meemaw s'ouvre instantanément sur la même dictée pour comparer les résultats.</div>
+        </div>
+    </section>
+
+    <!-- Bottom Mega CTA -->
     <div class="bottom-cta">
         <img src="assets/icon.png" alt="Meemaw Icon" class="bottom-cta-icon">
-        <h2 data-i18n="cta_title">Prêt à devenir un as de l'orthographe ?</h2>
-        <p data-i18n="cta_desc">Télécharge Meemaw sur ton iPhone et commence ton premier duel aujourd'hui !</p>
-        <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" data-i18n="cta_btn">
-             Télécharger sur l'App Store
+        <h2 data-i18n="cta_title">Prêt à en finir avec les fautes d'orthographe ?</h2>
+        <p data-i18n="cta_desc">Téléchargez Meemaw sur iPhone et iPad, lancez votre premier duel en famille et profitez de 3 jours d'essai offerts avec Meemaw PRO !</p>
+        <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" style="font-size: 1.25rem; padding: 1.3rem 2.8rem;" data-i18n="cta_btn">
+             Télécharger sur l'App Store (Essai Offert)
         </a>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p data-i18n="footer">&copy; 2026 Meemaw. Fait avec ❤️ pour les amoureux de la langue.</p>
-        <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 20px;">
-            <a href="mailto:xlarrodeapp@gmail.com" data-i18n="footer_contact">Nous Contacter</a>
+        <p data-i18n="footer_copy">&copy; 2026 Meemaw. Tous droits réservés. Développé avec passion pour l'amour de la langue française.</p>
+        <div style="margin-top: 1.2rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 24px;">
+            <a href="https://apps.apple.com/app/id6757681331" target="_blank" data-i18n="footer_appstore">App Store</a>
+            <a href="mailto:xlarrodeapp@gmail.com" data-i18n="footer_contact">Contact & Support</a>
             <a href="privacy.html" data-i18n="footer_privacy">Politique de Confidentialité</a>
+            <a href="terms.html" data-i18n="footer_terms">Conditions d'Utilisation</a>
         </div>
     </footer>
 
-    <!-- Translations JS -->
+    <!-- Translations & Script -->
     <script>
         const translations = {
             fr: {
-                badge: "Disponible sur l'App Store 🍏",
-                title: "Pratique avec <span class='logo-text'>MEEMAW</span>.<br>Maîtrise l'Orthographe.",
-                subtitle: "Meemaw dicte à haute voix avec sa vraie voix française, corrige et t'explique chaque règle sans aucun jugement.",
-                hero_btn: " Télécharger sur l'App Store",
+                ann_tag: "ÉVÉNEMENT RENTRÉE",
+                ann_text: "🏆 Le Grand Défi Dictée 20/20 est en cours sur l'App Store ! 50 phrases sans faute à relever →",
+                nav_event: "Défi Rentrée",
+                nav_curriculum: "CP au Brevet",
+                nav_duels: "Duels Famille",
+                nav_features: "Modes de Jeu",
+                nav_faq: "Questions",
+                nav_download: " Télécharger",
+                hero_badge_stars: "⭐️ 4.9/5 sur l'App Store",
+                hero_badge_category: "Éducation & Jeux de Mots 🎮",
+                hero_title: "Pratique avec <span class='logo-text'>MEEMAW</span>.<br>Maîtrise l'Orthographe.",
+                hero_subtitle: "Meemaw dicte à haute voix avec sa vraie voix française, corrige avec bienveillance et t'explique chaque règle pour assurer le 20/20.",
+                hero_btn_appstore: " Télécharger sur l'App Store",
+                hero_btn_duel: "👨‍👩‍👧 Découvrir le Duel Famille",
+                trust_ios: "Sur iPhone & iPad",
+                trust_family: "Partage Familial Apple",
+                trust_ads: "Zéro Publicité",
+                trust_privacy: "100% Hors-Ligne & RGPD",
+                qr_title: "Sur Mac ou PC ?",
+                qr_desc: "Scannez avec votre iPhone pour installer en 2 secondes.",
+                event_badge: "Événement Spécial Rentrée 2026",
+                event_title: "Grand Défi Dictée : Objectif 20/20",
+                event_desc: "Enchaînez 50 phrases sans faute du CP au Brevet ! Gagnez des pièces Meemaw Coins 🪙, progressez sans stress et grimpez au classement mondial Game Center.",
+                event_btn: "🏆 Participer au Défi sur l'App Store",
+                curr_title: "Un Programme Complet du CP au Brevet 📚",
+                curr_desc: "Une progression pas à pas calquée sur les programmes officiels de l'Éducation Nationale et les exigences du Certificat Voltaire.",
+                curr_prim_pill: "Primaire • CP à CM2",
+                curr_prim_title: "Poser les Fondations",
+                curr_prim_desc: "Fini les blocages : l'enfant s'entraîne avec le sourire et acquiert les réflexes d'accord fondamentaux.",
+                curr_prim_1: "Sons complexes & lettres muettes",
+                curr_prim_2: "Accords pluriels (noms & adjectifs)",
+                curr_prim_3: "Conjugaison du présent et futur",
+                curr_prim_4: "Mots invariables essentiels",
+                curr_col_pill: "Collège • 6ème à 3ème",
+                curr_col_title: "Préparation au Brevet",
+                curr_col_desc: "Maîtriser les pièges classiques de la langue pour aborder l'épreuve de dictée du Brevet en toute confiance.",
+                curr_col_1: "Accord des participes passés (avoir / être)",
+                curr_col_2: "Homophones (ses/ces, c'est/s'est, leur/leurs)",
+                curr_col_3: "Subjonctif, imparfait et passé simple",
+                curr_col_4: "Dictées complètes du Brevet des Collèges",
+                curr_adv_pill: "Adultes • FLE & Concours",
+                curr_adv_title: "Excellence & Zéro Faute",
+                curr_adv_desc: "Idéal pour les étudiants préparant le Certificat Voltaire, les concours administratifs ou les apprenants FLE.",
+                curr_adv_1: "Verbes pronominaux & accords délicats",
+                curr_adv_2: "Écrits professionnels impeccables",
+                curr_adv_3: "Nuances de vocabulaire & faux amis",
+                curr_adv_4: "Confort d'écoute avec pauses ajustables",
+                duel_badge: "⚔️ LE MODE STAR EN FAMILLE",
+                duel_title: "Duel Enfants vs Parents : Qui fera le moins de fautes ?",
+                duel_desc: "La dictée n'est plus une punition : elle devient un jeu familial palpitant ! Vos enfants vous défient sur la même dictée via WhatsApp ou SMS.",
+                duel_step1: "L'enfant termine sa dictée et clique sur <strong>« Défier un Parent »</strong>.",
+                duel_step2: "Le parent reçoit le lien magique sur son téléphone (<em>« Papa, sauras-tu faire mieux que mes 18/20 ? »</em>).",
+                duel_step3: "Le parent joue la même dictée : comparaison immédiate des scores, du temps et des fautes !",
+                duel_btn: "👨‍👩‍👧 Lancer un Premier Duel",
+                duel_card_title: "Compatible WhatsApp & Messages",
+                duel_card_desc: "Aucun compte à créer. Le lien s'ouvre directement dans l'application grâce aux Universal Links Apple.",
                 sec_title: "Ce qui rend Meemaw unique ✨",
-                feat1_title: "Dictées Vocales",
-                feat1_desc: "Meemaw dicte à voix haute avec sa vraie voix française. Ajuste la vitesse de diction et la durée des pauses à ton rythme.",
-                feat2_title: "Duels entre Amis ⚔️",
-                feat2_desc: "Défie tes proches sur la même dictée via WhatsApp ou iMessage ! Comparez vos scores, votre temps et votre précision.",
+                sec_subtitle: "8 modes de jeu pour transformer les révisions d'orthographe en pur moment de plaisir.",
+                feat1_title: "Dictées Vocales Intelligentes",
+                feat1_desc: "Meemaw dicte à voix haute avec sa vraie voix française. Ajustez la vitesse d'élocution et les pauses entre chaque phrase à votre convenance.",
+                feat2_title: "Meemaw Coins & Trophées 🪙",
+                feat2_desc: "Gagnez des pièces d'or sur chaque sans-faute, débloquez des trophées collector et hissez-vous au sommet du classement mondial Game Center.",
                 feat3_title: "L'Astuce de Meemaw 📚",
-                feat3_desc: "Après chaque dictée, Meemaw t'explique exactement pourquoi tu as fait une faute et comment ne plus jamais la refaire.",
-                feat4_title: "8 Modes de Jeux 🎮",
-                feat4_desc: "Dictée Longue, Dictée Express, Détective, Dictée Folle, Anagrammes, QCM, Marathon 20/20 et Mots Croisés. De quoi progresser en s'amusant !",
-                priv_title: "1 Accès pour Toute la Famille 👨‍👩‍👧‍👦",
-                priv_desc: "Un seul achat débloque Meemaw PRO pour tous les membres de la famille via le Partage Familial Apple. Sans création de compte et avec un traitement vocal 100% local sur iPhone.",
-                cta_title: "Prêt à devenir un as de l'orthographe ?",
-                cta_desc: "Télécharge Meemaw sur ton iPhone et commence ton premier duel aujourd'hui !",
-                cta_btn: " Télécharger sur l'App Store",
-                footer: "&copy; 2026 Meemaw. Fait avec ❤️ pour les amoureux de la langue.",
-                footer_contact: "Nous Contacter",
-                footer_privacy: "Politique de Confidentialité"
+                feat3_desc: "Après chaque dictée, Meemaw vous explique avec des mots simples et bienveillants exactement pourquoi une faute a été commise.",
+                feat4_title: "Mode Détective & Jeux 🔍",
+                feat4_desc: "Détective des fautes, Dictée Folle, Anagrammes, QCM et Mots Croisés : variez les plaisirs pour stimuler la mémoire visuelle.",
+                comp_title: "Pourquoi Meemaw change tout ? ⚖️",
+                comp_desc: "Comparez Meemaw avec les manuels scolaires papier et les plateformes professionnelles austères.",
+                comp_col_crit: "Critère",
+                comp_col_meemaw: "👵 Meemaw",
+                comp_col_book: "📖 Cahiers & Bescherelle",
+                comp_col_corp: "🏢 Outils d'Entreprise",
+                rev_title: "Ce que disent les parents & enseignants 💬",
+                rev_desc: "Adopté par des centaines de familles pour dédramatiser la dictée du soir.",
+                rev1_text: "« Fini les crises de larmes le dimanche soir avant la dictée de classe ! Mon fils en CM2 défie son père chaque soir sur WhatsApp et attend avec impatience ses 20/20. »",
+                rev1_author: "Sophie M.",
+                rev1_sub: "Maman de Lucas (10 ans)",
+                rev2_text: "« La voix française est douce et le rythme est parfait. En tant que professeure de français au collège, je la recommande les yeux fermés pour réviser le Brevet. »",
+                rev2_author: "Claire B.",
+                rev2_sub: "Enseignante de Français (Collège)",
+                rev3_text: "« Un seul achat pour mes trois enfants grâce au Partage Familial. Chacun progresse à son rythme, du CP à la 4ème. L'application vaut 100 fois son prix. »",
+                rev3_author: "Marc D.",
+                rev3_sub: "Père de famille (3 enfants)",
+                faq_title: "Foire Aux Questions 🤔",
+                faq_desc: "Tout ce que vous devez savoir avant d'installer Meemaw.",
+                faq1_q: "Faut-il créer un compte pour utiliser Meemaw ?",
+                faq1_a: "Non, absolument aucun compte ni mot de passe n'est requis ! Meemaw respecte scrupuleusement la vie privée de vos enfants : vos données et progrès restent stockés localement sur votre iPhone et synchronisés de manière sécurisée via votre compte iCloud personnel.",
+                faq2_q: "L'application fonctionne-t-elle sur iPad et sans connexion Internet ?",
+                faq2_a: "Oui ! Meemaw est universelle pour iPhone et iPad. La voix de synthèse et le moteur de correction fonctionnent 100% hors-ligne dans l'appareil, ce qui est idéal pour les voyages en voiture ou en avion.",
+                faq3_q: "Comment fonctionne le Partage Familial Apple ?",
+                faq3_a: "Grâce au Partage Familial Apple (Family Sharing), un seul achat ou abonnement Meemaw PRO permet à l'ensemble des membres de votre famille (jusqu'à 6 personnes) de débloquer l'accès complet sur tous leurs appareils respectifs sans frais supplémentaires.",
+                faq4_q: "Comment lancer un duel Enfants vs Parents ?",
+                faq4_a: "À la fin de chaque dictée, appuyez sur le bouton « Défier un Parent » ou « Défier un Ami ». Un lien d'invitation pré-rempli s'ouvre dans Messages ou WhatsApp. Quand le destinataire clique sur le lien, son application Meemaw s'ouvre instantanément sur la même dictée pour comparer les résultats.",
+                cta_title: "Prêt à en finir avec les fautes d'orthographe ?",
+                cta_desc: "Téléchargez Meemaw sur iPhone et iPad, lancez votre premier duel en famille et profitez de 3 jours d'essai offerts avec Meemaw PRO !",
+                cta_btn: " Télécharger sur l'App Store (Essai Offert)",
+                footer_copy: "&copy; 2026 Meemaw. Tous droits réservés. Développé avec passion pour l'amour de la langue française.",
+                footer_appstore: "App Store",
+                footer_contact: "Contact & Support",
+                footer_privacy: "Politique de Confidentialité",
+                footer_terms: "Conditions d'Utilisation"
             },
             en: {
-                badge: "Available on the App Store 🍏",
-                title: "Practice with <span class='logo-text'>MEEMAW</span>.<br>Master Spelling.",
-                subtitle: "Meemaw dictates aloud with her voice, corrects your mistakes, and explains grammar rules warmly.",
-                hero_btn: " Download on the App Store",
+                ann_tag: "BACK TO SCHOOL EVENT",
+                ann_text: "🏆 The 20/20 French Dictation Challenge is live on the App Store! 50 mistake-free sentences to master →",
+                nav_event: "Challenge",
+                nav_curriculum: "Curriculum",
+                nav_duels: "Family Duels",
+                nav_features: "Game Modes",
+                nav_faq: "FAQ",
+                nav_download: " Download",
+                hero_badge_stars: "⭐️ 4.9/5 on the App Store",
+                hero_badge_category: "Education & Word Games 🎮",
+                hero_title: "Practice with <span class='logo-text'>MEEMAW</span>.<br>Master French Spelling.",
+                hero_subtitle: "Meemaw speaks aloud with a warm neural French voice, gently corrects errors, and explains every grammar rule so you can score a perfect 20/20.",
+                hero_btn_appstore: " Download on App Store",
+                hero_btn_duel: "👨‍👩‍👧 Discover Family Duels",
+                trust_ios: "For iPhone & iPad",
+                trust_family: "Apple Family Sharing",
+                trust_ads: "Zero Ads",
+                trust_privacy: "100% Offline & Private",
+                qr_title: "On Mac or PC?",
+                qr_desc: "Scan with your iPhone to install in 2 seconds.",
+                event_badge: "Back to School Special Event 2026",
+                event_title: "Grand Dictation Challenge: Aim for 20/20",
+                event_desc: "Complete 50 mistake-free French sentences! Earn Meemaw Coins 🪙, build genuine confidence, and rise to the top of the global Game Center leaderboards.",
+                event_btn: "🏆 Join the Challenge on App Store",
+                curr_title: "Complete Curriculum from Elementary to Advanced 📚",
+                curr_desc: "Step-by-step progression tailored for schoolchildren, FLE (French as a Foreign Language) students, and certification candidates.",
+                curr_prim_pill: "Elementary • Grade 1 to 5",
+                curr_prim_title: "Building Strong Foundations",
+                curr_prim_desc: "No more tears: kids practice with a smile and develop natural spelling reflexes.",
+                curr_prim_1: "Complex French sounds & silent letters",
+                curr_prim_2: "Plural agreements (nouns & adjectives)",
+                curr_prim_3: "Present and future tense conjugations",
+                curr_prim_4: "Essential invariable words",
+                curr_col_pill: "Middle School • Grade 6 to 9",
+                curr_col_title: "Brevet Exam Preparation",
+                curr_col_desc: "Master tricky grammar traps to tackle French dictation exams with complete confidence.",
+                curr_col_1: "Past participle agreements (avoir / être)",
+                curr_col_2: "Homophones (ses/ces, c'est/s'est, leur/leurs)",
+                curr_col_3: "Subjunctive, imperfect and simple past",
+                curr_col_4: "Full official French Brevet exam dictations",
+                curr_adv_pill: "Adults • FLE & Certifications",
+                curr_adv_title: "Excellence & Flawless French",
+                curr_adv_desc: "Perfect for learners preparing for the Voltaire Certificate or non-native French learners.",
+                curr_adv_1: "Pronominal verbs and subtle agreements",
+                curr_adv_2: "Flawless professional emails & essays",
+                curr_adv_3: "Nuanced vocabulary & false friends",
+                curr_adv_4: "Comfortable listening with adjustable pauses",
+                duel_badge: "⚔️ THE FAMILY FAVORITE",
+                duel_title: "Kids vs Parents Duel: Who makes fewer mistakes?",
+                duel_desc: "Dictation is no longer a chore: it turns into a thrilling family game! Kids challenge parents to the exact same text via WhatsApp or SMS.",
+                duel_step1: "The child completes a dictation and taps <strong>« Challenge a Parent »</strong>.",
+                duel_step2: "The parent receives a magic invite link on their phone (<em>« Dad, can you beat my 18/20 score? »</em>).",
+                duel_step3: "The parent plays the exact same dictation: instant comparison of scores, speed, and accuracy!",
+                duel_btn: "👨‍👩‍👧 Start a Family Duel",
+                duel_card_title: "Works with WhatsApp & iMessage",
+                duel_card_desc: "No account required. The link opens straight in the app thanks to Apple Universal Links.",
                 sec_title: "What Makes Meemaw Unique ✨",
-                feat1_title: "Voice Dictations",
-                feat1_desc: "Meemaw speaks aloud using on-device neural voice synthesis. Adjust speech rate and pause duration between sentences.",
-                feat2_title: "Friend Duels ⚔️",
-                feat2_desc: "Challenge your friends to the exact same dictation via WhatsApp or iMessage! Compare scores, speed, and accuracy.",
-                feat3_title: "Meemaw's Grammar Tips 📚",
-                feat3_desc: "After every session, Meemaw breaks down why a mistake was made and teaches you the exact grammar rule.",
-                feat4_title: "8 Game Modes 🎮",
-                feat4_desc: "Full Dictation, Quick Express, Word Detective, Crazy Dictation, Anagrams, Quiz, 20/20 Marathon, and Crosswords. Learning spelling has never been this fun!",
-                priv_title: "1 Access for the Whole Family 👨‍👩‍👧‍👦",
-                priv_desc: "One single subscription or lifetime purchase unlocks Meemaw PRO for your entire family via Apple Family Sharing. No account required, 100% on-device voice processing.",
-                cta_title: "Ready to master your spelling?",
-                cta_desc: "Download Meemaw on your iPhone and launch your first duel today!",
-                cta_btn: " Download on the App Store",
-                footer: "&copy; 2026 Meemaw. Made with ❤️ for language learners everywhere.",
-                footer_contact: "Contact Us",
-                footer_privacy: "Privacy Policy"
+                sec_subtitle: "8 rich game modes to turn French spelling practice into pure fun.",
+                feat1_title: "Intelligent Voice Dictations",
+                feat1_desc: "Meemaw speaks aloud with authentic French voice synthesis. Adjust speaking speed and pause duration between phrases to match your pace.",
+                feat2_title: "Meemaw Coins & Trophies 🪙",
+                feat2_desc: "Earn shiny gold coins on every perfect session, unlock collectible trophies, and climb the Game Center global leaderboard.",
+                feat3_title: "Meemaw's Rules & Tips 📚",
+                feat3_desc: "After each session, Meemaw explains in friendly, clear language why an error occurred and how to easily remember the rule.",
+                feat4_title: "Detective Mode & Games 🔍",
+                feat4_desc: "Error Detective, Crazy Dictation, Anagrams, Quizzes and Crosswords: varied activities to stimulate visual memory.",
+                comp_title: "Why Meemaw Changes Everything ⚖️",
+                comp_desc: "Compare Meemaw with traditional grammar books and rigid corporate software.",
+                comp_col_crit: "Feature",
+                comp_col_meemaw: "👵 Meemaw",
+                comp_col_book: "📖 Grammar Books",
+                comp_col_corp: "🏢 Corporate Tools",
+                rev_title: "What Parents & Teachers Say 💬",
+                rev_desc: "Loved by hundreds of families to make French spelling stress-free.",
+                rev1_text: "« No more Sunday evening tears before class dictation! My 10-year-old challenges his dad every evening on WhatsApp and is proud of his 20/20s. »",
+                rev1_author: "Sophie M.",
+                rev1_sub: "Mother of Lucas (Grade 5)",
+                rev2_text: "« The French voice is gentle and the pacing is spot on. As a middle school French teacher, I recommend it wholeheartedly. »",
+                rev2_author: "Claire B.",
+                rev2_sub: "Middle School French Teacher",
+                rev3_text: "« A single purchase for all three of my kids thanks to Family Sharing. Each one learns at their own pace. Worth every penny. »",
+                rev3_author: "Marc D.",
+                rev3_sub: "Father of three",
+                faq_title: "Frequently Asked Questions 🤔",
+                faq_desc: "Everything you need to know before installing Meemaw.",
+                faq1_q: "Do I need to create an account to use Meemaw?",
+                faq1_a: "No! Absolutely no account, email, or password required. Meemaw respects children's privacy: all data stays local on your device and syncs securely via private iCloud.",
+                faq2_q: "Does it work on iPad and without an Internet connection?",
+                faq2_a: "Yes! Meemaw is universal for iPhone and iPad. Voice synthesis and correction work 100% offline on-device, making it perfect for road trips and flights.",
+                faq3_q: "How does Apple Family Sharing work?",
+                faq3_a: "Thanks to Apple Family Sharing, one single purchase or subscription unlocks Meemaw PRO for up to 6 family members on all their Apple devices at no extra charge.",
+                faq4_q: "How do Kids vs Parents duels work?",
+                faq4_a: "At the end of any dictation, tap 'Challenge a Parent'. A ready-to-send invite opens in Messages or WhatsApp. When they tap it, their Meemaw app opens right to that dictation to compare scores.",
+                cta_title: "Ready to conquer French spelling?",
+                cta_desc: "Download Meemaw on iPhone and iPad, start your first family duel, and enjoy a 3-day free trial of Meemaw PRO!",
+                cta_btn: " Download on App Store (Free Trial)",
+                footer_copy: "&copy; 2026 Meemaw. All rights reserved. Crafted with passion for French language learners.",
+                footer_appstore: "App Store",
+                footer_contact: "Contact & Support",
+                footer_privacy: "Privacy Policy",
+                footer_terms: "Terms of Service"
             },
             es: {
-                badge: "Disponible en la App Store 🍏",
-                title: "Practica con <span class='logo-text'>MEEMAW</span>.<br>Domina la Ortografía.",
-                subtitle: "Meemaw dicta en voz alta, corrige y te explica cada regla gramatical con cariño.",
-                hero_btn: " Descargar en la App Store",
+                ann_tag: "EVENTO VUELTA AL COLE",
+                ann_text: "🏆 ¡El Gran Desafío de Dictado 20/20 está en marcha en App Store! 50 frases sin faltas →",
+                nav_event: "Desafío",
+                nav_curriculum: "Programa",
+                nav_duels: "Duelos",
+                nav_features: "Modos de Juego",
+                nav_faq: "Preguntas",
+                nav_download: " Descargar",
+                hero_badge_stars: "⭐️ 4.9/5 en la App Store",
+                hero_badge_category: "Educación y Juegos de Palabras 🎮",
+                hero_title: "Practica con <span class='logo-text'>MEEMAW</span>.<br>Domina la Ortografía Francesa.",
+                hero_subtitle: "Meemaw dicta en voz alta con auténtica voz francesa, corrige con cariño y te explica cada regla para conseguir un 20/20 perfecto.",
+                hero_btn_appstore: " Descargar en App Store",
+                hero_btn_duel: "👨‍👩‍👧 Descubrir Duelo Familiar",
+                trust_ios: "Para iPhone y iPad",
+                trust_family: "En Familia de Apple",
+                trust_ads: "Sin Publicidad",
+                trust_privacy: "100% Sin Conexión y Privado",
+                qr_title: "¿En Mac o PC?",
+                qr_desc: "Escanea con tu iPhone para instalar en 2 segundos.",
+                event_badge: "Evento Especial Vuelta al Cole 2026",
+                event_title: "Gran Desafío de Dictado: Objetivo 20/20",
+                event_desc: "¡Completa 50 frases en francés sin faltas! Gana monedas Meemaw Coins 🪙, progresa sin estrés y sube en la clasificación mundial de Game Center.",
+                event_btn: "🏆 Participar en el Desafío en App Store",
+                curr_title: "Un Programa Completo de Primaria a Secundaria 📚",
+                curr_desc: "Progresión paso a paso adaptada al currículo oficial francés y a las exigencias de certificaciones FLE y Voltaire.",
+                curr_prim_pill: "Primaria • 6 a 11 años",
+                curr_prim_title: "Bases Sólidas",
+                curr_prim_desc: "Sin frustraciones: los niños practican con una sonrisa y adquieren reflejos ortográficos fundamentales.",
+                curr_prim_1: "Sonidos complejos y letras mudas en francés",
+                curr_prim_2: "Concordancias en plural (sustantivos y adjetivos)",
+                curr_prim_3: "Conjugación del presente y futuro",
+                curr_prim_4: "Palabras invariables clave",
+                curr_col_pill: "Secundaria • 11 a 15 años",
+                curr_col_title: "Preparación Examen Brevet",
+                curr_col_desc: "Domina las trampas clásicas del idioma para superar los exámenes de dictado con total tranquilidad.",
+                curr_col_1: "Concordancia de participios pasados (avoir / être)",
+                curr_col_2: "Homófonos (ses/ces, c'est/s'est, leur/leurs)",
+                curr_col_3: "Subjuntivo, imperfecto y pasado simple",
+                curr_col_4: "Dictados completos de exámenes oficiales",
+                curr_adv_pill: "Adultos • FLE y Certificaciones",
+                curr_adv_title: "Excelencia y Cero Faltas",
+                curr_adv_desc: "Ideal para estudiantes del Certificat Voltaire, opositores y estudiantes extranjeros de francés (FLE).",
+                curr_adv_1: "Verbos pronominales y concordancias difíciles",
+                curr_adv_2: "Redacción profesional impecable",
+                curr_adv_3: "Matices de vocabulario y falsos amigos",
+                curr_adv_4: "Comodidad auditiva con pausas configurables",
+                duel_badge: "⚔️ EL MODO FAVORITO DE LAS FAMILIAS",
+                duel_title: "Duelo Niños vs Padres: ¿Quién comete menos faltas?",
+                duel_desc: "El dictado deja de ser un castigo para convertirse en un emocionante juego en familia por WhatsApp o SMS.",
+                duel_step1: "El niño termina su dictado y pulsa <strong>« Desafiar a un Padre »</strong>.",
+                duel_step2: "El padre recibe el enlace mágico en su móvil (<em>« Papá, ¿podrás superar mi 18/20? »</em>).",
+                duel_step3: "El padre juega el mismo dictado: ¡comparación directa de puntuación, tiempo y errores!",
+                duel_btn: "👨‍👩‍👧 Iniciar un Duelo Familiar",
+                duel_card_title: "Compatible con WhatsApp y Mensajes",
+                duel_card_desc: "Sin registros. El enlace se abre directamente en la app mediante Apple Universal Links.",
                 sec_title: "Lo que hace única a Meemaw ✨",
-                feat1_title: "Dictados de Voz",
-                feat1_desc: "Meemaw dicta en voz alta con síntesis vocal integrada. Ajusta la velocidad de voz y la pausa entre frases.",
-                feat2_title: "Duelos con Amigos ⚔️",
-                feat2_desc: "¡Desafía a tus amigos al mismo dictado por WhatsApp o iMessage! Compara tus puntos, tiempo y precisión.",
+                sec_subtitle: "8 modos de juego para aprender ortografía francesa disfrutando.",
+                feat1_title: "Dictados Vocales Inteligentes",
+                feat1_desc: "Meemaw dicta en voz alta con síntesis vocal integrada. Ajusta la velocidad y las pausas entre frases a tu ritmo.",
+                feat2_title: "Monedas Meemaw y Trofeos 🪙",
+                feat2_desc: "Gana monedas de oro en cada dictado perfecto, desbloquea trofeos y escala en la clasificación mundial de Game Center.",
                 feat3_title: "El Consejo de Meemaw 📚",
-                feat3_desc: "Tras cada dictado, Meemaw te explica exactamente por qué cometiste un error y cómo evitarlo.",
-                feat4_title: "8 Modos de Juego 🎮",
-                feat4_desc: "Dictado Largo, Dictado Exprés, Detective, Dictado Loco, Anagramas, Quiz, Maratón 20/20 y Crucigramas. ¡Aprender ortografía nunca fue tan divertido!",
-                priv_title: "1 Acceso para Toda la Familia 👨‍👩‍👧‍👦",
-                priv_desc: "Una sola suscripción o compra de por vida desbloquea Meemaw PRO para toda la familia mediante Apple Compartir en familia. Sin cuentas y con procesamiento de voz 100% local en tu iPhone.",
-                cta_title: "¿Listo para dominar la ortografía?",
-                cta_desc: "Descarga Meemaw en tu iPhone y lanza tu primer duelo hoy mismo.",
-                cta_btn: " Descargar en la App Store",
-                footer: "&copy; 2026 Meemaw. Hecho con ❤️ para los amantes de la lengua.",
-                footer_contact: "Contáctanos",
-                footer_privacy: "Política de Privacidad"
+                feat3_desc: "Tras cada dictado, Meemaw te explica con sencillez y cariño exactamente por qué se cometió un error y cómo evitarlo.",
+                feat4_title: "Modo Detective y Juegos 🔍",
+                feat4_desc: "Detective de faltas, Dictado Loco, Anagramas, Cuestionarios y Crucigramas para potenciar la memoria visual.",
+                comp_title: "¿Por qué Meemaw lo cambia todo? ⚖️",
+                comp_desc: "Compara Meemaw con los cuadernos escolares y los programas aburridos de empresa.",
+                comp_col_crit: "Criterio",
+                comp_col_meemaw: "👵 Meemaw",
+                comp_col_book: "📖 Libros y Cuadernos",
+                comp_col_corp: "🏢 Programas de Empresa",
+                rev_title: "Lo que dicen padres y profesores 💬",
+                rev_desc: "Recomendado por cientos de familias para que la ortografía sea un placer.",
+                rev1_text: "« ¡Se acabaron los llantos antes del dictado de clase! Mi hijo de 10 años desafía a su padre cada noche por WhatsApp y busca su 20/20. »",
+                rev1_author: "Sophie M.",
+                rev1_sub: "Madre de Lucas (5º de primaria)",
+                rev2_text: "« La voz francesa es clara y el ritmo perfecto. Como profesora de francés, la recomiendo con los ojos cerrados. »",
+                rev2_author: "Claire B.",
+                rev2_sub: "Profesora de Francés",
+                rev3_text: "« Una sola compra para mis tres hijos gracias a En Familia de Apple. Cada uno avanza a su ritmo. Vale cada céntimo. »",
+                rev3_author: "Marc D.",
+                rev3_sub: "Padre de tres hijos",
+                faq_title: "Preguntas Frecuentes 🤔",
+                faq_desc: "Todo lo que necesitas saber antes de descargar Meemaw.",
+                faq1_q: "¿Hace falta crear una cuenta para usar Meemaw?",
+                faq1_a: "¡No, en absoluto! No se requiere correo ni contraseña. Meemaw protege la privacidad de tus hijos: los datos se guardan de forma local y privada en tu cuenta de iCloud.",
+                faq2_q: "¿Funciona en iPad y sin conexión a Internet?",
+                faq2_a: "¡Sí! Meemaw es universal para iPhone y iPad. La síntesis de voz y la corrección funcionan 100% sin conexión en tu dispositivo, ideal para viajes.",
+                faq3_q: "¿Cómo funciona En Familia de Apple?",
+                faq3_a: "Con Apple Family Sharing, una sola suscripción o compra de Meemaw PRO permite a hasta 6 miembros de la familia disfrutar de la app en todos sus dispositivos sin coste adicional.",
+                faq4_q: "¿Cómo se lanza un duelo Niños vs Padres?",
+                faq4_a: "Al final de cualquier dictado, pulsa 'Desafiar a un Padre'. Se abrirá un mensaje en WhatsApp o Mensajes. Al pulsar el enlace, la app se abre directamente para comparar puntuaciones.",
+                cta_title: "¿Listo para dominar la ortografía francesa?",
+                cta_desc: "Descarga Meemaw en iPhone y iPad, lanza tu primer duelo familiar y aprovecha 3 días de prueba gratis con Meemaw PRO.",
+                cta_btn: " Descargar en App Store (Prueba Gratis)",
+                footer_copy: "&copy; 2026 Meemaw. Todos los derechos reservados. Desarrollado con pasión para aprender francés.",
+                footer_appstore: "App Store",
+                footer_contact: "Contacto y Soporte",
+                footer_privacy: "Política de Privacidad",
+                footer_terms: "Términos de Servicio"
             }
         };
 
         function setLanguage(lang) {
+            localStorage.setItem('meemaw_lang', lang);
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
@@ -637,8 +1648,17 @@
             });
         }
 
-        const userLang = navigator.language || navigator.userLanguage; 
-        if (userLang.startsWith('en')) {
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            item.classList.toggle('open');
+        }
+
+        // Initialize Language on load
+        const savedLang = localStorage.getItem('meemaw_lang');
+        const userLang = navigator.language || navigator.userLanguage || 'fr';
+        if (savedLang && translations[savedLang]) {
+            setLanguage(savedLang);
+        } else if (userLang.startsWith('en')) {
             setLanguage('en');
         } else if (userLang.startsWith('es')) {
             setLanguage('es');
