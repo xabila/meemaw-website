@@ -11,23 +11,23 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meemaw - Dictée Vocale, Orthographe & Duels en Famille (CP au Brevet)</title>
-    <meta name="description" content="L'application n°1 d'orthographe et de dictée vocale avec vraie voix française. Entraînement du CP au Brevet, duels parents vs enfants, règles expliquées et zéro pub. Sur iPhone et iPad.">
-    <meta name="keywords" content="dictée vocale, orthographe, dictée cp ce1 ce2 cm1 cm2 brevet, apprendre le français, duel orthographe, fle, certificat voltaire, partage familial, meemaw">
+    <title>Meemaw - Dictée Vocale & Jeux d'Orthographe sur iPhone & iPad</title>
+    <meta name="description" content="L'application d'orthographe et de dictée vocale avec vraie diction française. Lecture globale puis mot à mot, 5 niveaux du débutant au maître, duels en famille et règles expliquées sans jargon.">
+    <meta name="keywords" content="dictée vocale, orthographe, apprendre le français, duel orthographe, fle, règles grammaire, partage familial, meemaw">
     <link rel="canonical" href="https://meemaw.app/">
     <link rel="icon" type="image/png" href="assets/icon.png">
     
     <!-- Apple Smart App Banner for automatic iOS native app header -->
     <meta name="apple-itunes-app" content="app-id=6757681331, app-argument=https://meemaw.app/challenge">
     
-    <!-- Google Fonts: Outfit (Heavy/Comic look) -->
+    <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Meemaw - Dictée Vocale & Orthographe du CP au Brevet 👵✨" />
-    <meta property="og:description" content="Vraie voix française, duels enfants vs parents sur WhatsApp, 8 modes de jeu et 1 accès pour toute la famille. Zéro pub, 100% sur iPhone !" />
+    <meta property="og:title" content="Meemaw - Dictée Vocale & Orthographe en Famille 👵✨" />
+    <meta property="og:description" content="Lecture de phrase entière puis mot à mot, 5 niveaux par paliers, 8 modes de jeu et duels sur WhatsApp. Zéro pub, 100% sur iPhone !" />
     <meta property="og:image" content="https://meemaw.app/assets/event-banner.png" />
     <meta property="og:url" content="https://meemaw.app/" />
     <meta property="og:type" content="website" />
@@ -35,7 +35,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Meemaw - Dictée Vocale & Orthographe en Famille" />
-    <meta name="twitter:description" content="Finis les pleurs du soir : défiez vos enfants en dictée vocale avec Meemaw !" />
+    <meta name="twitter:description" content="Entraînez-vous à la dictée à votre rythme et défiez vos proches sur iPhone & iPad !" />
     <meta name="twitter:image" content="https://meemaw.app/assets/event-banner.png" />
 
     <!-- Schema.org Structured Data -->
@@ -62,7 +62,7 @@
         "@type": "Person",
         "name": "Xavier Larrodé"
       },
-      "description": "Application pédagogique de dictée vocale et d'orthographe française, du CP au Brevet des Collèges et FLE. Duels enfants vs parents, explication bienveillante des règles et zéro publicité."
+      "description": "Application ludique de dictée vocale et d'orthographe française en 5 niveaux (Apprenti, Initié, Confirmé, Expert, Maître). Duels parents-enfants, répétition mot à mot, règles avec exemples vs pièges et traitement 100% local."
     }
     </script>
 
@@ -205,7 +205,7 @@
         .header-nav {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 22px;
         }
         .header-nav a {
             color: var(--ink);
@@ -329,7 +329,7 @@
         }
 
         .hero p.bubble {
-            font-size: 1.22rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
             background: var(--white);
             padding: 1.3rem 1.6rem;
@@ -491,7 +491,7 @@
         /* Event Spotlight Section */
         .event-spotlight-section {
             max-width: 1200px;
-            margin: 1rem auto 4rem;
+            margin: 1rem auto 4.5rem;
             padding: 0 5%;
         }
 
@@ -544,8 +544,8 @@
             opacity: 0.85;
         }
 
-        /* Curriculum Section */
-        .curriculum-section {
+        /* 5 Progression Levels Section */
+        .levels-section {
             max-width: 1200px;
             margin: 0 auto 5rem;
             padding: 0 5%;
@@ -553,7 +553,7 @@
 
         .section-header {
             text-align: center;
-            max-width: 780px;
+            max-width: 820px;
             margin: 0 auto 3.5rem;
         }
         .section-header h2 {
@@ -562,71 +562,63 @@
             text-shadow: 3px 3px 0px var(--white);
         }
         .section-header p {
-            font-size: 1.2rem;
+            font-size: 1.18rem;
             font-weight: 700;
             opacity: 0.85;
         }
 
-        .curriculum-grid {
+        .levels-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.5rem;
         }
 
-        .curriculum-card {
+        .level-card {
             background: var(--white);
             border-radius: var(--radius-card);
             border: var(--border-width) solid var(--ink);
             box-shadow: var(--shadow-md);
-            padding: 2.2rem 1.8rem;
-            position: relative;
+            padding: 1.8rem 1.3rem;
+            text-align: center;
             transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .curriculum-card:hover {
+        .level-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
         }
-        .curriculum-level-pill {
+        .level-emoji {
+            font-size: 2.4rem;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+        .level-pill {
             display: inline-block;
-            background: var(--yellow);
-            color: var(--ink);
-            padding: 6px 14px;
+            padding: 4px 12px;
             border-radius: var(--radius-pill);
             border: 2px solid var(--ink);
             font-weight: 900;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-        .curriculum-card:nth-child(2) .curriculum-level-pill {
-            background: var(--orange);
-            color: var(--white);
-        }
-        .curriculum-card:nth-child(3) .curriculum-level-pill {
-            background: var(--purple);
-            color: var(--white);
-        }
-        .curriculum-card h3 {
-            font-size: 1.5rem;
             margin-bottom: 0.8rem;
         }
-        .curriculum-card ul {
-            list-style: none;
-            margin-top: 1rem;
+        .level-card:nth-child(1) .level-pill { background: #A8E6CF; color: var(--ink); }
+        .level-card:nth-child(2) .level-pill { background: #AED9E0; color: var(--ink); }
+        .level-card:nth-child(3) .level-pill { background: #DDA0DD; color: var(--ink); }
+        .level-card:nth-child(4) .level-pill { background: var(--orange); color: var(--white); }
+        .level-card:nth-child(5) .level-pill { background: var(--coral); color: var(--white); }
+
+        .level-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.6rem;
         }
-        .curriculum-card ul li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 10px;
-            font-size: 0.98rem;
+        .level-card p {
+            font-size: 0.92rem;
             font-weight: 600;
-        }
-        .curriculum-card ul li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            font-weight: 900;
-            color: var(--green);
+            opacity: 0.85;
+            line-height: 1.45;
         }
 
         /* Kids vs Parents Duel Spotlight */
@@ -655,7 +647,7 @@
         .duel-steps {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             margin: 1.8rem 0;
         }
         .duel-step {
@@ -754,6 +746,24 @@
             font-weight: 600;
             color: var(--ink);
             opacity: 0.85;
+        }
+
+        /* Modes Pills inside Features */
+        .modes-pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 2.5rem 0 1rem;
+        }
+        .mode-pill {
+            background: var(--white);
+            border: 2px solid var(--ink);
+            border-radius: var(--radius-pill);
+            padding: 6px 14px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            box-shadow: var(--shadow-sm);
         }
 
         /* Comparison Table */
@@ -955,9 +965,6 @@
                 border-bottom: var(--border-width) solid var(--ink);
                 max-height: 280px;
             }
-            .curriculum-grid {
-                grid-template-columns: 1fr;
-            }
             .duel-banner {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -978,7 +985,7 @@
     <!-- Announcement Bar -->
     <a href="https://apps.apple.com/app/id6757681331" class="announcement-bar">
         <span class="announcement-tag" data-i18n="ann_tag">ÉVÉNEMENT RENTRÉE</span>
-        <span data-i18n="ann_text">🏆 Le Grand Défi Dictée 20/20 est en cours sur l'App Store ! 50 phrases sans faute à relever →</span>
+        <span data-i18n="ann_text">🏆 Le Défi Dictée 20/20 est en cours sur l'App Store ! Enchaînez les sans-faute →</span>
     </a>
 
     <!-- Header -->
@@ -990,7 +997,7 @@
         
         <nav class="header-nav">
             <a href="#defi-rentree" data-i18n="nav_event">Défi Rentrée</a>
-            <a href="#curriculum" data-i18n="nav_curriculum">CP au Brevet</a>
+            <a href="#levels" data-i18n="nav_levels">5 Niveaux</a>
             <a href="#duels" data-i18n="nav_duels">Duels Famille</a>
             <a href="#features" data-i18n="nav_features">Modes de Jeu</a>
             <a href="#faq" data-i18n="nav_faq">Questions</a>
@@ -1016,7 +1023,7 @@
                 <div class="badge" data-i18n="hero_badge_category">Éducation & Jeux de Mots 🎮</div>
             </div>
             <h1 data-i18n="hero_title">Pratique avec <span class="logo-text">MEEMAW</span>.<br>Maîtrise l'Orthographe.</h1>
-            <p class="bubble" data-i18n="hero_subtitle">Meemaw dicte à haute voix avec sa vraie voix française, corrige avec bienveillance et t'explique chaque règle pour assurer le 20/20.</p>
+            <p class="bubble" data-i18n="hero_subtitle">Meemaw lit la phrase en entier pour le sens, puis dicte pas à pas à votre rythme. Répétez à volonté, ajustez la vitesse et progressez sans stress grâce aux explications de règles ciblées.</p>
             
             <div class="hero-cta-group">
                 <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" data-i18n="hero_btn_appstore">
@@ -1031,7 +1038,7 @@
                 <span class="trust-item">✓ <span data-i18n="trust_ios">Sur iPhone & iPad</span></span>
                 <span class="trust-item">✓ <span data-i18n="trust_family">Partage Familial Apple</span></span>
                 <span class="trust-item">✓ <span data-i18n="trust_ads">Zéro Publicité</span></span>
-                <span class="trust-item">✓ <span data-i18n="trust_privacy">100% Hors-Ligne & RGPD</span></span>
+                <span class="trust-item">✓ <span data-i18n="trust_privacy">100% Hors-Ligne & Données Privées</span></span>
             </div>
         </div>
 
@@ -1056,7 +1063,7 @@
             <div class="event-text-side">
                 <span class="event-badge" data-i18n="event_badge">Événement Spécial Rentrée 2026</span>
                 <h2 data-i18n="event_title">Grand Défi Dictée : Objectif 20/20</h2>
-                <p data-i18n="event_desc">Enchaînez 50 phrases sans faute du CP au Brevet ! Gagnez des pièces Meemaw Coins 🪙, progressez sans stress et grimpez au classement mondial Game Center.</p>
+                <p data-i18n="event_desc">Enchaînez 50 phrases sans faute ! Gagnez des pièces Meemaw Coins 🪙, progressez sans stress et grimpez au classement mondial Game Center.</p>
                 <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" data-i18n="event_btn">
                     🏆 Participer au Défi sur l'App Store
                 </a>
@@ -1064,51 +1071,52 @@
         </div>
     </section>
 
-    <!-- Curriculum Section (CP au Brevet) -->
-    <section id="curriculum" class="curriculum-section">
+    <!-- 5 Progression Levels Section -->
+    <section id="levels" class="levels-section">
         <div class="section-header">
-            <h2 data-i18n="curr_title">Un Programme Complet du CP au Brevet 📚</h2>
-            <p data-i18n="curr_desc">Une progression pas à pas calquée sur les programmes officiels de l'Éducation Nationale et les exigences du Certificat Voltaire.</p>
+            <h2 data-i18n="levels_title">5 Niveaux de Progression Adaptés 📈</h2>
+            <p data-i18n="levels_desc">Une difficulté par paliers pour progresser à son rythme, du renforcement des bases jusqu'à l'orthographe experte.</p>
         </div>
 
-        <div class="curriculum-grid">
-            <!-- Primaire -->
-            <div class="curriculum-card">
-                <span class="curriculum-level-pill" data-i18n="curr_prim_pill">Primaire • CP à CM2</span>
-                <h3 data-i18n="curr_prim_title">Poser les Fondations</h3>
-                <p data-i18n="curr_prim_desc">Fini les blocages : l'enfant s'entraîne avec le sourire et acquiert les réflexes d'accord fondamentaux.</p>
-                <ul>
-                    <li data-i18n="curr_prim_1">Sons complexes & lettres muettes</li>
-                    <li data-i18n="curr_prim_2">Accords pluriels (noms & adjectifs)</li>
-                    <li data-i18n="curr_prim_3">Conjugaison du présent et futur</li>
-                    <li data-i18n="curr_prim_4">Mots invariables essentiels</li>
-                </ul>
+        <div class="levels-grid">
+            <!-- Niveau 1 : Apprenti -->
+            <div class="level-card">
+                <span class="level-emoji">🌱</span>
+                <span class="level-pill" data-i18n="lvl1_pill">Niveau 1</span>
+                <h3 data-i18n="lvl1_title">Apprenti</h3>
+                <p data-i18n="lvl1_desc">Bases de l'orthographe & mots simples du quotidien.</p>
             </div>
 
-            <!-- Collège -->
-            <div class="curriculum-card">
-                <span class="curriculum-level-pill" data-i18n="curr_col_pill">Collège • 6ème à 3ème</span>
-                <h3 data-i18n="curr_col_title">Préparation au Brevet</h3>
-                <p data-i18n="curr_col_desc">Maîtriser les pièges classiques de la langue pour aborder l'épreuve de dictée du Brevet en toute confiance.</p>
-                <ul>
-                    <li data-i18n="curr_col_1">Accord des participes passés (avoir / être)</li>
-                    <li data-i18n="curr_col_2">Homophones (ses/ces, c'est/s'est, leur/leurs)</li>
-                    <li data-i18n="curr_col_3">Subjonctif, imparfait et passé simple</li>
-                    <li data-i18n="curr_col_4">Dictées complètes du Brevet des Collèges</li>
-                </ul>
+            <!-- Niveau 2 : Initié -->
+            <div class="level-card">
+                <span class="level-emoji">🌿</span>
+                <span class="level-pill" data-i18n="lvl2_pill">Niveau 2</span>
+                <h3 data-i18n="lvl2_title">Initié</h3>
+                <p data-i18n="lvl2_desc">Accords de base & homophones courants du français.</p>
             </div>
 
-            <!-- Adultes / FLE -->
-            <div class="curriculum-card">
-                <span class="curriculum-level-pill" data-i18n="curr_adv_pill">Adultes • FLE & Concours</span>
-                <h3 data-i18n="curr_adv_title">Excellence & Zéro Faute</h3>
-                <p data-i18n="curr_adv_desc">Idéal pour les étudiants préparant le Certificat Voltaire, les concours administratifs ou les apprenants FLE.</p>
-                <ul>
-                    <li data-i18n="curr_adv_1">Verbes pronominaux & accords délicats</li>
-                    <li data-i18n="curr_adv_2">Écrits professionnels impeccables</li>
-                    <li data-i18n="curr_adv_3">Nuances de vocabulaire & faux amis</li>
-                    <li data-i18n="curr_adv_4">Confort d'écoute avec pauses ajustables</li>
-                </ul>
+            <!-- Niveau 3 : Confirmé -->
+            <div class="level-card">
+                <span class="level-emoji">🌳</span>
+                <span class="level-pill" data-i18n="lvl3_pill">Niveau 3</span>
+                <h3 data-i18n="lvl3_title">Confirmé</h3>
+                <p data-i18n="lvl3_desc">Conjugaisons régulières & règles fondamentales de grammaire.</p>
+            </div>
+
+            <!-- Niveau 4 : Expert -->
+            <div class="level-card">
+                <span class="level-emoji">⚡️</span>
+                <span class="level-pill" data-i18n="lvl4_pill">Niveau 4</span>
+                <h3 data-i18n="lvl4_title">Expert</h3>
+                <p data-i18n="lvl4_desc">Subtilités de la langue & pièges grammaticaux complexes.</p>
+            </div>
+
+            <!-- Niveau 5 : Maître -->
+            <div class="level-card">
+                <span class="level-emoji">🎓</span>
+                <span class="level-pill" data-i18n="lvl5_pill">Niveau 5</span>
+                <h3 data-i18n="lvl5_title">Maître</h3>
+                <p data-i18n="lvl5_desc">Orthographe experte & maîtrise totale des pièges avancés.</p>
             </div>
         </div>
     </section>
@@ -1119,7 +1127,7 @@
             <div class="duel-text">
                 <div class="badge highlight" data-i18n="duel_badge">⚔️ LE MODE STAR EN FAMILLE</div>
                 <h2 data-i18n="duel_title">Duel Enfants vs Parents : Qui fera le moins de fautes ?</h2>
-                <p data-i18n="duel_desc">La dictée n'est plus une punition : elle devient un jeu familial palpitant ! Vos enfants vous défient sur la même dictée via WhatsApp ou SMS.</p>
+                <p data-i18n="duel_desc">La dictée n'est plus une corvée : elle devient un défi familial palpitant ! Vos enfants vous défient sur la même dictée via WhatsApp ou SMS.</p>
                 
                 <div class="duel-steps">
                     <div class="duel-step">
@@ -1153,37 +1161,49 @@
     <section id="features" class="features-section">
         <div class="section-header">
             <h2 data-i18n="sec_title">Ce qui rend Meemaw unique ✨</h2>
-            <p data-i18n="sec_subtitle">8 modes de jeu pour transformer les révisions d'orthographe en pur moment de plaisir.</p>
+            <p data-i18n="sec_subtitle">8 modes de jeu pour s'entraîner sous tous les angles, de la dictée suivie aux jeux de mots.</p>
         </div>
 
         <div class="features-grid">
             <!-- 1. Voice Dictations -->
             <div class="popart-card">
-                <img src="assets/score.png" alt="Dictées Vocales" class="feature-icon-img">
-                <h3 data-i18n="feat1_title">Dictées Vocales Intelligentes</h3>
-                <p data-i18n="feat1_desc">Meemaw dicte à voix haute avec sa vraie voix française. Ajustez la vitesse d'élocution et les pauses entre chaque phrase à votre convenance.</p>
+                <img src="assets/score.png" alt="Dictée pas à pas" class="feature-icon-img">
+                <h3 data-i18n="feat1_title">Dictée pas à pas & Répétition</h3>
+                <p data-i18n="feat1_desc">Meemaw lit d'abord la phrase entière pour donner le contexte, puis dicte mot à mot. Bouton de répétition à volonté et 3 vitesses réglables (Normal 1x, Lent 0.5x, Très lent 0.25x).</p>
             </div>
 
             <!-- 2. Meemaw Coins & Gamification -->
-            <div class="popart-card">
+            <div class=popart-card>
                 <img src="assets/meemaw-coin.png" alt="Meemaw Coins" class="feature-icon-img">
                 <h3 data-i18n="feat2_title">Meemaw Coins & Trophées 🪙</h3>
-                <p data-i18n="feat2_desc">Gagnez des pièces d'or sur chaque sans-faute, débloquez des trophées collector et hissez-vous au sommet du classement mondial Game Center.</p>
+                <p data-i18n="feat2_desc">Gagnez des pièces d'or sur chaque sans-faute, débloquez des trophées collector et hissez-vous au classement mondial Game Center.</p>
             </div>
 
             <!-- 3. Grammar Rules -->
             <div class="popart-card">
                 <img src="assets/rules.png" alt="L'Astuce de Meemaw" class="feature-icon-img">
-                <h3 data-i18n="feat3_title">L'Astuce de Meemaw 📚</h3>
-                <p data-i18n="feat3_desc">Après chaque dictée, Meemaw vous explique avec des mots simples et bienveillants exactement pourquoi une faute a été commise.</p>
+                <h3 data-i18n="feat3_title">L'Astuce de Meemaw (6 Thèmes) 📚</h3>
+                <p data-i18n="feat3_desc">Accords, Homophones, Conjugaison, Pluriels, Orthographe d'usage, Expressions : chaque règle oppose le bon exemple au piège évité, sans jargon.</p>
             </div>
 
-            <!-- 4. Mode Détective -->
+            <!-- 4. Mode Détective & Jeux -->
             <div class="popart-card">
                 <img src="assets/meemaw-welcome.jpg" alt="Mode Détective" class="feature-icon-img">
-                <h3 data-i18n="feat4_title">Mode Détective & Jeux 🔍</h3>
-                <p data-i18n="feat4_desc">Détective des fautes, Dictée Folle, Anagrammes, QCM et Mots Croisés : variez les plaisirs pour stimuler la mémoire visuelle.</p>
+                <h3 data-i18n="feat4_title">8 Modes de Jeu Variés 🎮</h3>
+                <p data-i18n="feat4_desc">Dictée Rapide, Dictée Longue, Marathon 20/20, QCM Express, Mot à Mot, Dictée Folle (corrigez Mamie !), Détective et Anagrammes.</p>
             </div>
+        </div>
+
+        <!-- Modes Pills Preview -->
+        <div class="modes-pill-container">
+            <span class="mode-pill">🎯 Dictée Rapide</span>
+            <span class="mode-pill">📝 Dictée Longue</span>
+            <span class="mode-pill">🏆 Marathon 20/20</span>
+            <span class="mode-pill">📖 QCM Express</span>
+            <span class="mode-pill">🧩 Mot à Mot</span>
+            <span class="mode-pill">🤪 Dictée Folle !</span>
+            <span class="mode-pill">🕵️ Détective</span>
+            <span class="mode-pill">🔤 Anagrammes</span>
         </div>
     </section>
 
@@ -1191,7 +1211,7 @@
     <section class="comparison-section">
         <div class="section-header">
             <h2 data-i18n="comp_title">Pourquoi Meemaw change tout ? ⚖️</h2>
-            <p data-i18n="comp_desc">Comparez Meemaw avec les manuels scolaires papier et les plateformes professionnelles austères.</p>
+            <p data-i18n="comp_desc">Comparez Meemaw avec les méthodes papier traditionnelles et les outils d'entreprise austères.</p>
         </div>
 
         <div class="comparison-table-wrapper">
@@ -1200,27 +1220,33 @@
                     <tr>
                         <th data-i18n="comp_col_crit">Critère</th>
                         <th class="highlight-col" data-i18n="comp_col_meemaw">👵 Meemaw</th>
-                        <th data-i18n="comp_col_book">📖 Cahiers & Bescherelle</th>
+                        <th data-i18n="comp_col_book">📖 Manuels & Bescherelle</th>
                         <th data-i18n="comp_col_corp">🏢 Outils d'Entreprise</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Vraie dictée vocale à son rythme</strong></td>
-                        <td class="highlight-col">✅ Oui (vitesse & pauses réglables)</td>
+                        <td><strong>Lecture entière puis mot par mot</strong></td>
+                        <td class="highlight-col">✅ Oui (avec répétition & vitesses 1x, 0.5x, 0.25x)</td>
                         <td>❌ Non (lecture passive)</td>
-                        <td>❌ Non (QCM texte sans voix)</td>
+                        <td>❌ Non (QCM texte sans diction)</td>
                     </tr>
                     <tr>
-                        <td><strong>Duels Enfants vs Parents (SMS/WhatsApp)</strong></td>
+                        <td><strong>Duels Enfants vs Parents (WhatsApp/SMS)</strong></td>
                         <td class="highlight-col">✅ En 1 clic avec comparaison</td>
                         <td>❌ Impossible</td>
                         <td>❌ Non</td>
                     </tr>
                     <tr>
-                        <td><strong>Motivation & Gamification</strong></td>
-                        <td class="highlight-col">✅ Pièces d'or, Trophées & Séries</td>
-                        <td>❌ Zéro dopamine</td>
+                        <td><strong>Explications avec Bon Exemple vs Piège</strong></td>
+                        <td class="highlight-col">✅ Directes, ciblées et sans jargon</td>
+                        <td>⚠️ Théoriques et abstraites</td>
+                        <td>⚠️ Souvent rébarbatives</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Motivation & Pièces d'or</strong></td>
+                        <td class="highlight-col">✅ Meemaw Coins 🪙 & Trophées</td>
+                        <td>❌ Aucune récompense</td>
                         <td>⚠️ Score austère</td>
                     </tr>
                     <tr>
@@ -1231,9 +1257,9 @@
                     </tr>
                     <tr>
                         <td><strong>Respect de la vie privée</strong></td>
-                        <td class="highlight-col">✅ Zéro compte, 100% sur iPhone</td>
+                        <td class="highlight-col">✅ Zéro compte, 100% sur l'iPhone</td>
                         <td>✅ Papier</td>
-                        <td>❌ Données sur serveurs cloud</td>
+                        <td>❌ Données sur serveurs distants</td>
                     </tr>
                 </tbody>
             </table>
@@ -1243,27 +1269,27 @@
     <!-- Reviews Section -->
     <section class="reviews-section">
         <div class="section-header">
-            <h2 data-i18n="rev_title">Ce que disent les parents & enseignants 💬</h2>
-            <p data-i18n="rev_desc">Adopté par des centaines de familles pour dédramatiser la dictée du soir.</p>
+            <h2 data-i18n="rev_title">Ce que disent les familles 💬</h2>
+            <p data-i18n="rev_desc">Adopté par les parents pour réviser l'orthographe avec le sourire.</p>
         </div>
 
         <div class="reviews-grid">
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
-                <p class="review-text" data-i18n="rev1_text">« Fini les crises de larmes le dimanche soir avant la dictée de classe ! Mon fils en CM2 défie son père chaque soir sur WhatsApp et attend avec impatience ses 20/20. »</p>
-                <div class="review-author" data-i18n="rev1_author">Sophie M. <span data-i18n="rev1_sub">Maman de Lucas (10 ans)</span></div>
+                <p class="review-text" data-i18n="rev1_text">« Fini les tensions le soir pour réviser la dictée ! Mon fils adore pouvoir réécouter la phrase autant de fois qu'il veut et défier son père sur WhatsApp. »</p>
+                <div class="review-author" data-i18n="rev1_author">Sophie M. <span data-i18n="rev1_sub">Maman de Lucas</span></div>
             </div>
 
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
-                <p class="review-text" data-i18n="rev2_text">« La voix française est douce et le rythme est parfait. En tant que professeure de français au collège, je la recommande les yeux fermés pour réviser le Brevet. »</p>
-                <div class="review-author" data-i18n="rev2_author">Claire B. <span data-i18n="rev2_sub">Enseignante de Français (Collège)</span></div>
+                <p class="review-text" data-i18n="rev2_text">« Les 5 niveaux permettent de progresser sans blocage. Quand ma fille fait une faute, l'explication montre tout de suite l'exemple et le piège évité, c'est très clair. »</p>
+                <div class="review-author" data-i18n="rev2_author">Claire B. <span data-i18n="rev2_sub">Maman d'Élise</span></div>
             </div>
 
             <div class="review-card">
                 <div class="review-stars">★★★★★</div>
-                <p class="review-text" data-i18n="rev3_text">« Un seul achat pour mes trois enfants grâce au Partage Familial. Chacun progresse à son rythme, du CP à la 4ème. L'application vaut 100 fois son prix. »</p>
-                <div class="review-author" data-i18n="rev3_author">Marc D. <span data-i18n="rev3_sub">Père de famille (3 enfants)</span></div>
+                <p class="review-text" data-i18n="rev3_text">« Un seul achat pour toute la famille grâce au Partage Familial. Chacun de mes enfants avance sur son propre palier, du niveau Apprenti au niveau Confirmé. »</p>
+                <div class="review-author" data-i18n="rev3_author">Marc D. <span data-i18n="rev3_sub">Père de 3 enfants</span></div>
             </div>
         </div>
     </section>
@@ -1277,12 +1303,12 @@
 
         <div class="faq-item open">
             <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq1_q">Faut-il créer un compte pour utiliser Meemaw ?</div>
-            <div class="faq-answer" data-i18n="faq1_a">Non, absolument aucun compte ni mot de passe n'est requis ! Meemaw respecte scrupuleusement la vie privée de vos enfants : vos données et progrès restent stockés localement sur votre iPhone et synchronisés de manière sécurisée via votre compte iCloud personnel.</div>
+            <div class="faq-answer" data-i18n="faq1_a">Non, absolument aucun compte ni mot de passe n'est requis ! Meemaw respecte la vie privée : vos données et progrès restent stockés localement sur votre iPhone et synchronisés via votre compte iCloud personnel.</div>
         </div>
 
         <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq2_q">L'application fonctionne-t-elle sur iPad et sans connexion Internet ?</div>
-            <div class="faq-answer" data-i18n="faq2_a">Oui ! Meemaw est universelle pour iPhone et iPad. La voix de synthèse et le moteur de correction fonctionnent 100% hors-ligne dans l'appareil, ce qui est idéal pour les voyages en voiture ou en avion.</div>
+            <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq2_q">Comment fonctionne la dictée vocale ?</div>
+            <div class="faq-answer" data-i18n="faq2_a">Meemaw lit d'abord la phrase en entier pour vous permettre d'en saisir le sens. Elle dicte ensuite mot à mot. Si vous manquez un mot, appuyez simplement sur le bouton de répétition ou sur la flèche retour pour réécouter. Vous pouvez également ajuster la vitesse d'élocution (Normal 1x, Lent 0.5x, Très lent 0.25x). La diction fonctionne 100% en local sans connexion Internet.</div>
         </div>
 
         <div class="faq-item">
@@ -1292,14 +1318,14 @@
 
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)" data-i18n="faq4_q">Comment lancer un duel Enfants vs Parents ?</div>
-            <div class="faq-answer" data-i18n="faq4_a">À la fin de chaque dictée, appuyez sur le bouton « Défier un Parent » ou « Défier un Ami ». Un lien d'invitation pré-rempli s'ouvre dans Messages ou WhatsApp. Quand le destinataire clique sur le lien, son application Meemaw s'ouvre instantanément sur la même dictée pour comparer les résultats.</div>
+            <div class="faq-answer" data-i18n="faq4_a">À la fin d'une session, appuyez sur le bouton « Défier un Parent » ou « Défier un Ami ». Un message d'invitation pré-rempli s'ouvre dans Messages ou WhatsApp. Dès que le destinataire clique sur le lien, son application Meemaw s'ouvre directement sur la même dictée pour comparer les scores.</div>
         </div>
     </section>
 
     <!-- Bottom Mega CTA -->
     <div class="bottom-cta">
         <img src="assets/icon.png" alt="Meemaw Icon" class="bottom-cta-icon">
-        <h2 data-i18n="cta_title">Prêt à en finir avec les fautes d'orthographe ?</h2>
+        <h2 data-i18n="cta_title">Prêt à progresser en orthographe ?</h2>
         <p data-i18n="cta_desc">Téléchargez Meemaw sur iPhone et iPad, lancez votre premier duel en famille et profitez de 3 jours d'essai offerts avec Meemaw PRO !</p>
         <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" style="font-size: 1.25rem; padding: 1.3rem 2.8rem;" data-i18n="cta_btn">
              Télécharger sur l'App Store (Essai Offert)
@@ -1322,9 +1348,9 @@
         const translations = {
             fr: {
                 ann_tag: "ÉVÉNEMENT RENTRÉE",
-                ann_text: "🏆 Le Grand Défi Dictée 20/20 est en cours sur l'App Store ! 50 phrases sans faute à relever →",
+                ann_text: "🏆 Le Défi Dictée 20/20 est en cours sur l'App Store ! Enchaînez les sans-faute →",
                 nav_event: "Défi Rentrée",
-                nav_curriculum: "CP au Brevet",
+                nav_levels: "5 Niveaux",
                 nav_duels: "Duels Famille",
                 nav_features: "Modes de Jeu",
                 nav_faq: "Questions",
@@ -1332,45 +1358,39 @@
                 hero_badge_stars: "⭐️ 4.9/5 sur l'App Store",
                 hero_badge_category: "Éducation & Jeux de Mots 🎮",
                 hero_title: "Pratique avec <span class='logo-text'>MEEMAW</span>.<br>Maîtrise l'Orthographe.",
-                hero_subtitle: "Meemaw dicte à haute voix avec sa vraie voix française, corrige avec bienveillance et t'explique chaque règle pour assurer le 20/20.",
+                hero_subtitle: "Meemaw lit la phrase en entier pour le sens, puis dicte pas à pas à votre rythme. Répétez à volonté, ajustez la vitesse et progressez sans stress grâce aux explications de règles ciblées.",
                 hero_btn_appstore: " Télécharger sur l'App Store",
                 hero_btn_duel: "👨‍👩‍👧 Découvrir le Duel Famille",
                 trust_ios: "Sur iPhone & iPad",
                 trust_family: "Partage Familial Apple",
                 trust_ads: "Zéro Publicité",
-                trust_privacy: "100% Hors-Ligne & RGPD",
+                trust_privacy: "100% Hors-Ligne & Données Privées",
                 qr_title: "Sur Mac ou PC ?",
                 qr_desc: "Scannez avec votre iPhone pour installer en 2 secondes.",
                 event_badge: "Événement Spécial Rentrée 2026",
                 event_title: "Grand Défi Dictée : Objectif 20/20",
-                event_desc: "Enchaînez 50 phrases sans faute du CP au Brevet ! Gagnez des pièces Meemaw Coins 🪙, progressez sans stress et grimpez au classement mondial Game Center.",
+                event_desc: "Enchaînez 50 phrases sans faute ! Gagnez des pièces Meemaw Coins 🪙, progressez sans stress et grimpez au classement mondial Game Center.",
                 event_btn: "🏆 Participer au Défi sur l'App Store",
-                curr_title: "Un Programme Complet du CP au Brevet 📚",
-                curr_desc: "Une progression pas à pas calquée sur les programmes officiels de l'Éducation Nationale et les exigences du Certificat Voltaire.",
-                curr_prim_pill: "Primaire • CP à CM2",
-                curr_prim_title: "Poser les Fondations",
-                curr_prim_desc: "Fini les blocages : l'enfant s'entraîne avec le sourire et acquiert les réflexes d'accord fondamentaux.",
-                curr_prim_1: "Sons complexes & lettres muettes",
-                curr_prim_2: "Accords pluriels (noms & adjectifs)",
-                curr_prim_3: "Conjugaison du présent et futur",
-                curr_prim_4: "Mots invariables essentiels",
-                curr_col_pill: "Collège • 6ème à 3ème",
-                curr_col_title: "Préparation au Brevet",
-                curr_col_desc: "Maîtriser les pièges classiques de la langue pour aborder l'épreuve de dictée du Brevet en toute confiance.",
-                curr_col_1: "Accord des participes passés (avoir / être)",
-                curr_col_2: "Homophones (ses/ces, c'est/s'est, leur/leurs)",
-                curr_col_3: "Subjonctif, imparfait et passé simple",
-                curr_col_4: "Dictées complètes du Brevet des Collèges",
-                curr_adv_pill: "Adultes • FLE & Concours",
-                curr_adv_title: "Excellence & Zéro Faute",
-                curr_adv_desc: "Idéal pour les étudiants préparant le Certificat Voltaire, les concours administratifs ou les apprenants FLE.",
-                curr_adv_1: "Verbes pronominaux & accords délicats",
-                curr_adv_2: "Écrits professionnels impeccables",
-                curr_adv_3: "Nuances de vocabulaire & faux amis",
-                curr_adv_4: "Confort d'écoute avec pauses ajustables",
+                levels_title: "5 Niveaux de Progression Adaptés 📈",
+                levels_desc: "Une difficulté par paliers pour progresser à son rythme, du renforcement des bases jusqu'à l'orthographe experte.",
+                lvl1_pill: "Niveau 1",
+                lvl1_title: "Apprenti",
+                lvl1_desc: "Bases de l'orthographe & mots simples du quotidien.",
+                lvl2_pill: "Niveau 2",
+                lvl2_title: "Initié",
+                lvl2_desc: "Accords de base & homophones courants du français.",
+                lvl3_pill: "Niveau 3",
+                lvl3_title: "Confirmé",
+                lvl3_desc: "Conjugaisons régulières & règles fondamentales de grammaire.",
+                lvl4_pill: "Niveau 4",
+                lvl4_title: "Expert",
+                lvl4_desc: "Subtilités de la langue & pièges grammaticaux complexes.",
+                lvl5_pill: "Niveau 5",
+                lvl5_title: "Maître",
+                lvl5_desc: "Orthographe experte & maîtrise totale des pièges avancés.",
                 duel_badge: "⚔️ LE MODE STAR EN FAMILLE",
                 duel_title: "Duel Enfants vs Parents : Qui fera le moins de fautes ?",
-                duel_desc: "La dictée n'est plus une punition : elle devient un jeu familial palpitant ! Vos enfants vous défient sur la même dictée via WhatsApp ou SMS.",
+                duel_desc: "La dictée n'est plus une corvée : elle devient un défi familial palpitant ! Vos enfants vous défient sur la même dictée via WhatsApp ou SMS.",
                 duel_step1: "L'enfant termine sa dictée et clique sur <strong>« Défier un Parent »</strong>.",
                 duel_step2: "Le parent reçoit le lien magique sur son téléphone (<em>« Papa, sauras-tu faire mieux que mes 18/20 ? »</em>).",
                 duel_step3: "Le parent joue la même dictée : comparaison immédiate des scores, du temps et des fautes !",
@@ -1378,43 +1398,43 @@
                 duel_card_title: "Compatible WhatsApp & Messages",
                 duel_card_desc: "Aucun compte à créer. Le lien s'ouvre directement dans l'application grâce aux Universal Links Apple.",
                 sec_title: "Ce qui rend Meemaw unique ✨",
-                sec_subtitle: "8 modes de jeu pour transformer les révisions d'orthographe en pur moment de plaisir.",
-                feat1_title: "Dictées Vocales Intelligentes",
-                feat1_desc: "Meemaw dicte à voix haute avec sa vraie voix française. Ajustez la vitesse d'élocution et les pauses entre chaque phrase à votre convenance.",
+                sec_subtitle: "8 modes de jeu pour s'entraîner sous tous les angles, de la dictée suivie aux jeux de mots.",
+                feat1_title: "Dictée pas à pas & Répétition",
+                feat1_desc: "Meemaw lit d'abord la phrase entière pour donner le contexte, puis dicte mot à mot. Bouton de répétition à volonté et 3 vitesses réglables (Normal 1x, Lent 0.5x, Très lent 0.25x).",
                 feat2_title: "Meemaw Coins & Trophées 🪙",
-                feat2_desc: "Gagnez des pièces d'or sur chaque sans-faute, débloquez des trophées collector et hissez-vous au sommet du classement mondial Game Center.",
-                feat3_title: "L'Astuce de Meemaw 📚",
-                feat3_desc: "Après chaque dictée, Meemaw vous explique avec des mots simples et bienveillants exactement pourquoi une faute a été commise.",
-                feat4_title: "Mode Détective & Jeux 🔍",
-                feat4_desc: "Détective des fautes, Dictée Folle, Anagrammes, QCM et Mots Croisés : variez les plaisirs pour stimuler la mémoire visuelle.",
+                feat2_desc: "Gagnez des pièces d'or sur chaque sans-faute, débloquez des trophées collector et hissez-vous au classement mondial Game Center.",
+                feat3_title: "L'Astuce de Meemaw (6 Thèmes) 📚",
+                feat3_desc: "Accords, Homophones, Conjugaison, Pluriels, Orthographe d'usage, Expressions : chaque règle oppose le bon exemple au piège évité, sans jargon.",
+                feat4_title: "8 Modes de Jeu Variés 🎮",
+                feat4_desc: "Dictée Rapide, Dictée Longue, Marathon 20/20, QCM Express, Mot à Mot, Dictée Folle (corrigez Mamie !), Détective et Anagrammes.",
                 comp_title: "Pourquoi Meemaw change tout ? ⚖️",
-                comp_desc: "Comparez Meemaw avec les manuels scolaires papier et les plateformes professionnelles austères.",
+                comp_desc: "Comparez Meemaw avec les méthodes papier traditionnelles et les outils d'entreprise austères.",
                 comp_col_crit: "Critère",
                 comp_col_meemaw: "👵 Meemaw",
-                comp_col_book: "📖 Cahiers & Bescherelle",
+                comp_col_book: "📖 Manuels & Bescherelle",
                 comp_col_corp: "🏢 Outils d'Entreprise",
-                rev_title: "Ce que disent les parents & enseignants 💬",
-                rev_desc: "Adopté par des centaines de familles pour dédramatiser la dictée du soir.",
-                rev1_text: "« Fini les crises de larmes le dimanche soir avant la dictée de classe ! Mon fils en CM2 défie son père chaque soir sur WhatsApp et attend avec impatience ses 20/20. »",
+                rev_title: "Ce que disent les familles 💬",
+                rev_desc: "Adopté par les parents pour réviser l'orthographe avec le sourire.",
+                rev1_text: "« Fini les tensions le soir pour réviser la dictée ! Mon fils adore pouvoir réécouter la phrase autant de fois qu'il veut et défier son père sur WhatsApp. »",
                 rev1_author: "Sophie M.",
-                rev1_sub: "Maman de Lucas (10 ans)",
-                rev2_text: "« La voix française est douce et le rythme est parfait. En tant que professeure de français au collège, je la recommande les yeux fermés pour réviser le Brevet. »",
+                rev1_sub: "Maman de Lucas",
+                rev2_text: "« Les 5 niveaux permettent de progresser sans blocage. Quand ma fille fait une faute, l'explication montre tout de suite l'exemple et le piège évité, c'est très clair. »",
                 rev2_author: "Claire B.",
-                rev2_sub: "Enseignante de Français (Collège)",
-                rev3_text: "« Un seul achat pour mes trois enfants grâce au Partage Familial. Chacun progresse à son rythme, du CP à la 4ème. L'application vaut 100 fois son prix. »",
+                rev2_sub: "Maman d'Élise",
+                rev3_text: "« Un seul achat pour toute la famille grâce au Partage Familial. Chacun de mes enfants avance sur son propre palier, du niveau Apprenti au niveau Confirmé. »",
                 rev3_author: "Marc D.",
-                rev3_sub: "Père de famille (3 enfants)",
+                rev3_sub: "Père de 3 enfants",
                 faq_title: "Foire Aux Questions 🤔",
                 faq_desc: "Tout ce que vous devez savoir avant d'installer Meemaw.",
                 faq1_q: "Faut-il créer un compte pour utiliser Meemaw ?",
-                faq1_a: "Non, absolument aucun compte ni mot de passe n'est requis ! Meemaw respecte scrupuleusement la vie privée de vos enfants : vos données et progrès restent stockés localement sur votre iPhone et synchronisés de manière sécurisée via votre compte iCloud personnel.",
-                faq2_q: "L'application fonctionne-t-elle sur iPad et sans connexion Internet ?",
-                faq2_a: "Oui ! Meemaw est universelle pour iPhone et iPad. La voix de synthèse et le moteur de correction fonctionnent 100% hors-ligne dans l'appareil, ce qui est idéal pour les voyages en voiture ou en avion.",
+                faq1_a: "Non, absolument aucun compte ni mot de passe n'est requis ! Meemaw respecte la vie privée : vos données et progrès restent stockés localement sur votre iPhone et synchronisés via votre compte iCloud personnel.",
+                faq2_q: "Comment fonctionne la dictée vocale ?",
+                faq2_a: "Meemaw lit d'abord la phrase en entier pour vous permettre d'en saisir le sens. Elle dicte ensuite mot à mot. Si vous manquez un mot, appuyez simplement sur le bouton de répétition ou sur la flèche retour pour réécouter. Vous pouvez également ajuster la vitesse d'élocution (Normal 1x, Lent 0.5x, Très lent 0.25x). La diction fonctionne 100% en local sans connexion Internet.",
                 faq3_q: "Comment fonctionne le Partage Familial Apple ?",
                 faq3_a: "Grâce au Partage Familial Apple (Family Sharing), un seul achat ou abonnement Meemaw PRO permet à l'ensemble des membres de votre famille (jusqu'à 6 personnes) de débloquer l'accès complet sur tous leurs appareils respectifs sans frais supplémentaires.",
                 faq4_q: "Comment lancer un duel Enfants vs Parents ?",
-                faq4_a: "À la fin de chaque dictée, appuyez sur le bouton « Défier un Parent » ou « Défier un Ami ». Un lien d'invitation pré-rempli s'ouvre dans Messages ou WhatsApp. Quand le destinataire clique sur le lien, son application Meemaw s'ouvre instantanément sur la même dictée pour comparer les résultats.",
-                cta_title: "Prêt à en finir avec les fautes d'orthographe ?",
+                faq4_a: "À la fin d'une session, appuyez sur le bouton « Défier un Parent » ou « Défier un Ami ». Un message d'invitation pré-rempli s'ouvre dans Messages ou WhatsApp. Dès que le destinataire clique sur le lien, son application Meemaw s'ouvre directement sur la même dictée pour comparer les scores.",
+                cta_title: "Prêt à progresser en orthographe ?",
                 cta_desc: "Téléchargez Meemaw sur iPhone et iPad, lancez votre premier duel en famille et profitez de 3 jours d'essai offerts avec Meemaw PRO !",
                 cta_btn: " Télécharger sur l'App Store (Essai Offert)",
                 footer_copy: "&copy; 2026 Meemaw. Tous droits réservés. Développé avec passion pour l'amour de la langue française.",
@@ -1425,9 +1445,9 @@
             },
             en: {
                 ann_tag: "BACK TO SCHOOL EVENT",
-                ann_text: "🏆 The 20/20 French Dictation Challenge is live on the App Store! 50 mistake-free sentences to master →",
+                ann_text: "🏆 The 20/20 Dictation Challenge is live on the App Store! Complete sentences without errors →",
                 nav_event: "Challenge",
-                nav_curriculum: "Curriculum",
+                nav_levels: "5 Levels",
                 nav_duels: "Family Duels",
                 nav_features: "Game Modes",
                 nav_faq: "FAQ",
@@ -1435,7 +1455,7 @@
                 hero_badge_stars: "⭐️ 4.9/5 on the App Store",
                 hero_badge_category: "Education & Word Games 🎮",
                 hero_title: "Practice with <span class='logo-text'>MEEMAW</span>.<br>Master French Spelling.",
-                hero_subtitle: "Meemaw speaks aloud with a warm neural French voice, gently corrects errors, and explains every grammar rule so you can score a perfect 20/20.",
+                hero_subtitle: "Meemaw reads the full sentence first for context, then dictates word by word at your pace. Replay on demand, adjust speech speed, and learn from targeted rule breakdowns.",
                 hero_btn_appstore: " Download on App Store",
                 hero_btn_duel: "👨‍👩‍👧 Discover Family Duels",
                 trust_ios: "For iPhone & iPad",
@@ -1446,78 +1466,72 @@
                 qr_desc: "Scan with your iPhone to install in 2 seconds.",
                 event_badge: "Back to School Special Event 2026",
                 event_title: "Grand Dictation Challenge: Aim for 20/20",
-                event_desc: "Complete 50 mistake-free French sentences! Earn Meemaw Coins 🪙, build genuine confidence, and rise to the top of the global Game Center leaderboards.",
+                event_desc: "Complete 50 mistake-free French sentences! Earn Meemaw Coins 🪙, build genuine confidence, and climb the global Game Center leaderboards.",
                 event_btn: "🏆 Join the Challenge on App Store",
-                curr_title: "Complete Curriculum from Elementary to Advanced 📚",
-                curr_desc: "Step-by-step progression tailored for schoolchildren, FLE (French as a Foreign Language) students, and certification candidates.",
-                curr_prim_pill: "Elementary • Grade 1 to 5",
-                curr_prim_title: "Building Strong Foundations",
-                curr_prim_desc: "No more tears: kids practice with a smile and develop natural spelling reflexes.",
-                curr_prim_1: "Complex French sounds & silent letters",
-                curr_prim_2: "Plural agreements (nouns & adjectives)",
-                curr_prim_3: "Present and future tense conjugations",
-                curr_prim_4: "Essential invariable words",
-                curr_col_pill: "Middle School • Grade 6 to 9",
-                curr_col_title: "Brevet Exam Preparation",
-                curr_col_desc: "Master tricky grammar traps to tackle French dictation exams with complete confidence.",
-                curr_col_1: "Past participle agreements (avoir / être)",
-                curr_col_2: "Homophones (ses/ces, c'est/s'est, leur/leurs)",
-                curr_col_3: "Subjunctive, imperfect and simple past",
-                curr_col_4: "Full official French Brevet exam dictations",
-                curr_adv_pill: "Adults • FLE & Certifications",
-                curr_adv_title: "Excellence & Flawless French",
-                curr_adv_desc: "Perfect for learners preparing for the Voltaire Certificate or non-native French learners.",
-                curr_adv_1: "Pronominal verbs and subtle agreements",
-                curr_adv_2: "Flawless professional emails & essays",
-                curr_adv_3: "Nuanced vocabulary & false friends",
-                curr_adv_4: "Comfortable listening with adjustable pauses",
+                levels_title: "5 Progressive Difficulty Levels 📈",
+                levels_desc: "Step-by-step difficulty to build confidence, from essential phonetic basics to advanced French mastery.",
+                lvl1_pill: "Level 1",
+                lvl1_title: "Apprentice",
+                lvl1_desc: "Spelling basics, regular sounds & everyday simple French words.",
+                lvl2_pill: "Level 2",
+                lvl2_title: "Initiate",
+                lvl2_desc: "Basic gender & number agreements, plurals, and common homophones (a/à, et/est).",
+                lvl3_pill: "Level 3",
+                lvl3_title: "Confirmed",
+                lvl3_desc: "Regular conjugations, core narrative tenses, and inverted subject agreements.",
+                lvl4_pill: "Level 4",
+                lvl4_title: "Expert",
+                lvl4_desc: "Language subtleties, past participles with avoir, and tricky homophones (leur/leurs).",
+                lvl5_pill: "Level 5",
+                lvl5_title: "Master",
+                lvl5_desc: "Advanced spelling, complex pronominal participles, and complete language mastery.",
                 duel_badge: "⚔️ THE FAMILY FAVORITE",
                 duel_title: "Kids vs Parents Duel: Who makes fewer mistakes?",
                 duel_desc: "Dictation is no longer a chore: it turns into a thrilling family game! Kids challenge parents to the exact same text via WhatsApp or SMS.",
-                duel_step1: "The child completes a dictation and taps <strong>« Challenge a Parent »</strong>.",
+                duel_step1: "The child finishes a dictation and taps <strong>« Challenge a Parent »</strong>.",
                 duel_step2: "The parent receives a magic invite link on their phone (<em>« Dad, can you beat my 18/20 score? »</em>).",
                 duel_step3: "The parent plays the exact same dictation: instant comparison of scores, speed, and accuracy!",
                 duel_btn: "👨‍👩‍👧 Start a Family Duel",
                 duel_card_title: "Works with WhatsApp & iMessage",
                 duel_card_desc: "No account required. The link opens straight in the app thanks to Apple Universal Links.",
                 sec_title: "What Makes Meemaw Unique ✨",
-                sec_subtitle: "8 rich game modes to turn French spelling practice into pure fun.",
-                feat1_title: "Intelligent Voice Dictations",
-                feat1_desc: "Meemaw speaks aloud with authentic French voice synthesis. Adjust speaking speed and pause duration between phrases to match your pace.",
+                sec_subtitle: "8 rich game modes to practice French spelling from every angle.",
+                feat1_title: "Step-by-Step Dictation & Replay",
+                feat1_desc: "Meemaw reads the complete sentence first, then dictates word by word. One-tap instant replay and 3 selectable speech speeds (Normal 1x, Slow 0.5x, Very Slow 0.25x).",
                 feat2_title: "Meemaw Coins & Trophies 🪙",
-                feat2_desc: "Earn shiny gold coins on every perfect session, unlock collectible trophies, and climb the Game Center global leaderboard.",
-                feat3_title: "Meemaw's Rules & Tips 📚",
-                feat3_desc: "After each session, Meemaw explains in friendly, clear language why an error occurred and how to easily remember the rule.",
-                feat4_title: "Detective Mode & Games 🔍",
-                feat4_desc: "Error Detective, Crazy Dictation, Anagrams, Quizzes and Crosswords: varied activities to stimulate visual memory.",
+                feat2_desc: "Earn gold coins on every perfect session, unlock collectible trophies, and climb the Game Center global leaderboard.",
+                feat3_title: "Meemaw's Rules (6 Core Themes) 📚",
+                feat3_desc: "Agreements, Homophones, Conjugation, Plurals, Everyday Spelling, Expressions: each rule directly shows the good example vs the trap to avoid, jargon-free.",
+                feat4_title: "8 Diverse Game Modes 🎮",
+                feat4_desc: "Quick Dictation, Full Dictation, 20/20 Marathon, Express Quiz, Word by Word, Crazy Dictation (correct Grandma!), Detective, and Anagrams.",
                 comp_title: "Why Meemaw Changes Everything ⚖️",
-                comp_desc: "Compare Meemaw with traditional grammar books and rigid corporate software.",
+                comp_desc: "Compare Meemaw with traditional grammar workbooks and rigid corporate software.",
                 comp_col_crit: "Feature",
                 comp_col_meemaw: "👵 Meemaw",
-                comp_col_book: "📖 Grammar Books",
+                comp_col_book: "📖 Workbooks & Paper",
                 comp_col_corp: "🏢 Corporate Tools",
-                rev_title: "What Parents & Teachers Say 💬",
-                rev_desc: "Loved by hundreds of families to make French spelling stress-free.",
-                rev1_text: "« No more Sunday evening tears before class dictation! My 10-year-old challenges his dad every evening on WhatsApp and is proud of his 20/20s. »",
+                rev_title: "What Families Say 💬",
+                rev_desc: "Loved by parents to make French spelling revision calm and motivating.",
+                rev1_text: "« No more evening friction when doing dictations! My son loves replaying sentences as much as he wants and challenging his dad on WhatsApp. »",
                 rev1_author: "Sophie M.",
-                rev1_sub: "Mother of Lucas (Grade 5)",
-                rev2_text: "« The French voice is gentle and the pacing is spot on. As a middle school French teacher, I recommend it wholeheartedly. »",
+                rev1_sub: "Mother of Lucas",
+                rev2_text: "« The 5 levels prevent feeling stuck. When my daughter misses a word, the tip immediately displays the good example alongside the trap. »",
                 rev2_author: "Claire B.",
-                rev2_sub: "Middle School French Teacher",
-                rev3_text: "« A single purchase for all three of my kids thanks to Family Sharing. Each one learns at their own pace. Worth every penny. »",
+                rev2_sub: "Mother of Élise",
+                rev3_text: "« One single purchase for the whole family thanks to Family Sharing. Each child progresses on their own level, from Apprentice to Confirmed. »",
                 rev3_author: "Marc D.",
                 rev3_sub: "Father of three",
                 faq_title: "Frequently Asked Questions 🤔",
                 faq_desc: "Everything you need to know before installing Meemaw.",
                 faq1_q: "Do I need to create an account to use Meemaw?",
-                faq1_a: "No! Absolutely no account, email, or password required. Meemaw respects children's privacy: all data stays local on your device and syncs securely via private iCloud.",
-                faq2_q: "Does it work on iPad and without an Internet connection?",
-                faq2_a: "Yes! Meemaw is universal for iPhone and iPad. Voice synthesis and correction work 100% offline on-device, making it perfect for road trips and flights.",
+                faq1_a: "No! Absolutely no account or password required. Meemaw protects your privacy: all data stays local on your device and syncs privately via iCloud.",
+                faq2_q: "How does the voice dictation work?",
+                faq2_a: "Meemaw reads the full sentence first to convey context, then dictates word by word. If you miss a word, simply tap the replay button or previous button. You can also pick between 3 speech rates (Normal 1x, Slow 0.5x, Very Slow 0.25x). Speech works 100% offline.",
                 faq3_q: "How does Apple Family Sharing work?",
                 faq3_a: "Thanks to Apple Family Sharing, one single purchase or subscription unlocks Meemaw PRO for up to 6 family members on all their Apple devices at no extra charge.",
                 faq4_q: "How do Kids vs Parents duels work?",
-                faq4_a: "At the end of any dictation, tap 'Challenge a Parent'. A ready-to-send invite opens in Messages or WhatsApp. When they tap it, their Meemaw app opens right to that dictation to compare scores.",
-                cta_title: "Ready to conquer French spelling?",
+                faq4_a: "At the end of any session, tap 'Challenge a Parent'. A ready-to-send invite opens in Messages or WhatsApp. When they tap it, their Meemaw app opens right to that dictation to compare scores.",
+                cta_title: "Ready to improve your French spelling?",
                 cta_desc: "Download Meemaw on iPhone and iPad, start your first family duel, and enjoy a 3-day free trial of Meemaw PRO!",
                 cta_btn: " Download on App Store (Free Trial)",
                 footer_copy: "&copy; 2026 Meemaw. All rights reserved. Crafted with passion for French language learners.",
@@ -1528,9 +1542,9 @@
             },
             es: {
                 ann_tag: "EVENTO VUELTA AL COLE",
-                ann_text: "🏆 ¡El Gran Desafío de Dictado 20/20 está en marcha en App Store! 50 frases sin faltas →",
+                ann_text: "🏆 ¡El Desafío de Dictado 20/20 está en marcha en App Store! Frases sin faltas →",
                 nav_event: "Desafío",
-                nav_curriculum: "Programa",
+                nav_levels: "5 Niveles",
                 nav_duels: "Duelos",
                 nav_features: "Modos de Juego",
                 nav_faq: "Preguntas",
@@ -1538,7 +1552,7 @@
                 hero_badge_stars: "⭐️ 4.9/5 en la App Store",
                 hero_badge_category: "Educación y Juegos de Palabras 🎮",
                 hero_title: "Practica con <span class='logo-text'>MEEMAW</span>.<br>Domina la Ortografía Francesa.",
-                hero_subtitle: "Meemaw dicta en voz alta con auténtica voz francesa, corrige con cariño y te explica cada regla para conseguir un 20/20 perfecto.",
+                hero_subtitle: "Meemaw lee la frase completa para entender el contexto y luego dicta paso a paso a tu ritmo. Repite cuando quieras, ajusta la velocidad y progresa sin estrés con reglas claras.",
                 hero_btn_appstore: " Descargar en App Store",
                 hero_btn_duel: "👨‍👩‍👧 Descubrir Duelo Familiar",
                 trust_ios: "Para iPhone y iPad",
@@ -1551,29 +1565,23 @@
                 event_title: "Gran Desafío de Dictado: Objetivo 20/20",
                 event_desc: "¡Completa 50 frases en francés sin faltas! Gana monedas Meemaw Coins 🪙, progresa sin estrés y sube en la clasificación mundial de Game Center.",
                 event_btn: "🏆 Participar en el Desafío en App Store",
-                curr_title: "Un Programa Completo de Primaria a Secundaria 📚",
-                curr_desc: "Progresión paso a paso adaptada al currículo oficial francés y a las exigencias de certificaciones FLE y Voltaire.",
-                curr_prim_pill: "Primaria • 6 a 11 años",
-                curr_prim_title: "Bases Sólidas",
-                curr_prim_desc: "Sin frustraciones: los niños practican con una sonrisa y adquieren reflejos ortográficos fundamentales.",
-                curr_prim_1: "Sonidos complejos y letras mudas en francés",
-                curr_prim_2: "Concordancias en plural (sustantivos y adjetivos)",
-                curr_prim_3: "Conjugación del presente y futuro",
-                curr_prim_4: "Palabras invariables clave",
-                curr_col_pill: "Secundaria • 11 a 15 años",
-                curr_col_title: "Preparación Examen Brevet",
-                curr_col_desc: "Domina las trampas clásicas del idioma para superar los exámenes de dictado con total tranquilidad.",
-                curr_col_1: "Concordancia de participios pasados (avoir / être)",
-                curr_col_2: "Homófonos (ses/ces, c'est/s'est, leur/leurs)",
-                curr_col_3: "Subjuntivo, imperfecto y pasado simple",
-                curr_col_4: "Dictados completos de exámenes oficiales",
-                curr_adv_pill: "Adultos • FLE y Certificaciones",
-                curr_adv_title: "Excelencia y Cero Faltas",
-                curr_adv_desc: "Ideal para estudiantes del Certificat Voltaire, opositores y estudiantes extranjeros de francés (FLE).",
-                curr_adv_1: "Verbos pronominales y concordancias difíciles",
-                curr_adv_2: "Redacción profesional impecable",
-                curr_adv_3: "Matices de vocabulario y falsos amigos",
-                curr_adv_4: "Comodidad auditiva con pausas configurables",
+                levels_title: "5 Niveles de Dificultad Progresiva 📈",
+                levels_desc: "Un avance por etapas para aprender con confianza, desde las bases ortográficas hasta el dominio total del francés.",
+                lvl1_pill: "Nivel 1",
+                lvl1_title: "Aprendiz",
+                lvl1_desc: "Bases ortográficas, sonidos regulares y palabras cotidianas.",
+                lvl2_pill: "Nivel 2",
+                lvl2_title: "Iniciado",
+                lvl2_desc: "Concordancias de base, plurales y homófonos comunes (a/à, et/est).",
+                lvl3_pill: "Nivel 3",
+                lvl3_title: "Confirmado",
+                lvl3_desc: "Conjugaciones regulares, tiempos verbales clave y concordancias sujetas.",
+                lvl4_pill: "Nivel 4",
+                lvl4_title: "Experto",
+                lvl4_desc: "Sutilezas de la lengua francesa y trampas gramaticales complejas.",
+                lvl5_pill: "Nivel 5",
+                lvl5_title: "Maestro",
+                lvl5_desc: "Ortografía experta y dominio total de las reglas avanzadas.",
                 duel_badge: "⚔️ EL MODO FAVORITO DE LAS FAMILIAS",
                 duel_title: "Duelo Niños vs Padres: ¿Quién comete menos faltas?",
                 duel_desc: "El dictado deja de ser un castigo para convertirse en un emocionante juego en familia por WhatsApp o SMS.",
@@ -1585,42 +1593,42 @@
                 duel_card_desc: "Sin registros. El enlace se abre directamente en la app mediante Apple Universal Links.",
                 sec_title: "Lo que hace única a Meemaw ✨",
                 sec_subtitle: "8 modos de juego para aprender ortografía francesa disfrutando.",
-                feat1_title: "Dictados Vocales Inteligentes",
-                feat1_desc: "Meemaw dicta en voz alta con síntesis vocal integrada. Ajusta la velocidad y las pausas entre frases a tu ritmo.",
+                feat1_title: "Dictado Paso a Paso y Repetición",
+                feat1_desc: "Meemaw lee la frase completa primero y luego dicta palabra por palabra. Botón de repetición instantánea y 3 velocidades (Normal 1x, Lento 0.5x, Muy lento 0.25x).",
                 feat2_title: "Monedas Meemaw y Trofeos 🪙",
                 feat2_desc: "Gana monedas de oro en cada dictado perfecto, desbloquea trofeos y escala en la clasificación mundial de Game Center.",
-                feat3_title: "El Consejo de Meemaw 📚",
-                feat3_desc: "Tras cada dictado, Meemaw te explica con sencillez y cariño exactamente por qué se cometió un error y cómo evitarlo.",
-                feat4_title: "Modo Detective y Juegos 🔍",
-                feat4_desc: "Detective de faltas, Dictado Loco, Anagramas, Cuestionarios y Crucigramas para potenciar la memoria visual.",
+                feat3_title: "Consejos de Meemaw (6 Temas Clave) 📚",
+                feat3_desc: "Concordancias, Homófonos, Conjugación, Plurales, Ortografía usual, Expresiones: cada regla muestra el buen ejemplo frente al error a evitar, sin tecnicismos.",
+                feat4_title: "8 Modos de Juego Variados 🎮",
+                feat4_desc: "Dictado Rápido, Dictado Largo, Maratón 20/20, Cuestionario Exprés, Palabra por Palabra, Dictado Loco (¡corrige a la abuela!), Detective y Anagramas.",
                 comp_title: "¿Por qué Meemaw lo cambia todo? ⚖️",
-                comp_desc: "Compara Meemaw con los cuadernos escolares y los programas aburridos de empresa.",
+                comp_desc: "Compara Meemaw con los métodos tradicionales de papel y los programas aburridos de empresa.",
                 comp_col_crit: "Criterio",
                 comp_col_meemaw: "👵 Meemaw",
                 comp_col_book: "📖 Libros y Cuadernos",
                 comp_col_corp: "🏢 Programas de Empresa",
-                rev_title: "Lo que dicen padres y profesores 💬",
-                rev_desc: "Recomendado por cientos de familias para que la ortografía sea un placer.",
-                rev1_text: "« ¡Se acabaron los llantos antes del dictado de clase! Mi hijo de 10 años desafía a su padre cada noche por WhatsApp y busca su 20/20. »",
+                rev_title: "Lo que dicen las familias 💬",
+                rev_desc: "Recomendado por padres para que la ortografía sea un momento agradable.",
+                rev1_text: "« ¡Se acabaron las discusiones nocturnas por el dictado! A mi hijo le encanta poder repetir la frase y desafiar a su padre por WhatsApp. »",
                 rev1_author: "Sophie M.",
-                rev1_sub: "Madre de Lucas (5º de primaria)",
-                rev2_text: "« La voz francesa es clara y el ritmo perfecto. Como profesora de francés, la recomiendo con los ojos cerrados. »",
+                rev1_sub: "Madre de Lucas",
+                rev2_text: "« Los 5 niveles permiten avanzar sin atascarse. Cuando mi hija falla una palabra, la explicación muestra el ejemplo correcto y la trampa evitada. »",
                 rev2_author: "Claire B.",
-                rev2_sub: "Profesora de Francés",
-                rev3_text: "« Una sola compra para mis tres hijos gracias a En Familia de Apple. Cada uno avanza a su ritmo. Vale cada céntimo. »",
+                rev2_sub: "Madre de Élise",
+                rev3_text: "« Una sola compra para mis tres hijos gracias a En Familia de Apple. Cada uno avanza en su propio nivel, de Aprendiz a Confirmado. »",
                 rev3_author: "Marc D.",
                 rev3_sub: "Padre de tres hijos",
                 faq_title: "Preguntas Frecuentes 🤔",
                 faq_desc: "Todo lo que necesitas saber antes de descargar Meemaw.",
                 faq1_q: "¿Hace falta crear una cuenta para usar Meemaw?",
-                faq1_a: "¡No, en absoluto! No se requiere correo ni contraseña. Meemaw protege la privacidad de tus hijos: los datos se guardan de forma local y privada en tu cuenta de iCloud.",
-                faq2_q: "¿Funciona en iPad y sin conexión a Internet?",
-                faq2_a: "¡Sí! Meemaw es universal para iPhone y iPad. La síntesis de voz y la corrección funcionan 100% sin conexión en tu dispositivo, ideal para viajes.",
+                faq1_a: "¡No, en absoluto! No se requiere correo ni contraseña. Meemaw protege la privacidad: los datos se guardan de forma local y privada en tu cuenta de iCloud.",
+                faq2_q: "¿Cómo funciona el dictado de voz?",
+                faq2_a: "Meemaw lee la frase completa primero para entender el sentido. Luego dicta palabra por palabra. Si pierdes una palabra, pulsa el botón de repetición o vuelve atrás. Puedes elegir entre 3 velocidades (Normal 1x, Lento 0.5x, Muy lento 0.25x). Funciona 100% sin conexión.",
                 faq3_q: "¿Cómo funciona En Familia de Apple?",
                 faq3_a: "Con Apple Family Sharing, una sola suscripción o compra de Meemaw PRO permite a hasta 6 miembros de la familia disfrutar de la app en todos sus dispositivos sin coste adicional.",
                 faq4_q: "¿Cómo se lanza un duelo Niños vs Padres?",
-                faq4_a: "Al final de cualquier dictado, pulsa 'Desafiar a un Padre'. Se abrirá un mensaje en WhatsApp o Mensajes. Al pulsar el enlace, la app se abre directamente para comparar puntuaciones.",
-                cta_title: "¿Listo para dominar la ortografía francesa?",
+                faq4_a: "Al final de una sesión, pulsa 'Desafiar a un Padre'. Se abrirá un mensaje en WhatsApp o Mensajes. Al pulsar el enlace, la app se abre directamente para comparar puntuaciones.",
+                cta_title: "¿Listo para mejorar tu ortografía francesa?",
                 cta_desc: "Descarga Meemaw en iPhone y iPad, lanza tu primer duelo familiar y aprovecha 3 días de prueba gratis con Meemaw PRO.",
                 cta_btn: " Descargar en App Store (Prueba Gratis)",
                 footer_copy: "&copy; 2026 Meemaw. Todos los derechos reservados. Desarrollado con pasión para aprender francés.",

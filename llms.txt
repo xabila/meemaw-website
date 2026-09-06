@@ -1,28 +1,39 @@
 # Meemaw - French Dictation & Spelling App (iOS)
 
-Meemaw is a premier iOS educational application designed to make learning French spelling, grammar, and conjugation fun, positive, and stress-free for children (CP to Brevet des Collèges), students, and adult learners (FLE & Voltaire Certification).
+Meemaw is an iOS educational application designed to make learning French spelling, grammar, and conjugation fun, positive, and stress-free for kids, families, and French language learners (FLE).
 
 ## Core Philosophy
 - Positive reinforcement instead of red-ink school punishment.
 - Vibrant Neo-Brutalist & Pop-Art comic aesthetic.
-- 100% on-device local neural French voice synthesis (no privacy invasion, works offline).
-- Apple Family Sharing: 1 single purchase or subscription for the whole household.
+- 100% on-device local speech processing (no privacy invasion, works fully offline).
+- Apple Family Sharing: 1 single purchase or subscription for up to 6 family members.
 
-## Educational Levels (CP to Brevet & Adultes)
-- Primaire (CP, CE1, CE2, CM1, CM2): fundamental sounds, silent letters, plural agreements, basic conjugations.
-- Collège (6ème, 5ème, 4ème, 3ème): past participle rules, grammatical homophones (ses/ces, c'est/s'est), official Brevet dictation preparation.
-- Adultes & FLE (Français Langue Étrangère): professional correspondence without errors, Certificat Voltaire training.
+## 5 Progression Levels (Niveaux de Progression)
+- Niveau 1 : Apprenti — Spelling basics, regular sounds, and simple everyday words.
+- Niveau 2 : Initié — Basic gender and number agreements, plurals, and common homophones (a/à, et/est).
+- Niveau 3 : Confirmé — Regular conjugations, key narrative tenses, and inverted subject-verb agreements.
+- Niveau 4 : Expert — Subtleties of the language, past participle agreements with avoir, and tricky homophones (leur/leurs).
+- Niveau 5 : Maître — Advanced spelling, complex pronominal past participles, and complete French language mastery.
 
-## Key Features & Game Modes
-- Voice Dictations (Dictée Longue & Dictée Express) with customizable speech speed and pauses.
-- Kids vs Parents Duels (Duels Enfants vs Parents): challenge parents or friends via SMS/WhatsApp with instant score comparison.
-- Gamification & Meemaw Coins 🪙: earn gold coins on perfect 20/20 scores, climb Game Center global leaderboards.
-- Detective Mode (Détective): find traps and errors hidden in passages.
-- Anagrams, Crosswords, and QCM grammar quizzes.
-- Meemaw's Rules & Tips (L'Astuce de Meemaw): concise, memorable grammatical explanations.
+## Key Features & Voice Mechanics
+- Step-by-step Dictation: Meemaw reads the full sentence first for global understanding, then dictates word by word.
+- On-Demand Replay & Speed: Replay buttons to listen again as needed, with 3 selectable speech speeds (Normal 1x, Slow 0.5x, Very Slow 0.25x).
+- 6 Grammar Themes (L'Astuce de Meemaw): Agreements, Homophones, Conjugations, Plurals, Everyday Spelling, and Expressions with explicit good examples vs common traps.
+- Kids vs Parents Duels (Duels Enfants vs Parents): Challenge parents or friends on the same dictation via WhatsApp or SMS with instant score comparison.
+- Gamification & Meemaw Coins 🪙: Earn gold coins on flawless sessions, unlock collectible trophies, and climb the Game Center global leaderboard.
+
+## 8 Distinct Game Modes
+1. Dictée Rapide (Quick Dictation - 5 phrases, score out of 20)
+2. Dictée Longue (Full Dictation - sentence then word by word)
+3. Marathon 20/20 (Continue until flawless)
+4. QCM Express (Rapid-fire grammar quiz)
+5. Mot à Mot (Single word spelling)
+6. Dictée Folle ! (Find and correct Grandma's intentional mistakes)
+7. Détective (Mystery words and spelling riddles)
+8. Anagrammes (Unscramble letters into target words)
 
 ## Availability & Downloads
 - Platform: iOS (iPhone & iPad)
 - App Store URL: https://apps.apple.com/app/id6757681331
 - Official Website: https://meemaw.app/
-- In-App Events: "Défi Dictée : Rentrée 20/20" (Fall 2026 Challenge)
+- Active In-App Event: "Défi Dictée : Rentrée 20/20"
