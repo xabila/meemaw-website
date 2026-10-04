@@ -1,0 +1,102 @@
+# Meemaw — full site facts
+
+This file expands https://meemaw.app/llms.txt using only facts already published on meemaw.app and in the public site files. It does not add prices, review counts, or ratings.
+
+Meemaw is an iOS educational application for French spelling, grammar, and conjugation. It is aimed at kids, families, and French language learners (FLE). The marketing site is a single URL with an in-page language switcher (French default, English, Spanish). There are no separate locale URLs.
+
+- Official website: https://meemaw.app/
+- App Store: https://apps.apple.com/app/id6757681331
+- App Store id: 6757681331
+- Platform: iPhone and iPad
+- Developer named on the homepage structured data: Xavier Larrodé
+- Support contact on the homepage footer and terms page: xlarrodeapp@gmail.com
+- Privacy-page contact: xlarrodeapp+meemaw@gmail.com
+
+## Pages
+
+- https://meemaw.app/ — marketing homepage
+- https://meemaw.app/challenge — duel invite landing page (opens the app via universal link or meemaw://challenge)
+- https://meemaw.app/result — duel result landing page (meemaw://result)
+- https://meemaw.app/privacy.html — privacy policy (last updated July 1, 2026)
+- https://meemaw.app/terms.html — terms of use (last updated July 1, 2026)
+- https://meemaw.app/llms.txt — short facts
+- https://meemaw.app/sitemap.xml — sitemap
+- Apple universal links (from the site association file) cover /challenge and /result
+
+## Core philosophy
+
+- Positive reinforcement instead of red-ink school punishment.
+- Vibrant neo-brutalist and pop-art comic aesthetic.
+- On-device speech processing. The site states dictation works fully offline and that voice processing and correction happen on the device. The privacy policy says Meemaw uses Apple's built-in Speech Recognition framework, handled by the device operating system.
+- Apple Family Sharing: one purchase or subscription for up to 6 family members.
+
+## Five progression levels
+
+- Niveau 1, Apprenti: spelling basics, regular sounds, and simple everyday words.
+- Niveau 2, Initié: basic gender and number agreements, plurals, and common homophones (a/à, et/est).
+- Niveau 3, Confirmé: regular conjugations, key narrative tenses, and inverted subject-verb agreements.
+- Niveau 4, Expert: subtleties of the language, past participle agreements with avoir, and tricky homophones (leur/leurs).
+- Niveau 5, Maître: advanced spelling, complex pronominal past participles, and complete French language mastery.
+
+## Voice mechanics
+
+- Step-by-step dictation: Meemaw reads the full sentence first, then dictates word by word.
+- On-demand replay, plus a back control to listen again.
+- Three speech speeds: Normal 1x, Slow 0.5x, Very Slow 0.25x.
+- No account or password is required. The FAQ says progress stays on the iPhone and syncs through the user's personal iCloud account.
+
+## Six grammar themes (L'Astuce de Meemaw)
+
+Agreements, Homophones, Conjugations, Plurals, Everyday Spelling, and Expressions. Each rule shows a good example against a common trap, without jargon.
+
+## Eight game modes
+
+1. Dictée Rapide — quick dictation, 5 sentences, score out of 20
+2. Dictée Longue — full dictation, sentence then word by word
+3. Marathon 20/20 — continue until flawless
+4. QCM Express — rapid-fire grammar quiz
+5. Mot à Mot — single word spelling
+6. Dictée Folle — find and correct Grandma's intentional mistakes
+7. Détective — mystery words and spelling riddles
+8. Anagrammes — unscramble letters into target words
+
+## Duels (Kids vs Parents)
+
+- After a session, the child can challenge a parent or friend on the same dictation.
+- The invite is sent through WhatsApp or SMS. The site says no extra account is created.
+- The parent plays the same dictation. Scores, time, and mistakes are compared.
+- Challenge and result pages read query parameters (challenger or defender, score, title, and dictation id where present) and offer a button to open the app.
+
+## Gamification
+
+- Gold Meemaw Coins on flawless sessions. The homepage says +20 Meemaw Coins for each 20/20.
+- Collectible trophies.
+- Apple Game Center global leaderboard. Leaderboards, achievements, and challenge scores go through Game Center under the user's Apple ID.
+
+## Active in-app event
+
+"Défi Dictée : Rentrée 20/20" (Grand Défi Dictée, rentrée 2026). The homepage says the goal is 50 flawless sentences, Meemaw Coins, and the Game Center ranking.
+
+## Purchases (as stated on the terms and privacy pages)
+
+- Terms summary: Meemaw is free with optional in-app purchases.
+- Free to download and use with limitations.
+- Meemaw PRO is available as Monthly, Yearly, or Lifetime.
+- The homepage call to action mentions 3 days of Meemaw PRO offered as a trial.
+- Billing is charged to the Apple ID. Subscriptions renew unless canceled at least 24 hours before the end of the current period, in App Store account settings.
+- Refunds are handled by Apple, not by the developer.
+- The privacy policy says RevenueCat validates purchase status from an anonymous Apple receipt, and that the developer does not receive the buyer's name, payment details, or email.
+
+## Privacy (as stated on the privacy page)
+
+- No personal data is collected on third-party servers.
+- Dictation progress, scores, and preferences are stored locally on the iPhone.
+- The app policy says the app does not use third-party analytics such as Google Analytics, Mixpanel, or Facebook Pixel.
+- The developer operates no custom tracking servers for the app.
+
+## Other product statements on the homepage
+
+- No ads.
+- Works on iPhone and iPad.
+- A desktop QR code on the homepage points to the App Store listing.
+- Comparison claims published on the homepage: full-sentence then word-by-word reading with replay and three speeds; one-tap family duels; example-versus-trap explanations; coins and trophies; one Family Sharing purchase for siblings; no account, data kept on the iPhone.

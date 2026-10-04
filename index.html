@@ -15,7 +15,11 @@
     <meta name="description" content="L'application d'orthographe et de dictée vocale avec vraie diction française. Lecture globale puis mot à mot, 5 niveaux du débutant au maître, duels en famille et règles expliquées sans jargon.">
     <meta name="keywords" content="dictée vocale, orthographe, apprendre le français, duel orthographe, fle, règles grammaire, partage familial, meemaw">
     <link rel="canonical" href="https://meemaw.app/">
-    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="preload" as="image" href="assets/meemaw-trophy.webp" type="image/webp" fetchpriority="high">
     
     <!-- Apple Smart App Banner for automatic iOS native app header -->
     <meta name="apple-itunes-app" content="app-id=6757681331, app-argument=https://meemaw.app/challenge">
@@ -28,7 +32,10 @@
     <!-- Open Graph Meta -->
     <meta property="og:title" content="Meemaw - Dictée Vocale & Orthographe en Famille 👵✨" />
     <meta property="og:description" content="Lecture de phrase entière puis mot à mot, 5 niveaux par paliers, 8 modes de jeu et duels sur WhatsApp. Zéro pub, 100% sur iPhone !" />
-    <meta property="og:image" content="https://meemaw.app/assets/event-banner.png" />
+    <meta property="og:image" content="https://meemaw.app/assets/event-banner.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
     <meta property="og:url" content="https://meemaw.app/" />
     <meta property="og:type" content="website" />
 
@@ -36,7 +43,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Meemaw - Dictée Vocale & Orthographe en Famille" />
     <meta name="twitter:description" content="Entraînez-vous à la dictée à votre rythme et défiez vos proches sur iPhone & iPad !" />
-    <meta name="twitter:image" content="https://meemaw.app/assets/event-banner.png" />
+    <meta name="twitter:image" content="https://meemaw.app/assets/event-banner.jpg" />
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -1050,7 +1057,7 @@
     <!-- Header -->
     <header>
         <a href="#" class="header-left">
-            <img src="assets/icon.png" alt="Meemaw Logo" class="header-logo">
+            <img src="assets/icon.webp" alt="Meemaw Logo" class="header-logo" width="512" height="512" decoding="async">
             <span class="header-title">MEEMAW</span>
         </a>
         
@@ -1103,13 +1110,13 @@
 
         <div class="hero-image-wrapper">
             <div class="floating-coin-badge">
-                <img src="assets/meemaw-coin.png" alt="Pièce Meemaw Coin" class="coin-badge-img">
+                <img src="assets/meemaw-coin.webp" alt="Pièce Meemaw Coin" class="coin-badge-img" width="180" height="180" decoding="async">
                 <div class="coin-badge-info">
                     <span class="coin-badge-val" data-i18n="hero_coin_val">+20 Meemaw Coins 🪙</span>
                     <span class="coin-badge-sub" data-i18n="hero_coin_sub">Gagnés à chaque 20/20 !</span>
                 </div>
             </div>
-            <img src="assets/meemaw-trophy.png" alt="Meemaw tenant son trophée" class="hero-image">
+            <img src="assets/meemaw-trophy.webp" alt="Meemaw tenant son trophée" class="hero-image" width="1024" height="1024" fetchpriority="high" decoding="async">
             <div class="desktop-qr-card">
                 <img src="assets/qr-appstore.png" alt="QR code Meemaw App Store">
                 <div class="desktop-qr-text">
@@ -1124,7 +1131,7 @@
     <section id="defi-rentree" class="event-spotlight-section">
         <div class="event-card-banner">
             <div class="event-image-side">
-                <img src="assets/event-banner.png" alt="Meemaw Défi Dictée Rentrée 20/20">
+                <img src="assets/event-banner.webp" alt="Meemaw Défi Dictée Rentrée 20/20" width="1280" height="720" decoding="async">
             </div>
             <div class="event-text-side">
                 <span class="event-badge" data-i18n="event_badge">Événement Spécial Rentrée 2026</span>
@@ -1216,7 +1223,7 @@
             </div>
 
             <div class="duel-mockup-card">
-                <img src="assets/duel.png" alt="Duel Meemaw">
+                <img src="assets/duel.webp" alt="Duel Meemaw" width="720" height="720" loading="lazy" decoding="async">
                 <h4 data-i18n="duel_card_title">Compatible WhatsApp & Messages</h4>
                 <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n="duel_card_desc">Aucun compte à créer. Le lien s'ouvre directement dans l'application grâce aux Universal Links Apple.</p>
             </div>
@@ -1233,28 +1240,28 @@
         <div class="features-grid">
             <!-- 1. Voice Dictations -->
             <div class="popart-card">
-                <img src="assets/score.png" alt="Dictée pas à pas" class="feature-icon-img">
+                <img src="assets/score.webp" alt="Dictée pas à pas" class="feature-icon-img" width="480" height="480" loading="lazy" decoding="async">
                 <h3 data-i18n="feat1_title">Dictée pas à pas & Répétition</h3>
                 <p data-i18n="feat1_desc">Meemaw lit d'abord la phrase entière pour donner le contexte, puis dicte mot à mot. Bouton de répétition à volonté et 3 vitesses réglables (Normal 1x, Lent 0.5x, Très lent 0.25x).</p>
             </div>
 
             <!-- 2. Meemaw Coins & Gamification -->
             <div class=popart-card>
-                <img src="assets/meemaw-coin.png" alt="Meemaw Coins" class="feature-icon-img">
+                <img src="assets/meemaw-coin.webp" alt="Meemaw Coins" class="feature-icon-img" width="180" height="180" loading="lazy" decoding="async">
                 <h3 data-i18n="feat2_title">Meemaw Coins & Trophées 🪙</h3>
                 <p data-i18n="feat2_desc">Gagnez des pièces d'or sur chaque sans-faute, débloquez des trophées collector et hissez-vous au classement mondial Game Center.</p>
             </div>
 
             <!-- 3. Grammar Rules -->
             <div class="popart-card">
-                <img src="assets/rules.png" alt="L'Astuce de Meemaw" class="feature-icon-img">
+                <img src="assets/rules.webp" alt="L'Astuce de Meemaw" class="feature-icon-img" width="480" height="480" loading="lazy" decoding="async">
                 <h3 data-i18n="feat3_title">L'Astuce de Meemaw (6 Thèmes) 📚</h3>
                 <p data-i18n="feat3_desc">Accords, Homophones, Conjugaison, Pluriels, Orthographe d'usage, Expressions : chaque règle oppose le bon exemple au piège évité, sans jargon.</p>
             </div>
 
             <!-- 4. Mode Détective & Jeux -->
             <div class="popart-card">
-                <img src="assets/meemaw-welcome.jpg" alt="Mode Détective" class="feature-icon-img">
+                <img src="assets/meemaw-welcome.webp" alt="Mode Détective" class="feature-icon-img" width="480" height="480" loading="lazy" decoding="async">
                 <h3 data-i18n="feat4_title">8 Modes de Jeu Variés 🎮</h3>
                 <p data-i18n="feat4_desc">Dictée Rapide, Dictée Longue, Marathon 20/20, QCM Express, Mot à Mot, Dictée Folle (corrigez Mamie !), Détective et Anagrammes.</p>
             </div>
@@ -1311,7 +1318,7 @@
                     </tr>
                     <tr>
                         <td><strong>Motivation & Pièces d'or</strong></td>
-                        <td class="highlight-col">✅ <img src="assets/meemaw-coin.png" alt="Pièce Meemaw" class="table-coin-img"> Meemaw Coins & Trophées</td>
+                        <td class="highlight-col">✅ <img src="assets/meemaw-coin.webp" alt="Pièce Meemaw" class="table-coin-img" width="180" height="180" loading="lazy" decoding="async"> Meemaw Coins & Trophées</td>
                         <td>❌ Aucune récompense</td>
                         <td>⚠️ Score austère</td>
                     </tr>
@@ -1390,7 +1397,7 @@
 
     <!-- Bottom Mega CTA -->
     <div class="bottom-cta">
-        <img src="assets/icon.png" alt="Meemaw Icon" class="bottom-cta-icon">
+        <img src="assets/icon.webp" alt="Meemaw Icon" class="bottom-cta-icon" width="512" height="512" loading="lazy" decoding="async">
         <h2 data-i18n="cta_title">Prêt à progresser en orthographe ?</h2>
         <p data-i18n="cta_desc">Téléchargez Meemaw sur iPhone et iPad, lancez votre premier duel en famille et profitez de 3 jours d'essai offerts avec Meemaw PRO !</p>
         <a href="https://apps.apple.com/app/id6757681331" target="_blank" class="primary-button" style="font-size: 1.25rem; padding: 1.3rem 2.8rem;" data-i18n="cta_btn">

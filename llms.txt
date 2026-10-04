@@ -37,3 +37,6 @@ Meemaw is an iOS educational application designed to make learning French spelli
 - App Store URL: https://apps.apple.com/app/id6757681331
 - Official Website: https://meemaw.app/
 - Active In-App Event: "Défi Dictée : Rentrée 20/20"
+
+## Extended reference
+- Full site facts (no separate locale URLs): https://meemaw.app/llms-full.txt
