@@ -3,6 +3,16 @@
     "apps": [],
     "details": [
       {
+        "appIDs": ["5WJLNQMPLH.com.xlarrodeapp.meemawmath"],
+        "paths": ["/math/challenge", "/math/challenge/*", "/math/result", "/math/result/*"],
+        "components": [
+          { "/": "/math/challenge", "?": { "dictationId": "*" } },
+          { "/": "/math/challenge/*" },
+          { "/": "/math/result", "?": { "ctx": "*" } },
+          { "/": "/math/result/*" }
+        ]
+      },
+      {
         "appIDs": ["5WJLNQMPLH.com.xlarrodeapp.meemaw"],
         "paths": ["/challenge", "/challenge/*", "/result", "/result/*"],
         "components": [
@@ -15,6 +25,9 @@
     ]
   },
   "webcredentials": {
-    "apps": ["5WJLNQMPLH.com.xlarrodeapp.meemaw"]
+    "apps": [
+      "5WJLNQMPLH.com.xlarrodeapp.meemaw",
+      "5WJLNQMPLH.com.xlarrodeapp.meemawmath"
+    ]
   }
 }
