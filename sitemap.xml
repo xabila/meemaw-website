@@ -3,13 +3,43 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://meemaw.app/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://meemaw.app/comparatif-applications-orthographe-dictee.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/best-french-spelling-dictation-app.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/mejor-app-ortografia-dictado-frances.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
+  </url>
+  <url>
+    <loc>https://meemaw.app/best-french-spelling-dictation-app.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/best-french-spelling-dictation-app.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/mejor-app-ortografia-dictado-frances.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
+  </url>
+  <url>
+    <loc>https://meemaw.app/mejor-app-ortografia-dictado-frances.html</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/best-french-spelling-dictation-app.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/mejor-app-ortografia-dictado-frances.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
+  </url>
+  <url>
     <loc>https://meemaw.app/math/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/?lang=fr"/>
@@ -19,7 +49,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html"/>
@@ -29,7 +59,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/best-mental-math-app-comparison.html</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html"/>
@@ -39,7 +69,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html"/>
@@ -49,43 +79,43 @@
   </url>
   <url>
     <loc>https://meemaw.app/llms.txt</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meemaw.app/llms-full.txt</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meemaw.app/math/llms.txt</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://meemaw.app/challenge</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meemaw.app/math/challenge</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://meemaw.app/privacy.html</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://meemaw.app/terms.html</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
