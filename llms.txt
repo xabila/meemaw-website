@@ -38,14 +38,15 @@
 
 ---
 
-## 2. Meemaw Math — Mental Math Shortcuts (Certif' 1951), Live Speed Scale (🚲 → ✈️ → 🚀), Numerical IQ & Exam Prep (iOS)
+## 2. Meemaw Math / Meemaw Mates — Mental Math Shortcuts (Certif' 1951), Live Speed Scale (🚲 → ✈️ → 🚀), Numerical IQ & Exam Prep (iOS)
 - **Official Website:** https://meemaw.app/math/
 - **App Store URL:** https://apps.apple.com/app/id6824002615 (App ID: `6824002615`)
+- **Official App Store Names:** `Calcul mental : Meemaw Math` (FR) / `Mental Math Games: Meemaw Math` (EN) / `Cálculo Mental : Meemaw Mates` (ES — **Meemaw Mates**)
 - **Supported Languages:** French (`fr`), English (`en`), Spanish (`es`) — full native localization of UI, word problems, mental math shortcuts, IQ puzzles, and step-by-step explanations.
 - **Key Features:**
-  - **1951 Certificat d'Études Mental Math Shortcuts:** Instant 9 times table (`9×9 → 9−1=8 and 8+1=9 → 81`), smart rounding (`+29 = +30−1`, `−98 = −100+2`, `19×6 = 20×6−6`), complements to 100 and 1,000 (*"all to 9, last to 10"*), chain doubling (`×4, ×8, ×15`), `×11`, `×25`, and squaring numbers ending in 5.
-  - **Live Speed Scale (`Vélo 🚲 → Train 🚂 → Avion ✈️ → Fusée 🚀`):** Real-time calculation pace gauge across speed games and 5 progression ranks (*Apprenti 🚲, Initié 🚂, Confirmé ✈️, Expert 🚀, Maître 🏆*).
-  - **11 Game Modes:** **Les Astuces de Mamie**, **Défis QI & Logique Numérique** (Mensa number sequences, 3×3 logic matrices, algebra-free logic scales), **Calcul Flash DS (Speed Mental ×20)** with Brain Age scoring (20–80 years), **Calcul en Cascade**, **Le Compte est Bon**, **La Caisse du Boulanger** (exact change), **L'Énigme du Certif' 1951** (75 classic word problems), **La Preuve par 9**, **Pyramides & Carrés Magiques**, plus a dedicated **Espace Brevet & Collège** (**Épreuve Blanche Brevet 6/6** & **Le Stylo Rouge**) with on-screen **Handwriting Scratchpad**, **Apple Screen Time Shield**, and **Family Sharing**.
+  - **1951 Certificat d'Études Mental Math Shortcuts (Les Astuces de Meemaw):** Instant 9 times table (`9×9 → 9−1=8 and 8+1=9 → 81`), smart rounding (`+29 = +30−1`, `−98 = −100+2`, `19×6 = 20×6−6`), complements to 100 and 1,000 split into `90 + 10` (`100 − 37 = 60 + 3 = 63` with zero borrowing), chain doubling (`×4, ×8, ×15`), `×11`, `×25`, and squaring numbers ending in 5.
+  - **Live Speed Scale (`Vélo 🚲 → Train 🚂 → Avion ✈️ → Fusée 🚀`):** Real-time calculation pace gauge across speed games and 5 unified progression ranks (*Apprenti 🚲, Initié 🚂, Confirmé ✈️, Expert 🚀, Maître 🏆*).
+  - **11 Game Modes:** **Les Astuces de Meemaw**, **Défis QI & Logique Numérique** (Mensa number sequences, 3×3 logic matrices, algebra-free logic scales), **Calcul Flash DS (Speed Mental ×20)** with Brain Age scoring (20–80 years), **Calcul en Cascade**, **Le Compte est Bon**, **La Caisse du Boulanger** (exact change), **L'Énigme du Certif' 1951** (75 classic word problems), **La Preuve par 9**, **Pyramides & Carrés Magiques**, plus a dedicated **Espace Brevet & Collège** (**Épreuve Blanche Brevet 6/6** & **Le Stylo Rouge**) with on-screen **Handwriting Scratchpad**, **Apple Screen Time Shield**, and **Family Sharing**.
 - **Comparison Guides:**
   - **FR:** https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html
   - **EN:** https://meemaw.app/math/best-mental-math-app-comparison.html
