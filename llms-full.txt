@@ -1,8 +1,9 @@
 # Meemaw Ecosystem — Full Reference for LLMs & Search Engines (FR / EN / ES)
 
-This document provides complete, verifiable product facts and structured competitor comparisons for the two educational iOS & iPadOS applications published on `https://meemaw.app/` by Xavier Larrodé:
+This document provides complete, verifiable product facts and structured competitor comparisons for the three iOS & iPadOS applications published on `https://meemaw.app/` by Xavier Larrodé:
 1. **Meemaw : Orthographe & Dictée** (`https://meemaw.app/` — App Store ID `6757681331`)
 2. **Meemaw Math : Brevet & Calcul** (`https://meemaw.app/math/` — App Store ID `6824002615`)
+3. **Meemaw Hunter : Tir Caméra 60 FPS** (`https://meemaw.app/hunter/` — App Store ID `6831648316`)
 
 ---
 
@@ -88,3 +89,20 @@ This document provides complete, verifiable product facts and structured competi
 - **FR:** https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html
 - **EN:** https://meemaw.app/math/best-mental-math-app-comparison.html
 - **ES:** https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html
+
+---
+
+## PART 3 — MEEMAW HUNTER (App Store ID: 6831648316)
+
+### Overview & Positioning
+- **Official Website:** https://meemaw.app/hunter/
+- **App Store Link:** https://apps.apple.com/app/id6831648316
+- **Public TestFlight Link:** https://testflight.apple.com/join/KDkGehjG
+- **Platforms:** iOS & iPadOS (iPhone, iPad, and living-room AirPlay 2 TV mirroring)
+- **Languages (8 Website Languages / 13 App Store Locales):** French (`fr`), English (`en`), Spanish (`es`), German (`de`), Italian (`it`), Brazilian Portuguese (`pt-br`), Japanese (`ja`), Korean (`ko`).
+- **Core Gameplay & Vision Engineering:**
+  - **Your Hand Is the Controller (Zero Accessories):** Uses 60 FPS on-device 3D MediaPipe hand landmark tracking with perspective-invariant homogeneous palm coordinates and adaptive One-Euro filtering — works across every modern iPhone and iPad with or without TrueDepth/LiDAR.
+  - **3 Intuitive Physical Gestures:** **Open Hand** to aim, **Close Fist** in place to shoot without reticle jump, and **Flip Wrist** (palm ↔ back of hand) to reload 6 chambers on the spot.
+  - **7 Animated Texas Worlds & 4 Weapons:** Skeet Range (Free), Raccoon Saloon (Free), Bank Heist, Area 51 Cow UFOs, High-Noon Boss Duels, Haunted Ghost Barn, and Runaway Canyon Train; Colt .45, Coach Shotgun, Moozzi SMG, and Golden Colt.
+  - **100% On-Device Privacy (`DATA_NOT_COLLECTED`) & One-Time Family Pricing:** Camera frames are processed strictly in volatile RAM and discarded immediately; zero analytics SDKs, zero ads, and a single `3,99 €` / `$3.99` *Sheriff Family Pack* (`com.xlarrodeapp.meemawhunter.sheriffpack`) shared with up to 6 family members via Apple Family Sharing.
+  - **Dedicated Hunter Privacy & LLM Docs:** https://meemaw.app/hunter/privacy.html · https://meemaw.app/hunter/terms.html · https://meemaw.app/hunter/llms.txt

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité — Meemaw Hunter</title>
+    <meta name="description" content="Politique de confidentialité de Meemaw Hunter sur iPhone et iPad : suivi de la main 60 FPS 100 % local en mémoire vive, zéro image enregistrée, zéro donnée collectée.">
+    <link rel="canonical" href="https://meemaw.app/hunter/privacy.html">
+    <link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/privacy.html?lang=fr">
+    <link rel="alternate" hreflang="en" href="https://meemaw.app/hunter/privacy.html?lang=en">
+    <link rel="alternate" hreflang="es" href="https://meemaw.app/hunter/privacy.html?lang=es">
+    <link rel="alternate" hreflang="de" href="https://meemaw.app/hunter/privacy.html?lang=de">
+    <link rel="alternate" hreflang="it" href="https://meemaw.app/hunter/privacy.html?lang=it">
+    <link rel="alternate" hreflang="pt-BR" href="https://meemaw.app/hunter/privacy.html?lang=pt-br">
+    <link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/privacy.html?lang=ja">
+    <link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/privacy.html?lang=ko">
+    <link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/privacy.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <meta name="apple-itunes-app" content="app-id=6831648316">
+
+    <style>
+        @font-face {
+            font-family: 'Bricolage Grotesque';
+            src: url('fonts/bricolage-grotesque-latin.woff2') format('woff2');
+            font-weight: 200 800;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Bricolage Grotesque';
+            src: url('fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');
+            font-weight: 200 800;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1EFF;
+        }
+        @font-face {
+            font-family: 'Nunito';
+            src: url('fonts/nunito-latin.woff2') format('woff2');
+            font-weight: 400 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Nunito';
+            src: url('fonts/nunito-latin-ext.woff2') format('woff2');
+            font-weight: 400 900;
+            font-style: normal;
+            font-display: swap;
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1E00-1EFF;
+        }
+
+        :root {
+            --saloon-timber: #1F130C;
+            --saloon-rail: #2C1B11;
+            --sheriff-gold: #F7B928;
+            --sheriff-gold-deep: #D99B10;
+            --sunlit-paper: #FFFFFF;
+            --paper-warm: #F3F0EA;
+            --chili-red: #C93B2B;
+            --armed-emerald: #136B42;
+            --ink: #1A120B;
+            --ink-secondary: #4A3828;
+            --timber-cream: #F5E9D6;
+            --font-display: 'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif;
+            --font-body: 'Nunito', 'Hiragino Sans', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius-surface: 14px;
+            --radius-control: 10px;
+            --radius-pill: 999px;
+            --shadow-elevated: 0 10px 28px rgba(26, 18, 11, 0.14);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-color: var(--sheriff-gold-deep) var(--saloon-timber);
+            scrollbar-width: thin;
+        }
+
+        ::selection {
+            background-color: var(--sheriff-gold);
+            color: var(--ink);
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--ink);
+            outline-offset: 3px;
+        }
+
+        .masthead :focus-visible,
+        .hero-band :focus-visible,
+        footer :focus-visible {
+            outline-color: var(--sheriff-gold);
+        }
+
+        body {
+            background-color: var(--sunlit-paper);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 1.0625rem;
+            font-weight: 600;
+            line-height: 1.64;
+            font-variant-numeric: tabular-nums;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--chili-red);
+            text-underline-offset: 3px;
+            text-decoration-thickness: 2px;
+            font-weight: 700;
+        }
+        a:hover {
+            color: var(--ink);
+        }
+
+        .masthead {
+            background-color: var(--saloon-timber);
+            color: var(--sunlit-paper);
+            border-bottom: 3px solid var(--sheriff-gold);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .masthead-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 0.85rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .brand-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--sunlit-paper);
+        }
+        .brand-link:hover { color: var(--sheriff-gold); }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            border: 2px solid var(--sheriff-gold);
+            display: block;
+        }
+
+        .brand-name {
+            font-family: var(--font-display);
+            font-weight: 800;
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
+        }
+
+        .masthead-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .suite-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: var(--saloon-rail);
+            padding: 0.25rem;
+            border-radius: var(--radius-pill);
+            border: 1.5px solid rgba(247, 185, 40, 0.32);
+        }
+
+        .suite-link {
+            color: var(--timber-cream);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 700;
+            padding: 0.35rem 0.8rem;
+            border-radius: var(--radius-pill);
+            transition: background-color 0.18s ease, color 0.18s ease;
+        }
+        .suite-link:hover {
+            color: var(--sunlit-paper);
+            background: rgba(255, 253, 249, 0.08);
+        }
+        .suite-link[aria-current="true"] {
+            background: var(--sheriff-gold);
+            color: var(--ink);
+        }
+
+        .lang-wrap {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--saloon-rail);
+            border: 1.5px solid rgba(247, 185, 40, 0.45);
+            border-radius: var(--radius-control);
+            padding: 0.32rem 0.6rem;
+            color: var(--sunlit-paper);
+        }
+
+        .lang-select {
+            background: transparent;
+            color: var(--sunlit-paper);
+            border: none;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 800;
+            cursor: pointer;
+        }
+        .lang-select option {
+            background: var(--saloon-timber);
+            color: var(--sunlit-paper);
+        }
+
+        .hero-band {
+            background-color: var(--saloon-timber);
+            color: var(--sunlit-paper);
+            padding: 3.25rem 1.5rem 2.75rem;
+            border-bottom: 3px solid var(--ink);
+        }
+
+        .hero-band-inner {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4.2vw, 3rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+            text-wrap: balance;
+            color: var(--sunlit-paper);
+            margin-bottom: 0.75rem;
+        }
+
+        .updated-meta {
+            color: var(--timber-cream);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .summary-banner {
+            background-color: var(--sheriff-gold);
+            color: var(--ink);
+            border-bottom: 3px solid var(--ink);
+            padding: 1.35rem 1.5rem;
+        }
+
+        .summary-inner {
+            max-width: 780px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+
+        .summary-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            margin-top: 0.15rem;
+            color: var(--ink);
+        }
+
+        .summary-inner p {
+            font-size: 1.05rem;
+            font-weight: 800;
+            line-height: 1.5;
+            max-width: 66ch;
+            text-wrap: pretty;
+        }
+
+        main {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 2.75rem 1.5rem 4.5rem;
+        }
+
+        article section + section {
+            margin-top: 2.5rem;
+            padding-top: 2.25rem;
+            border-top: 1.5px solid rgba(26, 18, 11, 0.12);
+        }
+
+        h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.35rem, 2.4vw, 1.65rem);
+            font-weight: 800;
+            line-height: 1.22;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            text-wrap: balance;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: var(--ink-secondary);
+            max-width: 68ch;
+            text-wrap: pretty;
+            overflow-wrap: break-word;
+            margin-bottom: 0.95rem;
+        }
+
+        ul {
+            padding-left: 1.35rem;
+            max-width: 68ch;
+            color: var(--ink-secondary);
+            overflow-wrap: break-word;
+            margin-bottom: 0.95rem;
+        }
+
+        li {
+            margin-bottom: 0.55rem;
+            text-wrap: pretty;
+        }
+
+        li strong, p strong {
+            color: var(--ink);
+            font-weight: 800;
+        }
+
+        .manifest-table-wrap {
+            margin-top: 1.15rem;
+            border: 2px solid var(--ink);
+            border-radius: var(--radius-surface);
+            overflow-x: auto;
+            background: var(--paper-warm);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid rgba(26, 18, 11, 0.14);
+            vertical-align: top;
+        }
+
+        th {
+            font-family: var(--font-display);
+            font-weight: 800;
+            background: var(--saloon-timber);
+            color: var(--sunlit-paper);
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .back-cta {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-return {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: var(--saloon-timber);
+            color: var(--sheriff-gold);
+            text-decoration: none;
+            padding: 0.8rem 1.35rem;
+            border-radius: var(--radius-control);
+            border: 2px solid var(--ink);
+            font-family: var(--font-display);
+            font-weight: 800;
+            box-shadow: var(--shadow-elevated);
+        }
+        .btn-return:hover {
+            background: var(--sheriff-gold);
+            color: var(--ink);
+        }
+
+        footer {
+            background: var(--saloon-timber);
+            color: var(--timber-cream);
+            border-top: 3px solid var(--sheriff-gold);
+            padding: 2.25rem 1.5rem;
+        }
+
+        .footer-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.92rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.15rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--timber-cream);
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            color: var(--sheriff-gold);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .masthead-inner { padding: 0.75rem 1rem; }
+            .suite-nav { width: 100%; justify-content: space-between; }
+            .suite-link { padding: 0.35rem 0.55rem; font-size: 0.8rem; }
+            thead { display: none; }
+            tbody tr { display: block; padding: 0.85rem 0.95rem; border-bottom: 1px solid rgba(26, 18, 11, 0.14); }
+            tbody tr:last-child { border-bottom: none; }
+            td { display: block; padding: 0; border-bottom: none; font-size: 0.9rem; }
+            td:nth-child(1) { font-family: var(--font-display); font-weight: 800; font-size: 0.98rem; color: var(--ink); }
+            td:nth-child(2) { display: inline-block; background: var(--sheriff-gold); color: var(--ink); font-weight: 800; font-size: 0.78rem; padding: 0.12rem 0.5rem; border-radius: 6px; margin: 0.25rem 0 0.45rem; }
+            .hero-band { padding: 2.25rem 1.15rem 2rem; }
+            main { padding: 2rem 1.15rem 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="masthead">
+        <div class="masthead-inner">
+            <a href="/hunter/" class="brand-link" id="brandLink">
+                <img src="assets/app-icon.webp" alt="Meemaw Hunter" class="brand-icon" width="84" height="84">
+                <span class="brand-name">Meemaw Hunter</span>
+            </a>
+            <div class="masthead-controls">
+                <nav class="suite-nav" aria-label="Meemaw apps">
+                    <a href="/" class="suite-link">Meemaw</a>
+                    <a href="/math/" class="suite-link">Meemaw Math</a>
+                    <a href="/hunter/" class="suite-link" aria-current="true" id="hunterNavLink">Meemaw Hunter</a>
+                </nav>
+                <div class="lang-wrap">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <select id="langSelect" class="lang-select" aria-label="Language">
+                        <option value="fr">FR · Français</option>
+                        <option value="en">EN · English</option>
+                        <option value="es">ES · Español</option>
+                        <option value="de">DE · Deutsch</option>
+                        <option value="it">IT · Italiano</option>
+                        <option value="pt-br">PT · Português</option>
+                        <option value="ja">JA · 日本語</option>
+                        <option value="ko">KO · 한국어</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-band">
+        <div class="hero-band-inner">
+            <h1 id="pageTitle">Politique de Confidentialité — Meemaw Hunter</h1>
+            <p class="updated-meta" id="updatedMeta">Dernière mise à jour : 11 novembre 2026 · App Store ID 6831648316 · Zéro donnée collectée</p>
+        </div>
+    </div>
+
+    <div class="summary-banner">
+        <div class="summary-inner">
+            <svg class="summary-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <p id="summaryText">En bref : Meemaw Hunter ne collecte, n’enregistre et ne transmet aucune donnée personnelle. Le suivi de votre main à 60 FPS s’exécute 100 % localement dans la mémoire vive (RAM) de votre iPhone ou iPad : aucune image ni vidéo de la caméra ne quitte jamais votre appareil.</p>
+        </div>
+    </div>
+
+    <main>
+        <article id="policyBody"></article>
+
+        <div class="back-cta">
+            <a href="/hunter/" class="btn-return" id="backBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                <span id="backLabel">Retour au ranch Meemaw Hunter</span>
+            </a>
+            <a href="terms.html" id="termsCrossLink">Conditions d’utilisation (CGU)</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <span id="footerCopy">© 2026 Xavier Larrodé · Suite familiale Meemaw</span>
+            <div class="footer-links">
+                <a href="/hunter/" id="footerHunter">Meemaw Hunter</a>
+                <a href="privacy.html" id="footerPrivacy">Confidentialité</a>
+                <a href="terms.html" id="footerTerms">Conditions</a>
+                <a href="/privacy.html" id="footerSuitePrivacy">Confidentialité Suite Meemaw</a>
+                <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const COPY = {
+            fr: {
+                docTitle: "Politique de Confidentialité — Meemaw Hunter",
+                pageTitle: "Politique de Confidentialité — Meemaw Hunter",
+                updated: "Dernière mise à jour : 11 novembre 2026 · App Store ID 6831648316 · Étiquette App Store : Aucune donnée collectée",
+                summary: "En bref : Meemaw Hunter ne collecte, n’enregistre et ne transmet aucune donnée personnelle. Le suivi de votre main à 60 FPS s’exécute 100 % localement dans la mémoire vive (RAM) de votre iPhone ou iPad : aucune image ni vidéo de la caméra ne quitte jamais votre appareil.",
+                back: "Retour au ranch Meemaw Hunter",
+                termsLink: "Conditions d’utilisation (CGU)",
+                footerCopy: "© 2026 Xavier Larrodé · Suite familiale Meemaw",
+                footerPrivacy: "Confidentialité",
+                footerTerms: "Conditions",
+                footerSuite: "Confidentialité Suite Meemaw",
+                html: `
+                    <section>
+                        <h2>1. Champ d’application et engagement « Zéro Donnée Collectée »</h2>
+                        <p>La présente politique s’applique spécifiquement à l’application iOS et iPadOS <strong>Meemaw Hunter</strong> (identifiant de lot <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), éditée par Xavier Larrodé.</p>
+                        <p>Conformément aux exigences d’Apple App Store Connect (étiquette de confidentialité <strong>« Données non collectées » / DATA_NOT_COLLECTED</strong>) et au RGPD européen, Meemaw Hunter fonctionne sans création de compte, sans serveur applicatif distant, sans publicité et sans traceur d’analyse.</p>
+                    </section>
+                    <section>
+                        <h2>2. Caméra frontale et suivi gestuel de la main à 60 FPS (100 % sur l’appareil)</h2>
+                        <p>Meemaw Hunter demande l’accès à la caméra frontale uniquement afin de vous permettre de viser (main ouverte), tirer (poing fermé) et recharger (rotation du poignet) sans manette. Vous pouvez également jouer à tout moment au doigt sur l’écran tactile sans activer la caméra.</p>
+                        <ul>
+                            <li><strong>Traitement exclusivement en mémoire vive (RAM) :</strong> Chaque image vidéo captée à 60 images par seconde est analysée instantanément sur le processeur et le Neural Engine de votre iPhone ou iPad via le modèle local embarqué <code>MediaPipeTasksVision</code> (21 repères articulaires de la main), puis immédiatement libérée de la mémoire vive.</li>
+                            <li><strong>Zéro enregistrement, zéro envoi réseau :</strong> Aucune photo, vidéo, capture de pièce, carte de profondeur TrueDepth / Face ID ni empreinte biométrique n’est jamais enregistrée sur le stockage de l’appareil ni transmise sur Internet.</li>
+                            <li><strong>Fonctionnement 100 % hors-ligne :</strong> Le suivi caméra fonctionne intégralement en mode Avion, prouvant qu’aucun flux vidéo ne transite vers un serveur externe.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. Stockage local sur votre appareil et manifeste Apple (PrivacyInfo.xcprivacy)</h2>
+                        <p>Meemaw Hunter conserve uniquement vos préférences de jeu sur votre appareil :</p>
+                        <div class="manifest-table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>API système iOS déclarée</th>
+                                        <th>Code Apple</th>
+                                        <th>Usage strictement local dans Meemaw Hunter</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>UserDefaults</strong></td>
+                                        <td><code>CA92.1</code></td>
+                                        <td>Sauvegarde locale des meilleurs scores, des mondes débloqués, des réglages audio/gaucher, de la validation du tutoriel et du calibrage de confort de la main. Supprimé dès la désinstallation de l’app.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SystemBootTime</strong></td>
+                                        <td><code>35F9.1</code></td>
+                                        <td>Calcul monotone de l’intervalle entre deux images à 60 FPS pour le lissage optique du viseur et le rythme de jeu.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>4. Zéro traceur tiers, zéro SDK d’analyse, zéro publicité</h2>
+                        <p>Contrairement à de nombreux jeux mobiles, Meemaw Hunter n’intègre <strong>aucun</strong> SDK d’analyse tiers (ni Mixpanel, ni Firebase, ni Google Analytics, ni Meta/TikTok SDK), n’accède jamais à l’identifiant publicitaire IDFA (<code>NSPrivacyTracking = false</code>) et n’affiche aucune publicité.</p>
+                    </section>
+                    <section>
+                        <h2>5. Mode Salon AirPlay TV 16:9</h2>
+                        <p>Lorsque vous projetez Meemaw Hunter sur un téléviseur compatible AirPlay ou une Apple TV, iOS affiche localement une scène graphique 16:9 du décor western sur votre téléviseur. Aucune image de la caméra frontale n’est diffusée vers des serveurs tiers.</p>
+                    </section>
+                    <section>
+                        <h2>6. Achat intégré unique (StoreKit 2) et Partage Familial Apple</h2>
+                        <p>Le téléchargement inclut gratuitement l’entraînement interactif ainsi que les Mondes 1 et 2. L’achat optionnel unique à vie <strong>Pack Shérif Jeu Complet</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>) est traité directement et exclusivement par Apple via le framework natif <strong>StoreKit 2</strong> (sans serveur intermédiaire tiers). Nous n’avons jamais accès à votre nom, votre identifiant Apple, votre adresse ou vos coordonnées bancaires. L’achat prend en charge le Partage Familial Apple jusqu’à 6 membres.</p>
+                    </section>
+                    <section>
+                        <h2>7. Protection des enfants et de la famille (RGPD / COPPA)</h2>
+                        <p>Ne collectant aucune information personnelle, photo, voix, localisation ou identifiant d’appareil, Meemaw Hunter respecte pleinement la vie privée des mineurs et des familles conformément au RGPD européen et au COPPA américain.</p>
+                    </section>
+                    <section>
+                        <h2>8. Contact et droits</h2>
+                        <p>Aucune donnée personnelle n’étant stockée sur nos serveurs, vous gardez un contrôle total directement depuis votre iPhone ou iPad (révocation de l’accès Caméra dans <em>Réglages &gt; Confidentialité et sécurité &gt; Appareil photo</em>, ou suppression complète via la désinstallation de l’application). Pour toute question : <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
+                    </section>
+                `
+            },
+            en: {
+                docTitle: "Privacy Policy — Meemaw Hunter",
+                pageTitle: "Privacy Policy — Meemaw Hunter",
+                updated: "Last updated: November 11, 2026 · App Store ID 6831648316 · App Store Label: Data Not Collected",
+                summary: "In short: Meemaw Hunter collects, records, and transmits zero personal data. All 60 FPS front-camera hand tracking runs 100% locally in volatile RAM on your iPhone or iPad—no camera frame or image ever leaves your device.",
+                back: "Back to Meemaw Hunter Ranch",
+                termsLink: "Terms of Use (EULA)",
+                footerCopy: "© 2026 Xavier Larrodé · Meemaw Family Suite",
+                footerPrivacy: "Privacy",
+                footerTerms: "Terms",
+                footerSuite: "Meemaw Suite Privacy",
+                html: `
+                    <section>
+                        <h2>1. Scope &amp; Strict “Data Not Collected” Commitment</h2>
+                        <p>This Privacy Policy applies specifically to the iOS and iPadOS game <strong>Meemaw Hunter</strong> (Bundle ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), published by Xavier Larrodé.</p>
+                        <p>In full compliance with Apple App Store Connect guidelines (App Privacy Nutrition Label: <strong>Data Not Collected</strong>), GDPR, UK GDPR, and COPPA, Meemaw Hunter operates with zero user accounts, zero backend servers, zero ads, and zero analytics trackers.</p>
+                    </section>
+                    <section>
+                        <h2>2. Front Camera &amp; 60 FPS Hand Tracking (100% On-Device)</h2>
+                        <p>Meemaw Hunter requests front-camera permission solely so you can aim (open hand), fire (close fist), and reload (wrist flip) hands-free. You can also play at any time using direct touchscreen taps without enabling the camera.</p>
+                        <ul>
+                            <li><strong>Volatile RAM Processing Only:</strong> Every camera frame captured at 60 FPS is processed instantaneously in memory on your iPhone or iPad CPU/Neural Engine using the bundled local <code>MediaPipeTasksVision</code> hand-landmark model (21 geometric hand joints) and discarded immediately within milliseconds.</li>
+                            <li><strong>Zero Recording &amp; Zero Uploads:</strong> No photos, video streams, room images, Face ID / TrueDepth depth maps, or biometric identifiers are ever written to disk, cached, or transmitted over the internet.</li>
+                            <li><strong>100% Offline Capable:</strong> Camera gesture tracking works identically in Airplane Mode—confirming that zero visual data is ever sent to any external server.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. Local Device Storage &amp; Apple Privacy Manifest (PrivacyInfo.xcprivacy)</h2>
+                        <p>Meemaw Hunter stores only local gameplay state on your own device:</p>
+                        <div class="manifest-table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Declared iOS API</th>
+                                        <th>Reason Code</th>
+                                        <th>Strictly Local Purpose in Meemaw Hunter</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>UserDefaults</strong></td>
+                                        <td><code>CA92.1</code></td>
+                                        <td>Saves local high scores, unlocked Texas worlds, audio/left-handed settings, tutorial completion, and comfort hand calibration on your device. Deleted immediately if you uninstall the app.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SystemBootTime</strong></td>
+                                        <td><code>35F9.1</code></td>
+                                        <td>Measures monotonic 60 FPS frame intervals for optical crosshair smoothing and physics timing.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>4. Zero Third-Party Analytics, SDKs, or Advertising</h2>
+                        <p>Meemaw Hunter embeds <strong>zero</strong> third-party analytics or attribution SDKs (no Mixpanel, no Firebase, no Google Analytics, no Meta or TikTok SDKs), never requests IDFA tracking (<code>NSPrivacyTracking = false</code>), and displays zero third-party advertisements.</p>
+                    </section>
+                    <section>
+                        <h2>5. 16:9 AirPlay TV Living-Room Mode</h2>
+                        <p>When casting Meemaw Hunter to an Apple TV or AirPlay-compatible smart TV, iOS renders a native 16:9 western stage scene over your local AirPlay connection. Camera video is never sent to external servers.</p>
+                    </section>
+                    <section>
+                        <h2>6. One-Time In-App Purchase (Apple StoreKit 2) &amp; Family Sharing</h2>
+                        <p>Downloading the game includes the interactive calibration tutorial plus Worlds 1 and 2 for free. The optional one-time <strong>Sheriff Full Game Unlock</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>) is processed 100% natively by Apple via <strong>StoreKit 2</strong> with no third-party receipt server. We never receive your name, Apple ID, billing address, or payment details, and Apple Family Sharing covers up to 6 family members.</p>
+                    </section>
+                    <section>
+                        <h2>7. Children’s &amp; Family Privacy (COPPA / GDPR)</h2>
+                        <p>Because Meemaw Hunter collects zero personal information, identifiers, audio, photos, or location data from any player of any age, it fully complies with COPPA and global child-privacy regulations.</p>
+                    </section>
+                    <section>
+                        <h2>8. Contact &amp; Control</h2>
+                        <p>You can revoke Camera access anytime in <em>iOS Settings &gt; Privacy &amp; Security &gt; Camera</em> or erase all local scores by deleting the app. Questions? Contact Xavier Larrodé at <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
+                    </section>
+                `
+            },
+            es: {
+                docTitle: "Política de Privacidad — Meemaw Hunter",
+                pageTitle: "Política de Privacidad — Meemaw Hunter",
+                updated: "Última actualización: 11 de noviembre de 2026 · App Store ID 6831648316 · Etiqueta App Store: No se recopilan datos",
+                summary: "En resumen: Meemaw Hunter no recopila, graba ni transmite ningún dato personal. El seguimiento de la mano a 60 FPS se ejecuta 100 % en la memoria RAM local de tu iPhone o iPad: ninguna imagen ni vídeo sale jamás de tu dispositivo.",
+                back: "Volver al rancho Meemaw Hunter",
+                termsLink: "Condiciones de Uso (EULA)",
+                footerCopy: "© 2026 Xavier Larrodé · Suite familiar Meemaw",
+                footerPrivacy: "Privacidad",
+                footerTerms: "Condiciones",
+                footerSuite: "Privacidad Suite Meemaw",
+                html: `
+                    <section>
+                        <h2>1. Alcance y compromiso de «Cero Datos Recopilados»</h2>
+                        <p>Esta Política de Privacidad se aplica al juego para iOS e iPadOS <strong>Meemaw Hunter</strong> (Bundle ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), publicado por Xavier Larrodé. Meemaw Hunter funciona sin cuentas de usuario, sin servidores propios, sin anuncios y sin rastreadores analíticos (etiqueta oficial de Apple: <strong>No se recopilan datos</strong>).</p>
+                    </section>
+                    <section>
+                        <h2>2. Cámara frontal y seguimiento gestual a 60 FPS (100 % local)</h2>
+                        <p>Meemaw Hunter solicita permiso de la cámara frontal únicamente para detectar tus tres gestos de juego: mano abierta para apuntar, puño cerrado para disparar y giro de muñeca para recargar (también puedes jugar tocando la pantalla sin cámara).</p>
+                        <ul>
+                            <li><strong>Procesamiento exclusivo en memoria RAM:</strong> Cada fotograma a 60 FPS es analizado al instante dentro de tu iPhone o iPad mediante el modelo local integrado <code>MediaPipeTasksVision</code> (21 puntos de la mano) y se descarta de inmediato.</li>
+                            <li><strong>Cero grabación y cero envío a Internet:</strong> Nunca se guardan ni envían fotos, vídeos, mapas TrueDepth/Face ID ni datos biométricos. Funciona al 100 % en Modo Avión.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. Almacenamiento local y manifiesto de privacidad de Apple</h2>
+                        <p>Solo se guardan localmente en tu dispositivo mediante <code>UserDefaults</code> (código Apple <code>CA92.1</code>) tus récords, mundos desbloqueados, ajustes de audio/zurdo y calibración de la mano, además del reloj monotónico <code>SystemBootTime</code> (<code>35F9.1</code>) para la fluidez a 60 FPS. Al desinstalar la app se borran todos los datos locales.</p>
+                    </section>
+                    <section>
+                        <h2>4. Cero SDK de análisis, cero publicidad y AirPlay TV local</h2>
+                        <p>Meemaw Hunter no incluye ningún SDK de terceros (sin Mixpanel, Firebase ni redes publicitarias), no solicita seguimiento IDFA (<code>NSPrivacyTracking = false</code>) y proyecta el escenario 16:9 por AirPlay TV directamente en tu red local.</p>
+                    </section>
+                    <section>
+                        <h2>5. Compra única (StoreKit 2), En Familia y Contacto</h2>
+                        <p>El desbloqueo único de por vida <strong>Pack Sheriff Juego Completo</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>) es procesado íntegramente por Apple mediante <strong>StoreKit 2</strong> con soporte para En Familia (hasta 6 miembros). Nunca recibimos tus datos personales ni bancarios. Contacto: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
+                    </section>
+                `
+            },
+            de: {
+                docTitle: "Datenschutzerklärung — Meemaw Hunter",
+                pageTitle: "Datenschutzerklärung — Meemaw Hunter",
+                updated: "Stand: 11. November 2026 · App Store ID 6831648316 · App-Store-Kennzeichnung: Keine Daten erfasst",
+                summary: "Kurz gesagt: Meemaw Hunter erfasst, speichert und überträgt keinerlei personenbezogene Daten. Das 60-FPS-Hand-Tracking läuft zu 100 % lokal im Arbeitsspeicher (RAM) Ihres iPhones oder iPads – kein einziges Kamerabild verlässt jemals Ihr Gerät.",
+                back: "Zurück zur Meemaw Hunter Ranch",
+                termsLink: "Nutzungsbedingungen (EULA)",
+                footerCopy: "© 2026 Xavier Larrodé · Meemaw Familien-Suite",
+                footerPrivacy: "Datenschutz",
+                footerTerms: "Bedingungen",
+                footerSuite: "Meemaw-Suite Datenschutz",
+                html: `
+                    <section>
+                        <h2>1. Geltungsbereich &amp; Grundsatz „Keine Daten erfasst“</h2>
+                        <p>Diese Datenschutzerklärung gilt für das iOS- und iPadOS-Spiel <strong>Meemaw Hunter</strong> (Bundle-ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), veröffentlicht von Xavier Larrodé. Gemäß DSGVO und Apple App Store Connect („Daten nicht erfasst“) arbeitet Meemaw Hunter ohne Benutzerkonto, ohne externe Server, ohne Werbung und ohne Analyse-Tracker.</p>
+                    </section>
+                    <section>
+                        <h2>2. Frontkamera &amp; 60-FPS-Handsteuerung (100 % auf dem Gerät)</h2>
+                        <p>Der Kamerazugriff dient ausschließlich dazu, Ihre drei Spielgesten in Echtzeit zu erkennen: offene Hand zum Zielen, geschlossene Faust zum Schießen und Handdrehung zum Nachladen (Touch-Steuerung ist jederzeit auch ohne Kamera nutzbar).</p>
+                        <ul>
+                            <li><strong>Verarbeitung nur im flüchtigen RAM:</strong> Jedes Einzelbild wird lokal über das integrierte Modell <code>MediaPipeTasksVision</code> ausgewertet und sofort verworfen.</li>
+                            <li><strong>Keine Speicherung, kein Upload:</strong> Es werden niemals Fotos, Videos, TrueDepth-/Face-ID-Daten oder biometrische Merkmale gespeichert oder ins Internet übertragen. Das Spiel funktioniert vollständig im Flugmodus.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. Lokale Speicherung, Käufe (StoreKit 2) &amp; Kontakt</h2>
+                        <p>Highscores, freigeschaltete Welten, Audio-/Linkshänder-Optionen und die Handkalibrierung verbleiben ausschließlich lokal in <code>UserDefaults</code> (Apple-Code <code>CA92.1</code>; <code>SystemBootTime</code> <code>35F9.1</code> dient nur dem 60-FPS-Frame-Timing). Der optionale Einmalkauf <strong>Sheriff-Vollversion</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>) wird direkt von Apple über <strong>StoreKit 2</strong> inkl. Familienfreigabe abgewickelt, ohne dass wir Zahlungs- oder Identitätsdaten erhalten. Kontakt: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
+                    </section>
+                `
+            },
+            it: {
+                docTitle: "Informativa sulla Privacy — Meemaw Hunter",
+                pageTitle: "Informativa sulla Privacy — Meemaw Hunter",
+                updated: "Ultimo aggiornamento: 11 novembre 2026 · App Store ID 6831648316 · Etichetta App Store: Dati non raccolti",
+                summary: "In sintesi: Meemaw Hunter non raccoglie, registra né trasmette alcun dato personale. Il tracciamento della mano a 60 FPS avviene al 100 % localmente nella memoria RAM del tuo iPhone o iPad: nessuna immagine lascia mai il dispositivo.",
+                back: "Torna al ranch Meemaw Hunter",
+                termsLink: "Termini d’Uso (EULA)",
+                footerCopy: "© 2026 Xavier Larrodé · Suite familiare Meemaw",
+                footerPrivacy: "Privacy",
+                footerTerms: "Termini",
+                footerSuite: "Privacy Suite Meemaw",
+                html: `
+                    <section>
+                        <h2>1. Ambito e garanzia «Nessun Dato Raccolto»</h2>
+                        <p>La presente informativa riguarda l’app iOS e iPadOS <strong>Meemaw Hunter</strong> (Bundle ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), pubblicata da Xavier Larrodé. Nel pieno rispetto del GDPR e delle linee guida Apple («Dati non raccolti»), l’app opera senza account, senza server esterni, senza pubblicità e senza SDK di tracciamento.</p>
+                    </section>
+                    <section>
+                        <h2>2. Fotocamera frontale a 60 FPS (100 % sul dispositivo)</h2>
+                        <p>L’accesso alla fotocamera frontale serve unicamente per rilevare i tre gesti di gioco: mano aperta per mirare, pugno chiuso per sparare e rotazione del polso per ricaricare (i controlli touch restano sempre attivi anche senza fotocamera).</p>
+                        <ul>
+                            <li><strong>Elaborazione solo in RAM:</strong> I fotogrammi sono analizzati localmente tramite <code>MediaPipeTasksVision</code> e scartati all’istante.</li>
+                            <li><strong>Zero salvataggi o invii:</strong> Nessuna foto, video o dato Face ID/TrueDepth viene mai salvato su disco o inviato online. Funziona al 100 % anche in Modalità Aereo.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. Dati locali, Acquisto Unico (StoreKit 2) e Contatti</h2>
+                        <p>Record, mondi sbloccati, preferenze audio/mancini e calibrazione restano esclusivamente sul dispositivo tramite <code>UserDefaults</code> (codice Apple <code>CA92.1</code>; <code>SystemBootTime</code> <code>35F9.1</code> regola il frame-rate a 60 FPS). L’acquisto unico opzionale <strong>Pacchetto Sceriffo Gioco Completo</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>) è gestito interamente da Apple tramite <strong>StoreKit 2</strong> con supporto a «In famiglia». Contatto: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
+                    </section>
+                `
+            },
+            "pt-br": {
+                docTitle: "Política de Privacidade — Meemaw Hunter",
+                pageTitle: "Política de Privacidade — Meemaw Hunter",
+                updated: "Última atualização: 11 de novembro de 2026 · App Store ID 6831648316 · Rótulo App Store: Dados não coletados",
+                summary: "Em resumo: Meemaw Hunter não coleta, grava nem transmite nenhum dado pessoal. O rastreamento da mão a 60 FPS roda 100 % localmente na memória RAM do seu iPhone ou iPad — nenhuma imagem da câmera sai do seu aparelho.",
+                back: "Voltar ao rancho Meemaw Hunter",
+                termsLink: "Termos de Uso (EULA)",
+                footerCopy: "© 2026 Xavier Larrodé · Suíte familiar Meemaw",
+                footerPrivacy: "Privacidade",
+                footerTerms: "Termos",
+                footerSuite: "Privacidade Suíte Meemaw",
+                html: `
+                    <section>
+                        <h2>1. Escopo e compromisso «Zero Dados Coletados» (LGPD / GDPR)</h2>
+                        <p>Esta Política de Privacidade aplica-se ao jogo iOS e iPadOS <strong>Meemaw Hunter</strong> (Bundle ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), publicado por Xavier Larrodé. Em conformidade com a LGPD brasileira e o rótulo oficial da App Store (<strong>Dados não coletados</strong>), o jogo funciona sem cadastro, sem servidores externos, sem anúncios e sem rastreadores.</p>
+                    </section>
+                    <section>
+                        <h2>2. Câmera frontal e gestos a 60 FPS (100 % no aparelho)</h2>
+                        <p>A permissão da câmera frontal é usada apenas para reconhecer seus três gestos: mão aberta para mirar, punho fechado para atirar e giro de pulso para recarregar (o modo de toque na tela continua sempre disponível sem câmera).</p>
+                        <ul>
+                            <li><strong>Processamento exclusivo em RAM:</strong> Cada quadro é processado localmente pelo modelo embarcado <code>MediaPipeTasksVision</code> e descartado imediatamente.</li>
+                            <li><strong>Zero gravação e zero upload:</strong> Nenhuma foto, vídeo ou dado TrueDepth/Face ID é salvo ou transmitido pela internet. Funciona 100 % em Modo Avião.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. Armazenamento local, Compra Única (StoreKit 2) e Contato</h2>
+                        <p>Pontuações, mundos desbloqueados, preferências e calibração da mão ficam salvos apenas localmente no aparelho via <code>UserDefaults</code> (<code>CA92.1</code>; <code>SystemBootTime</code> <code>35F9.1</code> mede os intervalos de 60 FPS). O desbloqueio único vitalício <strong>Pacote Xerife Jogo Completo</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>) é processado integralmente pela Apple via <strong>StoreKit 2</strong> com Compartilhamento Familiar para até 6 pessoas. Contato: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
+                    </section>
+                `
+            },
+            ja: {
+                docTitle: "プライバシーポリシー — Meemaw Hunter",
+                pageTitle: "プライバシーポリシー — Meemaw Hunter",
+                updated: "最終更新日：2026年11月11日 · App Store ID 6831648316 · App Store表記：データ収集なし",
+                summary: "要約：Meemaw Hunterは個人データを一切収集・録画・送信しません。60 FPSのハンドトラッキングはすべてiPhone / iPad内のメモリ（RAM）上で完結し、カメラ映像が外部へ出ることは一切ありません。",
+                back: "Meemaw Hunter ランチへ戻る",
+                termsLink: "利用規約（EULA）",
+                footerCopy: "© 2026 Xavier Larrodé · Meemaw ファミリースイート",
+                footerPrivacy: "プライバシー",
+                footerTerms: "利用規約",
+                footerSuite: "Meemawスイート全体のポリシー",
+                html: `
+                    <section>
+                        <h2>1. 適用範囲と「データ収集なし（DATA_NOT_COLLECTED）」の原則</h2>
+                        <p>本ポリシーは、Xavier Larrodé が提供する iOS / iPadOS 向けゲーム <strong>Meemaw Hunter</strong>（バンドルID <code>com.xlarrodeapp.meemawhunter</code>、App Store ID <code>6831648316</code>）に適用されます。アカウント登録、外部サーバー通信、広告表示、解析SDKによる追跡は一切行いません。</p>
+                    </section>
+                    <section>
+                        <h2>2. フロントカメラと60 FPSハンドトラッキング（100 %端末内処理）</h2>
+                        <p>フロントカメラ権限は、手を開く（照準）、拳を握る（発射）、手首を返す（リロード）の3つのジェスチャー操作を検出する目的でのみ使用されます（カメラを使わず画面タップだけでも常にプレイ可能です）。</p>
+                        <ul>
+                            <li><strong>揮発性RAM内のみのリアルタイム処理：</strong> 毎秒60フレームの映像は端末内蔵の <code>MediaPipeTasksVision</code> モデルによって手の21関節座標へと即座に変換され、フレーム画像は直ちに破棄されます。</li>
+                            <li><strong>録画・保存・送信ゼロ：</strong> 写真、動画、Face ID / TrueDepthデータ、生体情報が保存されたりインターネットへ送信されたりすることは一切ありません。機内モードでも100 %同じように動作します。</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. 端末内保存・買い切り課金（StoreKit 2）・お問い合わせ</h2>
+                        <p>ハイスコア、解放済みワールド、音量・左利き設定、キャリブレーション値は端末内の <code>UserDefaults</code>（Apple申告コード <code>CA92.1</code>、フレーム計測 <code>SystemBootTime</code> <code>35F9.1</code>）にのみ保存され、アプリ削除で完全に消去されます。オプションの買い切りパック <strong>保安官フルゲーム解除</strong>（<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>）は Apple 標準の <strong>StoreKit 2</strong>（ファミリー共有最大6名対応）で処理され、開発者が氏名や決済情報を受け取ることはありません。お問い合わせ：<a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a></p>
+                    </section>
+                `
+            },
+            ko: {
+                docTitle: "개인정보 처리방침 — Meemaw Hunter",
+                pageTitle: "개인정보 처리방침 — Meemaw Hunter",
+                updated: "최종 업데이트: 2026년 11월 11일 · App Store ID 6831648316 · App Store 표시: 수집된 데이터 없음",
+                summary: "요약: Meemaw Hunter는 어떠한 개인정보도 수집, 녹화 또는 전송하지 않습니다. 60 FPS 손 제스처 추적은 iPhone 및 iPad의 메모리(RAM) 내부에서 100 % 온디바이스로 처리되며, 카메라 영상은 절대 기기 밖으로 나가지 않습니다.",
+                back: "Meemaw Hunter 목장으로 돌아가기",
+                termsLink: "이용약관 (EULA)",
+                footerCopy: "© 2026 Xavier Larrodé · Meemaw 패밀리 스위트",
+                footerPrivacy: "개인정보 처리방침",
+                footerTerms: "이용약관",
+                footerSuite: "Meemaw 스위트 통합 정책",
+                html: `
+                    <section>
+                        <h2>1. 적용 범위 및 ‘수집된 데이터 없음’ 원칙</h2>
+                        <p>본 방침은 Xavier Larrodé가 배포하는 iOS 및 iPadOS 게임 <strong>Meemaw Hunter</strong>(번들 ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>)에 적용됩니다. 회원가입, 외부 서버, 광고 및 서드파티 분석 추적기를 일절 사용하지 않습니다.</p>
+                    </section>
+                    <section>
+                        <h2>2. 전면 카메라 및 60 FPS 손 추적 (100 % 기기 내 처리)</h2>
+                        <p>전면 카메라 권한은 손 펴기(조준), 주먹 쥐기(발사), 손목 뒤집기(재장전)의 3가지 제스처를 인식하는 용도로만 사용됩니다(카메라 없이 화면 터치만으로도 언제든 플레이할 수 있습니다).</p>
+                        <ul>
+                            <li><strong>휘발성 RAM 내 실시간 처리:</strong> 초당 60프레임 영상은 기기 내장 <code>MediaPipeTasksVision</code> 모델을 통해 21개 손 관절 좌표로만 계산된 뒤 즉시 메모리에서 삭제됩니다.</li>
+                            <li><strong>저장 및 전송 제로:</strong> 사진, 동영상, Face ID / TrueDepth 깊이 정보 또는 생체 데이터는 절대 저장되거나 외부로 전송되지 않으며 비행기 모드에서도 100 % 동일하게 작동합니다.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>3. 로컬 저장소, 평생 소장 결제(StoreKit 2) 및 문의</h2>
+                        <p>최고 점수, 해금된 월드, 오디오/왼손잡이 설정 및 손 보정 데이터는 기기 내부 <code>UserDefaults</code>(Apple 코드 <code>CA92.1</code>, 프레임 타이밍 <code>SystemBootTime</code> <code>35F9.1</code>)에만 저장되며 앱 삭제 시 즉시 제거됩니다. 선택형 1회 결제 상품인 <strong>보안관 전체 게임 팩</strong>(<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>)은 Apple의 <strong>StoreKit 2</strong>(최대 6인 가족 공유 지원)로 안전하게 처리되며 개발자는 결제 정보를 열람하지 않습니다. 문의: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a></p>
+                    </section>
+                `
+            }
+        };
+
+        function resolveLang() {
+            const params = new URLSearchParams(window.location.search);
+            const raw = (params.get('lang') || navigator.language || 'fr').toLowerCase();
+            if (COPY[raw]) return raw;
+            if (raw.startsWith('pt')) return 'pt-br';
+            const short = raw.slice(0, 2);
+            if (COPY[short]) return short;
+            return 'fr';
+        }
+
+        function applyLang(lang, updateUrl) {
+            const data = COPY[lang] || COPY.fr;
+            document.documentElement.lang = lang === 'pt-br' ? 'pt-BR' : lang;
+            document.title = data.docTitle;
+            document.getElementById('pageTitle').textContent = data.pageTitle;
+            document.getElementById('updatedMeta').textContent = data.updated;
+            document.getElementById('summaryText').textContent = data.summary;
+            document.getElementById('policyBody').innerHTML = data.html;
+            document.getElementById('backLabel').textContent = data.back;
+            document.getElementById('termsCrossLink').textContent = data.termsLink;
+            document.getElementById('termsCrossLink').href = `terms.html?lang=${lang}`;
+            document.getElementById('footerTerms').textContent = data.footerTerms;
+            document.getElementById('footerTerms').href = `terms.html?lang=${lang}`;
+            document.getElementById('footerPrivacy').textContent = data.footerPrivacy;
+            document.getElementById('footerPrivacy').href = `privacy.html?lang=${lang}`;
+            document.getElementById('footerSuitePrivacy').textContent = data.footerSuite;
+            document.getElementById('footerCopy').textContent = data.footerCopy;
+            const homeUrl = `/hunter/?lang=${lang}`;
+            document.getElementById('brandLink').href = homeUrl;
+            document.getElementById('hunterNavLink').href = homeUrl;
+            document.getElementById('backBtn').href = homeUrl;
+            document.getElementById('footerHunter').href = homeUrl;
+            document.getElementById('langSelect').value = lang;
+
+            if (updateUrl) {
+                const url = new URL(window.location.href);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url.toString());
+            }
+        }
+
+        const initialLang = resolveLang();
+        applyLang(initialLang, false);
+        document.getElementById('langSelect').addEventListener('change', (e) => {
+            applyLang(e.target.value, true);
+        });
+    </script>
+</body>
+</html>

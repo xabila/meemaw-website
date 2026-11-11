@@ -1,0 +1,34 @@
+# Meemaw Hunter — 60 FPS On-Device Camera Hand-Gesture Western Arcade Shooter (iPhone, iPad & AirPlay TV)
+
+> **Meemaw Hunter** (`com.xlarrodeapp.meemawhunter`, App Store ID `6831648316`) turns your bare hand into a 60 FPS light-gun arcade blaster on iPhone and iPad—with zero controllers, zero cloud camera uploads (`DATA_NOT_COLLECTED`), 7 painted Texas worlds, High Noon boss duels, and native 16:9 AirPlay TV living-room projection.
+
+## Official Links
+- **Official Showcase (8 Languages):** https://meemaw.app/hunter/
+- **App Store Listing:** https://apps.apple.com/app/id6831648316
+- **Public TestFlight Beta:** https://testflight.apple.com/join/KDkGehjG
+- **Privacy Policy (8 Languages):** https://meemaw.app/hunter/privacy.html
+- **Terms of Use (8 Languages):** https://meemaw.app/hunter/terms.html
+- **Meemaw Family Suite Home:** https://meemaw.app/
+
+## 3-Gesture Optical Control Loop (60 FPS On-Device)
+1. **Open Hand = Aim:** Hold your open hand 30–60 cm in front of the front camera; 21-point 3D MediaPipe hand tracking and sub-pixel One-Euro optical filtering move the emerald/gold crosshair smoothly across all iPhone models (including iPhone 17 Pro's 18 MP Center Stage sensor) and iPads.
+2. **Close Fist = Fire:** Curl your fingers into a fist to fire with recoil-stabilized hit detection (zero crosshair jump during rapid fire).
+3. **Flip Wrist (Palm ↔ Back of Hand) = Reload:** Turn your hand in place to reload the 6-shot cylinder without losing your aim—plus instant touchscreen tap fallback at any time.
+
+## 7 Playable Texas Worlds & 4 Arcade Weapons
+- **World 1 — Ball-Trap Ranch (Free):** Flying targets and skeet plates over a Texas dusk pasture.
+- **World 2 — Barn Ambush (Free):** Outlaws peeking from haystacks, barrels, and ranch tractors.
+- **World 3 — Alien UFO Night:** Nocturnal flying saucers and tractor beams above sleeping cattle.
+- **World 4 — Canyon Saloon:** Swinging saloon doors, frying-pan armored bandits, and bonus Golden Pies.
+- **World 5 — Flashlight Bayou:** Sweep your hand-controlled spotlight beam through pitch-dark swamp mist.
+- **World 6 — Reflex Gold Mine:** Split-second pop-up outlaws and mid-air dynamite sticks.
+- **World 7 — 1885 Steam Train Heist & High Noon Boss Duels:** Moving locomotive rooftop showdown and quick-draw boss duels.
+- **4 Arcade Weapons & Streaks:** 6-Shot Colt .45, 3-Pellet Shotgun, 3-Round Burst Moozzi, Explosive Bazooka, Frying-Pan Headshots, Flying Hearts, and 2× Bullet-Time Chili Fury.
+
+## AirPlay TV 16:9 Living-Room Mode
+- Connects wirelessly to Apple TV or any AirPlay 2 smart TV to project a dedicated full-bleed 16:9 arcade stage on the television while the iPhone serves as your personal hand-tracking cockpit.
+
+## Privacy (`DATA_NOT_COLLECTED`) & Honest Family Pricing
+- **100% On-Device Camera Processing:** `MediaPipeTasksVision` processes frames solely in volatile RAM. Zero photos, videos, Face ID/TrueDepth depth maps, or analytics events are ever recorded or transmitted (`NSPrivacyTracking = false`, zero third-party analytics SDKs).
+- **Try Free, Pay Once Forever:** Free download includes the 6-step calibration tutorial plus Worlds 1 & 2. Optional one-time **Sheriff Full Game Pack** (`com.xlarrodeapp.meemawhunter.sheriffpack`, `3,99 €` / `$3.99`) unlocks Worlds 3–7, Boss Duels, and unlimited continues forever with **Apple Family Sharing** (up to 6 family members) and zero subscriptions.
+- **8 Supported Web & App Languages (13 App Store Locales):** French (`fr-FR`, `fr-CA`), English (`en-US`, `en-GB`, `en-CA`, `en-AU`), Spanish (`es-ES`, `es-MX`), German (`de-DE`), Italian (`it`), Brazilian Portuguese (`pt-BR`), Japanese (`ja`), and Korean (`ko`).

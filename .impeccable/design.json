@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T17:04:00+01:00",
+  "title": "Design System: Meemaw Hunter & Family Suite Web",
+  "extensions": {
+    "colorMeta": {
+      "sheriff-gold": {
+        "role": "primary",
+        "displayName": "Sheriff Gold",
+        "canonical": "#F7B928",
+        "tonalRamp": ["#2D1F02", "#4F3705", "#785408", "#A6760C", "#D99B10", "#F7B928", "#FFD56B", "#FFF2CC"]
+      },
+      "sheriff-gold-deep": {
+        "role": "primary",
+        "displayName": "Sheriff Gold Deep",
+        "canonical": "#D99B10",
+        "tonalRamp": ["#281B02", "#473104", "#6E4C07", "#996B0A", "#D99B10", "#F0B62E", "#FAD475", "#FDF0CE"]
+      },
+      "chili-red": {
+        "role": "secondary",
+        "displayName": "Chili Barn Red",
+        "canonical": "#C93B2B",
+        "tonalRamp": ["#2B0A06", "#4F130C", "#7A1F15", "#A32D20", "#C93B2B", "#E05A4B", "#F0958B", "#FCE0DC"]
+      },
+      "armed-emerald": {
+        "role": "tertiary",
+        "displayName": "Armed Emerald",
+        "canonical": "#136B42",
+        "tonalRamp": ["#062114", "#0A3A24", "#0D5232", "#136B42", "#1B8A56", "#34AD74", "#76CFA5", "#D6F3E5"]
+      },
+      "armed-emerald-deep": {
+        "role": "tertiary",
+        "displayName": "Armed Emerald Deep",
+        "canonical": "#0D5232",
+        "tonalRamp": ["#04190F", "#082E1C", "#0D5232", "#136B42", "#1D8755", "#3AA874", "#7ECBA6", "#DAF2E6"]
+      },
+      "saloon-timber": {
+        "role": "neutral",
+        "displayName": "Saloon Timber",
+        "canonical": "#1F130C",
+        "tonalRamp": ["#120A06", "#1F130C", "#2C1B11", "#483626", "#6E5540", "#9E846C", "#DECBB0", "#F5E9D6"]
+      },
+      "saloon-rail": {
+        "role": "neutral",
+        "displayName": "Saloon Rail",
+        "canonical": "#2C1B11",
+        "tonalRamp": ["#140B07", "#1F130C", "#2C1B11", "#4A3222", "#70513D", "#A1806A", "#DECBB0", "#F6ECE0"]
+      },
+      "crisp-paper": {
+        "role": "neutral",
+        "displayName": "Crisp Paper",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["#1A120B", "#3B2D22", "#614F40", "#8C7A6B", "#B8ACA0", "#DDD6CE", "#F3F0EA", "#FFFFFF"]
+      },
+      "paper-stone": {
+        "role": "neutral",
+        "displayName": "Paper Stone",
+        "canonical": "#F3F0EA",
+        "tonalRamp": ["#1F1A14", "#3D352B", "#63584B", "#8C8070", "#B8AEA0", "#DAD3C8", "#F3F0EA", "#FCFBF9"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Roast Ink",
+        "canonical": "#1A120B",
+        "tonalRamp": ["#100A06", "#1A120B", "#302217", "#483626", "#6E5845", "#9C8673", "#CFC1B4", "#F4EFEA"]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Warm Umber Secondary",
+        "canonical": "#483626",
+        "tonalRamp": ["#1A120B", "#2E2117", "#483626", "#664F3B", "#8A6F58", "#B39B86", "#DCD0C4", "#F6F2EE"]
+      },
+      "timber-cream": {
+        "role": "neutral",
+        "displayName": "Timber Cream",
+        "canonical": "#F5E9D6",
+        "tonalRamp": ["#21160B", "#422E1A", "#694C2E", "#946F49", "#BD9972", "#DECBB0", "#F5E9D6", "#FCF8F2"]
+      },
+      "timber-muted": {
+        "role": "neutral",
+        "displayName": "Timber Muted",
+        "canonical": "#DECBB0",
+        "tonalRamp": ["#21170D", "#402E1C", "#664C32", "#8F6E4D", "#B89A78", "#DECBB0", "#EFE4D5", "#FAF6F0"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Opening saloon-plaque h1 and primary legal document titles."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Chapter h2 headings across product and legal surfaces."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "World showcase h3, ledger column headers, and screenshot strip headers."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Primary narrative copy, capped at 48ch-68ch with tabular numerals."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, world tabs, status pills, and split-flap instrument digits."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-stage",
+        "value": "0 18px 44px rgba(10, 5, 2, 0.42)",
+        "purpose": "Anchors the 16:9 AirPlay living-room frame against dark Saloon Timber."
+      },
+      {
+        "name": "shadow-elevated",
+        "value": "0 10px 26px rgba(26, 18, 11, 0.16)",
+        "purpose": "Lifts the interactive 7-world stage theater off the Crisp Paper ground."
+      },
+      {
+        "name": "drop-sprite",
+        "value": "0 10px 16px rgba(15, 7, 3, 0.45)",
+        "purpose": "Separates cutout ranch critters and optical indicators from painted scenery."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Snappy tactile hover lift and split-flap digit cascade easing."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "600px" },
+      { "name": "md", "value": "980px" },
+      { "name": "lg", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary App Store Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary conversion CTA in Sheriff Gold with solid ink border and tactile lift.",
+      "html": "<a href=\"#\" class=\"ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3\"/></svg><span>Download on the App Store</span></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.55rem; background: #F7B928; color: #1A120B; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 1rem; padding: 0.82rem 1.3rem; border-radius: 12px; border: 2px solid #1A120B; transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.18s ease; } .ds-btn-primary:hover { background: #FFD054; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 3px solid #F7B928; outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary TestFlight Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary action on dark Saloon Timber plaques for joining the public TestFlight beta.",
+      "html": "<a href=\"#\" class=\"ds-btn-secondary\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M22 2 11 13\"/><path d=\"m22 2-7 20-4-9-9-4 20-7z\"/></svg><span>Public TestFlight Beta</span></a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: #2C1B11; color: #F5E9D6; text-decoration: none; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 0.95rem; padding: 0.8rem 1.15rem; border-radius: 12px; border: 1.5px solid rgba(247, 185, 40, 0.65); transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.18s ease, color 0.18s ease; } .ds-btn-secondary:hover { border-color: #F7B928; color: #F7B928; transform: translateY(-2px); } .ds-btn-secondary:focus-visible { outline: 3px solid #F7B928; outline-offset: 3px; }"
+    },
+    {
+      "name": "Armed Emerald Reload Button",
+      "kind": "button",
+      "refersTo": "button-reload",
+      "description": "Compact range instrument trigger in WCAG-compliant Armed Emerald.",
+      "html": "<button type=\"button\" class=\"ds-btn-reload\">Reload</button>",
+      "css": ".ds-btn-reload { background: #136B42; color: #FFFFFF; border: 1.5px solid #FFFFFF; border-radius: 8px; padding: 0.28rem 0.65rem; font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.82rem; font-weight: 800; cursor: pointer; transition: background-color 0.15s ease, transform 0.15s ease; } .ds-btn-reload:hover { background: #0D5232; transform: translateY(-1px); } .ds-btn-reload:focus-visible { outline: 3px solid #F7B928; outline-offset: 3px; }"
+    },
+    {
+      "name": "World Switcher Chip",
+      "kind": "chip",
+      "refersTo": "chip-world",
+      "description": "Interactive Texas stage selector pairing stage title with Free or Sheriff Pack pill.",
+      "html": "<div class=\"ds-chip-row\"><button type=\"button\" class=\"ds-chip-world is-active\"><span>1. Skeet Ranch</span><span class=\"ds-pill-free\">Free</span></button><button type=\"button\" class=\"ds-chip-world\"><span>4. Canyon Saloon</span><span class=\"ds-pill-pro\">Sheriff Pack</span></button></div>",
+      "css": ".ds-chip-row { display: flex; gap: 0.5rem; flex-wrap: wrap; } .ds-chip-world { display: inline-flex; align-items: center; gap: 0.45rem; background: #F3F0EA; color: #1A120B; border: 2px solid rgba(26, 18, 11, 0.2); border-radius: 12px; padding: 0.55rem 0.9rem; font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.92rem; font-weight: 800; cursor: pointer; transition: background-color 0.14s ease, color 0.14s ease, border-color 0.14s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1); } .ds-chip-world:hover { border-color: #1A120B; transform: translateY(-1px); } .ds-chip-world.is-active { background: #1F130C; color: #FFFFFF; border-color: #1A120B; } .ds-chip-world:focus-visible { outline: 3px solid #1A120B; outline-offset: 3px; } .ds-pill-free { background: #136B42; color: #FFFFFF; font-family: 'Nunito', sans-serif; font-size: 0.76rem; font-weight: 800; padding: 0.12rem 0.48rem; border-radius: 999px; } .ds-pill-pro { background: #F7B928; color: #1A120B; font-family: 'Nunito', sans-serif; font-size: 0.76rem; font-weight: 800; padding: 0.12rem 0.48rem; border-radius: 999px; }"
+    },
+    {
+      "name": "Language Selector Capsule",
+      "kind": "input",
+      "refersTo": "button-secondary",
+      "description": "Compact 8-language selector capsule set into the Saloon Timber masthead.",
+      "html": "<div class=\"ds-lang-wrap\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M2 12h20\"/><path d=\"M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z\"/></svg><select class=\"ds-lang-select\" aria-label=\"Language\"><option>FR · Français</option><option>EN · English</option><option>JA · 日本語</option></select></div>",
+      "css": ".ds-lang-wrap { display: inline-flex; align-items: center; gap: 0.35rem; background: #2C1B11; border: 1.5px solid rgba(247, 185, 40, 0.45); border-radius: 12px; padding: 0.35rem 0.6rem; color: #FFFFFF; } .ds-lang-wrap:focus-within { outline: 3px solid #F7B928; outline-offset: 3px; } .ds-lang-select { background: transparent; color: #FFFFFF; border: none; font-family: 'Nunito', sans-serif; font-size: 0.86rem; font-weight: 800; cursor: pointer; outline: none; }"
+    },
+    {
+      "name": "Family Suite Segmented Navigation",
+      "kind": "nav",
+      "refersTo": "button-secondary",
+      "description": "Cross-app wayfinding pill connecting Meemaw, Meemaw Math, and Meemaw Hunter.",
+      "html": "<nav class=\"ds-suite-nav\" aria-label=\"Meemaw Family Suite\"><a href=\"#\" class=\"ds-suite-link\">Meemaw</a><a href=\"#\" class=\"ds-suite-link\">Meemaw Math</a><a href=\"#\" class=\"ds-suite-link\" aria-current=\"page\">Meemaw Hunter</a></nav>",
+      "css": ".ds-suite-nav { display: inline-flex; align-items: center; gap: 0.25rem; background: #2C1B11; padding: 0.22rem; border-radius: 999px; border: 1.5px solid rgba(247, 185, 40, 0.3); } .ds-suite-link { color: #F5E9D6; text-decoration: none; font-family: 'Nunito', sans-serif; font-size: 0.85rem; font-weight: 700; padding: 0.3rem 0.72rem; border-radius: 999px; transition: background-color 0.18s cubic-bezier(0.16, 1, 0.3, 1), color 0.18s ease; } .ds-suite-link:hover { color: #FFFFFF; background: rgba(255, 255, 255, 0.08); } .ds-suite-link[aria-current=\"page\"] { background: #F7B928; color: #1A120B; font-weight: 800; } .ds-suite-link:focus-visible { outline: 3px solid #F7B928; outline-offset: 3px; }"
+    },
+    {
+      "name": "Saloon Sign Plaque",
+      "kind": "card",
+      "refersTo": "card-saloon",
+      "description": "Brass-framed dark timber foreground plaque carrying primary display copy over painted scenery.",
+      "html": "<article class=\"ds-saloon-card\"><h3>Your bare hand is the blaster.</h3><p>Open hand to aim, close fist to fire, and flip wrist to reload at 60 FPS — 100% on-device.</p></article>",
+      "css": ".ds-saloon-card { max-width: 460px; padding: 1.5rem 1.65rem; background: rgba(31, 19, 12, 0.94); border: 2.5px solid #F7B928; border-radius: 16px; color: #FFFFFF; } .ds-saloon-card h3 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.75rem; font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; margin: 0 0 0.6rem; } .ds-saloon-card p { font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 600; line-height: 1.55; color: #F5E9D6; margin: 0; }"
+    },
+    {
+      "name": "Split-Flap Range Scoreboard & Cylinder",
+      "kind": "custom",
+      "refersTo": "card-saloon",
+      "description": "Mechanical 4-cell split-flap score display paired with 6 brass revolver chambers.",
+      "html": "<aside class=\"ds-hud\"><div class=\"ds-flaps\"><span class=\"ds-flap\">0</span><span class=\"ds-flap\">4</span><span class=\"ds-flap\">5</span><span class=\"ds-flap\">0</span></div><div class=\"ds-chambers\"><span class=\"ds-chamber\"></span><span class=\"ds-chamber\"></span><span class=\"ds-chamber\"></span><span class=\"ds-chamber\"></span><span class=\"ds-chamber is-spent\"></span><span class=\"ds-chamber is-spent\"></span></div></aside>",
+      "css": ".ds-hud { display: inline-flex; align-items: center; gap: 1rem; background: rgba(31, 19, 12, 0.94); border: 2px solid #F7B928; border-radius: 16px; padding: 0.75rem 1rem; } .ds-flaps { display: inline-flex; gap: 0.24rem; } .ds-flap { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 38px; background: linear-gradient(180deg, #160D08 0%, #24150D 49%, #0D0603 51%, #1A0F09 100%); border: 1.5px solid rgba(247, 185, 40, 0.65); border-radius: 6px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.32rem; font-weight: 800; color: #FFFFFF; box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 2px 5px rgba(0,0,0,0.55); } .ds-flap::after { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; background: rgba(8, 4, 2, 0.92); } .ds-chambers { display: inline-flex; gap: 0.3rem; } .ds-chamber { width: 11px; height: 22px; border-radius: 4px; background: #F7B928; border: 1.5px solid #1A120B; } .ds-chamber.is-spent { background: rgba(245, 233, 214, 0.18); transform: scaleY(0.82); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Daylight Saloon Gallery",
+    "overview": "The `meemaw.app/hunter/` visual system merges painted Texas pop-art arcade illustration with disciplined architectural section-cutting. Instead of dark neon gaming clichés, faked woodgrain CSS bevels, or generic SaaS card grids, the page alternates between deep espresso Saloon Timber poche, a bold sunlit Sheriff Gold active band, and crisp pure-white editorial ledgers ruled with solid ink hairlines.\n\nEvery surface pairs tactile character warmth with verifiable family trust. Authentic painted game plates, critter sprites, and hand-pose medallions supply all pictorial richness, while interface chrome stays crisp, flat-inked, and typographically authoritative across eight languages—including French, English, Spanish, German, Italian, Brazilian Portuguese, Japanese, and Korean.",
+    "keyCharacteristics": [
+      "Architectural chapter alternation between Saloon Timber dark poche, Sheriff Gold active bands, and pure-white ink-ruled ledgers.",
+      "Self-hosted expressive grotesque display lettering (`Bricolage Grotesque`) paired with warm rounded tabular body copy (`Nunito` + native CJK fallbacks).",
+      "Cardless ink-ruled multi-column ledgers for gestures, armory specs, and privacy/pricing commitments instead of repetitive boxed grids.",
+      "Mechanical split-flap instrument readouts and ink-cased optical crosshairs that stay legible over bright painted scenery.",
+      "Strict surface-aware focus outlines and WCAG AA+ contrast across dark timber, bright gold, and crisp white grounds."
+    ],
+    "rules": [
+      {
+        "name": "The Chapter Section-Cut Rule",
+        "body": "Alternate full-bleed horizontal chapters decisively between Saloon Timber (`#1F130C`), Sheriff Gold (`#F7B928`), and Crisp Paper (`#FFFFFF`) separated by `2.5px–3px` solid ink or gold rules—never blend chapters with soft atmospheric page gradients.",
+        "section": "colors"
+      },
+      {
+        "name": "The Adaptive Focus Ring Rule",
+        "body": "Keyboard `:focus-visible` rings use `3px solid #F7B928` on dark Saloon Timber surfaces and switch explicitly to `3px solid #1A120B` on Sheriff Gold and Crisp Paper chapters so focus indicators never drop below `8:1` contrast.",
+        "section": "colors"
+      },
+      {
+        "name": "The Direct Heading Rule",
+        "body": "Every `h1`, `h2`, and `h3` opens its block directly without small uppercase kicker or eyebrow labels above it; status pills and weapon tags sit below the body copy where they act as structured metadata.",
+        "section": "typography"
+      },
+      {
+        "name": "The Multilingual CJK Phrase Rule",
+        "body": "Apply `word-break: auto-phrase; line-break: strict;` on `:lang(ja)` headings and `word-break: keep-all;` on `:lang(ko)` blocks alongside `overflow-wrap: break-word` on legal prose so long bundle identifiers and CJK clauses wrap cleanly on `390px` viewports.",
+        "section": "typography"
+      },
+      {
+        "name": "The Architectural Stage Rule",
+        "body": "Full-bleed viewport stages (`.gallery-window`) remain flush (`border-radius: 0`, `box-shadow: none`) with a solid `6px` dark timber counter sill along their bottom edge, so foreground plaques (`.saloon-sign`, `.range-hud`) never create nested card-in-card framing.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use authentic painted game plates, critter sprites, and hand-pose medallions for pictorial surfaces while keeping UI chrome flat-inked and architectural.",
+      "Do frame over-scenery vector indicators (such as `#opticalReticle`) with a `#1A120B` ink outer stroke and dark drop-shadow so they remain `>= 4.5:1` legible against bright sky and grass.",
+      "Do structure feature groups as ink-ruled ledgers (`.gesture-row`, `.armory-grid`, `.trust-ledger`) on solid `#F7B928` or `#FFFFFF` grounds.",
+      "Do test every layout change across both `1440px` desktop and `390px` mobile in Latin and CJK (`ja`, `ko`) locales."
+    ],
+    "donts": [
+      "Don't place uppercase eyebrow or kicker labels above `h1`, `h2`, or `h3` headings.",
+      "Don't nest bordered/shadowed cards inside outer rounded/shadowed hero containers.",
+      "Don't drift light paper chapters (`#FFFFFF`) toward warm cream washes or dark timber chapters (`#1F130C`) toward cool blue-slate.",
+      "Don't fabricate ratings, review counts, press badges, or unverified telemetry claims anywhere in the Meemaw suite."
+    ]
+  }
+}

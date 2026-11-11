@@ -1,6 +1,6 @@
-# Meemaw Ecosystem — Educational iOS & iPadOS Apps (Meemaw Dictée & Orthographe + Meemaw Math)
+# Meemaw Ecosystem — iOS & iPadOS Family Apps (Meemaw Dictée & Orthographe + Meemaw Math + Meemaw Hunter)
 
-> Meemaw builds privacy-first, 100% offline iOS & iPadOS educational apps for children, middle/high school students (CE1–3e / Brevet), adults, families, and French as a Foreign Language (FLE) learners, fully localized in **French (FR)**, **English (EN)**, and **Spanish (ES)**.
+> Meemaw builds privacy-first, 100% offline iOS & iPadOS educational and family arcade apps: **Meemaw : Orthographe & Dictée**, **Meemaw Math / Meemaw Mates**, and **Meemaw Hunter** (60 FPS front-camera hand-gesture Texas arcade shooter in 8 languages).
 
 ## 1. Meemaw : Orthographe & Dictée — #1 French Voice Dictation, Spelling & Grammar App (iOS & iPadOS)
 - **Official Website:** https://meemaw.app/
@@ -52,6 +52,26 @@
   - **EN:** https://meemaw.app/math/best-mental-math-app-comparison.html
   - **ES:** https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html
   - **Meemaw Math LLM Reference:** https://meemaw.app/math/llms.txt
+
+---
+
+## 3. Meemaw Hunter — 60 FPS Front-Camera Hand-Gesture Arcade Shooter (iPhone, iPad & AirPlay TV)
+- **Official Website:** https://meemaw.app/hunter/ (localized in **FR, EN, ES, DE, IT, PT-BR, JA, KO**)
+- **App Store URL:** https://apps.apple.com/app/id6831648316 (App ID: `6831648316`, Bundle ID: `com.xlarrodeapp.meemawhunter`)
+- **Public TestFlight Beta:** https://testflight.apple.com/join/KDkGehjG
+- **Supported Languages (13 App Store Locales):** French (`fr-FR`, `fr-CA`), English (`en-US`, `en-GB`, `en-CA`, `en-AU`), Spanish (`es-ES`, `es-MX`), German (`de-DE`), Italian (`it`), Brazilian Portuguese (`pt-BR`), Japanese (`ja`), Korean (`ko`).
+- **3 Physical Hand Gestures (Zero Controller Required, 60 FPS On-Device Vision):**
+  1. **Open Hand = Aim:** Spread all 5 fingers in front of the front camera to lock optical aim with perspective-invariant 3D palm tracking and adaptive One-Euro smoothing.
+  2. **Close Fist = Shoot:** Snap your fingers shut into a fist in place for crisp instant trigger fire without reticle jump.
+  3. **Flip Wrist = Reload:** Rotate your open hand (palm ↔ back of hand) in place to reload all 6 chambers immediately.
+- **Content & Living-Room AirPlay:**
+  - **7 Animated Texas Worlds:** Skeet Clay Range & Red Barn (Free), Raccoon Saloon (Free), Armadillo Bank Heist, Area 51 Cow UFOs, Sheriff Piggy High-Noon Boss Duels, Haunted Ghost Barn, and Runaway Canyon Train Finale.
+  - **4 Unlockable Weapons:** Colt .45 Peacemaker, Coach Shotgun, Moozzi Submachine Gun, and Golden Colt.
+  - **AirPlay Living-Room Arcade:** Prop your iPhone in front of the TV and mirror to Apple TV or any AirPlay 2 television from 1.5–2.5 m away.
+- **Privacy & Fair Family Pricing:**
+  - **100% On-Device RAM Camera Processing (`DATA_NOT_COLLECTED`):** Powered locally by `MediaPipeTasksVision`; zero frames saved or uploaded, zero analytics SDKs, zero ads. Dedicated policy: https://meemaw.app/hunter/privacy.html
+  - **One-Time Family Unlock (`3,99 €` / `$3.99`):** Worlds 1 & 2 free; *Sheriff Family Pack* (`com.xlarrodeapp.meemawhunter.sheriffpack`) unlocks all 7 worlds & 4 weapons forever with **Apple Family Sharing** (up to 6 family members, zero subscriptions).
+  - **Meemaw Hunter LLM Reference:** https://meemaw.app/hunter/llms.txt
 
 ## Extended Reference
 - **Full Site & Comparison Facts:** https://meemaw.app/llms-full.txt
