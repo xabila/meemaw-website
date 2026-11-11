@@ -8,7 +8,7 @@ window.HUNTER_I18N = {
     navPrivacy: "Confidentialité",
     navDownload: "App Store",
     heroTitle: "Ta main nue est le pistolet.",
-    heroLead: "Pose ton iPhone ou ton iPad : vise main ouverte, ferme le poing pour tirer et tourne le poignet pour recharger à 60 FPS — sans manette et 100 % en local.",
+    heroLead: "Tiens ton iPhone de la main gauche pour tirer de la main droite (ou pose ton iPhone/iPad devant toi) : main ouverte pour viser, poing fermé pour tirer et rotation du poignet pour recharger à 60 FPS — 100 % en local.",
     ctaAppStore: "Télécharger sur l’App Store",
     ctaTestFlight: "Bêta publique TestFlight",
     proofLocal: "Caméra 60 FPS 100 % locale · Zéro donnée",
@@ -19,14 +19,14 @@ window.HUNTER_I18N = {
     hudHint: "Déplace le viseur sur le ranch et clique ou touche une cible pour tirer !",
     hudEmpty: "Barillet vide — clique Recharger !",
     gesturesTitle: "Trois gestes francs, calibrés du premier coup.",
-    gesturesIntro: "Conçu pour tous les iPhone (de l’iPhone SE au capteur Center Stage 18 MP de l’iPhone 17 Pro) et iPad, à 30–60 cm de l’écran.",
+    gesturesIntro: "Joue à main levée (iPhone tenu main gauche et tir main droite, ou l’inverse en gaucher) ou appareil posé à 30–60 cm — de l’iPhone SE au capteur Center Stage 18 MP de l’iPhone 17 Pro et sur iPad.",
     g1Title: "1. Main ouverte = Viser",
     g1Body: "Montre ta main ouverte face à l’écran : le suivi 21 points et le filtre optique stabilisent le réticule au sous-pixel près.",
     g2Title: "2. Poing fermé = Tirer",
     g2Body: "Referme franchement les doigts dans la paume pour faire feu sans faire trembler ta visée pendant la rafale.",
     g3Title: "3. Tourne la main = Recharger",
     g3Body: "Retourne ta main sur place (paume vers dos, ou dos vers paume) pour remplir les 6 chambres du barillet instantanément.",
-    hardwareStrip: "Compatible droitier & gaucher auto · Mode tactile toujours actif · Fonctionne 100 % hors-ligne en mode Avion",
+    hardwareStrip: "Jouable téléphone en main ou posé · Droitier & gaucher auto · Mode tactile inclus · 100 % hors-ligne en mode Avion",
     worldsTitle: "Sept mondes au Texas et quatre armes d’arcade.",
     worldsIntro: "Défends le ranch de Sheriff Meemaw du crépuscule jusqu’au toit de la locomotive de 1885, avec Duels Boss à Midi Pile.",
     freeBadge: "Gratuit",
@@ -49,11 +49,11 @@ window.HUNTER_I18N = {
       { num: "Monde 7", name: "Train Express 1885 & Boss", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "Bazooka", desc: "Poursuite à toute vapeur sur les wagons et Duels à Midi Pile : attends le signal et dégaine en une fraction de seconde." }
     ],
     airplayTitle: "Projetez le ranch en 16:9 sur la télé du salon.",
-    airplayBody: "Activez AirPlay vers votre Apple TV ou téléviseur connecté : Meemaw Hunter ouvre une vraie scène 16:9 dédiée sur grand écran tandis que votre iPhone posé devant vous sert de cockpit optique.",
+    airplayBody: "Activez AirPlay vers votre Apple TV ou téléviseur connecté, puis posez votre iPhone juste en dessous de la télé (centré sur le meuble TV, écran tourné vers vous) : quand vous visez l’écran 16:9 à main ouverte, votre main reste pile dans l’axe optique de la caméra frontale.",
     airplayPoints: [
-      "Double scène native iOS (grand écran TV 16:9 sans bandes noires + retour de visée sur iPhone)",
-      "Parfait en soirée ou en famille : passez simplement devant l’iPhone, l’auto-calibration s’adapte à chaque joueur",
-      "Captures d’écran localisées ci-dessous dans votre langue"
+      "Posez impérativement l’iPhone sous le téléviseur (face au joueur) pour aligner votre visée avec l’écran TV",
+      "Double scène native iOS (grand écran TV 16:9 sans bandes noires + retour de visée sur l’iPhone)",
+      "Parfait en soirée ou en famille : passez simplement devant la TV, l’auto-calibration s’adapte à chaque joueur"
     ],
     shotsTitle: "Aperçu sur iPhone dans votre langue",
     shotsCaptions: [
@@ -86,7 +86,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "Sur quels modèles d’iPhone et d’iPad le suivi de la main fonctionne-t-il ?", a: "Meemaw Hunter tourne à 60 FPS sur tous les iPhone et iPad compatibles iOS 16+, de l’iPhone SE jusqu’à l’iPhone 17 Pro (avec prise en charge native de sa caméra frontale grand-angle 18 MP Center Stage). Un mode tactile complet est également actif à tout moment." },
       { q: "La caméra frontale filme-t-elle ou envoie-t-elle des images sur Internet ?", a: "Jamais. L’analyse s’effectue exclusivement en mémoire vive (RAM) sur votre appareil et chaque image est détruite en quelques millisecondes. Vous pouvez couper le Wi-Fi et passer en mode Avion : le jeu fonctionne exactement pareil." },
-      { q: "À quelle distance poser son téléphone et comment marche le mode gaucher ?", a: "Posez l’iPhone ou l’iPad entre 30 et 60 cm de votre main. L’onboarding interactif mesure votre amplitude naturelle en quelques secondes et s’adapte automatiquement que vous jouiez de la main droite ou de la main gauche." },
+      { q: "Puis-je tenir mon téléphone d’une main et tirer de l’autre, ou où le poser sur TV ?", a: "Oui ! En solo, vous pouvez tenir votre iPhone de la main gauche et viser/tirer de la main droite (ou l’inverse si vous êtes gaucher), ou le poser à 30–60 cm devant vous. Sur AirPlay TV, posez impérativement l’iPhone juste en dessous de la télé (centré sur le meuble TV, écran face à vous) pour que votre main soit alignée avec l’écran." },
       { q: "Comment recharger sans perdre sa visée ?", a: "Il suffit de tourner légèrement la main sur place (montrer le dos de la main puis revenir paume face à l’écran, ou l’inverse). Votre barillet de 6 balles se recharge instantanément sans quitter les cibles des yeux." },
       { q: "Faut-il payer un abonnement pour débloquer tous les mondes ?", a: "Non. Le tutoriel et les Mondes 1 et 2 sont gratuits sans limite de temps. Le Pack Shérif est un achat unique à vie (3,99 € / $3.99) partagé automatiquement avec jusqu’à 6 proches via le Partage Familial Apple." }
     ],
@@ -109,7 +109,7 @@ window.HUNTER_I18N = {
     navPrivacy: "Privacy",
     navDownload: "App Store",
     heroTitle: "Your bare hand is the blaster.",
-    heroLead: "Set down your iPhone or iPad: aim with an open hand, close your fist to fire, and flip your wrist to reload at 60 FPS—zero controllers and 100% on-device.",
+    heroLead: "Hold your iPhone in your left hand and shoot with your right (or prop your iPhone/iPad in front of you): open hand to aim, close your fist to fire, and flip your wrist to reload at 60 FPS—100% on-device.",
     ctaAppStore: "Download on the App Store",
     ctaTestFlight: "Join Public TestFlight",
     proofLocal: "100% On-Device 60 FPS Camera · Zero Data",
@@ -120,14 +120,14 @@ window.HUNTER_I18N = {
     hudHint: "Move the optical reticle across the ranch and click or tap any target to fire!",
     hudEmpty: "Empty cylinder — click Reload!",
     gesturesTitle: "Three unmistakable gestures, calibrated in seconds.",
-    gesturesIntro: "Engineered for every iPhone (from iPhone SE to iPhone 17 Pro’s 18 MP Center Stage camera) and iPad at arm’s length (30–60 cm).",
+    gesturesIntro: "Play handheld (hold your iPhone in one hand and aim/shoot with the other—right- or left-handed) or propped at 30–60 cm on any iPhone (SE to iPhone 17 Pro’s 18 MP Center Stage camera) and iPad.",
     g1Title: "1. Open Hand = Aim",
     g1Body: "Hold your open palm toward the screen: 21-point 3D tracking and optical filtering lock the reticle smoothly onto every critter.",
     g2Title: "2. Close Fist = Fire",
     g2Body: "Squeeze your fingers into a fist to shoot with recoil-stabilized hit detection—zero crosshair jump during rapid fire.",
     g3Title: "3. Flip Wrist = Reload",
     g3Body: "Turn your hand in place (palm to back of hand, or back) to refill all 6 chambers without taking your eyes off the stage.",
-    hardwareStrip: "Auto left- & right-handed calibration · Instant touchscreen mode anytime · Works 100% offline in Airplane Mode",
+    hardwareStrip: "Play handheld or propped · Auto left- & right-handed · Touchscreen mode anytime · Works 100% offline in Airplane Mode",
     worldsTitle: "Seven painted Texas worlds and four arcade weapons.",
     worldsIntro: "Defend Sheriff Meemaw’s ranch from sunset pastures to a speeding 1885 steam locomotive, complete with High Noon Boss Duels.",
     freeBadge: "Free",
@@ -150,11 +150,11 @@ window.HUNTER_I18N = {
       { num: "World 7", name: "1885 Steam Train & Bosses", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "Bazooka", desc: "Rooftop locomotive showdown and High Noon Boss Duels—wait for the draw call and fire in a split second." }
     ],
     airplayTitle: "Cast a true 16:9 arcade stage to your living-room TV.",
-    airplayBody: "Mirror via AirPlay to Apple TV or any AirPlay 2 smart TV: Meemaw Hunter renders a dedicated full-bleed 16:9 western stage on your television while your iPhone sits on the coffee table as your optical hand-tracking cockpit.",
+    airplayBody: "Connect via AirPlay to Apple TV or any AirPlay 2 smart TV, then place your iPhone centered directly underneath the TV screen (on your TV console, screen facing you): as you aim at the 16:9 television with an open hand, your hand stays naturally aligned with the front camera.",
     airplayPoints: [
-      "Native dual-screen iOS UIWindowScene (full 16:9 TV stage + live cockpit HUD on iPhone)",
-      "Pass-and-play ready for game nights: smart auto-calibration adapts to every family member",
-      "Localized iPhone preview gallery below in your selected language"
+      "Place your iPhone directly beneath the TV (screen facing the player) so aiming at the TV aligns with the front camera",
+      "Native dual-screen iOS UIWindowScene (full 16:9 TV stage + live hand-tracking HUD on iPhone)",
+      "Pass-and-play ready for game nights: smart auto-calibration adapts to every family member"
     ],
     shotsTitle: "iPhone preview in your language",
     shotsCaptions: [
@@ -187,7 +187,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "Which iPhone and iPad models support 60 FPS hand tracking?", a: "Meemaw Hunter runs at 60 FPS on iPhones and iPads running iOS 16+, from iPhone SE all the way to iPhone 17 Pro (including native support for its 18 MP ultra-wide Center Stage front camera). Full touchscreen tap controls are also active anytime." },
       { q: "Does the game ever record or upload video from my front camera?", a: "Never. Frame analysis happens strictly in volatile RAM on your device and each frame is discarded in milliseconds. Switch on Airplane Mode and everything works identically." },
-      { q: "How far should I hold my hand, and does it work left-handed?", a: "Place your device on a table or stand 30–60 cm (12–24 in) from your hand. The guided calibration learns your natural comfort zone in seconds for both right- and left-handed players." },
+      { q: "Can I hold my iPhone in one hand and shoot with the other, or where should I put it for TV play?", a: "Yes! On the go, hold your iPhone in your left hand and aim/shoot with your right hand (or vice versa if you’re left-handed), or prop it on a table 30–60 cm away. For AirPlay TV mode, always place your iPhone centered directly underneath the TV screen (facing you) so your hand aligns with the camera when aiming at the TV." },
       { q: "How do I reload my 6-shot cylinder?", a: "Simply flip your wrist in place (turn your palm to show the back of your hand, or back again). All 6 chambers reload immediately without losing your aim." },
       { q: "Is there any subscription required?", a: "None. Worlds 1 & 2 and the interactive training range are free forever, and the Sheriff Full Game Pack is a single one-time purchase shared across up to 6 family members via Apple Family Sharing." }
     ],
@@ -210,7 +210,7 @@ window.HUNTER_I18N = {
     navPrivacy: "Privacidad",
     navDownload: "App Store",
     heroTitle: "Tu propia mano es la pistola.",
-    heroLead: "Apoya tu iPhone o iPad: apunta con la mano abierta, cierra el puño para disparar y gira la muñeca para recargar a 60 FPS — sin mandos y 100 % en local.",
+    heroLead: "Sujeta tu iPhone con la mano izquierda y dispara con la derecha (o apóyalo frente a ti): mano abierta para apuntar, puño cerrado para disparar y gira la muñeca para recargar a 60 FPS — 100 % en local.",
     ctaAppStore: "Descargar en el App Store",
     ctaTestFlight: "Beta pública en TestFlight",
     proofLocal: "Cámara 60 FPS 100 % local · Cero datos",
@@ -221,14 +221,14 @@ window.HUNTER_I18N = {
     hudHint: "¡Mueve la mira por el rancho y haz clic o toca un objetivo para disparar!",
     hudEmpty: "Tambor vacío — ¡pulsa Recargar!",
     gesturesTitle: "Tres gestos naturales, calibrados al instante.",
-    gesturesIntro: "Optimizado para todos los iPhone (desde iPhone SE hasta la cámara Center Stage de 18 MP del iPhone 17 Pro) e iPad a 30–60 cm.",
+    gesturesIntro: "Juega teléfono en mano (iPhone en la izquierda y disparo con la derecha, o al revés para zurdos) o apoyado a 30–60 cm en cualquier iPhone (desde SE hasta iPhone 17 Pro de 18 MP) e iPad.",
     g1Title: "1. Mano abierta = Apuntar",
     g1Body: "Muestra la palma abierta hacia la pantalla: el seguimiento de 21 puntos estabiliza la mira con precisión subpíxel.",
     g2Title: "2. Puño cerrado = Disparar",
     g2Body: "Cierra los dedos en un puño firme para abrir fuego sin que tiemble la mira en plena ráfaga.",
     g3Title: "3. Gira la mano = Recargar",
     g3Body: "Gira la muñeca en el sitio (palma ↔ dorso) para recargar las 6 balas al instante sin apartar la vista.",
-    hardwareStrip: "Calibración automática para diestros y zurdos · Modo táctil siempre activo · 100 % sin conexión en Modo Avión",
+    hardwareStrip: "Juega en mano o apoyado · Diestros y zurdos auto · Modo táctil siempre activo · 100 % sin conexión en Modo Avión",
     worldsTitle: "Siete mundos en Texas y cuatro armas arcade.",
     worldsIntro: "Defiende el rancho de Sheriff Meemaw desde el atardecer hasta el tren de vapor de 1885 y los Duelos de Jefes a Mediodía.",
     freeBadge: "Gratis",
@@ -251,11 +251,11 @@ window.HUNTER_I18N = {
       { num: "Mundo 7", name: "Tren Expreso 1885 y Jefes", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "Bazooka", desc: "Asalto sobre vagones a todo vapor y duelos rápidos a mediodía contra el Jefe Forajido." }
     ],
     airplayTitle: "Proyecta el escenario 16:9 en el televisor del salón.",
-    airplayBody: "Conecta por AirPlay a tu Apple TV o Smart TV: Meemaw Hunter abre un escenario 16:9 completo en el televisor mientras tu iPhone actúa como cabina óptica de puntería.",
+    airplayBody: "Conecta por AirPlay a tu Apple TV o Smart TV y coloca el iPhone justo debajo del televisor (centrado en el mueble de TV, con la pantalla mirando hacia ti): así, al apuntar a la tele con la mano abierta, quedas alineado con la cámara frontal.",
     airplayPoints: [
+      "Coloca el iPhone justo debajo de la TV (mirando hacia el jugador) para alinear la puntería con la pantalla",
       "Doble pantalla nativa iOS (escenario 16:9 en la TV + cabina de control en el iPhone)",
-      "Ideal para jugar en familia y amigos con autocalibración instantánea",
-      "Capturas localizadas en español justo debajo"
+      "Ideal para jugar en familia y amigos con autocalibración instantánea"
     ],
     shotsTitle: "Vista previa en iPhone en tu idioma",
     shotsCaptions: [
@@ -288,6 +288,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "¿En qué iPhone e iPad funciona el seguimiento de la mano a 60 FPS?", a: "En cualquier iPhone o iPad con iOS 16 o superior, desde iPhone SE hasta iPhone 17 Pro (incluida su cámara Center Stage de 18 MP). También incluye controles táctiles en todo momento." },
       { q: "¿La cámara graba o sube alguna imagen a Internet?", a: "Jamás. Todo ocurre en la memoria RAM volátil de tu dispositivo y funciona exactamente igual en Modo Avión." },
+      { q: "¿Puedo sujetar el móvil con una mano y disparar con la otra, o dónde ponerlo en TV?", a: "¡Sí! Puedes sostener el iPhone con la mano izquierda y apuntar/disparar con la derecha (o al revés si eres zurdo), o apoyarlo a 30–60 cm. En AirPlay TV, coloca siempre el iPhone justo debajo del televisor mirando hacia ti para que tu mano quede alineada con la pantalla." },
       { q: "¿Cómo se recarga el revólver sin perder la puntería?", a: "Basta con girar ligeramente la mano en el sitio (mostrar el dorso o volver a la palma) para recargar las 6 balas al instante." },
       { q: "¿Hay alguna suscripción?", a: "Ninguna. Los Mundos 1 y 2 son gratis y el Pack Sheriff es un pago único de por vida compartido con hasta 6 familiares." }
     ],
@@ -310,7 +311,7 @@ window.HUNTER_I18N = {
     navPrivacy: "Datenschutz",
     navDownload: "App Store",
     heroTitle: "Deine bloße Hand ist der Colt.",
-    heroLead: "Stell dein iPhone oder iPad ab: Offene Hand zum Zielen, Faust schließen zum Feuern und Handgelenk drehen zum Nachladen mit 60 FPS — 100 % lokal auf dem Gerät.",
+    heroLead: "Halte dein iPhone in der linken Hand und schieße mit rechts (oder stell es vor dir ab): Offene Hand zum Zielen, Faust schließen zum Feuern und Handgelenk drehen zum Nachladen mit 60 FPS — 100 % lokal.",
     ctaAppStore: "Laden im App Store",
     ctaTestFlight: "Öffentliche TestFlight-Beta",
     proofLocal: "100 % lokales 60-FPS-Tracking · Keine Daten",
@@ -321,14 +322,14 @@ window.HUNTER_I18N = {
     hudHint: "Bewege das Visier über die Ranch und klicke oder tippe auf ein Ziel!",
     hudEmpty: "Trommel leer — Nachladen klicken!",
     gesturesTitle: "Drei klare Handgesten, sofort kalibriert.",
-    gesturesIntro: "Entwickelt für alle iPhones (vom iPhone SE bis zur 18-MP-Center-Stage-Kamera des iPhone 17 Pro) und iPads auf 30–60 cm Abstand.",
+    gesturesIntro: "Spiele freihändig (iPhone in einer Hand halten, mit der anderen zielen & feuern – für Rechts- und Linkshänder) oder aufgestellt auf 30–60 cm Abstand auf allen iPhones (SE bis iPhone 17 Pro mit 18-MP-Center-Stage) und iPads.",
     g1Title: "1. Offene Hand = Zielen",
     g1Body: "Halte die geöffnete Handfläche Richtung Display: 21-Punkt-Tracking führt das Fadenkreuz präzise und verzögerungsfrei.",
     g2Title: "2. Faust schließen = Schießen",
     g2Body: "Schließe die Finger zur Faust, um rückstoßstabilisiert zu feuern – ohne Verwackeln im Schnellfeuer.",
     g3Title: "3. Hand drehen = Nachladen",
     g3Body: "Drehe deine Hand kurz auf der Stelle (Handfläche ↔ Handrücken), um alle 6 Kammern sofort nachzuladen.",
-    hardwareStrip: "Automatisch für Rechts- & Linkshänder · Touch-Modus jederzeit aktiv · 100 % offline im Flugmodus",
+    hardwareStrip: "In der Hand oder aufgestellt spielbar · Rechts- & Linkshänder auto · Touch-Modus inklusive · 100 % offline im Flugmodus",
     worldsTitle: "Sieben Texas-Welten und vier Arcade-Waffen.",
     worldsIntro: "Verteidige Sheriff Meemaws Ranch von der Abendweide bis auf das Dach des Dampfzugs von 1885 samt High-Noon-Bossduellen.",
     freeBadge: "Gratis",
@@ -351,11 +352,11 @@ window.HUNTER_I18N = {
       { num: "Welt 7", name: "Dampfzug 1885 & Bosse", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "Bazooka", desc: "Showdown auf dem fahrenden Zug und High-Noon-Duelle gegen den Outlaw-Boss." }
     ],
     airplayTitle: "16:9-Arcade-Bühne per AirPlay auf dem Wohnzimmer-TV.",
-    airplayBody: "Verbinde dein iPhone per AirPlay mit Apple TV oder Smart-TV: Auf dem Fernseher läuft die volle 16:9-Bühne, während dein iPhone als optisches Hand-Tracking-Cockpit dient.",
+    airplayBody: "Verbinde dein iPhone per AirPlay mit Apple TV oder Smart-TV und stelle das iPhone direkt mittig unter den Fernseher (Display zu dir gerichtet): So liegt deine geöffnete Zielhand beim Zielen auf den TV exakt in der optischen Achse der Frontkamera.",
     airplayPoints: [
+      "iPhone direkt unter den TV stellen (Display zum Spieler), damit die Kamera deine Zielhand auf dem TV exakt erfasst",
       "Natives Dual-Screen-Setup unter iOS (16:9-TV-Bühne + Ziel-HUD auf dem iPhone)",
-      "Perfekt für Familien- und Partyrunden dank automatischer Neukalibrierung",
-      "Deutsche iPhone-Vorschau direkt darunter"
+      "Perfekt für Familien- und Partyrunden dank automatischer Neukalibrierung"
     ],
     shotsTitle: "iPhone-Einblicke auf Deutsch",
     shotsCaptions: [
@@ -388,6 +389,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "Auf welchen iPhones und iPads läuft das 60-FPS-Tracking?", a: "Auf allen Geräten ab iOS 16 – vom iPhone SE bis zum iPhone 17 Pro (inkl. 18-MP-Center-Stage-Frontkamera). Touch-Steuerung ist jederzeit zusätzlich aktiv." },
       { q: "Werden Kamerabilder gespeichert oder hochgeladen?", a: "Niemals. Alles bleibt lokal im flüchtigen Arbeitsspeicher (RAM) und funktioniert identisch im Flugmodus." },
+      { q: "Kann ich das iPhone in einer Hand halten und mit der anderen schießen, und wo steht es am TV?", a: "Ja! Unterwegs hältst du das iPhone einfach links und zielst/feuerst mit rechts (oder umgekehrt für Linkshänder) – oder du stellst es 30–60 cm vor dir ab. Im AirPlay-TV-Modus muss das iPhone mittig direkt unter dem Fernseher stehen (Display zu dir), damit Kamera und TV-Blickachse übereinstimmen." },
       { q: "Wie lade ich nach, ohne das Ziel zu verlieren?", a: "Drehe deine Hand kurz auf der Stelle (Handfläche zum Handrücken oder zurück) – sofort sind alle 6 Kugeln geladen." },
       { q: "Gibt es ein Abonnement?", a: "Nein. Welt 1 & 2 sind kostenlos, das Sheriff-Paket ist ein einmaliger Kauf inklusive Familienfreigabe." }
     ],
@@ -410,7 +412,7 @@ window.HUNTER_I18N = {
     navPrivacy: "Privacy",
     navDownload: "App Store",
     heroTitle: "La tua mano nuda è la pistola.",
-    heroLead: "Appoggia iPhone o iPad: mira a mano aperta, chiudi il pugno per sparare e ruota il polso per ricaricare a 60 FPS — senza controller e 100 % in locale.",
+    heroLead: "Tieni l’iPhone con la mano sinistra e spara con la destra (oppure appoggialo davanti a te): mano aperta per mirare, pugno chiuso per sparare e ruota il polso per ricaricare a 60 FPS — 100 % in locale.",
     ctaAppStore: "Scarica su App Store",
     ctaTestFlight: "Beta pubblica TestFlight",
     proofLocal: "Fotocamera 60 FPS 100 % locale · Zero dati",
@@ -421,14 +423,14 @@ window.HUNTER_I18N = {
     hudHint: "Muovi il mirino sul ranch e fai clic o tocca un bersaglio per sparare!",
     hudEmpty: "Tamburo vuoto — premi Ricarica!",
     gesturesTitle: "Tre gesti immediati, calibrati al primo colpo.",
-    gesturesIntro: "Progettato per tutti gli iPhone (da iPhone SE fino alla fotocamera Center Stage da 18 MP di iPhone 17 Pro) e iPad a 30–60 cm.",
+    gesturesIntro: "Gioca tenendo l’iPhone con una mano e sparando con l’altra (destri o mancini) oppure appoggiato a 30–60 cm, da iPhone SE fino alla fotocamera Center Stage da 18 MP di iPhone 17 Pro e iPad.",
     g1Title: "1. Mano aperta = Mira",
     g1Body: "Mostra il palmo aperto verso lo schermo: il tracciamento a 21 punti guida il mirino con fluidità sub-pixel.",
     g2Title: "2. Pugno chiuso = Spara",
     g2Body: "Stringi le dita a pugno per fare fuoco con stabilizzazione anti-rinculo anche nelle raffiche veloci.",
     g3Title: "3. Ruota la mano = Ricarica",
     g3Body: "Gira la mano sul posto (palmo ↔ dorso) per ricaricare subito i 6 colpi senza staccare gli occhi dall’azione.",
-    hardwareStrip: "Calibrazione automatica destri e mancini · Controlli touch sempre attivi · 100 % offline in Modalità Aereo",
+    hardwareStrip: "Giocabile in mano o appoggiato · Destri e mancini auto · Controlli touch attivi · 100 % offline in Modalità Aereo",
     worldsTitle: "Sette mondi texani e quattro armi arcade.",
     worldsIntro: "Difendi il ranch di Sheriff Meemaw dal tramonto fino al treno a vapore del 1885 con i Duelli Boss di Mezzogiorno.",
     freeBadge: "Gratis",
@@ -451,11 +453,11 @@ window.HUNTER_I18N = {
       { num: "Mondo 7", name: "Treno Espresso 1885 & Boss", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "Bazooka", desc: "Assalto sul tetto della locomotiva e duelli fulminei di mezzogiorno contro il Boss." }
     ],
     airplayTitle: "Proietta il ranch in 16:9 sulla TV del salotto.",
-    airplayBody: "Collega via AirPlay a Apple TV o Smart TV: Meemaw Hunter mostra una vera scena arcade 16:9 sul televisore mentre il tuo iPhone resta la tua postazione ottica.",
+    airplayBody: "Collega via AirPlay a Apple TV o Smart TV e posiziona l’iPhone esattamente sotto il televisore (centrato sul mobile TV, con lo schermo rivolto verso di te): così, mirando alla TV a mano aperta, resti perfettamente nell’asse ottico della fotocamera frontale.",
     airplayPoints: [
+      "Posiziona l’iPhone direttamente sotto la TV (schermo verso il giocatore) per allineare la mira al grande schermo",
       "Doppio schermo nativo iOS (scena TV 16:9 + mirino cockpit su iPhone)",
-      "Perfetto in famiglia e con gli amici grazie all’autocalibrazione immediata",
-      "Anteprime iPhone localizzate in italiano qui sotto"
+      "Perfetto in famiglia e con gli amici grazie all’autocalibrazione immediata"
     ],
     shotsTitle: "Anteprima iPhone in italiano",
     shotsCaptions: [
@@ -488,6 +490,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "Su quali iPhone e iPad funziona il tracciamento a 60 FPS?", a: "Su tutti gli iPhone e iPad con iOS 16+, da iPhone SE fino a iPhone 17 Pro (inclusa la fotocamera Center Stage da 18 MP), con comandi touch sempre disponibili." },
       { q: "La fotocamera registra o invia immagini online?", a: "Mai. Tutto resta nella memoria RAM volatile del tuo dispositivo e funziona identicamente in Modalità Aereo." },
+      { q: "Posso tenere il telefono con una mano e sparare con l’altra, o dove metterlo sulla TV?", a: "Sì! Puoi impugnare l’iPhone con la mano sinistra e mirare/sparare con la destra (o viceversa per i mancini), oppure appoggiarlo a 30–60 cm. In modalità AirPlay TV, posiziona sempre l’iPhone centrato proprio sotto il televisore rivolto verso di te." },
       { q: "Come si ricarica senza perdere la mira?", a: "Ruota leggermente il polso sul posto (palmo ↔ dorso) per ricaricare all’istante tutti i 6 colpi." },
       { q: "Serve un abbonamento?", a: "No. I Mondi 1 e 2 sono gratuiti e il Pacchetto Sceriffo è un acquisto unico condivisibile con 6 familiari." }
     ],
@@ -510,7 +513,7 @@ window.HUNTER_I18N = {
     navPrivacy: "Privacidade",
     navDownload: "App Store",
     heroTitle: "Sua própria mão é a pistola.",
-    heroLead: "Apoie seu iPhone ou iPad: mire com a mão aberta, feche o punho para atirar e gire o pulso para recarregar a 60 FPS — sem controles e 100 % no aparelho.",
+    heroLead: "Segure o iPhone com a mão esquerda e atire com a direita (ou apoie-o à sua frente): mão aberta para mirar, punho fechado para atirar e gire o pulso para recarregar a 60 FPS — 100 % no aparelho.",
     ctaAppStore: "Baixar na App Store",
     ctaTestFlight: "Beta público no TestFlight",
     proofLocal: "Câmera 60 FPS 100 % local · Zero dados",
@@ -521,14 +524,14 @@ window.HUNTER_I18N = {
     hudHint: "Mova a mira pelo rancho e clique ou toque em qualquer alvo para atirar!",
     hudEmpty: "Tambor vazio — clique em Recarregar!",
     gesturesTitle: "Três gestos naturais, calibrados em segundos.",
-    gesturesIntro: "Feito para todos os iPhones (do iPhone SE à câmera Center Stage de 18 MP do iPhone 17 Pro) e iPads a 30–60 cm da tela.",
+    gesturesIntro: "Jogue segurando o iPhone com uma mão e atirando com a outra (destros ou canhotos) ou apoiado a 30–60 cm em qualquer iPhone (do SE ao iPhone 17 Pro de 18 MP) e iPad.",
     g1Title: "1. Mão aberta = Mirar",
     g1Body: "Mostre a palma aberta para a tela: o rastreamento de 21 pontos estabiliza a mira com suavidade subpixel.",
     g2Title: "2. Punho fechado = Atirar",
     g2Body: "Feche os dedos em punho firme para disparar sem tremer a mira durante tiros rápidos.",
     g3Title: "3. Gire a mão = Recarregar",
     g3Body: "Vire a mão no próprio lugar (palma ↔ dorso) para recarregar as 6 balas na hora sem perder o alvo.",
-    hardwareStrip: "Calibração automática para destros e canhotos · Modo toque sempre ativo · 100 % offline em Modo Avião",
+    hardwareStrip: "Jogue na mão ou apoiado · Destros e canhotos auto · Modo toque ativo · 100 % offline em Modo Avião",
     worldsTitle: "Sete mundos no Texas e quatro armas de fliperama.",
     worldsIntro: "Defenda o rancho da Sheriff Meemaw do pôr do sol até o trem a vapor de 1885 com Duelos de Chefões ao Meio-Dia.",
     freeBadge: "Grátis",
@@ -551,11 +554,11 @@ window.HUNTER_I18N = {
       { num: "Mundo 7", name: "Trem Expresso 1885 & Chefes", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "Bazooka", desc: "Ação sobre os vagões a vapor e duelos rápidos ao meio-dia contra o Chefão." }
     ],
     airplayTitle: "Projete o cenário 16:9 na TV da sala via AirPlay.",
-    airplayBody: "Conecte via AirPlay à sua Apple TV ou Smart TV: Meemaw Hunter exibe um palco 16:9 completo na televisão enquanto o iPhone funciona como seu cockpit óptico.",
+    airplayBody: "Conecte via AirPlay à sua Apple TV ou Smart TV e apoie o iPhone exatamente embaixo da TV (centralizado no rack, com a tela virada para você): assim, ao mirar para a TV de mão aberta, sua mão fica alinhada com a câmera frontal.",
     airplayPoints: [
+      "Apoie o iPhone bem embaixo da TV (tela voltada para o jogador) para alinhar a mira com a tela grande",
       "Tela dupla nativa do iOS (cenário 16:9 na TV + mira e munição no iPhone)",
-      "Perfeito para jogar em família com autocalibração instantânea",
-      "Capturas em português logo abaixo"
+      "Perfeito para jogar em família com autocalibração instantânea"
     ],
     shotsTitle: "Prévia no iPhone em português",
     shotsCaptions: [
@@ -588,6 +591,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "Em quais iPhones e iPads o rastreamento a 60 FPS funciona?", a: "Em todos os iPhones e iPads com iOS 16+, do iPhone SE até o iPhone 17 Pro (incluindo a câmera Center Stage de 18 MP), além de controles por toque sempre ativos." },
       { q: "A câmera grava ou envia imagens para a internet?", a: "Nunca. Tudo acontece na memória RAM volátil do seu aparelho e funciona igualmente em Modo Avião." },
+      { q: "Posso segurar o celular com uma mão e atirar com a outra, ou onde apoiar na TV?", a: "Sim! Você pode segurar o iPhone com a mão esquerda e mirar/atirar com a direita (ou o inverso para canhotos), ou apoiá-lo a 30–60 cm. No AirPlay TV, coloque sempre o iPhone centralizado logo abaixo da TV virado para você." },
       { q: "Como recarrego sem perder a mira?", a: "Basta girar levemente a mão no lugar (palma ↔ dorso) para recarregar as 6 balas instantaneamente." },
       { q: "Existe alguma assinatura?", a: "Nenhuma. Os Mundos 1 e 2 são gratuitos e o Pacote Xerife é uma compra única vitalícia com Compartilhamento Familiar." }
     ],
@@ -610,7 +614,7 @@ window.HUNTER_I18N = {
     navPrivacy: "プライバシー",
     navDownload: "App Store",
     heroTitle: "あなたの素手が、そのまま二丁拳銃になる。",
-    heroLead: "iPhoneやiPadを置くだけ。手を開いて狙い、拳を握って発射、手首を返して60 FPS高速リロード。コントローラー不要・100 %端末内処理。",
+    heroLead: "左手でiPhoneを持って右手で撃つ（または目の前に置く）だけ。手を開いて狙い、拳を握って発射、手首を返して60 FPS高速リロード。100 %端末内処理。",
     ctaAppStore: "App Storeでダウンロード",
     ctaTestFlight: "TestFlight公開ベータに参加",
     proofLocal: "100 %端末内60 FPSカメラ処理・データ収集なし",
@@ -621,14 +625,14 @@ window.HUNTER_I18N = {
     hudHint: "牧場の上で照準を動かし、ターゲットをクリック／タップして撃とう！",
     hudEmpty: "弾切れ — リロードを押そう！",
     gesturesTitle: "迷わない3つのハンドジェスチャー。",
-    gesturesIntro: "iPhone SEからiPhone 17 Pro（18 MPセンターフレームカメラ対応）およびiPadまで、画面から30〜60 cmの距離で快適に動作します。",
+    gesturesIntro: "片手でiPhoneを持って反対の手で撃つ手持ちスタイル（右利き・左利き両対応）でも、画面から30〜60 cmに置いても快適。iPhone SE〜iPhone 17 Pro（18 MPセンターフレーム対応）およびiPadに対応。",
     g1Title: "1. 手を開く ＝ 照準",
     g1Body: "画面に手のひらを向けるだけ。21点3D骨格追跡と光学フィルタで照準が滑らかに追従します。",
     g2Title: "2. 拳を握る ＝ 発射",
     g2Body: "指をグッと握り込んで発射。連射時も照準がブレない反動補正アルゴリズムを搭載。",
     g3Title: "3. 手首を返す ＝ リロード",
     g3Body: "その場で手のひらと手の甲をクルッと返すだけで、狙いを外さず6発すべて即座に装填できます。",
-    hardwareStrip: "右利き・左利き自動キャリブレーション · 画面タップ操作も常時対応 · 機内モードで100 %オフライン動作",
+    hardwareStrip: "手持ち＆スタンド置き両対応 · 右利き・左利き自動補正 · タップ操作も常時対応 · 機内モードで100 %オフライン動作",
     worldsTitle: "テキサスを巡る7つのワールドと4種の武器。",
     worldsIntro: "夕暮れの牧場から1885年の蒸気機関車、さらに一瞬の早撃ちを競うハイヌーン・ボス決闘まで収録。",
     freeBadge: "無料",
@@ -651,11 +655,11 @@ window.HUNTER_I18N = {
       { num: "ワールド 7", name: "1885年蒸気機関車＆ボス戦", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "バズーカ", desc: "疾走する列車の屋根での決戦と、合図と同時に抜くハイヌーン早撃ち対決。" }
     ],
     airplayTitle: "AirPlay TVでリビングの大画面16:9アーケードに。",
-    airplayBody: "Apple TVやAirPlay対応テレビにワイヤレス接続すると、テレビ画面いっぱいに16:9の専用ステージが広がり、手元のiPhoneは光学コックピットとして機能します。",
+    airplayBody: "Apple TVやAirPlay対応テレビに接続し、iPhoneをテレビ画面の真下（テレビ台の中央・画面を自分に向けて）に置いてください。テレビに向かって手を開いて狙うと、そのままフロントカメラの正面軸と一致します。",
     airplayPoints: [
+      "テレビの真下（プレイヤー向き）にiPhoneを置くことで、テレビへの照準とカメラ軸がぴったり一致",
       "iOSネイティブのデュアル画面描画（テレビ16:9フル画面＋iPhone手元HUD）",
-      "家族や友人と交代しても自動キャリブレーションですぐ遊べるパーティー仕様",
-      "日本語ローカライズ済みスクリーンショットを下に掲載"
+      "家族や友人と交代しても自動キャリブレーションですぐ遊べるパーティー仕様"
     ],
     shotsTitle: "日本語版 iPhone スクリーンショット",
     shotsCaptions: [
@@ -688,6 +692,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "どのiPhone・iPadで遊べますか？", a: "iOS 16以降のiPhone SEから最新のiPhone 17 Pro（18 MPセンターフレームカメラ対応）およびiPadで60 FPS動作します。画面タップ操作もいつでも使えます。" },
       { q: "カメラの映像が保存されたり送信されたりしませんか？", a: "一切ありません。すべて端末のメモリ（RAM）内だけで処理され、機内モードでも全く同じように遊べます。" },
+      { q: "片手でiPhoneを持って反対の手で撃てますか？テレビ接続時の置き場所は？", a: "はい！左手でiPhoneを持って右手で狙って撃つ（左利きなら逆）ことも、30〜60 cm前に置くこともできます。AirPlay TVモードでは、必ずテレビ画面の真下（自分向き）にiPhoneを置いてください。" },
       { q: "リロードはどうやって行いますか？", a: "手首をその場でクルッと返す（手のひら↔手の甲）だけで、照準を保ったまま6発すぐリロードされます。" },
       { q: "定期購読（サブスク）はありますか？", a: "ありません。ワールド1・2は無料、フルゲーム解除は1回限りの買い切り（ファミリー共有対応）です。" }
     ],
@@ -710,7 +715,7 @@ window.HUNTER_I18N = {
     navPrivacy: "개인정보 보호",
     navDownload: "App Store",
     heroTitle: "당신의 맨손이 곧 권총입니다.",
-    heroLead: "iPhone이나 iPad를 내려놓으세요. 손을 펴서 조준하고 주먹을 쥐어 발사하며 손목을 뒤집어 60 FPS로 재장전합니다 — 컨트롤러 없이 100 % 기기 내 처리.",
+    heroLead: "왼손으로 iPhone을 들고 오른손으로 쏘거나(또는 앞에 거치해 두고) 플레이하세요: 손을 펴서 조준, 주먹을 쥐어 발사, 손목을 뒤집어 60 FPS로 재장전 — 100 % 기기 내 처리.",
     ctaAppStore: "App Store에서 다운로드",
     ctaTestFlight: "TestFlight 공개 베타 참여",
     proofLocal: "100 % 기기 내 60 FPS 카메라 · 수집 데이터 없음",
@@ -721,14 +726,14 @@ window.HUNTER_I18N = {
     hudHint: "목장 위로 조준선을 움직여 과녁을 클릭하거나 터치해 발사해 보세요!",
     hudEmpty: "탄창 비었음 — 재장전을 누르세요!",
     gesturesTitle: "누구나 3초 만에 익히는 세 가지 손동작.",
-    gesturesIntro: "iPhone SE부터 iPhone 17 Pro(18 MP 센터 스테이지 카메라 지원) 및 iPad까지 30–60 cm 거리에서 매끄럽게 작동합니다.",
+    gesturesIntro: "한 손에 iPhone을 들고 다른 손으로 조준·발사하는 핸드헬드 플레이(오른손·왼손잡이 모두 지원) 또는 30–60 cm 거치 플레이 모두 지원 — iPhone SE부터 iPhone 17 Pro(18 MP 센터 스테이지) 및 iPad 호환.",
     g1Title: "1. 손 펴기 = 조준",
     g1Body: "화면을 향해 손바닥을 펴면 21개 관절 추적과 광학 필터가 조준점을 서브픽셀 단위로 안정화합니다.",
     g2Title: "2. 주먹 쥐기 = 발사",
     g2Body: "손가락을 주먹으로 쥐면 반동 보정 알고리즘으로 조준 흔들림 없이 즉시 발사됩니다.",
     g3Title: "3. 손목 뒤집기 = 재장전",
     g3Body: "제자리에서 손바닥과 손등을 가볍게 뒤집기만 하면 시선을 떼지 않고 6발 모두 즉시 장전됩니다.",
-    hardwareStrip: "오른손·왼손 자동 보정 · 화면 터치 모드 상시 지원 · 비행기 모드 100 % 오프라인 작동",
+    hardwareStrip: "한 손 들고 플레이 또는 거치 모두 가능 · 오른손·왼손 자동 보정 · 화면 터치 지원 · 비행기 모드 100 % 오프라인 작동",
     worldsTitle: "일곱 개의 텍사스 월드와 네 가지 아케이드 무기.",
     worldsIntro: "노을 지는 목장부터 1885년 증기 기관차 지붕과 정오의 보스 결투까지 Sheriff Meemaw와 함께 지켜내세요.",
     freeBadge: "무료",
@@ -751,11 +756,11 @@ window.HUNTER_I18N = {
       { num: "월드 7", name: "1885 증기 열차 & 보스전", free: false, img: "assets/stage-train.webp", sprite: "assets/cow-bandit.webp", weapon: "바주카", desc: "달리는 기관차 지붕 위 추격전과 신호와 함께 뽑는 정오의 보스 순발력 대결." }
     ],
     airplayTitle: "AirPlay TV로 거실 TV를 16:9 오락실 스크린으로.",
-    airplayBody: "Apple TV 또는 AirPlay 2 지원 스마트 TV에 연결하면 TV 전체에 전용 16:9 웨스턴 스테이지가 펼쳐지고 iPhone은 손 추적 조종석이 됩니다.",
+    airplayBody: "Apple TV 또는 AirPlay 2 지원 스마트 TV에 연결한 뒤, iPhone을 TV 화면 바로 아래 중앙(전면 화면이 플레이어를 향하도록)에 두세요. TV를 향해 손을 펴고 조준하면 전면 카메라 시야와 정확히 일치합니다.",
     airplayPoints: [
+      "iPhone을 TV 바로 아래(플레이어를 향하게)에 두어 TV 조준선과 전면 카메라 축을 일치시킴",
       "iOS 네이티브 듀얼 스크린(TV 16:9 와이드 화면 + iPhone 조준 HUD)",
-      "온 가족과 친구가 번갈아 가며 바로 즐길 수 있는 자동 손 보정",
-      "아래에서 한국어 iPhone 미리보기를 확인하세요"
+      "온 가족과 친구가 번갈아 가며 바로 즐길 수 있는 자동 손 보정"
     ],
     shotsTitle: "한국어 iPhone 미리보기",
     shotsCaptions: [
@@ -788,6 +793,7 @@ window.HUNTER_I18N = {
     faqs: [
       { q: "어떤 iPhone과 iPad에서 60 FPS 손 추적이 되나요?", a: "iOS 16 이상의 iPhone SE부터 최신 iPhone 17 Pro(18 MP 센터 스테이지 전면 카메라 지원) 및 iPad에서 60 FPS로 작동하며, 화면 터치 조작도 언제든 가능합니다." },
       { q: "카메라 영상이 저장되거나 서버로 전송되나요?", a: "절대 그렇지 않습니다. 모든 처리는 기기 RAM 내부에서만 이루어지며 비행기 모드에서도 똑같이 작동합니다." },
+      { q: "한 손으로 폰을 들고 다른 손으로 쏠 수 있나요? TV 연결 시 위치는?", a: "네! 왼손으로 iPhone을 들고 오른손으로 조준·발사하거나(왼손잡이는 반대), 30–60 cm 앞에 거치해 플레이할 수 있습니다. AirPlay TV 모드에서는 반드시 TV 화면 바로 아래 중앙에 플레이어를 향하도록 두세요." },
       { q: "조준을 유지한 채 어떻게 재장전하나요?", a: "제자리에서 손바닥과 손등을 가볍게 한 번 뒤집으면 6발이 즉시 재장전됩니다." },
       { q: "월간 구독이 필요한가요?", a: "아니요. 월드 1·2는 무료이며 보안관 팩은 최대 6인 가족 공유를 지원하는 1회 영구 결제 상품입니다." }
     ],

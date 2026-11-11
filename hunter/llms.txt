@@ -10,8 +10,9 @@
 - **Terms of Use (8 Languages):** https://meemaw.app/hunter/terms.html
 - **Meemaw Family Suite Home:** https://meemaw.app/
 
-## 3-Gesture Optical Control Loop (60 FPS On-Device)
-1. **Open Hand = Aim:** Hold your open hand 30–60 cm in front of the front camera; 21-point 3D MediaPipe hand tracking and sub-pixel One-Euro optical filtering move the emerald/gold crosshair smoothly across all iPhone models (including iPhone 17 Pro's 18 MP Center Stage sensor) and iPads.
+## 3-Gesture Optical Control Loop (60 FPS On-Device — Handheld or Propped)
+- **Handheld or Propped Play:** Hold your iPhone in your left hand and aim/shoot with your right hand (or vice versa for left-handed players) anywhere on the go, or prop your iPhone/iPad 30–60 cm in front of you.
+1. **Open Hand = Aim:** Hold your open hand in front of the front camera; 21-point 3D MediaPipe hand tracking and sub-pixel One-Euro optical filtering move the emerald/gold crosshair smoothly across all iPhone models (including iPhone 17 Pro's 18 MP Center Stage sensor) and iPads.
 2. **Close Fist = Fire:** Curl your fingers into a fist to fire with recoil-stabilized hit detection (zero crosshair jump during rapid fire).
 3. **Flip Wrist (Palm ↔ Back of Hand) = Reload:** Turn your hand in place to reload the 6-shot cylinder without losing your aim—plus instant touchscreen tap fallback at any time.
 
@@ -26,7 +27,7 @@
 - **4 Arcade Weapons & Streaks:** 6-Shot Colt .45, 3-Pellet Shotgun, 3-Round Burst Moozzi, Explosive Bazooka, Frying-Pan Headshots, Flying Hearts, and 2× Bullet-Time Chili Fury.
 
 ## AirPlay TV 16:9 Living-Room Mode
-- Connects wirelessly to Apple TV or any AirPlay 2 smart TV to project a dedicated full-bleed 16:9 arcade stage on the television while the iPhone serves as your personal hand-tracking cockpit.
+- Connects wirelessly to Apple TV or any AirPlay 2 smart TV to project a dedicated full-bleed 16:9 arcade stage on the television: **place your iPhone centered directly underneath the TV screen (on the TV console, screen and front camera facing the player)** so aiming at the television aligns naturally with the iPhone's optical tracking axis.
 
 ## Privacy (`DATA_NOT_COLLECTED`) & Honest Family Pricing
 - **100% On-Device Camera Processing:** `MediaPipeTasksVision` processes frames solely in volatile RAM. Zero photos, videos, Face ID/TrueDepth depth maps, or analytics events are ever recorded or transmitted (`NSPrivacyTracking = false`, zero third-party analytics SDKs).

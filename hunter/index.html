@@ -70,7 +70,7 @@
               "name": "How do the hand-gesture controls work in Meemaw Hunter?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Hold your hand 30–60 cm in front of your iPhone or iPad front camera: show an open hand to aim, close your fist to shoot, and flip your wrist in place (palm to back of hand) to reload all 6 chambers at 60 FPS."
+                "text": "Hold your iPhone in your left hand and aim/shoot with your right hand (or vice versa for left-handed players), prop your device 30–60 cm in front of you, or place your iPhone centered directly underneath your TV for 16:9 AirPlay mode: show an open hand to aim, close your fist to shoot, and flip your wrist in place to reload all 6 chambers at 60 FPS."
               }
             },
             {
@@ -652,7 +652,9 @@
             position: absolute;
             right: 1.2rem;
             bottom: -6px;
-            width: 220px;
+            width: 248px;
+            height: auto;
+            aspect-ratio: 1 / 1;
             z-index: 5;
             pointer-events: none;
             filter: drop-shadow(0 12px 24px rgba(12, 6, 2, 0.55));
@@ -1447,7 +1449,7 @@
             .target-skeet { left: 3%; right: auto; top: 9%; width: 98px; }
             .target-pie { left: 39%; right: auto; top: 6%; width: 78px; }
             .target-bandit { left: 26%; right: auto; bottom: 8%; width: 106px; }
-            .sheriff-host { width: 132px; right: 0; }
+            .sheriff-host { width: 156px; height: auto; right: 0; }
             .optical-reticle { left: 16%; top: 58%; width: 62px; height: 62px; }
             .range-hint-pill { position: relative; left: auto; bottom: auto; margin: 0 0 0.35rem; text-align: center; }
 
@@ -1537,7 +1539,7 @@
                 <div class="gallery-stage-inner">
                 <article class="saloon-sign" id="saloonSign">
                     <h1 id="heroTitle">Ta main nue est le pistolet.</h1>
-                    <p class="hero-lead" id="heroLead">Pose ton iPhone ou ton iPad : vise main ouverte, ferme le poing pour tirer et tourne le poignet pour recharger à 60 FPS — sans manette et 100 % en local.</p>
+                    <p class="hero-lead" id="heroLead">Tiens ton iPhone de la main gauche pour tirer de la main droite (ou pose ton iPhone/iPad devant toi) : main ouverte pour viser, poing fermé pour tirer et rotation du poignet pour recharger à 60 FPS — 100 % en local.</p>
                     <div class="cta-row">
                         <a href="https://apps.apple.com/app/id6831648316" class="btn-primary" target="_blank" rel="noopener">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
@@ -1588,16 +1590,16 @@
 
                 <div class="range-playfield" id="rangePlayfield">
                     <button type="button" class="range-target target-skeet" data-points="150" aria-label="Target 150 points">
-                        <img src="assets/cow-skeet.webp" alt="Cible volante Ball-Trap" width="276" height="220">
+                        <img src="assets/cow-skeet.webp" alt="Cible volante Ball-Trap" width="420" height="297">
                     </button>
                     <button type="button" class="range-target target-bandit" data-points="200" aria-label="Bandit 200 points">
-                        <img src="assets/cow-bandit.webp" alt="Raton bandit hors-la-loi" width="292" height="292">
+                        <img src="assets/cow-bandit.webp" alt="Raton bandit hors-la-loi" width="371" height="512">
                     </button>
                     <button type="button" class="range-target target-pie" data-points="300" aria-label="Golden Pie 300 points">
-                        <img src="assets/golden-pie.webp" alt="Tarte dorée bonus" width="216" height="216">
+                        <img src="assets/golden-pie.webp" alt="Tarte dorée bonus" width="360" height="264">
                     </button>
 
-                    <img src="assets/meemaw-sheriff.webp" alt="Sheriff Meemaw" class="sheriff-host" width="440" height="440">
+                    <img src="assets/meemaw-sheriff.webp" alt="Sheriff Meemaw" class="sheriff-host" width="512" height="512">
 
                     <svg class="optical-reticle" id="opticalReticle" viewBox="0 0 72 72" fill="none" aria-hidden="true">
                         <circle cx="36" cy="36" r="26" fill="rgba(26, 18, 11, 0.24)" stroke="#1A120B" stroke-width="7.2"/>
@@ -1621,12 +1623,12 @@
             <div class="section-shell">
                 <div class="section-header">
                     <h2 id="gesturesTitle">Trois gestes francs, calibrés du premier coup.</h2>
-                    <p id="gesturesIntro">Conçu pour tous les iPhone (de l’iPhone SE au capteur Center Stage 18 MP de l’iPhone 17 Pro) et iPad, à 30–60 cm de l’écran.</p>
+                    <p id="gesturesIntro">Joue à main levée (iPhone tenu main gauche et tir main droite, ou l’inverse en gaucher) ou appareil posé à 30–60 cm — de l’iPhone SE au capteur Center Stage 18 MP de l’iPhone 17 Pro et sur iPad.</p>
                 </div>
 
                 <div class="gesture-row">
                     <div class="gesture-step">
-                        <img src="assets/gesture-open.webp" alt="Main ouverte pour viser" class="gesture-medallion" width="208" height="208" loading="lazy">
+                        <img src="assets/gesture-open.webp" alt="Main ouverte pour viser" class="gesture-medallion" width="440" height="440" loading="lazy">
                         <div class="gesture-copy">
                             <h3 id="g1Title">1. Main ouverte = Viser</h3>
                             <p id="g1Body">Montre ta main ouverte face à l’écran : le suivi 21 points et le filtre optique stabilisent le réticule au sous-pixel près.</p>
@@ -1634,7 +1636,7 @@
                     </div>
 
                     <div class="gesture-step">
-                        <img src="assets/gesture-fist.webp" alt="Poing fermé pour tirer" class="gesture-medallion" width="208" height="208" loading="lazy">
+                        <img src="assets/gesture-fist.webp" alt="Poing fermé pour tirer" class="gesture-medallion" width="440" height="440" loading="lazy">
                         <div class="gesture-copy">
                             <h3 id="g2Title">2. Poing fermé = Tirer</h3>
                             <p id="g2Body">Referme franchement les doigts dans la paume pour faire feu sans faire trembler ta visée pendant la rafale.</p>
@@ -1642,7 +1644,7 @@
                     </div>
 
                     <div class="gesture-step">
-                        <img src="assets/gesture-flip.webp" alt="Tourner la main pour recharger" class="gesture-medallion" width="208" height="208" loading="lazy">
+                        <img src="assets/gesture-flip.webp" alt="Tourner la main pour recharger" class="gesture-medallion" width="440" height="440" loading="lazy">
                         <div class="gesture-copy">
                             <h3 id="g3Title">3. Tourne la main = Recharger</h3>
                             <p id="g3Body">Retourne ta main sur place (paume vers dos, ou dos vers paume) pour remplir les 6 chambres du barillet instantanément.</p>
@@ -1652,7 +1654,7 @@
 
                 <div class="hardware-bar">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                    <span id="hardwareStrip">Compatible droitier &amp; gaucher auto · Mode tactile toujours actif · Fonctionne 100 % hors-ligne en mode Avion</span>
+                    <span id="hardwareStrip">Jouable téléphone en main ou posé · Droitier &amp; gaucher auto · Mode tactile inclus · 100 % hors-ligne en mode Avion</span>
                 </div>
             </div>
         </section>
@@ -1669,7 +1671,7 @@
 
                 <div class="stage-theater" id="stageTheater">
                     <div class="theater-visual" id="theaterVisual" style="background-image: url('assets/stage-skeet.webp');">
-                        <img src="assets/cow-skeet.webp" alt="" class="theater-critter" id="theaterCritter" width="352" height="280" loading="lazy">
+                        <img src="assets/cow-skeet.webp" alt="" class="theater-critter" id="theaterCritter" width="420" height="297" loading="lazy">
                     </div>
                     <div class="theater-info">
                         <h3 id="theaterName">1. Ball-Trap au Ranch</h3>
@@ -1696,11 +1698,11 @@
             <div class="section-shell">
                 <div class="airplay-split">
                     <div>
-                        <img src="assets/airplay-tv.webp" alt="Meemaw Hunter projeté en 16:9 sur une télévision de salon via AirPlay" class="airplay-photo" width="1440" height="860" loading="lazy">
+                        <img src="assets/airplay-tv.webp" id="airplayPhoto" alt="Meemaw Hunter projeté en 16:9 sur une télévision via AirPlay, avec l’iPhone posé juste sous l’écran TV face au joueur" class="airplay-photo" width="1440" height="860" loading="lazy">
                     </div>
                     <div class="airplay-copy">
                         <h2 id="airplayTitle">Projetez le ranch en 16:9 sur la télé du salon.</h2>
-                        <p id="airplayBody">Activez AirPlay vers votre Apple TV ou téléviseur connecté : Meemaw Hunter ouvre une vraie scène 16:9 dédiée sur grand écran tandis que votre iPhone posé devant vous sert de cockpit optique.</p>
+                        <p id="airplayBody">Activez AirPlay vers votre Apple TV ou téléviseur connecté, puis posez votre iPhone juste en dessous de la télé (centré sur le meuble TV, écran tourné vers vous) : quand vous visez l’écran 16:9 à main ouverte, votre main reste pile dans l’axe optique de la caméra frontale.</p>
                         <ul class="check-list" id="airplayList"></ul>
                     </div>
                 </div>
@@ -1825,6 +1827,8 @@
                 const w = pack.worlds[idx] || pack.worlds[0];
                 document.getElementById('theaterVisual').style.backgroundImage = `url('${w.img}')`;
                 const critter = document.getElementById('theaterCritter');
+                critter.removeAttribute('width');
+                critter.removeAttribute('height');
                 critter.src = w.sprite;
                 critter.alt = w.name;
                 const badge = document.getElementById('theaterBadge');
