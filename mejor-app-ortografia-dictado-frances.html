@@ -92,6 +92,24 @@
 
     <style>
         @font-face {
+            font-family: 'Bricolage Fallback';
+            src: local('Helvetica Neue Bold'), local('Helvetica-Bold'), local('Arial Bold'), local('Arial');
+            font-weight: 200 800;
+            size-adjust: 102.41%;
+            ascent-override: 90.81%;
+            descent-override: 26.36%;
+            line-gap-override: 0%;
+        }
+        @font-face {
+            font-family: 'Nunito Fallback';
+            src: local('Helvetica Neue'), local('Helvetica'), local('Arial');
+            font-weight: 400 900;
+            size-adjust: 102.53%;
+            ascent-override: 98.60%;
+            descent-override: 34.43%;
+            line-gap-override: 0%;
+        }
+        @font-face {
             font-family: 'Bricolage Grotesque';
             font-style: normal;
             font-weight: 600 800;
@@ -132,8 +150,8 @@
             --ink-muted: #3A4A63;
             --white: #FFFFFF;
             --paper-alt: #F6F9FE;
-            --font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Bricolage Grotesque', 'Bricolage Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Nunito', 'Nunito Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }

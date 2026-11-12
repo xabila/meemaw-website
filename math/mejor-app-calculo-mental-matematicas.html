@@ -113,11 +113,29 @@
     </script>
 
     <style>
+        @font-face {
+            font-family: 'Bricolage Fallback';
+            src: local('Helvetica Neue Bold'), local('Helvetica-Bold'), local('Arial Bold'), local('Arial');
+            font-weight: 200 800;
+            size-adjust: 102.41%;
+            ascent-override: 90.81%;
+            descent-override: 26.36%;
+            line-gap-override: 0%;
+        }
+        @font-face {
+            font-family: 'Nunito Fallback';
+            src: local('Helvetica Neue'), local('Helvetica'), local('Arial');
+            font-weight: 400 900;
+            size-adjust: 102.53%;
+            ascent-override: 98.60%;
+            descent-override: 34.43%;
+            line-gap-override: 0%;
+        }
         @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:600 800;font-display:swap;src:url('/hunter/fonts/bricolage-grotesque-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF}
         @font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:600 800;font-display:swap;src:url('/hunter/fonts/bricolage-grotesque-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+FEFF}
         @font-face{font-family:'Nunito';font-style:normal;font-weight:500 800;font-display:swap;src:url('/hunter/fonts/nunito-latin-ext.woff2') format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF}
         @font-face{font-family:'Nunito';font-style:normal;font-weight:500 800;font-display:swap;src:url('/hunter/fonts/nunito-latin.woff2') format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+FEFF}
-        :root{--emerald:#0B4634;--emerald-tint:#EBF5F0;--paper-alt:#F4F8F6;--ink:#10221B;--ink-muted:#364B42;--white:#FFFFFF;--yellow:#FFD13B;--border-width:2.5px;--thick-border:3px;--radius-card:16px;--radius-btn:12px;--radius-pill:999px;--shadow-md:4px 4px 0px var(--ink);--shadow-lg:6px 6px 0px var(--ink);--font-display:'Bricolage Grotesque',-apple-system,BlinkMacSystemFont,sans-serif;--font-body:'Nunito',-apple-system,BlinkMacSystemFont,sans-serif}
+        :root{--emerald:#0B4634;--emerald-tint:#EBF5F0;--paper-alt:#F4F8F6;--ink:#10221B;--ink-muted:#364B42;--white:#FFFFFF;--yellow:#FFD13B;--border-width:2.5px;--thick-border:3px;--radius-card:16px;--radius-btn:12px;--radius-pill:999px;--shadow-md:4px 4px 0px var(--ink);--shadow-lg:6px 6px 0px var(--ink);--font-display:'Bricolage Grotesque','Bricolage Fallback',-apple-system,BlinkMacSystemFont,sans-serif;--font-body:'Nunito','Nunito Fallback',-apple-system,BlinkMacSystemFont,sans-serif}
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth}
         ::selection{background-color:var(--yellow);color:var(--ink)}
