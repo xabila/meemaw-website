@@ -4,14 +4,35 @@ description: Architectural Texas Sunset & Saloon Timber showcase and multilingua
 colors:
   sheriff-gold: "#F7B928"
   sheriff-gold-deep: "#D99B10"
+  pop-gold: "#FFD13B"
+  pop-gold-hover: "#FFE06B"
+  pop-gold-deep: "#D9A814"
   chili-red: "#C93B2B"
+  chili-link: "#B82E22"
   armed-emerald: "#136B42"
   armed-emerald-deep: "#0D5232"
   saloon-timber: "#1F130C"
   saloon-rail: "#2C1B11"
+  emerald-poche: "#0B4634"
+  emerald-rail: "#105A43"
+  emerald-slate: "#073124"
+  emerald-badge: "#126E51"
+  emerald-tint: "#E9F6F0"
+  mint-cream: "#E8F5EF"
+  mint-muted: "#B8DACB"
+  sapphire-poche: "#0B3068"
+  sapphire-rail: "#124084"
+  sapphire-slate: "#072048"
+  sapphire-badge: "#154D9E"
+  sapphire-tint: "#EBF2FC"
+  sky-cream: "#EAF2FF"
+  sky-muted: "#BDD1F2"
   crisp-paper: "#FFFFFF"
   paper-stone: "#F3F0EA"
+  paper-cool: "#EFF3F9"
   ink: "#1A120B"
+  ink-emerald: "#11211B"
+  ink-sapphire: "#0E1B31"
   ink-secondary: "#483626"
   timber-cream: "#F5E9D6"
   timber-muted: "#DECBB0"
@@ -136,6 +157,12 @@ The palette balances warm roasted espresso timber against high-noon Sheriff Gold
 - **Warm Umber Secondary** (`#483626`): Long-form editorial body copy on pure-white paper (`10.2:1` contrast).
 - **Timber Cream** (`#F5E9D6`): Primary body copy and list text on dark Saloon Timber chapters.
 - **Timber Muted** (`#DECBB0`): Captions, scoreboard labels, and secondary metadata on dark Saloon Timber chapters.
+
+### Suite App Chapter Poche Worlds
+All three Meemaw Family Suite web experiences share the exact same architectural chapter grammar (`Dark App Poche` → `Active Pop/Sheriff Gold Band` → `Crisp Paper #FFFFFF Ledger` → `Dark App Showcase` → `Crisp Paper #FFFFFF Matrix` → `Dark Closing Chapter`), `Bricolage Grotesque` + `Nunito` self-hosted typography, and two-tier mobile masthead, differentiated by each app's signature App Store chromatic world:
+- **Meemaw Orthographe (`/`) — Royal Sapphire**: `--sapphire-poche: #0B3068`, `--sapphire-rail: #124084`, `--sapphire-slate: #072048`, `--pop-gold: #FFD13B`, `--ink-sapphire: #0E1B31`.
+- **Meemaw Math (`/math/`) — Deep Emerald**: `--emerald-poche: #0B4634`, `--emerald-rail: #105A43`, `--emerald-slate: #073124`, `--pop-gold: #FFD13B`, `--ink-emerald: #11211B`.
+- **Meemaw Hunter (`/hunter/`) — Saloon Timber**: `--saloon-timber: #1F130C`, `--saloon-rail: #2C1B11`, `--sheriff-gold: #F7B928`, `--ink: #1A120B`.
 
 ### Named Rules
 **The Chapter Section-Cut Rule.** Alternate full-bleed horizontal chapters decisively between Saloon Timber (`#1F130C`), Sheriff Gold (`#F7B928`), and Crisp Paper (`#FFFFFF`) separated by `2.5px–3px` solid ink or gold rules—never blend chapters with soft atmospheric page gradients.

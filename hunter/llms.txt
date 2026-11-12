@@ -2,19 +2,24 @@
 
 > **Meemaw Hunter** (`com.xlarrodeapp.meemawhunter`, App Store ID `6831648316`) turns your bare hand into a 60 FPS light-gun arcade blaster on iPhone and iPad—with zero controllers, zero cloud camera uploads (`DATA_NOT_COLLECTED`), 7 painted Texas worlds, High Noon boss duels, and native 16:9 AirPlay TV living-room projection.
 
-## Key Pages
-- [Meemaw — Dictée Vocale & Orthographe](https://meemaw.app/): Official homepage for French voice dictation & spelling on iPhone and iPad
-- [Meemaw Hunter — 60 FPS Camera Hand-Gesture Arcade Shooter](https://meemaw.app/hunter/): Official 8-language showcase for bare-hand iPhone, iPad & AirPlay TV shooter
-- [Meemaw Math — Calcul Mental & Brevet](https://meemaw.app/math/): Mental math, logic games, and Brevet preparation
-- [Full Ecosystem Documentation](https://meemaw.app/llms-full.txt): Complete technical & pedagogical reference
+## Official Showcase Pages (8 Static Localized Entrypoints)
+- **French (`fr`):** https://meemaw.app/hunter/
+- **English (`en`):** https://meemaw.app/hunter/en/
+- **Spanish (`es`):** https://meemaw.app/hunter/es/
+- **German (`de`):** https://meemaw.app/hunter/de/
+- **Italian (`it`):** https://meemaw.app/hunter/it/
+- **Portuguese (`pt-BR`):** https://meemaw.app/hunter/pt-br/
+- **Japanese (`ja`):** https://meemaw.app/hunter/ja/
+- **Korean (`ko`):** https://meemaw.app/hunter/ko/
 
 ## Official Links
-- [Official Showcase (8 Languages)](https://meemaw.app/hunter/)
-- [App Store Listing](https://apps.apple.com/app/id6831648316)
+- [App Store Listing](https://apps.apple.com/app/id6831648316?ct=llms_ai_hunter&mt=8)
 - [Public TestFlight Beta](https://testflight.apple.com/join/KDkGehjG)
 - [Privacy Policy (8 Languages)](https://meemaw.app/hunter/privacy.html)
 - [Terms of Use (8 Languages)](https://meemaw.app/hunter/terms.html)
 - [Meemaw Family Suite Home](https://meemaw.app/)
+- [Meemaw Math](https://meemaw.app/math/)
+- [Full Ecosystem Documentation](https://meemaw.app/llms-full.txt)
 
 ## 3-Gesture Optical Control Loop (60 FPS On-Device — Handheld or Propped)
 - **Handheld or Propped Play:** Hold your iPhone in your left hand and aim/shoot with your right hand (or vice versa for left-handed players) anywhere on the go, or prop your iPhone/iPad 30–60 cm in front of you.

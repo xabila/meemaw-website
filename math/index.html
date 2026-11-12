@@ -8,9 +8,9 @@
     <meta name="keywords" content="application calcul mental, astuces calcul mental rapide, calculer pourcentage de tête, table de 9 astuce, âge cérébral iPhone, Dr Kawashima iOS, défis QI numérique, temps d'écran maths, brevet sans calculatrice, mental math app iOS, app cálculo mental">
     <link rel="canonical" href="https://meemaw.app/math/">
     <link rel="ard" href="/.well-known/ard.json" type="application/ai-catalog+json">
-    <link rel="alternate" hreflang="fr" href="https://meemaw.app/math/?lang=fr">
-    <link rel="alternate" hreflang="en" href="https://meemaw.app/math/?lang=en">
-    <link rel="alternate" hreflang="es" href="https://meemaw.app/math/?lang=es">
+    <link rel="alternate" hreflang="fr" href="https://meemaw.app/math/">
+    <link rel="alternate" hreflang="en" href="https://meemaw.app/math/en/">
+    <link rel="alternate" hreflang="es" href="https://meemaw.app/math/es/">
     <link rel="alternate" hreflang="x-default" href="https://meemaw.app/math/">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -37,7 +37,7 @@
     <meta name="twitter:image" content="https://meemaw.app/math/assets/og-math.jpg">
 
     <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="pageJsonLd">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -49,8 +49,8 @@
           "applicationCategory": "EducationalApplication",
           "inLanguage": ["fr", "en", "es"],
           "url": "https://meemaw.app/math/",
-          "downloadUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
-          "installUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
+          "downloadUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_schema_math_fr&mt=8",
+          "installUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_schema_math_fr&mt=8",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -79,6 +79,19 @@
             "Duels Parents vs Enfants sur WhatsApp et iMessage via Universal Links sans création de compte"
           ],
           "description": "Meemaw Math aide enfants, ados et adultes à oublier leur calculatrice en 5 minutes par jour grâce à 13 secrets de calcul mental guidés en 2 étapes, au suivi de l'Âge Cérébral, à 11 jeux de réflexion et au bouclier Temps d'Écran sur iPhone et iPad."
+        },
+        {
+          "@type": "ItemList",
+          "name": "Comparatif 2026 des applications de calcul mental et mathématiques sur iPhone et iPad",
+          "itemListOrder": "https://schema.org/ItemListOrderDescending",
+          "numberOfItems": 5,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Meemaw Math (iOS / iPadOS) — 13 secrets de calcul mental en 2 étapes, Âge Cérébral, QI numérique, 11 jeux, Temps d'Écran Apple & Partage Familial" },
+            { "@type": "ListItem", "position": 2, "name": "Duolingo Math — Initiation visuelle élémentaire (compte requis, sans méthode de calcul mental)" },
+            { "@type": "ListItem", "position": 3, "name": "Photomath — Solveur par caméra donnant le résultat tout fait" },
+            { "@type": "ListItem", "position": 4, "name": "Roi des Maths (King of Math) — QCM rapides à 4 choix sans explication de méthode" },
+            { "@type": "ListItem", "position": 5, "name": "Anton / Smartick — Exercices scolaires généraux en ligne" }
+          ]
         },
         {
           "@type": "FAQPage",
@@ -513,6 +526,49 @@
         .proof-item svg {
             flex-shrink: 0;
             color: var(--pop-gold);
+        }
+
+        /* Desktop-Only iPhone QR Handoff Row (flat ink-ruled, zero nested card) */
+        .qr-handoff {
+            display: none;
+        }
+
+        @media (min-width: 981px) {
+            .qr-handoff {
+                display: flex;
+                align-items: center;
+                gap: 0.95rem;
+                margin-top: 1.1rem;
+                padding-top: 1.05rem;
+                border-top: 1.5px solid rgba(232, 245, 239, 0.18);
+            }
+        }
+
+        .qr-code-img {
+            width: 66px;
+            height: 66px;
+            padding: 5px;
+            background: var(--crisp-paper);
+            border-radius: 10px;
+            border: 2px solid var(--pop-gold);
+            image-rendering: pixelated;
+            flex-shrink: 0;
+        }
+
+        .qr-copy strong {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--crisp-paper);
+            line-height: 1.34;
+        }
+
+        .qr-copy span {
+            display: block;
+            font-size: 0.86rem;
+            color: var(--mint-muted);
+            line-height: 1.38;
         }
 
         /* Interactive Live "Déclic" Mental-Math Slate */
@@ -1068,18 +1124,14 @@
         }
 
         /* Chapter 5: Crisp Paper — Responsive Comparison Matrix */
-        .comp-table-wrap {
-            border: 2.5px solid var(--ink);
-            border-radius: var(--radius-surface);
-            overflow: hidden;
-            background: var(--crisp-paper);
-        }
-
         table.comp-table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
             font-variant-numeric: tabular-nums;
+            border-top: 2.5px solid var(--ink);
+            border-bottom: 2.5px solid var(--ink);
+            background: var(--crisp-paper);
         }
 
         table.comp-table th,
@@ -1397,7 +1449,7 @@
 
             table.comp-table tr {
                 border-bottom: 2px solid var(--ink);
-                padding: 0.9rem 1rem;
+                padding: 0.95rem 0;
             }
 
             table.comp-table tr:last-child {
@@ -1563,7 +1615,7 @@
             </nav>
 
             <div class="masthead-actions">
-                <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615" class="nav-cta" target="_blank" rel="noopener">
+                <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_nav_fr&amp;mt=8" class="nav-cta" target="_blank" rel="noopener">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
                     <span data-i18n="nav_store">App Store</span>
                 </a>
@@ -1587,7 +1639,7 @@
                     <h1 id="heroTitle" data-i18n="hero_title">Oubliez votre calculatrice <span class="gold-ink">en 5 minutes par jour.</span></h1>
                     <p class="hero-lead" data-i18n="hero_lead">Découvrez les 13 secrets de calcul mental que l’école ne vous a jamais appris — calculer 15 % d’une addition de tête, faire 100 − 37 sans retenue ou rendre la monnaie au centime — et dérouillez votre Âge Cérébral sur iPhone et iPad.</p>
                     <div class="cta-row">
-                        <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615" class="btn-primary" target="_blank" rel="noopener">
+                        <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_hero_fr&amp;mt=8" class="btn-primary" target="_blank" rel="noopener">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
                             <span data-i18n="cta_download">Télécharger sur l’App Store</span>
                         </a>
@@ -1604,6 +1656,13 @@
                         <div class="proof-item">
                             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
                             <span data-i18n="proof_2">100&nbsp;% hors-ligne&nbsp;· Zéro publicité&nbsp;· Partage Familial Apple (jusqu’à 6)</span>
+                        </div>
+                    </div>
+                    <div class="qr-handoff">
+                        <img src="/assets/qr-math.webp" alt="QR Code App Store Meemaw Math" class="qr-code-img" width="66" height="66" loading="lazy" decoding="async">
+                        <div class="qr-copy">
+                            <strong data-i18n="qr_label">Sur Mac ou PC ? Scannez avec l’appareil photo de votre iPhone</strong>
+                            <span data-i18n="qr_sub">Ouvre directement Meemaw Math sur l’App Store iOS — essai gratuit immédiat</span>
                         </div>
                     </div>
                 </div>
@@ -1880,62 +1939,60 @@
                     <p data-i18n="comp_sub">Comparaison factuelle avec Duolingo Math, Photomath, Roi des Maths (King of Math) et Smartick / Anton sur iPhone et iPad.</p>
                 </div>
 
-                <div class="comp-table-wrap">
-                    <table class="comp-table">
-                        <thead>
-                            <tr>
-                                <th data-i18n="c_crit">Critère clé</th>
-                                <th class="meemaw-col" id="thMeemaw">Meemaw Math</th>
-                                <th>Duolingo Math</th>
-                                <th>Photomath</th>
-                                <th id="thKing">Roi des Maths</th>
-                                <th>Anton / Smartick</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong data-i18n="r1_k">Secrets de calcul mental expliqués en 2 étapes</strong></td>
-                                <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r1_m">Oui — 13 secrets guidés + 60 fiches méthodes</td>
-                                <td data-label="Duolingo Math" data-i18n="r1_d">Non — exercices visuels sans méthode</td>
-                                <td data-label="Photomath" data-i18n="r1_p">Donne la solution finale par caméra</td>
-                                <td data-label="Roi des Maths" data-i18n="r1_k2">Non — QCM bruts sans explication</td>
-                                <td data-label="Anton / Smartick" data-i18n="r1_a">Indices scolaires classiques</td>
-                            </tr>
-                            <tr>
-                                <td><strong data-i18n="r2_k">Variété des jeux &amp; Âge Cérébral</strong></td>
-                                <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r2_m">11 jeux (Flash DS, QI, Monnaie, Compte est Bon, Certif’…)</td>
-                                <td data-label="Duolingo Math" data-i18n="r2_d">Parcours linéaire élémentaire</td>
-                                <td data-label="Photomath" data-i18n="r2_p">Aucun jeu d’entraînement</td>
-                                <td data-label="Roi des Maths" data-i18n="r2_k2">QCM à 4 choix uniquement</td>
-                                <td data-label="Anton / Smartick" data-i18n="r2_a">Fiches d’exercices scolaires</td>
-                            </tr>
-                            <tr>
-                                <td><strong data-i18n="r3_k">Brouillon manuscrit &amp; espace examens sans calculatrice</strong></td>
-                                <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r3_m">Brouillon intégré + espace Brevet / Collège dédié</td>
-                                <td data-label="Duolingo Math" data-i18n="r3_d">Limité aux bases du primaire</td>
-                                <td data-label="Photomath" data-i18n="r3_p">Favorise la copie du résultat</td>
-                                <td data-label="Roi des Maths" data-i18n="r3_k2">Sans brouillon ni programme d’examen</td>
-                                <td data-label="Anton / Smartick" data-i18n="r3_a">Partiel, sans examen blanc dédié</td>
-                            </tr>
-                            <tr>
-                                <td><strong data-i18n="r4_k">Bouclier Temps d’Écran Apple &amp; duels WhatsApp</strong></td>
-                                <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r4_m">Intégré nativement (débloque TikTok/jeux après 5 min)</td>
-                                <td data-label="Duolingo Math" data-i18n="r4_d">Non</td>
-                                <td data-label="Photomath" data-i18n="r4_p">Non</td>
-                                <td data-label="Roi des Maths" data-i18n="r4_k2">Non</td>
-                                <td data-label="Anton / Smartick" data-i18n="r4_a">Non</td>
-                            </tr>
-                            <tr>
-                                <td><strong data-i18n="r5_k">100 % hors-ligne, sans compte &amp; Partage Familial</strong></td>
-                                <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r5_m">100 % hors-ligne, zéro pub, 1 accès pour 6 proches</td>
-                                <td data-label="Duolingo Math" data-i18n="r5_d">Compte requis &amp; publicités</td>
-                                <td data-label="Photomath" data-i18n="r5_p">Connexion requise, abonnement solo</td>
-                                <td data-label="Roi des Maths" data-i18n="r5_k2">Hors-ligne</td>
-                                <td data-label="Anton / Smartick" data-i18n="r5_a">Connexion &amp; compte obligatoires</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th data-i18n="c_crit">Critère clé</th>
+                            <th class="meemaw-col" id="thMeemaw">Meemaw Math</th>
+                            <th>Duolingo Math</th>
+                            <th>Photomath</th>
+                            <th id="thKing">Roi des Maths</th>
+                            <th id="thC5">Anton / Smartick</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong data-i18n="r1_k">Secrets de calcul mental expliqués en 2 étapes</strong></td>
+                            <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r1_m">Oui — 13 secrets guidés + 60 fiches méthodes</td>
+                            <td data-label="Duolingo Math" data-i18n="r1_d">Non — exercices visuels sans méthode</td>
+                            <td data-label="Photomath" data-i18n="r1_p">Donne la solution finale par caméra</td>
+                            <td data-label="Roi des Maths" data-i18n="r1_k2">Non — QCM bruts sans explication</td>
+                            <td data-label="Anton / Smartick" data-i18n="r1_a">Indices scolaires classiques</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-i18n="r2_k">Variété des jeux &amp; Âge Cérébral</strong></td>
+                            <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r2_m">11 jeux (Flash DS, QI, Monnaie, Compte est Bon, Certif’…)</td>
+                            <td data-label="Duolingo Math" data-i18n="r2_d">Parcours linéaire élémentaire</td>
+                            <td data-label="Photomath" data-i18n="r2_p">Aucun jeu d’entraînement</td>
+                            <td data-label="Roi des Maths" data-i18n="r2_k2">QCM à 4 choix uniquement</td>
+                            <td data-label="Anton / Smartick" data-i18n="r2_a">Fiches d’exercices scolaires</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-i18n="r3_k">Brouillon manuscrit &amp; espace examens sans calculatrice</strong></td>
+                            <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r3_m">Brouillon intégré + espace Brevet / Collège dédié</td>
+                            <td data-label="Duolingo Math" data-i18n="r3_d">Limité aux bases du primaire</td>
+                            <td data-label="Photomath" data-i18n="r3_p">Favorise la copie du résultat</td>
+                            <td data-label="Roi des Maths" data-i18n="r3_k2">Sans brouillon ni programme d’examen</td>
+                            <td data-label="Anton / Smartick" data-i18n="r3_a">Partiel, sans examen blanc dédié</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-i18n="r4_k">Bouclier Temps d’Écran Apple &amp; duels WhatsApp</strong></td>
+                            <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r4_m">Intégré nativement (débloque TikTok/jeux après 5 min)</td>
+                            <td data-label="Duolingo Math" data-i18n="r4_d">Non</td>
+                            <td data-label="Photomath" data-i18n="r4_p">Non</td>
+                            <td data-label="Roi des Maths" data-i18n="r4_k2">Non</td>
+                            <td data-label="Anton / Smartick" data-i18n="r4_a">Non</td>
+                        </tr>
+                        <tr>
+                            <td><strong data-i18n="r5_k">100 % hors-ligne, sans compte &amp; Partage Familial</strong></td>
+                            <td class="meemaw-col" data-label="Meemaw Math" data-i18n="r5_m">100 % hors-ligne, zéro pub, 1 accès pour 6 proches</td>
+                            <td data-label="Duolingo Math" data-i18n="r5_d">Compte requis &amp; publicités</td>
+                            <td data-label="Photomath" data-i18n="r5_p">Connexion requise, abonnement solo</td>
+                            <td data-label="Roi des Maths" data-i18n="r5_k2">Hors-ligne</td>
+                            <td data-label="Anton / Smartick" data-i18n="r5_a">Connexion &amp; compte obligatoires</td>
+                        </tr>
+                    </tbody>
+                </table>
 
                 <div class="comp-foot">
                     <a href="/math/comparatif-applications-calcul-mental-brevet.html" class="text-action-link" id="compGuideLink">
@@ -1980,7 +2037,7 @@
                     <h2 data-i18n="final_title">Prêt à oublier votre calculatrice ?</h2>
                     <p data-i18n="final_sub">5 minutes par jour sur iPhone et iPad, 100 % hors-ligne, sans publicité et pour toute la famille.</p>
                 </div>
-                <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615" class="btn-primary" target="_blank" rel="noopener">
+                <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_final_fr&amp;mt=8" class="btn-primary" target="_blank" rel="noopener">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
                     <span data-i18n="cta_download">Télécharger sur l’App Store</span>
                 </a>
@@ -2037,6 +2094,8 @@
                 cta_preview: "Voir l’application en action",
                 proof_1: "13 secrets guidés en 2 étapes\u00A0· 11 modes de jeu\u00A0· Âge Cérébral & QI",
                 proof_2: "100\u00A0% hors-ligne\u00A0· Zéro publicité\u00A0· Partage Familial Apple (jusqu’à 6)",
+                qr_label: "Sur Mac ou PC ? Scannez avec l’appareil photo de votre iPhone",
+                qr_sub: "Ouvre directement Meemaw Math sur l’App Store iOS — essai gratuit immédiat",
                 tr_title: "Testez le déclic en 2 étapes",
                 tr_sub: "Touchez un calcul pour voir le secret de Meemaw",
                 tr_more: "+ 12 autres secrets dans le Dojo",
@@ -2109,6 +2168,7 @@
                 comp_sub: "Comparaison factuelle avec Duolingo Math, Photomath, Roi des Maths (King of Math) et Smartick / Anton sur iPhone et iPad.",
                 c_crit: "Critère clé",
                 th_king: "Roi des Maths",
+                th_c5: "Anton / Smartick",
                 r1_k: "Secrets de calcul mental expliqués en 2 étapes",
                 r1_m: "Oui — 13 secrets guidés + 60 fiches méthodes",
                 r1_d: "Non — exercices visuels sans méthode",
@@ -2179,6 +2239,8 @@
                 cta_preview: "See the app in action",
                 proof_1: "13 two-step mental shortcuts\u00A0· 11 game modes\u00A0· Brain Age & IQ",
                 proof_2: "100% offline\u00A0· Zero ads\u00A0· Apple Family Sharing (up to 6 members)",
+                qr_label: "On Mac or PC? Scan with your iPhone camera",
+                qr_sub: "Opens Meemaw Math directly on the iOS App Store — start free in seconds",
                 tr_title: "Feel the 2-step click live",
                 tr_sub: "Tap any calculation to see Meemaw’s shortcut",
                 tr_more: "+ 12 more secrets inside the Dojo",
@@ -2248,9 +2310,10 @@
                 duel_2: "Everyone plays the exact same numbers timed to the tenth of a second.",
                 duel_3: "One subscription or lifetime unlock covers up to 6 family members via Family Sharing.",
                 comp_title: "How Meemaw Math compares to other math apps",
-                comp_sub: "Side-by-side comparison with Duolingo Math, Photomath, King of Math, and Smartick / Anton on iPhone and iPad.",
+                comp_sub: "Side-by-side comparison with Duolingo Math, Photomath, King of Math, and Elevate / Smartick on iPhone and iPad.",
                 c_crit: "Key feature",
                 th_king: "King of Math",
+                th_c5: "Elevate / Smartick",
                 r1_k: "2-step mental math secrets & method sheets",
                 r1_m: "Yes — 13 guided secrets + 60 method sheets",
                 r1_d: "No — visual drills without explanations",
@@ -2321,6 +2384,8 @@
                 cta_preview: "Ver la aplicación en acción",
                 proof_1: "13 secretos guiados en 2 pasos\u00A0· 11 modos de juego\u00A0· Edad Cerebral y CI",
                 proof_2: "100\u00A0% sin conexión\u00A0· Cero anuncios\u00A0· En Familia de Apple (hasta 6)",
+                qr_label: "¿En Mac o PC? Escanea con la cámara de tu iPhone",
+                qr_sub: "Abre Meemaw Mates directamente en el App Store de iOS — prueba gratuita al instante",
                 tr_title: "Prueba el truco en 2 pasos",
                 tr_sub: "Toca un cálculo para ver el secreto de Meemaw",
                 tr_more: "+ 12 secretos más en el Dojo",
@@ -2393,6 +2458,7 @@
                 comp_sub: "Comparación objetiva con Duolingo Math, Photomath, Rey de las Matemáticas y Smartick / Anton en iPhone y iPad.",
                 c_crit: "Criterio clave",
                 th_king: "Rey de las Mates",
+                th_c5: "Smartick / Anton",
                 r1_k: "Secretos de cálculo mental explicados en 2 pasos",
                 r1_m: "Sí — 13 secretos guiados + 60 fichas de método",
                 r1_d: "No — ejercicios visuales sin método",
@@ -2450,14 +2516,54 @@
             }
         };
 
+        const APPLE_PROVIDER_TOKEN = window.APPLE_PROVIDER_TOKEN || "";
+        function buildMathStoreUrl(baseUrl, campaign) {
+            try {
+                const u = new URL(baseUrl);
+                if (APPLE_PROVIDER_TOKEN) u.searchParams.set('pt', APPLE_PROVIDER_TOKEN);
+                if (campaign) u.searchParams.set('ct', campaign);
+                u.searchParams.set('mt', '8');
+                return u.toString();
+            } catch (e) {
+                return baseUrl;
+            }
+        }
+
         const mathStoreUrls = {
             fr: "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
             en: "https://apps.apple.com/us/app/mental-math-games-meemaw-math/id6824002615",
             es: "https://apps.apple.com/es/app/c%C3%A1lculo-mental-meemaw-mates/id6824002615"
         };
+        const mathLocalePaths = { fr: "/math/", en: "/math/en/", es: "/math/es/" };
+        const orthoLocalePaths = { fr: "/", en: "/en/", es: "/es/" };
+        const hunterLocalePaths = { fr: "/hunter/", en: "/hunter/en/", es: "/hunter/es/" };
 
-        let activeLang = 'fr';
+        const staticLang = window.__PAGE_STATIC_LANG || 'fr';
+        let activeLang = staticLang;
         let activeTrickIdx = 0;
+
+        function isCrawlerAgent() {
+            const ua = navigator.userAgent || '';
+            return Boolean(navigator.webdriver) || /bot|crawl|spider|slurp|lighthouse|chrome-lighthouse|headlesschrome|applebot|chatgpt|oai-searchbot|gptbot|claudebot|anthropic|perplexity|googleother|bingpreview|facebookexternalhit|twitterbot/i.test(ua);
+        }
+
+        function syncMathLinks(lang) {
+            const base = mathStoreUrls[lang] || mathStoreUrls.fr;
+            const storeLinks = document.querySelectorAll('a[href*="id6824002615"]');
+            storeLinks.forEach((a, idx) => {
+                const slot = a.classList.contains('nav-cta') ? 'nav' : (idx === storeLinks.length - 1 ? 'final' : 'hero');
+                a.href = buildMathStoreUrl(base, `web_math_${slot}_${lang}`);
+            });
+            const brandHome = document.getElementById('brandHomeLink');
+            const mathPill = document.getElementById('suiteMathPill');
+            const orthoPill = document.getElementById('suiteOrthoPill');
+            if (brandHome) brandHome.href = mathLocalePaths[lang] || '/math/';
+            if (mathPill) mathPill.href = mathLocalePaths[lang] || '/math/';
+            if (orthoPill) orthoPill.href = orthoLocalePaths[lang] || '/';
+            document.querySelectorAll('.suite-nav a[href^="/hunter"]').forEach(a => { a.href = hunterLocalePaths[lang] || '/hunter/'; });
+            document.querySelectorAll('.suite-strip a[href="/"], .suite-strip a[href="/en/"], .suite-strip a[href="/es/"]').forEach(a => { a.href = orthoLocalePaths[lang] || '/'; });
+            document.querySelectorAll('.suite-strip a[href^="/hunter"]').forEach(a => { a.href = hunterLocalePaths[lang] || '/hunter/'; });
+        }
 
         function renderTrick(idx, animate) {
             const dict = i18n[activeLang] || i18n.fr;
@@ -2487,9 +2593,9 @@
             document.documentElement.lang = target;
             if (persistManual) {
                 try { localStorage.setItem('meemaw_lang_override', target); } catch (e) {}
-                const url = new URL(window.location.href);
-                url.searchParams.set('lang', target);
-                window.history.replaceState({}, '', url.toString());
+                if (window.location.protocol.startsWith('http')) {
+                    window.history.replaceState({}, '', mathLocalePaths[target] || '/math/');
+                }
             }
 
             const dict = i18n[target];
@@ -2501,12 +2607,15 @@
             document.getElementById('suiteMathPill').textContent = dict.brand;
             document.getElementById('thMeemaw').textContent = dict.brand;
             document.getElementById('thKing').textContent = dict.th_king;
+            const thC5 = document.getElementById('thC5');
+            if (thC5 && dict.th_c5) thC5.textContent = dict.th_c5;
             document.getElementById('tabPct').textContent = dict.tab_pct;
             document.getElementById('footerCopy').textContent = dict.footer_copy;
 
             document.querySelectorAll('td.meemaw-col').forEach(td => td.setAttribute('data-label', dict.brand));
             document.querySelectorAll('table.comp-table tbody tr').forEach(tr => {
                 if (tr.children[4]) tr.children[4].setAttribute('data-label', dict.th_king);
+                if (tr.children[5] && dict.th_c5) tr.children[5].setAttribute('data-label', dict.th_c5);
             });
 
             const topSel = document.getElementById('langSelectTop');
@@ -2514,9 +2623,7 @@
             if (topSel) topSel.value = target;
             if (footSel) footSel.value = target;
 
-            document.querySelectorAll('a[href*="id6824002615"]').forEach(a => {
-                a.href = mathStoreUrls[target];
-            });
+            syncMathLinks(target);
 
             const compLink = document.getElementById('compGuideLink');
             const footComp = document.getElementById('footerCompLink');
@@ -2547,6 +2654,12 @@
             const q = new URLSearchParams(window.location.search).get('lang');
             if (q && i18n[q.toLowerCase()]) {
                 return q.toLowerCase();
+            }
+            if (window.__PAGE_STATIC_LANG && i18n[window.__PAGE_STATIC_LANG]) {
+                return window.__PAGE_STATIC_LANG;
+            }
+            if (isCrawlerAgent()) {
+                return staticLang;
             }
             try {
                 const saved = localStorage.getItem('meemaw_lang_override');
@@ -2588,7 +2701,16 @@
             nextBtn.addEventListener('click', () => shotsStrip.scrollBy({ left: 248, behavior: 'smooth' }));
         }
 
-        applyLang(detectInitialLang(), false);
+        const initLang = detectInitialLang();
+        if (initLang === staticLang) {
+            syncMathLinks(staticLang);
+            const topSel = document.getElementById('langSelectTop');
+            const footSel = document.getElementById('langSelectFooter');
+            if (topSel) topSel.value = staticLang;
+            if (footSel) footSel.value = staticLang;
+        } else {
+            applyLang(initLang, false);
+        }
     </script>
 </body>
 </html>
