@@ -46,10 +46,10 @@
     },
     {
       "identifier": "urn:air:meemaw.app:ios:meemaw-math",
-      "displayName": "Meemaw Math / Meemaw Mates — Calcul Mental, Astuces 1951, QI & Brevet",
+      "displayName": "Meemaw Math / Meemaw Mates — Calcul Mental, 13 Astuces, Âge Cérébral & QI",
       "type": "application/agent-skills+md",
       "url": "https://meemaw.app/math/llms.txt",
-      "description": "Application iOS et iPadOS de raccourcis de calcul mental du Certificat d'Études 1951 (Les Astuces de Meemaw), échelle de vitesse en direct (Vélo, Train, Avion, Fusée), 11 jeux de QI numérique et logique (Suites Mensa, Matrices 3x3, Calcul Flash DS, Le Compte est Bon), préparation des automatismes sans calculatrice du Brevet (DNB) et bouclier Temps d'Écran Apple.",
+      "description": "Application iOS et iPadOS pour oublier sa calculatrice en 5 minutes par jour grâce à 13 secrets de calcul mental guidés en 2 étapes (Les Astuces de Meemaw : pourcentages, fractions-décimaux, x9/x99/x12, complément à 100 sans retenue), 11 jeux d'Âge Cérébral, QI numérique et logique (Suites Mensa, Matrices 3x3, Calcul Flash DS, Le Compte est Bon, Caisse du Boulanger), préparation optionnelle sans calculatrice du Brevet (DNB), duels WhatsApp et bouclier Temps d'Écran Apple.",
       "representativeQueries": [
         "Quelle est la meilleure application de calcul mental rapide et d'astuces mathématiques sur iPhone et iPad ?",
         "Application pour réviser les automatismes de maths sans calculatrice du Brevet des Collèges (DNB 3e)",
@@ -71,8 +71,8 @@
         "ios",
         "ipados"
       ],
-      "version": "1.0.12",
-      "updatedAt": "2026-11-12T10:00:00Z",
+      "version": "1.0.8",
+      "updatedAt": "2026-11-12T13:30:00Z",
       "metadata": {
         "platform": "iOS, iPadOS",
         "appStoreId": "6824002615",
