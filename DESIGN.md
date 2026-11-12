@@ -17,30 +17,30 @@ colors:
   timber-muted: "#DECBB0"
 typography:
   display:
-    fontFamily: "'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
+    fontFamily: "'Bricolage Grotesque', 'Bricolage Fallback', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
     fontSize: "3.1rem"
     fontWeight: 800
     lineHeight: 1.06
     letterSpacing: "-0.028em"
   headline:
-    fontFamily: "'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
+    fontFamily: "'Bricolage Grotesque', 'Bricolage Fallback', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
     fontSize: "2.55rem"
     fontWeight: 800
     lineHeight: 1.12
     letterSpacing: "-0.025em"
   title:
-    fontFamily: "'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
+    fontFamily: "'Bricolage Grotesque', 'Bricolage Fallback', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
     fontSize: "1.4rem"
     fontWeight: 800
     lineHeight: 1.18
     letterSpacing: "-0.02em"
   body:
-    fontFamily: "'Nunito', 'Hiragino Sans', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif"
+    fontFamily: "'Nunito', 'Nunito Fallback', 'Hiragino Sans', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 600
     lineHeight: 1.6
   label:
-    fontFamily: "'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
+    fontFamily: "'Bricolage Grotesque', 'Bricolage Fallback', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif"
     fontSize: "0.92rem"
     fontWeight: 800
     lineHeight: 1.2

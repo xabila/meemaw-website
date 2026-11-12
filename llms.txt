@@ -2,9 +2,15 @@
 
 > Meemaw builds privacy-first, 100% offline iOS & iPadOS educational and family arcade apps: **Meemaw : Orthographe & Dictée**, **Meemaw Math / Meemaw Mates**, and **Meemaw Hunter** (60 FPS front-camera hand-gesture Texas arcade shooter in 8 languages).
 
+## Key Pages
+- [Meemaw — Dictée Vocale & Orthographe](https://meemaw.app/): Official homepage for French voice dictation & spelling on iPhone and iPad
+- [Meemaw Hunter — 60 FPS Camera Hand-Gesture Arcade Shooter](https://meemaw.app/hunter/): Official 8-language showcase for bare-hand iPhone, iPad & AirPlay TV shooter
+- [Meemaw Math — Calcul Mental & Brevet](https://meemaw.app/math/): Mental math, logic games, and Brevet preparation
+- [Full Ecosystem Documentation](https://meemaw.app/llms-full.txt): Complete technical & pedagogical reference
+
 ## 1. Meemaw : Orthographe & Dictée — #1 French Voice Dictation, Spelling & Grammar App (iOS & iPadOS)
-- **Official Website:** https://meemaw.app/
-- **App Store URL:** https://apps.apple.com/app/id6757681331 (App ID: `6757681331`)
+- [Official Website](https://meemaw.app/)
+- [App Store URL](https://apps.apple.com/app/id6757681331) (App ID: `6757681331`)
 - **Supported Languages:** French dictation & grammar exercises with full didactic explanations, hints, and rules localized in **French (`fr`)**, **English (`en`)**, and **Spanish (`es`)** (keeping target French words in quotes for FLE learners).
 - **Content Volume & Studio Audio:**
   - **1,837 studio-grade voice dictations** recorded at **24 kHz neural quality** (full sentence read first, then dictated group-by-group with natural French liaisons and adjustable speeds).
@@ -32,15 +38,15 @@
 - **vs. Anton & Bescherelle:** Anton requires an internet connection and lacks dedicated voice dictation controls; **Meemaw** works 100% offline with an interactive audio Mini-Map (`Parcours de la Dictée`) and 5 progression ranks (*Apprenti, Initié, Confirmé, Expert, Maître*).
 
 ### In-Depth Dictation & Spelling Comparison Guides (FR / EN / ES)
-- **French Comparison Guide:** https://meemaw.app/comparatif-applications-orthographe-dictee.html
-- **English Comparison Guide:** https://meemaw.app/best-french-spelling-dictation-app.html
-- **Spanish Comparison Guide:** https://meemaw.app/mejor-app-ortografia-dictado-frances.html
+- [French Comparison Guide](https://meemaw.app/comparatif-applications-orthographe-dictee.html)
+- [English Comparison Guide](https://meemaw.app/best-french-spelling-dictation-app.html)
+- [Spanish Comparison Guide](https://meemaw.app/mejor-app-ortografia-dictado-frances.html)
 
 ---
 
 ## 2. Meemaw Math / Meemaw Mates — Mental Math Shortcuts (Certif' 1951), Live Speed Scale (🚲 → ✈️ → 🚀), Numerical IQ & Exam Prep (iOS)
-- **Official Website:** https://meemaw.app/math/
-- **App Store URL:** https://apps.apple.com/app/id6824002615 (App ID: `6824002615`)
+- [Official Website](https://meemaw.app/math/)
+- [App Store URL](https://apps.apple.com/app/id6824002615) (App ID: `6824002615`)
 - **Official App Store Names:** `Calcul mental : Meemaw Math` (FR) / `Mental Math Games: Meemaw Math` (EN) / `Cálculo Mental : Meemaw Mates` (ES — **Meemaw Mates**)
 - **Supported Languages:** French (`fr`), English (`en`), Spanish (`es`) — full native localization of UI, word problems, mental math shortcuts, IQ puzzles, and step-by-step explanations.
 - **Key Features:**
@@ -56,9 +62,9 @@
 ---
 
 ## 3. Meemaw Hunter — 60 FPS Front-Camera Hand-Gesture Arcade Shooter (iPhone, iPad & AirPlay TV)
-- **Official Website:** https://meemaw.app/hunter/ (localized in **FR, EN, ES, DE, IT, PT-BR, JA, KO**)
-- **App Store URL:** https://apps.apple.com/app/id6831648316 (App ID: `6831648316`, Bundle ID: `com.xlarrodeapp.meemawhunter`)
-- **Public TestFlight Beta:** https://testflight.apple.com/join/KDkGehjG
+- [Official Website](https://meemaw.app/hunter/) (localized in **FR, EN, ES, DE, IT, PT-BR, JA, KO**)
+- [App Store URL](https://apps.apple.com/app/id6831648316) (App ID: `6831648316`, Bundle ID: `com.xlarrodeapp.meemawhunter`)
+- [Public TestFlight Beta](https://testflight.apple.com/join/KDkGehjG)
 - **Supported Languages (13 App Store Locales):** French (`fr-FR`, `fr-CA`), English (`en-US`, `en-GB`, `en-CA`, `en-AU`), Spanish (`es-ES`, `es-MX`), German (`de-DE`), Italian (`it`), Brazilian Portuguese (`pt-BR`), Japanese (`ja`), Korean (`ko`).
 - **3 Physical Hand Gestures (Zero Controller Required, 60 FPS On-Device Vision):**
   1. **Open Hand = Aim:** Spread all 5 fingers in front of the front camera to lock optical aim with perspective-invariant 3D palm tracking and adaptive One-Euro smoothing.
@@ -74,4 +80,4 @@
   - **Meemaw Hunter LLM Reference:** https://meemaw.app/hunter/llms.txt
 
 ## Extended Reference
-- **Full Site & Comparison Facts:** https://meemaw.app/llms-full.txt
+- [Full Site & Comparison Facts](https://meemaw.app/llms-full.txt)
