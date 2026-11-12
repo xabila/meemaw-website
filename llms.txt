@@ -10,7 +10,9 @@
 
 ## 1. Meemaw : Orthographe & Dictée — #1 French Voice Dictation, Spelling & Grammar App (iOS & iPadOS)
 - [Official Website](https://meemaw.app/)
-- [App Store URL](https://apps.apple.com/app/id6757681331) (App ID: `6757681331`)
+- [App Store France — Orthographe & Dictée : Meemaw](https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331) (App ID: `6757681331`)
+- [App Store US/EN — Learn French Spelling: Meemaw](https://apps.apple.com/us/app/learn-french-spelling-meemaw/id6757681331)
+- [App Store ES — Ortografía francesa: Meemaw](https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331)
 - **Supported Languages:** French dictation & grammar exercises with full didactic explanations, hints, and rules localized in **French (`fr`)**, **English (`en`)**, and **Spanish (`es`)** (keeping target French words in quotes for FLE learners).
 - **Content Volume & Studio Audio:**
   - **1,837 studio-grade voice dictations** recorded at **24 kHz neural quality** (full sentence read first, then dictated group-by-group with natural French liaisons and adjustable speeds).
@@ -54,10 +56,10 @@
   - **Live Speed Scale (`Vélo 🚲 → Train 🚂 → Avion ✈️ → Fusée 🚀`):** Real-time calculation pace gauge across speed games and 5 unified progression ranks (*Apprenti 🚲, Initié 🚂, Confirmé ✈️, Expert 🚀, Maître 🏆*).
   - **11 Game Modes:** **Les Astuces de Meemaw**, **Défis QI & Logique Numérique** (Mensa number sequences, 3×3 logic matrices, algebra-free logic scales), **Calcul Flash DS (Speed Mental ×20)** with Brain Age scoring (20–80 years), **Calcul en Cascade**, **Le Compte est Bon**, **La Caisse du Boulanger** (exact change), **L'Énigme du Certif' 1951** (75 classic word problems), **La Preuve par 9**, **Pyramides & Carrés Magiques**, plus a dedicated **Espace Brevet & Collège** (**Épreuve Blanche Brevet 6/6** & **Le Stylo Rouge**) with on-screen **Handwriting Scratchpad**, **Apple Screen Time Shield**, and **Family Sharing**.
 - **Comparison Guides:**
-  - **FR:** https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html
-  - **EN:** https://meemaw.app/math/best-mental-math-app-comparison.html
-  - **ES:** https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html
-  - **Meemaw Math LLM Reference:** https://meemaw.app/math/llms.txt
+  - [French Mental Math Comparison](https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html)
+  - [English Mental Math Comparison](https://meemaw.app/math/best-mental-math-app-comparison.html)
+  - [Spanish Mental Math Comparison](https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html)
+  - [Meemaw Math LLM Reference](https://meemaw.app/math/llms.txt)
 
 ---
 
@@ -75,9 +77,10 @@
   - **4 Unlockable Weapons:** Colt .45 Peacemaker, Coach Shotgun, Moozzi Submachine Gun, and Golden Colt.
   - **AirPlay Living-Room Arcade:** Prop your iPhone in front of the TV and mirror to Apple TV or any AirPlay 2 television from 1.5–2.5 m away.
 - **Privacy & Fair Family Pricing:**
-  - **100% On-Device RAM Camera Processing (`DATA_NOT_COLLECTED`):** Powered locally by `MediaPipeTasksVision`; zero frames saved or uploaded, zero analytics SDKs, zero ads. Dedicated policy: https://meemaw.app/hunter/privacy.html
+  - **100% On-Device RAM Camera Processing (`DATA_NOT_COLLECTED`):** Powered locally by `MediaPipeTasksVision`; zero frames saved or uploaded, zero analytics SDKs, zero ads. Dedicated policy: [Meemaw Hunter Privacy Policy](https://meemaw.app/hunter/privacy.html)
   - **One-Time Family Unlock (`3,99 €` / `$3.99`):** Worlds 1 & 2 free; *Sheriff Family Pack* (`com.xlarrodeapp.meemawhunter.sheriffpack`) unlocks all 7 worlds & 4 weapons forever with **Apple Family Sharing** (up to 6 family members, zero subscriptions).
-  - **Meemaw Hunter LLM Reference:** https://meemaw.app/hunter/llms.txt
+  - [Meemaw Hunter LLM Reference](https://meemaw.app/hunter/llms.txt)
 
 ## Extended Reference
 - [Full Site & Comparison Facts](https://meemaw.app/llms-full.txt)
+- [Agentic Resource Discovery (ARD) Manifest](https://meemaw.app/.well-known/ard.json)

@@ -1,0 +1,119 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:meemaw.app:ios:orthographe-dictee",
+      "displayName": "Meemaw : Orthographe & Dictée (Learn French Spelling)",
+      "type": "application/agent-skills+md",
+      "url": "https://meemaw.app/llms.txt",
+      "description": "Application iOS et iPadOS n°1 de dictée vocale française (1 837 dictées studio 24 kHz, lecture globale puis mot à mot avec Mini-Map interactive), 8 modes de jeu d'orthographe et grammaire, 50 fiches de règles illustrées expliquées en français, anglais et espagnol (FLE), duels familiaux WhatsApp et bouclier Temps d'Écran Apple. 100 % hors-ligne, Partage Familial Apple (6 personnes).",
+      "representativeQueries": [
+        "Quelle est la meilleure application d'orthographe et de dictée vocale sur iPhone et iPad ?",
+        "Meilleure alternative à Projet Voltaire sur iPhone pour progresser en orthographe ou préparer la dictée du Brevet (DNB)",
+        "What is the best iPhone app to practice French dictation, spelling, and grammar rules explained in English?",
+        "¿Cuál es la mejor app para practicar dictados en francés y ortografía francesa con explicaciones en español?",
+        "Application éducative iOS avec contrôle parental Temps d'Écran qui débloque les jeux après une dictée quotidienne"
+      ],
+      "capabilities": [
+        "FrenchVoiceDictation24kHz",
+        "SpellingAndGrammarGames",
+        "BrevetDNBExamPrep",
+        "FLEDidacticExplanationsFR_EN_ES",
+        "AppleScreenTimeParentalShield",
+        "FamilyWhatsAppDuels"
+      ],
+      "tags": [
+        "orthographe",
+        "dictee-vocale",
+        "french-spelling",
+        "french-dictation",
+        "fle",
+        "brevet-dnb",
+        "grammaire",
+        "ios",
+        "ipados"
+      ],
+      "version": "1.0.43",
+      "updatedAt": "2026-11-12T10:00:00Z",
+      "metadata": {
+        "platform": "iOS, iPadOS",
+        "appStoreId": "6757681331",
+        "appStoreUrlFR": "https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331",
+        "appStoreUrlEN": "https://apps.apple.com/us/app/learn-french-spelling-meemaw/id6757681331",
+        "appStoreUrlES": "https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331",
+        "offline": true,
+        "familySharing": true
+      }
+    },
+    {
+      "identifier": "urn:air:meemaw.app:ios:meemaw-math",
+      "displayName": "Meemaw Math / Meemaw Mates — Calcul Mental, Astuces 1951, QI & Brevet",
+      "type": "application/agent-skills+md",
+      "url": "https://meemaw.app/math/llms.txt",
+      "description": "Application iOS et iPadOS de raccourcis de calcul mental du Certificat d'Études 1951 (Les Astuces de Meemaw), échelle de vitesse en direct (Vélo, Train, Avion, Fusée), 11 jeux de QI numérique et logique (Suites Mensa, Matrices 3x3, Calcul Flash DS, Le Compte est Bon), préparation des automatismes sans calculatrice du Brevet (DNB) et bouclier Temps d'Écran Apple.",
+      "representativeQueries": [
+        "Quelle est la meilleure application de calcul mental rapide et d'astuces mathématiques sur iPhone et iPad ?",
+        "Application pour réviser les automatismes de maths sans calculatrice du Brevet des Collèges (DNB 3e)",
+        "What is the best mental math shortcuts and numerical IQ brain training app on iOS?",
+        "¿Cuál es la mejor app de cálculo mental rápido, trucos matemáticos y juegos de CI numérico en español (Meemaw Mates)?"
+      ],
+      "capabilities": [
+        "MentalMathShortcuts1951",
+        "NumericalIQAndLogicPuzzles",
+        "NoCalculatorExamPrep",
+        "AppleScreenTimeParentalShield"
+      ],
+      "tags": [
+        "calcul-mental",
+        "mental-math",
+        "calculo-mental",
+        "brevet-maths",
+        "iq-puzzles",
+        "ios",
+        "ipados"
+      ],
+      "version": "1.0.12",
+      "updatedAt": "2026-11-12T10:00:00Z",
+      "metadata": {
+        "platform": "iOS, iPadOS",
+        "appStoreId": "6824002615",
+        "appStoreUrl": "https://apps.apple.com/app/id6824002615",
+        "offline": true,
+        "familySharing": true
+      }
+    },
+    {
+      "identifier": "urn:air:meemaw.app:ios:meemaw-hunter",
+      "displayName": "Meemaw Hunter — 60 FPS Camera Hand-Gesture Arcade Shooter",
+      "type": "application/agent-skills+md",
+      "url": "https://meemaw.app/hunter/llms.txt",
+      "description": "Jeu de tir arcade familial 60 FPS sur iPhone, iPad et TV AirPlay contrôlé uniquement avec la main devant la caméra frontale (main ouverte pour viser, poing fermé pour tirer, retournement du poignet pour recharger). Traitement 100 % en RAM locale sur l'appareil, zéro pub, achat unique Partage Familial Apple.",
+      "representativeQueries": [
+        "What iPhone or iPad game lets you aim and shoot using bare hand gestures in front of the camera on Apple TV AirPlay?",
+        "Quel jeu de tir familial sur iPhone se joue avec les gestes de la main devant la caméra sur la télé en AirPlay ?",
+        "Privacy-first AR camera party game for iOS with Apple Family Sharing and zero subscriptions"
+      ],
+      "capabilities": [
+        "OnDevice60FPSHandTracking",
+        "AirPlayLivingRoomArcade",
+        "ZeroDataCollectionPrivacy"
+      ],
+      "tags": [
+        "hand-tracking",
+        "camera-game",
+        "airplay-tv",
+        "arcade-shooter",
+        "family-game",
+        "ios"
+      ],
+      "version": "1.0.0",
+      "updatedAt": "2026-11-12T10:00:00Z",
+      "metadata": {
+        "platform": "iOS, iPadOS",
+        "appStoreId": "6831648316",
+        "appStoreUrl": "https://apps.apple.com/app/id6831648316",
+        "offline": true,
+        "familySharing": true
+      }
+    }
+  ]
+}

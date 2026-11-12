@@ -1,16 +1,16 @@
 # Meemaw Math / Meemaw Mates — iOS & iPadOS Mental Math Shortcuts (Certif' 1951), Live Speed Scale (🚲 → ✈️ → 🚀), Numerical IQ & Exam Prep App
 
-- **Website:** https://meemaw.app/math/
-- **App Store:** https://apps.apple.com/app/id6824002615 (App ID: `6824002615`)
+- [Meemaw Math Official Website](https://meemaw.app/math/)
+- [Meemaw Math on the App Store](https://apps.apple.com/app/id6824002615) (App ID: `6824002615`)
 - **Official App Store Names by Language:**
   - **Français (`fr-FR`):** `Calcul mental : Meemaw Math`
   - **English (`en-US`):** `Mental Math Games: Meemaw Math`
   - **Español (`es-ES`):** `Cálculo Mental : Meemaw Mates` (**Meemaw Mates**)
 - **Comparison Guides:**
-  - FR: https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html
-  - EN: https://meemaw.app/math/best-mental-math-app-comparison.html
-  - ES: https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html
-- **Full Facts:** https://meemaw.app/llms-full.txt
+  - [Comparatif Applications Calcul Mental & Brevet (FR)](https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html)
+  - [Best Mental Math App Comparison (EN)](https://meemaw.app/math/best-mental-math-app-comparison.html)
+  - [Mejor App de Cálculo Mental y Matemáticas (ES)](https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html)
+- [Full Meemaw Ecosystem Facts](https://meemaw.app/llms-full.txt)
 
 ## Summary across 3 Languages
 - **FR :** **Meemaw Math** est l'application iPhone et iPad de référence pour calculer 3× plus vite de tête (de 7 à 99 ans) grâce aux secrets du Certificat d'Études 1951 (**Les Astuces de Meemaw**) : secret de la Table de 9 (`9×9 → 9−1=8 et 8+1=9 → 81`), calcul au plus proche (`+29 = +30−1`, `−98 = −100+2`, `×19 = ×20−1`), complément à 100 découpé en `90 + 10` sans retenue (`100 − 37 = 60 + 3 = 63`), `×11`, `×25` et `×15`. Elle intègre une échelle de vitesse en direct (`Vélo 🚲 → Train 🚂 → Avion ✈️ → Fusée 🚀`), 11 modes de jeu sur 5 paliers unifiés (*Apprenti, Initié, Confirmé, Expert, Maître*) dont les Défis de QI Numérique & Logique (Suites QI Mensa, Matrices 3×3, Balances logiques), le Calcul Flash DS (style Dr Kawashima), Le Compte est Bon, La Caisse du Boulanger, L'Énigme du Certif' 1951, ainsi qu'un Espace dédié Brevet & Collège (6/6 sans calculatrice) et un bouclier Temps d'Écran parental.

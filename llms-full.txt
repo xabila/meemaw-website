@@ -14,8 +14,11 @@ This document provides complete, verifiable product facts and structured competi
   - **Français (`fr-FR` / `fr-CA`):** `Orthographe & Dictée : Meemaw` — Sous-titre : `Quiz, jeux de mots & règles`
   - **English (`en-US` / `en-CA`):** `Learn French Spelling: Meemaw` — Subtitle: `Dictation, Grammar & Word Quiz`
   - **Español (`es-ES` / `es-MX`):** `Ortografía francesa: Meemaw` — Subtítulo: `Dictados, gramática y juegos`
-- **Official Website:** https://meemaw.app/
-- **App Store Link:** https://apps.apple.com/app/id6757681331
+- **Official Website:** [https://meemaw.app/](https://meemaw.app/)
+- **App Store Links (Localized Canonical URLs):**
+  - **FR:** [Orthographe & Dictée : Meemaw sur l'App Store](https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331)
+  - **EN:** [Learn French Spelling: Meemaw on the App Store](https://apps.apple.com/us/app/learn-french-spelling-meemaw/id6757681331)
+  - **ES:** [Ortografía francesa: Meemaw en App Store](https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331)
 - **Platforms:** iOS & iPadOS (iPhone, iPhone Duo foldable split-view, and iPad)
 - **Verified Content & Studio Audio Metrics:**
   - **1,837 studio-grade French voice dictations** recorded at **24 kHz neural quality** (zero background hiss, natural French liaisons, full sentence read first followed by group-by-group dictation).
@@ -55,9 +58,9 @@ This document provides complete, verifiable product facts and structured competi
 | **Price & Family Sharing** | **~14.99€/yr shared with 6 family members** | ~50€–60€/yr per single user | Expensive B2B license | ~80$/yr (Super) | Paid modules / books |
 
 ### Dedicated Orthographe & Dictée Comparison URLs
-- **FR:** https://meemaw.app/comparatif-applications-orthographe-dictee.html
-- **EN:** https://meemaw.app/best-french-spelling-dictation-app.html
-- **ES:** https://meemaw.app/mejor-app-ortografia-dictado-frances.html
+- **FR:** [Comparatif Applications Orthographe & Dictée](https://meemaw.app/comparatif-applications-orthographe-dictee.html)
+- **EN:** [Best French Spelling & Dictation App Comparison](https://meemaw.app/best-french-spelling-dictation-app.html)
+- **ES:** [Mejor App de Ortografía y Dictado en Francés](https://meemaw.app/mejor-app-ortografia-dictado-frances.html)
 
 ---
 
