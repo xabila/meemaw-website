@@ -1,7 +1,9 @@
 # Meemaw Math / Meemaw Mates — iOS & iPadOS Mental Math Shortcuts (Certif' 1951), Live Speed Scale (🚲 → ✈️ → 🚀), Numerical IQ & Exam Prep App
 
 - [Meemaw Math Official Website](https://meemaw.app/math/)
-- [Meemaw Math on the App Store](https://apps.apple.com/app/id6824002615) (App ID: `6824002615`)
+- [App Store France — Calcul mental : Meemaw Math](https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615) (App ID: `6824002615`)
+- [App Store US/EN — Mental Math Games: Meemaw Math](https://apps.apple.com/us/app/mental-math-games-meemaw-math/id6824002615)
+- [App Store ES — Cálculo Mental : Meemaw Mates](https://apps.apple.com/es/app/c%C3%A1lculo-mental-meemaw-mates/id6824002615)
 - **Official App Store Names by Language:**
   - **Français (`fr-FR`):** `Calcul mental : Meemaw Math`
   - **English (`en-US`):** `Mental Math Games: Meemaw Math`

@@ -7,14 +7,16 @@
     <meta name="description" content="Meemaw Math est l'application iOS de référence pour calculer 3× plus vite de tête : secrets du Certificat d'Études 1951 (table de 9, calcul au plus proche +30−1, compléments à 100), échelle de vitesse Vélo 🚲 → Train 🚂 → Avion ✈️ → Fusée 🚀, défis de QI numérique (suites Mensa, matrices 3×3, balances) et Espace Brevet dédié. Disponible en Français, Anglais et Espagnol.">
     <meta name="keywords" content="meilleure application calcul mental, astuces calcul mental rapide, table de 9 astuce, calculer vite de tête, jeux de QI numérique logique, certificat d'études 1951 maths, Dr Kawashima iPhone, réviser brevet maths sans calculatrice, best mental math app iOS, mejor app cálculo mental y CI">
     <link rel="canonical" href="https://meemaw.app/math/">
-    <link rel="alternate" hreflang="fr" href="https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html">
-    <link rel="alternate" hreflang="en" href="https://meemaw.app/math/best-mental-math-app-comparison.html">
-    <link rel="alternate" hreflang="es" href="https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html">
+    <link rel="ard" href="/.well-known/ard.json" type="application/ai-catalog+json">
+    <link rel="alternate" hreflang="fr" href="https://meemaw.app/math/?lang=fr">
+    <link rel="alternate" hreflang="en" href="https://meemaw.app/math/?lang=en">
+    <link rel="alternate" hreflang="es" href="https://meemaw.app/math/?lang=es">
     <link rel="alternate" hreflang="x-default" href="https://meemaw.app/math/">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="preload" as="image" href="/assets/math-icon-420.webp" imagesrcset="/assets/math-icon-420.webp 420w, /assets/math-icon.webp 512w" imagesizes="210px" type="image/webp" fetchpriority="high">
 
     <!-- Apple Smart App Banner -->
     <meta name="apple-itunes-app" content="app-id=6824002615, app-argument=https://meemaw.app/math/challenge">
@@ -22,7 +24,8 @@
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
 
     <!-- Open Graph Meta -->
     <meta property="og:title" content="Meemaw Math — Calcul Mental, Brevet 6/6 Sans Calculatrice & Gym Cérébrale" />
@@ -44,8 +47,8 @@
           "applicationCategory": "EducationalApplication",
           "inLanguage": ["fr", "en", "es"],
           "url": "https://meemaw.app/math/",
-          "downloadUrl": "https://apps.apple.com/app/id6824002615",
-          "installUrl": "https://apps.apple.com/app/id6824002615",
+          "downloadUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
+          "installUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -108,681 +111,16 @@
     }
     </script>
 
-    <style>
-        :root {
-            --emerald: #137A5B;
-            --emerald-bright: #1B9E77;
-            --emerald-tint: #E9F7F2;
-            --cream: #FFF8F0;
-            --ink: #1A1A1A;
-            --ink-muted: #38332E;
-            --white: #FFFFFF;
-            --yellow: #FFD13B;
-            --coral: #D9383A;
-            --orange: #D96B27;
-            --border-width: 3px;
-            --thick-border: 4px;
-            --radius-card: 16px;
-            --radius-btn: 12px;
-            --radius-pill: 999px;
-            --shadow-sm: 3px 3px 0px var(--ink);
-            --shadow-md: 5px 5px 0px var(--ink);
-            --shadow-lg: 8px 8px 0px var(--ink);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html {
-            scroll-behavior: smooth;
-            scrollbar-color: var(--emerald) var(--cream);
-            scrollbar-width: thin;
-        }
-        ::selection {
-            background-color: var(--yellow);
-            color: var(--ink);
-        }
-        :focus-visible {
-            outline: 3px solid var(--emerald);
-            outline-offset: 3px;
-        }
-
-        body {
-            background-color: var(--cream);
-            color: var(--ink);
-            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 600;
-            line-height: 1.55;
-            font-variant-numeric: tabular-nums;
-            -webkit-font-smoothing: antialiased;
-            background-image:
-                linear-gradient(to right, rgba(19, 122, 91, 0.07) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(19, 122, 91, 0.07) 1px, transparent 1px);
-            background-size: 28px 28px;
-        }
-
-        a {
-            text-underline-offset: 0.2em;
-        }
-
-        .announcement-bar {
-            background: var(--yellow);
-            color: var(--ink);
-            border-bottom: var(--border-width) solid var(--ink);
-            padding: 10px 5%;
-            font-size: 0.95rem;
-            font-weight: 800;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            text-decoration: none;
-            transition: background-color 0.2s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .announcement-bar:hover {
-            background: #FFE066;
-        }
-
-        header {
-            padding: 1rem 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: var(--white);
-            border-bottom: var(--border-width) solid var(--ink);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            gap: 16px;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .header-logo {
-            width: 46px;
-            height: 46px;
-            border-radius: 12px;
-            border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-sm);
-            object-fit: cover;
-        }
-
-        .header-title {
-            font-size: 1.65rem;
-            font-weight: 900;
-            color: var(--ink);
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-        }
-
-        .header-nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-        .header-nav a {
-            color: var(--ink);
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 0.95rem;
-        }
-        .header-nav a:hover {
-            color: var(--emerald);
-            text-decoration: underline;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .switch-app-pill {
-            background: var(--cream);
-            color: var(--ink);
-            border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-sm);
-            padding: 6px 14px;
-            border-radius: var(--radius-pill);
-            font-weight: 800;
-            font-size: 0.85rem;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .switch-app-pill:hover {
-            background: var(--yellow);
-        }
-
-        .lang-switch {
-            display: flex;
-            background: var(--cream);
-            padding: 3px;
-            border-radius: var(--radius-pill);
-            border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            padding: 5px 11px;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 800;
-            font-size: 0.82rem;
-            border-radius: var(--radius-pill);
-            cursor: pointer;
-            color: var(--ink);
-        }
-
-        .lang-btn.active {
-            background: var(--emerald);
-            color: var(--white);
-        }
-
-        .container {
-            max-width: 1160px;
-            margin: 0 auto;
-            padding: 4rem 5%;
-        }
-
-        .hero {
-            display: grid;
-            grid-template-columns: 1.18fr 0.82fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        h1 {
-            font-size: clamp(2.25rem, 4.4vw, 3.65rem);
-            font-weight: 900;
-            line-height: 1.08;
-            letter-spacing: -0.025em;
-            text-transform: uppercase;
-            text-wrap: balance;
-            margin-bottom: 1.25rem;
-        }
-
-        .highlight {
-            color: var(--emerald);
-            text-decoration: underline;
-            text-decoration-thickness: 5px;
-        }
-
-        .hero-lead {
-            font-size: 1.15rem;
-            color: var(--ink-muted);
-            max-width: 65ch;
-            margin-bottom: 1.75rem;
-        }
-
-        .persona-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 1.75rem;
-        }
-
-        .persona-pill {
-            background: var(--white);
-            border: 2px solid var(--ink);
-            border-radius: var(--radius-pill);
-            padding: 6px 14px;
-            font-size: 0.88rem;
-            font-weight: 800;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .cta-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-bottom: 1.5rem;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--emerald);
-            color: var(--white);
-            border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-md);
-            padding: 16px 26px;
-            border-radius: var(--radius-btn);
-            font-weight: 900;
-            font-size: 1.05rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .btn-primary:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--white);
-            color: var(--ink);
-            border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-md);
-            padding: 16px 22px;
-            border-radius: var(--radius-btn);
-            font-weight: 800;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.18s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .btn-secondary:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: var(--shadow-lg);
-            background: var(--yellow);
-        }
-
-        .trust-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            font-size: 0.92rem;
-            font-weight: 800;
-            color: var(--ink-muted);
-        }
-
-        .hero-card {
-            background: var(--white);
-            border: var(--thick-border) solid var(--ink);
-            border-radius: var(--radius-card);
-            box-shadow: var(--shadow-lg);
-            padding: 28px;
-            text-align: center;
-        }
-
-        .hero-card img {
-            max-width: 210px;
-            width: 100%;
-            height: auto;
-            border-radius: 14px;
-            border: var(--border-width) solid var(--ink);
-            margin-bottom: 16px;
-        }
-
-        .hero-card h2 {
-            font-size: 1.25rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .score-preview {
-            background: var(--emerald);
-            color: var(--white);
-            border: var(--border-width) solid var(--ink);
-            border-radius: 14px;
-            padding: 16px;
-            margin-top: 10px;
-        }
-
-        .score-preview .big {
-            font-size: 2.1rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 4px;
-        }
-
-        .section-heading {
-            text-align: center;
-            font-size: clamp(1.85rem, 3.4vw, 2.65rem);
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
-            text-wrap: balance;
-            margin-bottom: 0.75rem;
-        }
-
-        .section-sub {
-            text-align: center;
-            max-width: 68ch;
-            margin: 0 auto 2.75rem;
-            color: var(--ink-muted);
-            font-size: 1.08rem;
-        }
-
-        /* Bento Feature Grid (Avoid uniform lazy card grids) */
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 20px;
-        }
-
-        .bento-item {
-            background: var(--white);
-            border: var(--border-width) solid var(--ink);
-            border-radius: var(--radius-card);
-            box-shadow: var(--shadow-md);
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .bento-span-6 { grid-column: span 6; }
-        .bento-span-4 { grid-column: span 4; }
-        .bento-span-8 { grid-column: span 8; }
-
-        .bento-item.featured-emerald {
-            background: var(--emerald-tint);
-        }
-
-        .bento-item.featured-yellow {
-            background: #FFF6D6;
-        }
-
-        .bento-top {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            gap: 16px;
-            margin-bottom: 12px;
-        }
-
-        .bento-thumb {
-            width: 72px;
-            height: 72px;
-            border-radius: 12px;
-            border: 2px solid var(--ink);
-            object-fit: cover;
-            flex-shrink: 0;
-            background: var(--cream);
-        }
-
-        .bento-item h3 {
-            font-size: 1.3rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            letter-spacing: -0.01em;
-        }
-
-        .bento-item p {
-            color: var(--ink-muted);
-            font-size: 0.98rem;
-            max-width: 65ch;
-        }
-
-        .bento-meta {
-            margin-top: 14px;
-            padding-top: 12px;
-            border-top: 2px dashed rgba(26, 26, 26, 0.18);
-            font-size: 0.85rem;
-            font-weight: 800;
-            color: var(--emerald);
-        }
-
-        /* Screen Time & Family Duel Split Showcase */
-        .spotlight-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-
-        .spotlight-box {
-            background: var(--white);
-            border: var(--thick-border) solid var(--ink);
-            border-radius: var(--radius-card);
-            box-shadow: var(--shadow-lg);
-            padding: 32px;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .spotlight-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .spotlight-img {
-            width: 84px;
-            height: 84px;
-            border-radius: 14px;
-            border: var(--border-width) solid var(--ink);
-            box-shadow: var(--shadow-sm);
-            object-fit: cover;
-            background: var(--cream);
-            flex-shrink: 0;
-        }
-
-        .spotlight-box h3 {
-            font-size: 1.5rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            line-height: 1.15;
-        }
-
-        .spotlight-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .spotlight-list li {
-            background: var(--cream);
-            border: 2px solid var(--ink);
-            border-radius: 12px;
-            padding: 12px 16px;
-            font-size: 0.96rem;
-            font-weight: 700;
-        }
-
-        /* Comparison Matrix Section */
-        .comparison-wrapper {
-            background: var(--white);
-            border: var(--thick-border) solid var(--ink);
-            border-radius: var(--radius-card);
-            box-shadow: var(--shadow-lg);
-            overflow-x: auto;
-            padding: 12px;
-        }
-
-        table.comp-table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-variant-numeric: tabular-nums;
-        }
-
-        table.comp-table th,
-        table.comp-table td {
-            padding: 16px 18px;
-            border-bottom: 2px solid rgba(26, 26, 26, 0.12);
-            font-size: 0.95rem;
-        }
-
-        table.comp-table th {
-            background: var(--cream);
-            border-bottom: var(--border-width) solid var(--ink);
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 0.92rem;
-        }
-
-        table.comp-table th.meemaw-col,
-        table.comp-table td.meemaw-col {
-            background: var(--emerald-tint);
-            font-weight: 800;
-            border-left: 3px solid var(--ink);
-            border-right: 3px solid var(--ink);
-        }
-
-        table.comp-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .comp-guides-row {
-            margin-top: 28px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-        }
-
-        .guide-link-card {
-            background: var(--white);
-            border: var(--border-width) solid var(--ink);
-            border-radius: var(--radius-btn);
-            box-shadow: var(--shadow-sm);
-            padding: 18px 20px;
-            text-decoration: none;
-            color: var(--ink);
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.18s;
-        }
-        .guide-link-card:hover {
-            transform: translate(-2px, -2px);
-            background: var(--yellow);
-        }
-        .guide-link-card strong {
-            font-size: 1.02rem;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
-        .guide-link-card span {
-            font-size: 0.88rem;
-            color: var(--ink-muted);
-        }
-
-        /* Multilingual Crawlable Reference Block (Always in DOM for Search & AI) */
-        .multilingual-hub {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .lang-column {
-            background: var(--white);
-            border: var(--border-width) solid var(--ink);
-            border-radius: var(--radius-card);
-            box-shadow: var(--shadow-md);
-            padding: 24px;
-        }
-
-        .lang-column h3 {
-            font-size: 1.25rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--ink);
-        }
-
-        .lang-column p {
-            font-size: 0.94rem;
-            color: var(--ink-muted);
-            margin-bottom: 12px;
-        }
-
-        .lang-column ul {
-            padding-left: 18px;
-            font-size: 0.9rem;
-            color: var(--ink);
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        /* FAQ Section */
-        .faq-list {
-            max-width: 860px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        details.faq-box {
-            background: var(--white);
-            border: var(--border-width) solid var(--ink);
-            border-radius: var(--radius-btn);
-            box-shadow: var(--shadow-sm);
-            padding: 18px 22px;
-        }
-
-        details.faq-box summary {
-            font-weight: 900;
-            font-size: 1.1rem;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 12px;
-        }
-        details.faq-box summary::-webkit-details-marker {
-            display: none;
-        }
-        details.faq-box summary::after {
-            content: "+";
-            font-size: 1.5rem;
-            font-weight: 900;
-            color: var(--emerald);
-        }
-        details.faq-box[open] summary::after {
-            content: "−";
-        }
-        details.faq-box p {
-            margin-top: 12px;
-            color: var(--ink-muted);
-            font-size: 0.98rem;
-            max-width: 72ch;
-        }
-
-        footer {
-            background: var(--ink);
-            color: var(--white);
-            padding: 3rem 5%;
-            text-align: center;
-            margin-top: 2rem;
-            border-top: var(--thick-border) solid var(--ink);
-        }
-
-        footer a {
-            color: var(--yellow);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 800;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 920px) {
-            .hero { grid-template-columns: 1fr; }
-            .bento-span-6, .bento-span-4, .bento-span-8 { grid-column: span 12; }
-            .spotlight-split, .comp-guides-row, .multilingual-hub { grid-template-columns: 1fr; }
-            .header-nav { display: none; }
-        }
-    </style>
+    <style>:root{--emerald:#137A5B;--emerald-bright:#1B9E77;--emerald-tint:#E9F7F2;--cream:#FFF8F0;--ink:#1A1A1A;--ink-muted:#38332E;--white:#FFFFFF;--yellow:#FFD13B;--coral:#D9383A;--orange:#D96B27;--border-width:3px;--thick-border:4px;--radius-card:16px;--radius-btn:12px;--radius-pill:999px;--shadow-sm:3px 3px 0px var(--ink);--shadow-md:5px 5px 0px var(--ink);--shadow-lg:8px 8px 0px var(--ink)} *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth;scrollbar-color:var(--emerald) var(--cream);scrollbar-width:thin}::selection{background-color:var(--yellow);color:var(--ink)}:focus-visible{outline:3px solid var(--emerald);outline-offset:3px} body{background-color:var(--cream);color:var(--ink);font-family:'Outfit',-apple-system,BlinkMacSystemFont,sans-serif;font-weight:600;line-height:1.55;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased;background-image:linear-gradient(to right,rgba(19,122,91,0.07) 1px,transparent 1px),linear-gradient(to bottom,rgba(19,122,91,0.07) 1px,transparent 1px);background-size:28px 28px} a{text-underline-offset:0.2em} .announcement-bar{background:var(--yellow);color:var(--ink);border-bottom:var(--border-width) solid var(--ink);padding:10px 5%;font-size:0.95rem;font-weight:800;text-align:center;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;transition:background-color 0.2s cubic-bezier(0.22,1,0.36,1)} .announcement-bar:hover{background:#FFE066} header{padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;background:var(--white);border-bottom:var(--border-width) solid var(--ink);position:sticky;top:0;z-index:100;gap:16px} .header-left{display:flex;align-items:center;gap:12px;text-decoration:none} .header-logo{width:46px;height:46px;border-radius:12px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);object-fit:cover} .header-title{font-size:1.65rem;font-weight:900;color:var(--ink);text-transform:uppercase;letter-spacing:-0.02em} .header-nav{display:flex;align-items:center;gap:20px} .header-nav a{color:var(--ink);text-decoration:none;font-weight:800;font-size:0.95rem} .header-nav a:hover{color:var(--emerald);text-decoration:underline} .header-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap} .switch-app-pill{background:var(--cream);color:var(--ink);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);padding:6px 14px;border-radius:var(--radius-pill);font-weight:800;font-size:0.85rem;text-decoration:none;display:inline-flex;align-items:center;gap:6px} .switch-app-pill:hover{background:var(--yellow)} .lang-switch{display:flex;background:var(--cream);padding:3px;border-radius:var(--radius-pill);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm)} .lang-btn{background:transparent;border:none;padding:5px 11px;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.82rem;border-radius:var(--radius-pill);cursor:pointer;color:var(--ink)} .lang-btn.active{background:var(--emerald);color:var(--white)} .container{max-width:1160px;margin:0 auto;padding:4rem 5%} .hero{display:grid;grid-template-columns:1.18fr 0.82fr;gap:3rem;align-items:center} h1{font-size:clamp(2.25rem,4.4vw,3.65rem);font-weight:900;line-height:1.08;letter-spacing:-0.025em;text-transform:uppercase;text-wrap:balance;margin-bottom:1.25rem} .highlight{color:var(--emerald);text-decoration:underline;text-decoration-thickness:5px} .hero-lead{font-size:1.15rem;color:var(--ink-muted);max-width:65ch;margin-bottom:1.75rem} .persona-pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.75rem} .persona-pill{background:var(--white);border:2px solid var(--ink);border-radius:var(--radius-pill);padding:6px 14px;font-size:0.88rem;font-weight:800;box-shadow:var(--shadow-sm)} .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:1.5rem} .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--emerald);color:var(--white);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);padding:16px 26px;border-radius:var(--radius-btn);font-weight:900;font-size:1.05rem;text-decoration:none;text-transform:uppercase;transition:transform 0.18s cubic-bezier(0.22,1,0.36,1),box-shadow 0.18s cubic-bezier(0.22,1,0.36,1)} .btn-primary:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-lg)} .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:var(--white);color:var(--ink);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);padding:16px 22px;border-radius:var(--radius-btn);font-weight:800;font-size:1rem;text-decoration:none;transition:transform 0.18s cubic-bezier(0.22,1,0.36,1),box-shadow 0.18s cubic-bezier(0.22,1,0.36,1)} .btn-secondary:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-lg);background:var(--yellow)} .trust-row{display:flex;flex-wrap:wrap;gap:18px;font-size:0.92rem;font-weight:800;color:var(--ink-muted)} .hero-card{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:var(--radius-card);box-shadow:var(--shadow-lg);padding:28px;text-align:center} .hero-card img{max-width:210px;width:100%;height:auto;border-radius:14px;border:var(--border-width) solid var(--ink);margin-bottom:16px} .hero-card h2{font-size:1.25rem;font-weight:900;text-transform:uppercase;margin-bottom:10px} .score-preview{background:var(--emerald);color:var(--white);border:var(--border-width) solid var(--ink);border-radius:14px;padding:16px;margin-top:10px} .score-preview .big{font-size:2.1rem;font-weight:900;line-height:1.1;margin-bottom:4px} .section-heading{text-align:center;font-size:clamp(1.85rem,3.4vw,2.65rem);font-weight:900;letter-spacing:-0.02em;text-transform:uppercase;text-wrap:balance;margin-bottom:0.75rem} .section-sub{text-align:center;max-width:68ch;margin:0 auto 2.75rem;color:var(--ink-muted);font-size:1.08rem} .bento-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px} .bento-item{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:var(--radius-card);box-shadow:var(--shadow-md);padding:24px;display:flex;flex-direction:column;justify-content:space-between} .bento-span-6{grid-column:span 6} .bento-span-4{grid-column:span 4} .bento-span-8{grid-column:span 8} .bento-item.featured-emerald{background:var(--emerald-tint)} .bento-item.featured-yellow{background:#FFF6D6} .bento-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px} .bento-thumb{width:72px;height:72px;border-radius:12px;border:2px solid var(--ink);object-fit:cover;flex-shrink:0;background:var(--cream)} .bento-item h3{font-size:1.3rem;font-weight:900;text-transform:uppercase;margin-bottom:8px;letter-spacing:-0.01em} .bento-item p{color:var(--ink-muted);font-size:0.98rem;max-width:65ch} .bento-meta{margin-top:14px;padding-top:12px;border-top:2px dashed rgba(26,26,26,0.18);font-size:0.85rem;font-weight:800;color:var(--emerald)} .spotlight-split{display:grid;grid-template-columns:1fr 1fr;gap:24px} .spotlight-box{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:var(--radius-card);box-shadow:var(--shadow-lg);padding:32px;display:flex;flex-direction:column;gap:16px} .spotlight-header{display:flex;align-items:center;gap:16px} .spotlight-img{width:84px;height:84px;border-radius:14px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);object-fit:cover;background:var(--cream);flex-shrink:0} .spotlight-box h3{font-size:1.5rem;font-weight:900;text-transform:uppercase;line-height:1.15} .spotlight-list{list-style:none;display:flex;flex-direction:column;gap:10px} .spotlight-list li{background:var(--cream);border:2px solid var(--ink);border-radius:12px;padding:12px 16px;font-size:0.96rem;font-weight:700} .comparison-wrapper{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:var(--radius-card);box-shadow:var(--shadow-lg);overflow-x:auto;padding:12px} table.comp-table{width:100%;border-collapse:collapse;text-align:left;font-variant-numeric:tabular-nums} table.comp-table th,table.comp-table td{padding:16px 18px;border-bottom:2px solid rgba(26,26,26,0.12);font-size:0.95rem} table.comp-table th{background:var(--cream);border-bottom:var(--border-width) solid var(--ink);font-weight:900;text-transform:uppercase;font-size:0.92rem} table.comp-table th.meemaw-col,table.comp-table td.meemaw-col{background:var(--emerald-tint);font-weight:800;border-left:3px solid var(--ink);border-right:3px solid var(--ink)} table.comp-table tr:last-child td{border-bottom:none} .comp-guides-row{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px} .guide-link-card{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:var(--radius-btn);box-shadow:var(--shadow-sm);padding:18px 20px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:6px;transition:transform 0.18s cubic-bezier(0.22,1,0.36,1),background-color 0.18s} .guide-link-card:hover{transform:translate(-2px,-2px);background:var(--yellow)} .guide-link-card strong{font-size:1.02rem;font-weight:900;text-transform:uppercase} .guide-link-card span{font-size:0.88rem;color:var(--ink-muted)} .multilingual-hub{display:grid;grid-template-columns:repeat(3,1fr);gap:20px} .lang-column{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:var(--radius-card);box-shadow:var(--shadow-md);padding:24px} .lang-column h3{font-size:1.25rem;font-weight:900;text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid var(--ink)} .lang-column p{font-size:0.94rem;color:var(--ink-muted);margin-bottom:12px} .lang-column ul{padding-left:18px;font-size:0.9rem;color:var(--ink);display:flex;flex-direction:column;gap:6px} .faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:14px} details.faq-box{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:var(--radius-btn);box-shadow:var(--shadow-sm);padding:18px 22px} details.faq-box summary{font-weight:900;font-size:1.1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px} details.faq-box summary::-webkit-details-marker{display:none} details.faq-box summary::after{content:"+";font-size:1.5rem;font-weight:900;color:var(--emerald)} details.faq-box[open] summary::after{content:"−"} details.faq-box p{margin-top:12px;color:var(--ink-muted);font-size:0.98rem;max-width:72ch} footer{background:var(--ink);color:var(--white);padding:3rem 5%;text-align:center;margin-top:2rem;border-top:var(--thick-border) solid var(--ink)} footer a{color:var(--yellow);text-decoration:none;margin:0 10px;font-weight:800} footer a:hover{text-decoration:underline} #jeux,#famille,#comparatif,#langues,#suite,#faq{content-visibility:auto;contain-intrinsic-size:auto 620px} .suite-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px} .suite-card{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:var(--radius-card);box-shadow:var(--shadow-md);padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:14px} .suite-card-top{display:flex;align-items:center;gap:14px} .suite-card-icon{width:58px;height:58px;border-radius:14px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);flex-shrink:0} .suite-card h3{font-size:1.3rem;font-weight:900;text-transform:uppercase;line-height:1.15} .suite-card p{color:var(--ink-muted);font-size:0.96rem} .suite-card-actions{display:flex;flex-wrap:wrap;gap:10px} .suite-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);font-weight:900;font-size:0.9rem;text-decoration:none;color:var(--ink);background:var(--cream);transition:transform 0.16s ease} .suite-btn:hover{transform:translate(-2px,-2px);background:var(--yellow)} @media (max-width:920px){.hero{grid-template-columns:1fr} .bento-span-6,.bento-span-4,.bento-span-8{grid-column:span 12} .spotlight-split,.comp-guides-row,.multilingual-hub,.suite-grid{grid-template-columns:1fr} .header-nav{display:none} }</style>
 </head>
 <body>
-    <a href="https://apps.apple.com/app/id6824002615" class="announcement-bar">
+    <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615" class="announcement-bar">
         <span data-i18n="banner">Nouveau : Les Secrets du Certif' 1951 (Table de 9, +30−1) + Échelle Vélo 🚲 → Avion ✈️ & Défis de QI Numérique — Essai 7 Jours Offert →</span>
     </a>
 
     <header>
         <a href="/math/" class="header-left">
-            <img src="/assets/math-icon.webp" alt="Meemaw Math Icon" class="header-logo" width="512" height="512">
+            <img src="/assets/math-icon-96.webp" srcset="/assets/math-icon-96.webp 96w, /assets/math-icon.webp 512w" sizes="44px" alt="Meemaw Math Icon" class="header-logo" width="44" height="44" decoding="async">
             <span class="header-title">MEEMAW MATH</span>
         </a>
         <nav class="header-nav" aria-label="Navigation principale">
@@ -817,7 +155,7 @@
                     <span class="persona-pill" data-i18n="p_parent">🎓 Espace Dédié Brevet 3e & Bouclier Temps d'Écran</span>
                 </div>
                 <div class="cta-row">
-                    <a href="https://apps.apple.com/app/id6824002615" class="btn-primary" data-i18n="cta_download">Télécharger sur l'App Store</a>
+                    <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615" class="btn-primary" data-i18n="cta_download">Télécharger sur l'App Store</a>
                     <a href="#comparatif" class="btn-secondary" data-i18n="cta_compare">Pourquoi Meemaw bat les autres apps</a>
                 </div>
                 <div class="trust-row">
@@ -828,7 +166,7 @@
             </div>
 
             <div class="hero-card">
-                <img src="/assets/math-icon.webp" alt="Mascotte Meemaw Math" width="512" height="512">
+                <img src="/assets/math-icon-420.webp" srcset="/assets/math-icon-420.webp 420w, /assets/math-icon.webp 512w" sizes="210px" alt="Mascotte Meemaw Math" width="420" height="420" fetchpriority="high" decoding="async">
                 <h2 data-i18n="card_title">ÉCHELLE DE VITESSE & QI NUMÉRIQUE</h2>
                 <div class="score-preview">
                     <div class="big" data-i18n="card_big">🚲 → 🚂 → ✈️ → 🚀</div>
@@ -867,7 +205,7 @@
                     <div>
                         <div class="bento-top">
                             <h3 data-i18n="g3_t">La Caisse du Boulanger</h3>
-                            <img src="/assets/math-boulanger.webp" alt="La Caisse du Boulanger" class="bento-thumb" width="480" height="480" loading="lazy">
+                            <img src="/assets/math-boulanger-160.webp" srcset="/assets/math-boulanger-160.webp 160w, /assets/math-boulanger.webp 480w" sizes="72px" alt="La Caisse du Boulanger" class="bento-thumb" width="160" height="160" loading="lazy" decoding="async">
                         </div>
                         <p data-i18n="g3">Additionne les croissants et baguettes de tête puis rends la monnaie exacte au centime près grâce à la méthode par complément des commerçants d'autrefois.</p>
                     </div>
@@ -918,7 +256,7 @@
                     <div>
                         <div class="bento-top">
                             <h3 data-i18n="g8_t">Pyramides, Carrés Magiques & Conversions</h3>
-                            <img src="/assets/math-pyramide.webp" alt="Pyramides et Carrés Magiques" class="bento-thumb" width="480" height="480" loading="lazy">
+                            <img src="/assets/math-pyramide-160.webp" srcset="/assets/math-pyramide-160.webp 160w, /assets/math-pyramide.webp 480w" sizes="72px" alt="Pyramides et Carrés Magiques" class="bento-thumb" width="160" height="160" loading="lazy" decoding="async">
                         </div>
                         <p data-i18n="g8">Complète les pyramides additives, les carrés magiques et le tableau interactif de conversion d'unités (km, m, L, kg, m², heures/minutes) sans donner la réponse d'avance.</p>
                     </div>
@@ -935,7 +273,7 @@
             <div class="spotlight-split">
                 <div class="spotlight-box">
                     <div class="spotlight-header">
-                        <img src="/assets/math-screentime.webp" alt="Bouclier Temps d'Écran Meemaw Math" class="spotlight-img" width="480" height="480" loading="lazy">
+                        <img src="/assets/math-screentime-192.webp" srcset="/assets/math-screentime-192.webp 192w, /assets/math-screentime.webp 480w" sizes="84px" alt="Bouclier Temps d'Écran Meemaw Math" class="spotlight-img" width="192" height="192" loading="lazy" decoding="async">
                         <h3 data-i18n="st_title">5 Minutes de Maths Débloquent TikTok & les Jeux</h3>
                     </div>
                     <p data-i18n="st_desc">Grâce à l'intégration native de l'API Apple Screen Time (FamilyControls), les parents peuvent conditionner l'ouverture des réseaux sociaux et jeux vidéo à la réussite de la séance quotidienne de 5 minutes.</p>
@@ -948,7 +286,7 @@
 
                 <div class="spotlight-box">
                     <div class="spotlight-header">
-                        <img src="/assets/duel.webp" alt="Duel WhatsApp Parents vs Enfants" class="spotlight-img" width="480" height="480" loading="lazy">
+                        <img src="/assets/duel-192.webp" srcset="/assets/duel-192.webp 192w, /assets/duel.webp 720w" sizes="84px" alt="Duel WhatsApp Parents vs Enfants" class="spotlight-img" width="192" height="192" loading="lazy" decoding="async">
                         <h3 data-i18n="duel_title">Duels Famille sur WhatsApp & iMessage</h3>
                     </div>
                     <p data-i18n="duel_desc">Qui résoudra le problème du Certif' 1951 ou le sprint Calcul Flash DS le plus vite ? Défiez parents, grands-parents ou amis sur la même série d'exercices en un tap.</p>
@@ -1106,6 +444,48 @@
                 </details>
             </div>
         </section>
+
+        <!-- FAMILY SUITE CROSS-DISCOVERY -->
+        <section class="container" id="suite">
+            <h2 class="section-heading" data-i18n="suite_title">DÉCOUVREZ L'UNIVERS FAMILIAL MEEMAW SUR IPHONE & IPAD</h2>
+            <p class="section-sub" data-i18n="suite_sub">Trois applications complémentaires conçues par le même studio indépendant : 100 % hors-ligne, zéro publicité et compatibles Partage Familial Apple (jusqu'à 6 proches).</p>
+
+            <div class="suite-grid">
+                <article class="suite-card" style="background: #FFF4EB;">
+                    <div>
+                        <div class="suite-card-top">
+                            <img src="/assets/icon-96.webp" srcset="/assets/icon-96.webp 96w, /assets/icon.webp 512w" sizes="58px" alt="Meemaw Orthographe & Dictée" class="suite-card-icon" width="58" height="58" loading="lazy" decoding="async">
+                            <div>
+                                <h3 data-i18n="s_ortho_t">Orthographe & Dictée : Meemaw</h3>
+                                <strong style="font-size: 0.85rem; color: #A64200;" data-i18n="s_ortho_tag">⭐️ 4.9/5 • 1 837 Dictées Studio 24 kHz & 8 Jeux</strong>
+                            </div>
+                        </div>
+                        <p style="margin-top: 12px;" data-i18n="s_ortho_d">Lecture de la phrase entière puis dictée mot à mot à ton rythme, 50 fiches de règles illustrées (FR / EN / ES), Bouclier Temps d'Écran et duels familiaux sur WhatsApp.</p>
+                    </div>
+                    <div class="suite-card-actions">
+                        <a href="/" class="suite-btn" style="background: #FF8C42; color: #1A1A1A;" data-i18n="s_ortho_web">Découvrir Meemaw Dictée →</a>
+                        <a href="https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331" class="suite-btn" data-i18n="s_appstore">App Store</a>
+                    </div>
+                </article>
+
+                <article class="suite-card" style="background: #FFF8E1;">
+                    <div>
+                        <div class="suite-card-top">
+                            <img src="/hunter/assets/app-icon-96.webp" srcset="/hunter/assets/app-icon-96.webp 96w, /hunter/assets/app-icon.webp 512w" sizes="58px" alt="Meemaw Hunter" class="suite-card-icon" width="58" height="58" loading="lazy" decoding="async">
+                            <div>
+                                <h3 data-i18n="s_hunter_t">Meemaw Hunter : Tir Caméra 60 FPS</h3>
+                                <strong style="font-size: 0.85rem; color: #7A4B00;" data-i18n="s_hunter_tag">🤠 Arcade Familial • iPhone, iPad & AirPlay TV 16:9</strong>
+                            </div>
+                        </div>
+                        <p style="margin-top: 12px;" data-i18n="s_hunter_d">Ta main nue devient le pistolet devant la caméra frontale : main ouverte pour viser, poing fermé pour tirer, tourne le poignet pour recharger. 7 mondes au Texas, 100 % local en RAM, zéro donnée collectée.</p>
+                    </div>
+                    <div class="suite-card-actions">
+                        <a href="/hunter/" class="suite-btn" style="background: #F7B928; color: #1A120B;" data-i18n="s_hunter_web">Découvrir Meemaw Hunter →</a>
+                        <a href="https://testflight.apple.com/join/KDkGehjG" class="suite-btn" data-i18n="s_testflight">TestFlight Public</a>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -1192,7 +572,19 @@
                 q2: "Meemaw Math convient-elle aussi aux adultes pour la gym cérébrale ?",
                 a2: "Oui ! Dès le premier lancement, vous pouvez choisir le parcours « Adulte / Gym Cérébrale & Calcul Mental ». Vous accédez immédiatement au Calcul Flash DS façon Dr Kawashima (calcul de votre Âge Cérébral de 20 à 80 ans), au Compte est Bon, à la Caisse du Boulanger et aux énigmes du Certificat d'Études 1951.",
                 q3: "Comment fonctionne le Partage Familial Apple et l'essai gratuit ?",
-                a3: "Le téléchargement est gratuit avec un essai de 7 jours offerts pour tester tous les modes PRO. Grâce au Partage Familial Apple (Family Sharing), un seul abonnement ou achat à vie débloque Meemaw Math PRO pour jusqu'à 6 membres de la famille, chacun sur son propre iPhone ou iPad."
+                a3: "Le téléchargement est gratuit avec un essai de 7 jours offerts pour tester tous les modes PRO. Grâce au Partage Familial Apple (Family Sharing), un seul abonnement ou achat à vie débloque Meemaw Math PRO pour jusqu'à 6 membres de la famille, chacun sur son propre iPhone ou iPad.",
+                suite_title: "DÉCOUVREZ L'UNIVERS FAMILIAL MEEMAW SUR IPHONE & IPAD",
+                suite_sub: "Trois applications complémentaires conçues par le même studio indépendant : 100 % hors-ligne, zéro publicité et compatibles Partage Familial Apple (jusqu'à 6 proches).",
+                s_ortho_t: "Orthographe & Dictée : Meemaw",
+                s_ortho_tag: "⭐️ 4.9/5 • 1 837 Dictées Studio 24 kHz & 8 Jeux",
+                s_ortho_d: "Lecture de la phrase entière puis dictée mot à mot à ton rythme, 50 fiches de règles illustrées (FR / EN / ES), Bouclier Temps d'Écran et duels familiaux sur WhatsApp.",
+                s_ortho_web: "Découvrir Meemaw Dictée →",
+                s_hunter_t: "Meemaw Hunter : Tir Caméra 60 FPS",
+                s_hunter_tag: "🤠 Arcade Familial • iPhone, iPad & AirPlay TV 16:9",
+                s_hunter_d: "Ta main nue devient le pistolet devant la caméra frontale : main ouverte pour viser, poing fermé pour tirer, tourne le poignet pour recharger. 7 mondes au Texas, 100 % local en RAM, zéro donnée collectée.",
+                s_hunter_web: "Découvrir Meemaw Hunter →",
+                s_appstore: "App Store",
+                s_testflight: "TestFlight Public"
             },
             en: {
                 banner: "No-Calculator Exam Prep + Dr. Kawashima-Style Speed Math & Brain Age — 7-Day Free Trial on the App Store →",
@@ -1262,7 +654,19 @@
                 q2: "Is Meemaw Math suitable for adults who want Dr. Kawashima-style brain training?",
                 a2: "Yes! On first launch, choose the 'Adult / Brain Training & Mental Math' path to jump straight into Speed Mental ×20 (with Brain Age calculation from 20 to 80), Countdown Target Number, The Baker's Register, and 1951 Certificate logic puzzles.",
                 q3: "How does Apple Family Sharing and the free trial work?",
-                a3: "Meemaw Math is free to download and includes a 7-day free trial of Meemaw PRO. With Apple Family Sharing, a single subscription or lifetime purchase unlocks full PRO access for up to 6 family members across all their iPhones and iPads."
+                a3: "Meemaw Math is free to download and includes a 7-day free trial of Meemaw PRO. With Apple Family Sharing, a single subscription or lifetime purchase unlocks full PRO access for up to 6 family members across all their iPhones and iPads.",
+                suite_title: "EXPLORE THE MEEMAW FAMILY SUITE ON IPHONE & IPAD",
+                suite_sub: "Three privacy-first apps crafted by the same indie studio: 100% offline, zero ads, and built for Apple Family Sharing (up to 6 family members).",
+                s_ortho_t: "Learn French Spelling: Meemaw",
+                s_ortho_tag: "⭐️ 4.9/5 • 1,837 Studio French Dictations & 8 Games",
+                s_ortho_d: "Full-sentence context reading followed by word-by-word French dictation, 50 illustrated grammar rules explained in English/French/Spanish, Screen Time Shield, and WhatsApp family duels.",
+                s_ortho_web: "Explore Meemaw Spelling →",
+                s_hunter_t: "Meemaw Hunter: 60 FPS Camera Shooter",
+                s_hunter_tag: "🤠 Family Arcade • iPhone, iPad & 16:9 AirPlay TV",
+                s_hunter_d: "Your bare hand is the blaster in front of the front camera: open hand to aim, close fist to fire, flip wrist to reload. 7 Texas worlds, 100% on-device RAM processing, zero data collected.",
+                s_hunter_web: "Explore Meemaw Hunter →",
+                s_appstore: "App Store",
+                s_testflight: "Public TestFlight"
             },
             es: {
                 banner: "Matemáticas Sin Calculadora (ESO / Primaria) + Cálculo Flash DS y Edad Cerebral — 7 Días Gratis en el App Store →",
@@ -1332,22 +736,64 @@
                 q2: "¿Es adecuada Meemaw Mates para adultos que buscan entrenar el cerebro al estilo Dr. Kawashima?",
                 a2: "¡Sí! Al abrir la app puedes elegir el perfil «Adulto / Gimnasia Cerebral y Cálculo Mental» para entrenar directamente con Cálculo Flash DS (con medición de velocidad en vivo Bici → Avión), Retos de CI, El Número Exacto, La Caja de la Panadería y los acertijos lógicos de 1951.",
                 q3: "¿Cómo funciona En Familia de Apple en Meemaw Mates?",
-                a3: "La descarga es gratuita e incluye acceso diario gratuito. Con En Familia de Apple (Family Sharing), una sola suscripción o compra de por vida desbloquea Meemaw Mates Pro para hasta 6 miembros de la familia en todos sus iPhones e iPads."
+                a3: "La descarga es gratuita e incluye acceso diario gratuito. Con En Familia de Apple (Family Sharing), una sola suscripción o compra de por vida desbloquea Meemaw Mates Pro para hasta 6 miembros de la familia en todos sus iPhones e iPads.",
+                suite_title: "DESCUBRE LA COLECCIÓN FAMILIAR MEEMAW EN IPHONE Y IPAD",
+                suite_sub: "Tres aplicaciones complementarias del mismo estudio independiente: 100 % sin conexión, cero publicidad y compatibles con En Familia de Apple (hasta 6 personas).",
+                s_ortho_t: "Ortografía francesa: Meemaw",
+                s_ortho_tag: "⭐️ 4.9/5 • 1.837 Dictados en Francés y 8 Juegos",
+                s_ortho_d: "Lectura completa y luego dictado palabra por palabra a tu ritmo, 50 fichas gramaticales explicadas en español, francés e inglés, Escudo de Tiempo en Pantalla y duelos por WhatsApp.",
+                s_ortho_web: "Descubrir Meemaw Francés →",
+                s_hunter_t: "Meemaw Hunter: Shooter por Cámara 60 FPS",
+                s_hunter_tag: "🤠 Arcade Familiar • iPhone, iPad y AirPlay TV 16:9",
+                s_hunter_d: "Tu propia mano es la pistola frente a la cámara frontal: mano abierta para apuntar, puño cerrado para disparar y gira la muñeca para recargar. 7 mundos en Texas y cero datos recopilados.",
+                s_hunter_web: "Descubrir Meemaw Hunter →",
+                s_appstore: "App Store",
+                s_testflight: "Beta TestFlight"
             }
         };
 
+        const mathStoreUrls = {
+            fr: "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
+            en: "https://apps.apple.com/us/app/mental-math-games-meemaw-math/id6824002615",
+            es: "https://apps.apple.com/es/app/c%C3%A1lculo-mental-meemaw-mates/id6824002615"
+        };
+
+        const orthoStoreUrls = {
+            fr: "https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331",
+            en: "https://apps.apple.com/us/app/learn-french-spelling-meemaw/id6757681331",
+            es: "https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331"
+        };
+
         function setLang(lang) {
-            document.documentElement.lang = lang;
+            const target = i18n[lang] ? lang : 'fr';
+            document.documentElement.lang = target;
             ['fr', 'en', 'es'].forEach(code => {
                 const btn = document.getElementById('btn-' + code);
-                if (btn) btn.classList.toggle('active', code === lang);
+                if (btn) btn.classList.toggle('active', code === target);
             });
-            const dict = i18n[lang] || i18n.fr;
+            document.querySelectorAll('a[href*="id6824002615"]').forEach(a => {
+                a.href = mathStoreUrls[target];
+            });
+            document.querySelectorAll('a[href*="id6757681331"]').forEach(a => {
+                a.href = orthoStoreUrls[target];
+            });
+            const dict = i18n[target];
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) el.innerHTML = dict[key];
             });
         }
+
+        (function initMathLang() {
+            const q = new URLSearchParams(window.location.search).get('lang');
+            if (q && i18n[q.toLowerCase()]) {
+                setLang(q.toLowerCase());
+                return;
+            }
+            const nav = (navigator.language || 'fr').toLowerCase();
+            if (nav.startsWith('en')) setLang('en');
+            else if (nav.startsWith('es')) setLang('es');
+        })();
     </script>
 </body>
 </html>

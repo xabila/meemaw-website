@@ -76,7 +76,9 @@
       "metadata": {
         "platform": "iOS, iPadOS",
         "appStoreId": "6824002615",
-        "appStoreUrl": "https://apps.apple.com/app/id6824002615",
+        "appStoreUrlFR": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
+        "appStoreUrlEN": "https://apps.apple.com/us/app/mental-math-games-meemaw-math/id6824002615",
+        "appStoreUrlES": "https://apps.apple.com/es/app/c%C3%A1lculo-mental-meemaw-mates/id6824002615",
         "offline": true,
         "familySharing": true
       }

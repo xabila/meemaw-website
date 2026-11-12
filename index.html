@@ -49,6 +49,51 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://meemaw.app/#organization",
+          "name": "Meemaw",
+          "url": "https://meemaw.app/",
+          "logo": "https://meemaw.app/assets/icon.webp",
+          "founder": {
+            "@type": "Person",
+            "name": "Xavier Larrodé"
+          },
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "Orthographe & Dictée : Meemaw",
+                "operatingSystem": "iOS, iPadOS",
+                "applicationCategory": "EducationalApplication",
+                "url": "https://meemaw.app/",
+                "downloadUrl": "https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "SoftwareApplication",
+                "name": "Meemaw Math : Calcul Mental, Astuces 1951, QI & Brevet",
+                "operatingSystem": "iOS, iPadOS",
+                "applicationCategory": "EducationalApplication",
+                "url": "https://meemaw.app/math/",
+                "downloadUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "VideoGame",
+                "name": "Meemaw Hunter : Tir Caméra 60 FPS à Mains Nues",
+                "operatingSystem": "iOS, iPadOS",
+                "applicationCategory": "GameApplication",
+                "url": "https://meemaw.app/hunter/"
+              }
+            }
+          ]
+        },
+        {
           "@type": "SoftwareApplication",
           "name": "Orthographe & Dictée : Meemaw",
           "alternateName": [
@@ -146,7 +191,7 @@
     }
     </script>
 
-    <style>:root{--orange:#FF8C42;--orange-light:#FFA64D;--cream:#FFF8F0;--ink:#1A1A1A;--white:#FFFFFF;--yellow:#FFD13B;--coral:#FF6B6B;--green:#2ECC71;--blue:#4D96FF;--purple:#9B51E0;--border-width:3px;--thick-border:4px;--radius-card:22px;--radius-btn:14px;--radius-pill:999px;--shadow-sm:3px 3px 0px var(--ink);--shadow-md:5px 5px 0px var(--ink);--shadow-lg:8px 8px 0px var(--ink);--shadow-orange:6px 6px 0px var(--orange)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background-color:var(--cream);color:var(--ink);font-family:'Outfit',sans-serif;font-weight:600;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;background-image:radial-gradient(var(--orange) 10%,transparent 11%),radial-gradient(var(--orange) 10%,transparent 11%);background-size:22px 22px;background-position:0 0,11px 11px}.halftone-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(rgba(0,0,0,0.05) 15%,transparent 16%);background-size:16px 16px;z-index:-1;pointer-events:none}h1,h2,h3,h4{font-family:'Outfit',sans-serif;font-weight:900;color:var(--ink);text-transform:uppercase}.announcement-bar{background:var(--yellow);color:var(--ink);border-bottom:var(--border-width) solid var(--ink);padding:10px 5%;font-size:0.95rem;font-weight:800;text-align:center;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;transition:background 0.2s}.announcement-bar:hover{background:#FFE066}.announcement-tag{background:var(--ink);color:var(--white);padding:3px 10px;border-radius:var(--radius-pill);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em}header{padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;background:var(--white);border-bottom:var(--border-width) solid var(--ink);position:sticky;top:0;z-index:100;box-shadow:0 4px 0px rgba(0,0,0,0.05)}.header-left{display:flex;align-items:center;gap:12px;text-decoration:none}.header-logo{width:44px;height:44px;border-radius:12px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm)}.header-title{font-size:1.8rem;font-weight:900;color:var(--ink);text-transform:uppercase;letter-spacing:-0.02em;text-shadow:2px 2px 0px var(--orange)}.header-nav{display:flex;align-items:center;gap:22px}.header-nav a{color:var(--ink);text-decoration:none;font-weight:800;font-size:0.95rem;transition:color 0.2s}.header-nav a:hover{color:var(--orange)}.header-right{display:flex;align-items:center;gap:14px}.lang-switch{display:flex;background:var(--cream);padding:3px;border-radius:var(--radius-pill);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm)}.lang-btn{background:transparent;border:none;padding:5px 14px;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.85rem;color:var(--ink);border-radius:var(--radius-pill);cursor:pointer;text-transform:uppercase;transition:all 0.2s}.lang-btn.active{background:var(--orange);color:var(--ink);border:2px solid var(--ink)}.header-cta-btn{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:var(--ink);padding:8px 18px;border-radius:var(--radius-pill);border:var(--border-width) solid var(--ink);font-weight:900;font-size:0.9rem;text-decoration:none;box-shadow:var(--shadow-sm);transition:all 0.1s}.header-cta-btn:hover{transform:translate(-1px,-1px);box-shadow:var(--shadow-md)}.hero{max-width:1200px;margin:0 auto;padding:4rem 5% 3.5rem;display:flex;align-items:center;gap:3.5rem}.hero-content{flex:1.1}.hero-badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.5rem}.badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--ink);padding:7px 16px;border-radius:var(--radius-pill);font-weight:800;font-size:0.88rem;text-transform:uppercase;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm)}.badge.highlight{background:var(--yellow);transform:rotate(-1.5deg)}.hero h1{font-size:3.8rem;line-height:1.08;margin-bottom:1.4rem;text-shadow:4px 4px 0px var(--orange);letter-spacing:-0.03em}.hero h1 .logo-text{color:var(--white);-webkit-text-stroke:2.5px var(--ink);text-shadow:4px 4px 0px var(--ink)}.hero p.bubble{font-size:1.2rem;margin-bottom:2rem;background:var(--white);padding:1.3rem 1.6rem;border-radius:20px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);font-weight:700;position:relative}.hero p.bubble::after{content:'';position:absolute;bottom:-15px;left:30px;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid var(--ink)}.hero p.bubble::before{content:'';position:absolute;bottom:-9px;left:32px;width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:11px solid var(--white);z-index:1}.hero-cta-group{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:1.8rem}.primary-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:var(--ink);padding:1.1rem 2.2rem;font-size:1.15rem;font-weight:900;text-transform:uppercase;text-decoration:none;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);transition:all 0.1s;cursor:pointer}.primary-button:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-lg);background:var(--orange-light)}.primary-button:active{transform:translate(2px,2px);box-shadow:2px 2px 0px var(--ink)}.secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--white);color:var(--ink);padding:1.1rem 1.8rem;font-size:1.05rem;font-weight:800;text-transform:uppercase;text-decoration:none;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);transition:all 0.1s}.secondary-button:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md);background:var(--cream)}.trust-strip{display:flex;flex-wrap:wrap;gap:14px;font-size:0.88rem;font-weight:700;color:var(--ink);opacity:0.9}.trust-item{display:inline-flex;align-items:center;gap:6px}.hero-image-wrapper{flex:0.9;display:flex;flex-direction:column;align-items:center;position:relative}.hero-image{max-width:320px;width:100%;height:auto;border-radius:28px;border:var(--thick-border) solid var(--ink);box-shadow:var(--shadow-orange);transform:rotate(2.5deg);background:var(--white);transition:transform 0.3s}.hero-image:hover{transform:rotate(0deg) scale(1.02)}.floating-coin-badge{position:absolute;top:-16px;left:-18px;background:var(--yellow);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);border-radius:16px;padding:8px 14px;display:flex;align-items:center;gap:10px;z-index:5;transform:rotate(-3deg);animation:floatCoin 3.5s ease-in-out infinite alternate}@keyframes floatCoin{0%{transform:rotate(-3deg) translateY(0px)}100%{transform:rotate(-1deg) translateY(-7px)}}.coin-badge-img{width:42px;height:42px;filter:drop-shadow(1px 2px 0px rgba(0,0,0,0.15));animation:coinPulse 2.5s ease-in-out infinite alternate}@keyframes coinPulse{0%{transform:scale(1)}100%{transform:scale(1.08)}}.coin-badge-info{display:flex;flex-direction:column;text-align:left}.coin-badge-val{font-size:0.95rem;font-weight:900;color:var(--ink);line-height:1.15}.coin-badge-sub{font-size:0.72rem;font-weight:800;color:var(--ink);opacity:0.85}.table-coin-img{width:20px;height:20px;vertical-align:-3px;margin-right:4px}.desktop-qr-card{margin-top:1.4rem;background:var(--white);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);border-radius:16px;padding:12px 18px;display:flex;align-items:center;gap:14px;max-width:320px}.desktop-qr-card img{width:60px;height:60px;border-radius:8px;border:2px solid var(--ink)}.desktop-qr-text{font-size:0.82rem;font-weight:700;line-height:1.3}.desktop-qr-text strong{display:block;font-size:0.88rem;color:#B34700}.event-spotlight-section{max-width:1200px;margin:1rem auto 4.5rem;padding:0 5%}.event-card-banner{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:30px;box-shadow:var(--shadow-lg);overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;align-items:center}.event-image-side img{width:100%;height:100%;object-fit:cover;display:block;border-right:var(--border-width) solid var(--ink)}.event-text-side{padding:3rem 2.8rem}.event-badge{display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:var(--ink);padding:6px 14px;border-radius:var(--radius-pill);border:2px solid var(--ink);font-size:0.85rem;font-weight:900;text-transform:uppercase;margin-bottom:1.2rem;box-shadow:var(--shadow-sm)}.event-text-side h2{font-size:2.3rem;margin-bottom:1rem;line-height:1.15}.event-text-side p{font-size:1.08rem;margin-bottom:1.8rem;font-weight:600;opacity:0.85}.levels-section{max-width:1200px;margin:0 auto 5rem;padding:0 5%}.section-header{text-align:center;max-width:820px;margin:0 auto 3.5rem}.section-header h2{font-size:2.9rem;margin-bottom:0.8rem;text-shadow:3px 3px 0px var(--white)}.section-header p{font-size:1.18rem;font-weight:700;opacity:0.85}.levels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem}.level-card{background:var(--white);border-radius:var(--radius-card);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);padding:1.8rem 1.3rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;align-items:center}.level-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}.level-emoji{font-size:2.4rem;margin-bottom:0.6rem;display:block}.level-pill{display:inline-block;padding:4px 12px;border-radius:var(--radius-pill);border:2px solid var(--ink);font-weight:900;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.8rem}.level-card:nth-child(1) .level-pill{background:#A8E6CF;color:var(--ink)}.level-card:nth-child(2) .level-pill{background:#AED9E0;color:var(--ink)}.level-card:nth-child(3) .level-pill{background:#DDA0DD;color:var(--ink)}.level-card:nth-child(4) .level-pill{background:var(--orange);color:var(--ink)}.level-card:nth-child(5) .level-pill{background:var(--coral);color:var(--ink)}.level-card h3{font-size:1.35rem;margin-bottom:0.6rem}.level-card p{font-size:0.92rem;font-weight:600;opacity:0.85;line-height:1.45}.duel-section{max-width:1200px;margin:0 auto 5rem;padding:0 5%}.duel-banner{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:30px;box-shadow:var(--shadow-lg);padding:3.5rem 3rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:center}.duel-banner h2{font-size:2.7rem;line-height:1.15;margin-bottom:1rem}.duel-steps{display:flex;flex-direction:column;gap:14px;margin:1.8rem 0}.duel-step{display:flex;align-items:flex-start;gap:14px;background:var(--cream);padding:14px 18px;border-radius:14px;border:2px solid var(--ink)}.duel-step-num{background:var(--orange);color:var(--white);width:32px;height:32px;border-radius:var(--radius-pill);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0}.duel-step-text{font-size:0.98rem;font-weight:700}.duel-mockup-card{background:var(--cream);border:var(--border-width) solid var(--ink);border-radius:20px;padding:24px;text-align:center;box-shadow:var(--shadow-sm)}.duel-mockup-card img{max-width:240px;width:100%;height:auto;margin-bottom:12px}.features-section{padding:2rem 5% 5rem;max-width:1200px;margin:0 auto}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2.2rem}.popart-card{background:var(--white);padding:2.2rem 1.8rem;border-radius:var(--radius-card);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;align-items:center;text-align:center}.popart-card:hover{transform:translate(-3px,-3px);box-shadow:var(--shadow-lg)}.feature-icon-img{width:80px;height:80px;object-fit:contain;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);margin-bottom:1.2rem;background:var(--cream)}.popart-card h3{font-size:1.35rem;font-weight:900;margin-bottom:0.6rem;color:var(--ink)}.popart-card p{font-size:1rem;font-weight:600;color:var(--ink);opacity:0.85}.modes-pill-container{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:2.5rem 0 1rem}.mode-pill{background:var(--white);border:2px solid var(--ink);border-radius:var(--radius-pill);padding:6px 14px;font-weight:800;font-size:0.88rem;box-shadow:var(--shadow-sm)}.comparison-section{max-width:1100px;margin:0 auto 5rem;padding:0 5%}.comparison-table-wrapper{background:var(--white);border-radius:var(--radius-card);border:var(--thick-border) solid var(--ink);box-shadow:var(--shadow-lg);overflow-x:auto}table.comparison-table{width:100%;border-collapse:collapse;text-align:left}table.comparison-table th,table.comparison-table td{padding:18px 22px;border-bottom:2px solid rgba(26,26,26,0.12)}table.comparison-table th{font-size:1.1rem;font-weight:900;text-transform:uppercase;background:var(--cream);border-bottom:var(--border-width) solid var(--ink)}table.comparison-table th.highlight-col,table.comparison-table td.highlight-col{background:#FFF0E0;font-weight:800}table.comparison-table tr:last-child td{border-bottom:none}.reviews-section{max-width:1200px;margin:0 auto 5rem;padding:0 5%}.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}.review-card{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:var(--radius-card);padding:2rem;box-shadow:var(--shadow-md)}.review-stars{color:#F39C12;font-size:1.2rem;margin-bottom:0.8rem}.review-text{font-size:1.05rem;font-style:italic;margin-bottom:1.2rem;line-height:1.5}.review-author{font-weight:900;font-size:0.95rem;color:#B34700}.review-author span{display:block;font-size:0.82rem;font-weight:600;color:var(--ink);opacity:0.78}.faq-section{max-width:860px;margin:0 auto 5rem;padding:0 5%}.faq-item{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:16px;margin-bottom:14px;box-shadow:var(--shadow-sm);overflow:hidden}.faq-question{padding:18px 24px;font-weight:900;font-size:1.15rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}.faq-question::after{content:'+';font-size:1.6rem;font-weight:900;color:var(--orange);transition:transform 0.2s}.faq-item.open .faq-question::after{content:'−';transform:rotate(180deg)}.faq-answer{padding:0 24px 20px;font-size:1.02rem;line-height:1.6;display:none;opacity:0.9}.faq-item.open .faq-answer{display:block}.bottom-cta{text-align:center;max-width:900px;margin:2rem auto 5rem;padding:4rem 2.5rem;background:var(--white);border-radius:36px;border:var(--thick-border) solid var(--ink);box-shadow:12px 12px 0px var(--orange)}.bottom-cta-icon{width:90px;height:90px;border-radius:24px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);margin-bottom:1.4rem}.bottom-cta h2{font-size:2.8rem;margin-bottom:0.9rem;line-height:1.15}.bottom-cta p{font-size:1.25rem;font-weight:700;opacity:0.85;margin-bottom:2.2rem;max-width:650px;margin-left:auto;margin-right:auto}footer{background:var(--white);border-top:var(--border-width) solid var(--ink);padding:3.5rem 5% 2.5rem;text-align:center;font-weight:700}footer a{color:#B34700;text-decoration:underline;text-underline-offset:3px;font-weight:900}.levels-section,.duel-section,.features-section,.comparison-section,.reviews-section,.faq-section{content-visibility:auto;contain-intrinsic-size:auto 620px}@media (max-width:960px){.hero{flex-direction:column;text-align:center;gap:2.5rem}.hero h1{font-size:3rem}.hero-badge-row{justify-content:center}.hero-cta-group{justify-content:center}.trust-strip{justify-content:center}.event-card-banner{grid-template-columns:1fr}.event-image-side img{border-right:none;border-bottom:var(--border-width) solid var(--ink);max-height:280px}.duel-banner{grid-template-columns:1fr;text-align:center}.floating-coin-badge{top:-10px;left:10px}.header-nav{display:none}}</style>
+    <style>:root{--orange:#FF8C42;--orange-light:#FFA64D;--cream:#FFF8F0;--ink:#1A1A1A;--white:#FFFFFF;--yellow:#FFD13B;--coral:#FF6B6B;--green:#2ECC71;--blue:#4D96FF;--purple:#9B51E0;--border-width:3px;--thick-border:4px;--radius-card:22px;--radius-btn:14px;--radius-pill:999px;--shadow-sm:3px 3px 0px var(--ink);--shadow-md:5px 5px 0px var(--ink);--shadow-lg:8px 8px 0px var(--ink);--shadow-orange:6px 6px 0px var(--orange)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background-color:var(--cream);color:var(--ink);font-family:'Outfit',sans-serif;font-weight:600;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased;background-image:radial-gradient(var(--orange) 10%,transparent 11%),radial-gradient(var(--orange) 10%,transparent 11%);background-size:22px 22px;background-position:0 0,11px 11px}.halftone-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(rgba(0,0,0,0.05) 15%,transparent 16%);background-size:16px 16px;z-index:-1;pointer-events:none}h1,h2,h3,h4{font-family:'Outfit',sans-serif;font-weight:900;color:var(--ink);text-transform:uppercase}.announcement-bar{background:var(--yellow);color:var(--ink);border-bottom:var(--border-width) solid var(--ink);padding:10px 5%;font-size:0.95rem;font-weight:800;text-align:center;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;transition:background 0.2s}.announcement-bar:hover{background:#FFE066}.announcement-tag{background:var(--ink);color:var(--white);padding:3px 10px;border-radius:var(--radius-pill);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em}header{padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;background:var(--white);border-bottom:var(--border-width) solid var(--ink);position:sticky;top:0;z-index:100;box-shadow:0 4px 0px rgba(0,0,0,0.05)}.header-left{display:flex;align-items:center;gap:12px;text-decoration:none}.header-logo{width:44px;height:44px;border-radius:12px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm)}.header-title{font-size:1.8rem;font-weight:900;color:var(--ink);text-transform:uppercase;letter-spacing:-0.02em;text-shadow:2px 2px 0px var(--orange)}.header-nav{display:flex;align-items:center;gap:22px}.header-nav a{color:var(--ink);text-decoration:none;font-weight:800;font-size:0.95rem;transition:color 0.2s}.header-nav a:hover{color:var(--orange)}.header-right{display:flex;align-items:center;gap:14px}.lang-switch{display:flex;background:var(--cream);padding:3px;border-radius:var(--radius-pill);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm)}.lang-btn{background:transparent;border:none;padding:5px 14px;font-family:'Outfit',sans-serif;font-weight:800;font-size:0.85rem;color:var(--ink);border-radius:var(--radius-pill);cursor:pointer;text-transform:uppercase;transition:all 0.2s}.lang-btn.active{background:var(--orange);color:var(--ink);border:2px solid var(--ink)}.header-cta-btn{display:inline-flex;align-items:center;gap:6px;background:var(--orange);color:var(--ink);padding:8px 18px;border-radius:var(--radius-pill);border:var(--border-width) solid var(--ink);font-weight:900;font-size:0.9rem;text-decoration:none;box-shadow:var(--shadow-sm);transition:all 0.1s}.header-cta-btn:hover{transform:translate(-1px,-1px);box-shadow:var(--shadow-md)}.hero{max-width:1200px;margin:0 auto;padding:4rem 5% 3.5rem;display:flex;align-items:center;gap:3.5rem}.hero-content{flex:1.1}.hero-badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.5rem}.badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);color:var(--ink);padding:7px 16px;border-radius:var(--radius-pill);font-weight:800;font-size:0.88rem;text-transform:uppercase;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm)}.badge.highlight{background:var(--yellow);transform:rotate(-1.5deg)}.hero h1{font-size:3.8rem;line-height:1.08;margin-bottom:1.4rem;text-shadow:4px 4px 0px var(--orange);letter-spacing:-0.03em}.hero h1 .logo-text{color:var(--white);-webkit-text-stroke:2.5px var(--ink);text-shadow:4px 4px 0px var(--ink)}.hero p.bubble{font-size:1.2rem;margin-bottom:2rem;background:var(--white);padding:1.3rem 1.6rem;border-radius:20px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);font-weight:700;position:relative}.hero p.bubble::after{content:'';position:absolute;bottom:-15px;left:30px;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:15px solid var(--ink)}.hero p.bubble::before{content:'';position:absolute;bottom:-9px;left:32px;width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:11px solid var(--white);z-index:1}.hero-cta-group{display:flex;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:1.8rem}.primary-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:var(--ink);padding:1.1rem 2.2rem;font-size:1.15rem;font-weight:900;text-transform:uppercase;text-decoration:none;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);transition:all 0.1s;cursor:pointer}.primary-button:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-lg);background:var(--orange-light)}.primary-button:active{transform:translate(2px,2px);box-shadow:2px 2px 0px var(--ink)}.secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--white);color:var(--ink);padding:1.1rem 1.8rem;font-size:1.05rem;font-weight:800;text-transform:uppercase;text-decoration:none;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);transition:all 0.1s}.secondary-button:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow-md);background:var(--cream)}.trust-strip{display:flex;flex-wrap:wrap;gap:14px;font-size:0.88rem;font-weight:700;color:var(--ink);opacity:0.9}.trust-item{display:inline-flex;align-items:center;gap:6px}.hero-image-wrapper{flex:0.9;display:flex;flex-direction:column;align-items:center;position:relative}.hero-image{max-width:320px;width:100%;height:auto;border-radius:28px;border:var(--thick-border) solid var(--ink);box-shadow:var(--shadow-orange);transform:rotate(2.5deg);background:var(--white);transition:transform 0.3s}.hero-image:hover{transform:rotate(0deg) scale(1.02)}.floating-coin-badge{position:absolute;top:-16px;left:-18px;background:var(--yellow);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);border-radius:16px;padding:8px 14px;display:flex;align-items:center;gap:10px;z-index:5;transform:rotate(-3deg);animation:floatCoin 3.5s ease-in-out infinite alternate}@keyframes floatCoin{0%{transform:rotate(-3deg) translateY(0px)}100%{transform:rotate(-1deg) translateY(-7px)}}.coin-badge-img{width:42px;height:42px;filter:drop-shadow(1px 2px 0px rgba(0,0,0,0.15));animation:coinPulse 2.5s ease-in-out infinite alternate}@keyframes coinPulse{0%{transform:scale(1)}100%{transform:scale(1.08)}}.coin-badge-info{display:flex;flex-direction:column;text-align:left}.coin-badge-val{font-size:0.95rem;font-weight:900;color:var(--ink);line-height:1.15}.coin-badge-sub{font-size:0.72rem;font-weight:800;color:var(--ink);opacity:0.85}.table-coin-img{width:20px;height:20px;vertical-align:-3px;margin-right:4px}.desktop-qr-card{margin-top:1.4rem;background:var(--white);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);border-radius:16px;padding:12px 18px;display:flex;align-items:center;gap:14px;max-width:320px}.desktop-qr-card img{width:60px;height:60px;border-radius:8px;border:2px solid var(--ink)}.desktop-qr-text{font-size:0.82rem;font-weight:700;line-height:1.3}.desktop-qr-text strong{display:block;font-size:0.88rem;color:#B34700}.event-spotlight-section{max-width:1200px;margin:1rem auto 4.5rem;padding:0 5%}.event-card-banner{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:30px;box-shadow:var(--shadow-lg);overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;align-items:center}.event-image-side img{width:100%;height:100%;object-fit:cover;display:block;border-right:var(--border-width) solid var(--ink)}.event-text-side{padding:3rem 2.8rem}.event-badge{display:inline-flex;align-items:center;gap:6px;background:var(--coral);color:var(--ink);padding:6px 14px;border-radius:var(--radius-pill);border:2px solid var(--ink);font-size:0.85rem;font-weight:900;text-transform:uppercase;margin-bottom:1.2rem;box-shadow:var(--shadow-sm)}.event-text-side h2{font-size:2.3rem;margin-bottom:1rem;line-height:1.15}.event-text-side p{font-size:1.08rem;margin-bottom:1.8rem;font-weight:600;opacity:0.85}.levels-section{max-width:1200px;margin:0 auto 5rem;padding:0 5%}.section-header{text-align:center;max-width:820px;margin:0 auto 3.5rem}.section-header h2{font-size:2.9rem;margin-bottom:0.8rem;text-shadow:3px 3px 0px var(--white)}.section-header p{font-size:1.18rem;font-weight:700;opacity:0.85}.levels-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1.5rem}.level-card{background:var(--white);border-radius:var(--radius-card);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);padding:1.8rem 1.3rem;text-align:center;transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;align-items:center}.level-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}.level-emoji{font-size:2.4rem;margin-bottom:0.6rem;display:block}.level-pill{display:inline-block;padding:4px 12px;border-radius:var(--radius-pill);border:2px solid var(--ink);font-weight:900;font-size:0.8rem;text-transform:uppercase;margin-bottom:0.8rem}.level-card:nth-child(1) .level-pill{background:#A8E6CF;color:var(--ink)}.level-card:nth-child(2) .level-pill{background:#AED9E0;color:var(--ink)}.level-card:nth-child(3) .level-pill{background:#DDA0DD;color:var(--ink)}.level-card:nth-child(4) .level-pill{background:var(--orange);color:var(--ink)}.level-card:nth-child(5) .level-pill{background:var(--coral);color:var(--ink)}.level-card h3{font-size:1.35rem;margin-bottom:0.6rem}.level-card p{font-size:0.92rem;font-weight:600;opacity:0.85;line-height:1.45}.duel-section{max-width:1200px;margin:0 auto 5rem;padding:0 5%}.duel-banner{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:30px;box-shadow:var(--shadow-lg);padding:3.5rem 3rem;display:grid;grid-template-columns:1.1fr 0.9fr;gap:3rem;align-items:center}.duel-banner h2{font-size:2.7rem;line-height:1.15;margin-bottom:1rem}.duel-steps{display:flex;flex-direction:column;gap:14px;margin:1.8rem 0}.duel-step{display:flex;align-items:flex-start;gap:14px;background:var(--cream);padding:14px 18px;border-radius:14px;border:2px solid var(--ink)}.duel-step-num{background:var(--orange);color:var(--white);width:32px;height:32px;border-radius:var(--radius-pill);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:900;flex-shrink:0}.duel-step-text{font-size:0.98rem;font-weight:700}.duel-mockup-card{background:var(--cream);border:var(--border-width) solid var(--ink);border-radius:20px;padding:24px;text-align:center;box-shadow:var(--shadow-sm)}.duel-mockup-card img{max-width:240px;width:100%;height:auto;margin-bottom:12px}.features-section{padding:2rem 5% 5rem;max-width:1200px;margin:0 auto}.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2.2rem}.popart-card{background:var(--white);padding:2.2rem 1.8rem;border-radius:var(--radius-card);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-md);transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column;align-items:center;text-align:center}.popart-card:hover{transform:translate(-3px,-3px);box-shadow:var(--shadow-lg)}.feature-icon-img{width:80px;height:80px;object-fit:contain;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);margin-bottom:1.2rem;background:var(--cream)}.popart-card h3{font-size:1.35rem;font-weight:900;margin-bottom:0.6rem;color:var(--ink)}.popart-card p{font-size:1rem;font-weight:600;color:var(--ink);opacity:0.85}.modes-pill-container{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:2.5rem 0 1rem}.mode-pill{background:var(--white);border:2px solid var(--ink);border-radius:var(--radius-pill);padding:6px 14px;font-weight:800;font-size:0.88rem;box-shadow:var(--shadow-sm)}.comparison-section{max-width:1100px;margin:0 auto 5rem;padding:0 5%}.comparison-table-wrapper{background:var(--white);border-radius:var(--radius-card);border:var(--thick-border) solid var(--ink);box-shadow:var(--shadow-lg);overflow-x:auto}table.comparison-table{width:100%;border-collapse:collapse;text-align:left}table.comparison-table th,table.comparison-table td{padding:18px 22px;border-bottom:2px solid rgba(26,26,26,0.12)}table.comparison-table th{font-size:1.1rem;font-weight:900;text-transform:uppercase;background:var(--cream);border-bottom:var(--border-width) solid var(--ink)}table.comparison-table th.highlight-col,table.comparison-table td.highlight-col{background:#FFF0E0;font-weight:800}table.comparison-table tr:last-child td{border-bottom:none}.reviews-section{max-width:1200px;margin:0 auto 5rem;padding:0 5%}.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}.review-card{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:var(--radius-card);padding:2rem;box-shadow:var(--shadow-md)}.review-stars{color:#F39C12;font-size:1.2rem;margin-bottom:0.8rem}.review-text{font-size:1.05rem;font-style:italic;margin-bottom:1.2rem;line-height:1.5}.review-author{font-weight:900;font-size:0.95rem;color:#B34700}.review-author span{display:block;font-size:0.82rem;font-weight:600;color:var(--ink);opacity:0.78}.faq-section{max-width:860px;margin:0 auto 5rem;padding:0 5%}.faq-item{background:var(--white);border:var(--border-width) solid var(--ink);border-radius:16px;margin-bottom:14px;box-shadow:var(--shadow-sm);overflow:hidden}.faq-question{padding:18px 24px;font-weight:900;font-size:1.15rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none}.faq-question::after{content:'+';font-size:1.6rem;font-weight:900;color:var(--orange);transition:transform 0.2s}.faq-item.open .faq-question::after{content:'−';transform:rotate(180deg)}.faq-answer{padding:0 24px 20px;font-size:1.02rem;line-height:1.6;display:none;opacity:0.9}.faq-item.open .faq-answer{display:block}.bottom-cta{text-align:center;max-width:900px;margin:2rem auto 5rem;padding:4rem 2.5rem;background:var(--white);border-radius:36px;border:var(--thick-border) solid var(--ink);box-shadow:12px 12px 0px var(--orange)}.bottom-cta-icon{width:90px;height:90px;border-radius:24px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);margin-bottom:1.4rem}.bottom-cta h2{font-size:2.8rem;margin-bottom:0.9rem;line-height:1.15}.bottom-cta p{font-size:1.25rem;font-weight:700;opacity:0.85;margin-bottom:2.2rem;max-width:650px;margin-left:auto;margin-right:auto}footer{background:var(--white);border-top:var(--border-width) solid var(--ink);padding:3.5rem 5% 2.5rem;text-align:center;font-weight:700}footer a{color:#B34700;text-decoration:underline;text-underline-offset:3px;font-weight:900}.suite-section{max-width:1200px;margin:0 auto 5rem;padding:0 5%}.suite-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}.suite-app-card{background:var(--white);border:var(--thick-border) solid var(--ink);border-radius:var(--radius-card);box-shadow:var(--shadow-lg);padding:2rem 1.7rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem;transition:transform 0.2s,box-shadow 0.2s}.suite-app-card:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0px var(--ink)}.suite-app-head{display:flex;align-items:center;gap:14px}.suite-app-icon{width:60px;height:60px;border-radius:15px;border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);flex-shrink:0}.suite-app-pill{display:inline-block;padding:3px 11px;border-radius:var(--radius-pill);border:2px solid var(--ink);font-size:0.76rem;font-weight:900;text-transform:uppercase;margin-bottom:4px}.suite-app-card h3{font-size:1.3rem;line-height:1.15}.suite-app-card p{font-size:0.96rem;font-weight:600;line-height:1.5;color:var(--ink)}.suite-app-links{display:flex;flex-wrap:wrap;gap:10px}.suite-cta{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 15px;border-radius:var(--radius-btn);border:var(--border-width) solid var(--ink);box-shadow:var(--shadow-sm);font-weight:900;font-size:0.88rem;text-decoration:none;color:var(--ink);background:var(--cream);transition:transform 0.15s}.suite-cta:hover{transform:translate(-2px,-2px);background:var(--yellow)}.levels-section,.duel-section,.features-section,.comparison-section,.reviews-section,.suite-section,.faq-section{content-visibility:auto;contain-intrinsic-size:auto 620px}@media (max-width:960px){.hero{flex-direction:column;text-align:center;gap:2.5rem}.hero h1{font-size:3rem}.hero-badge-row{justify-content:center}.hero-cta-group{justify-content:center}.trust-strip{justify-content:center}.event-card-banner{grid-template-columns:1fr}.event-image-side img{border-right:none;border-bottom:var(--border-width) solid var(--ink);max-height:280px}.duel-banner{grid-template-columns:1fr;text-align:center}.suite-cards-grid{grid-template-columns:1fr}.floating-coin-badge{top:-10px;left:10px}.header-nav{display:none}}</style>
 </head>
 <body>
 
@@ -334,7 +379,7 @@
             </div>
 
             <div class="duel-mockup-card">
-                <img src="assets/duel.webp" alt="Duel Meemaw" width="720" height="720" loading="lazy" decoding="async">
+                <img src="assets/duel-480.webp" srcset="assets/duel-480.webp 480w, assets/duel.webp 720w" sizes="240px" alt="Duel Meemaw" width="480" height="480" loading="lazy" decoding="async">
                 <h3 style="font-size: 1.12rem; margin-bottom: 0.35rem;" data-i18n="duel_card_title">Compatible WhatsApp & Messages</h3>
                 <p style="font-size: 0.9rem; opacity: 0.8;" data-i18n="duel_card_desc">Aucun compte à créer. Le lien s'ouvre directement dans l'application grâce aux Universal Links Apple.</p>
             </div>
@@ -475,6 +520,67 @@
                 <p class="review-text" data-i18n="rev3_text">« Un seul achat pour toute la famille grâce au Partage Familial. Chacun de mes enfants avance sur son propre palier, du niveau Apprenti au niveau Confirmé. »</p>
                 <div class="review-author" data-i18n="rev3_author">Marc D. <span data-i18n="rev3_sub">Père de 3 enfants</span></div>
             </div>
+        </div>
+    </section>
+
+    <!-- 3-App Family Ecosystem Showcase -->
+    <section id="univers" class="suite-section">
+        <div class="section-header">
+            <h2 data-i18n="suite_title">La Collection Familiale Meemaw sur iPhone &amp; iPad 🌟</h2>
+            <p data-i18n="suite_desc">Trois applications complémentaires signées Meemaw : 100 % hors-ligne, zéro publicité, zéro collecte de données et compatibles Partage Familial Apple (jusqu'à 6 membres).</p>
+        </div>
+
+        <div class="suite-cards-grid">
+            <article class="suite-app-card" style="background: #FFF4EB;">
+                <div>
+                    <div class="suite-app-head">
+                        <img src="assets/icon-96.webp" srcset="assets/icon-96.webp 96w, assets/icon.webp 512w" sizes="60px" alt="Meemaw Orthographe & Dictée" class="suite-app-icon" width="60" height="60" loading="lazy" decoding="async">
+                        <div>
+                            <span class="suite-app-pill" style="background: var(--yellow); color: var(--ink);" data-i18n="s1_pill">Orthographe &amp; FLE</span>
+                            <h3 data-i18n="s1_title">Meemaw Dictée</h3>
+                        </div>
+                    </div>
+                    <p style="margin-top: 14px;" data-i18n="s1_body">1 837 dictées vocales studio (24 kHz), lecture globale puis mot à mot, 8 modes de jeu, 50 fiches de règles illustrées (FR/EN/ES), Bouclier Temps d'Écran et duels WhatsApp.</p>
+                </div>
+                <div class="suite-app-links">
+                    <a href="https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331" target="_blank" class="suite-cta" style="background: var(--orange); color: var(--ink);" data-i18n="s1_cta"> Télécharger (Dictée)</a>
+                    <a href="/comparatif-applications-orthographe-dictee.html" id="orthoGuideLink" class="suite-cta" data-i18n="s1_guide">Comparatif 2026</a>
+                </div>
+            </article>
+
+            <article class="suite-app-card" style="background: #E9F7F2;">
+                <div>
+                    <div class="suite-app-head">
+                        <img src="assets/math-icon-96.webp" srcset="assets/math-icon-96.webp 96w, assets/math-icon.webp 512w" sizes="60px" alt="Meemaw Math" class="suite-app-icon" width="60" height="60" loading="lazy" decoding="async">
+                        <div>
+                            <span class="suite-app-pill" style="background: #137A5B; color: #FFFFFF;" data-i18n="s2_pill">Calcul Mental &amp; QI</span>
+                            <h3 data-i18n="s2_title">Meemaw Math</h3>
+                        </div>
+                    </div>
+                    <p style="margin-top: 14px;" data-i18n="s2_body">Secrets du Certif' 1951 (Table de 9, +30−1, compléments à 100), vitesse Vélo 🚲 → Fusée 🚀, 11 jeux de QI numérique &amp; logique, Espace Brevet sans calculatrice et Temps d'Écran.</p>
+                </div>
+                <div class="suite-app-links">
+                    <a href="/math/" class="suite-cta" style="background: #137A5B; color: #FFFFFF;" data-i18n="s2_cta">🧮 Explorer Meemaw Math →</a>
+                    <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615" target="_blank" class="suite-cta" data-i18n="s2_store">App Store</a>
+                </div>
+            </article>
+
+            <article class="suite-app-card" style="background: #FFF8E1;">
+                <div>
+                    <div class="suite-app-head">
+                        <img src="hunter/assets/app-icon-96.webp" srcset="hunter/assets/app-icon-96.webp 96w, hunter/assets/app-icon.webp 512w" sizes="60px" alt="Meemaw Hunter" class="suite-app-icon" width="60" height="60" loading="lazy" decoding="async">
+                        <div>
+                            <span class="suite-app-pill" style="background: #F7B928; color: #1A120B;" data-i18n="s3_pill">Arcade Caméra 60 FPS</span>
+                            <h3 data-i18n="s3_title">Meemaw Hunter</h3>
+                        </div>
+                    </div>
+                    <p style="margin-top: 14px;" data-i18n="s3_body">Ta main nue est le pistolet devant la caméra frontale : main ouverte pour viser, poing fermé pour tirer, rotation du poignet pour recharger sur iPhone, iPad et TV AirPlay 16:9.</p>
+                </div>
+                <div class="suite-app-links">
+                    <a href="/hunter/" class="suite-cta" style="background: #F7B928; color: #1A120B;" data-i18n="s3_cta">🤠 Explorer Meemaw Hunter →</a>
+                    <a href="https://testflight.apple.com/join/KDkGehjG" target="_blank" class="suite-cta" data-i18n="s3_beta">TestFlight Public</a>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -639,7 +745,24 @@
                 footer_appstore: "App Store",
                 footer_contact: "Contact & Support",
                 footer_privacy: "Politique de Confidentialité",
-                footer_terms: "Conditions d'Utilisation"
+                footer_terms: "Conditions d'Utilisation",
+                suite_title: "La Collection Familiale Meemaw sur iPhone &amp; iPad 🌟",
+                suite_desc: "Trois applications complémentaires signées Meemaw : 100 % hors-ligne, zéro publicité, zéro collecte de données et compatibles Partage Familial Apple (jusqu'à 6 membres).",
+                s1_pill: "Orthographe &amp; FLE",
+                s1_title: "Meemaw Dictée",
+                s1_body: "1 837 dictées vocales studio (24 kHz), lecture globale puis mot à mot, 8 modes de jeu, 50 fiches de règles illustrées (FR/EN/ES), Bouclier Temps d'Écran et duels WhatsApp.",
+                s1_cta: " Télécharger (Dictée)",
+                s1_guide: "Comparatif 2026",
+                s2_pill: "Calcul Mental &amp; QI",
+                s2_title: "Meemaw Math",
+                s2_body: "Secrets du Certif' 1951 (Table de 9, +30−1, compléments à 100), vitesse Vélo 🚲 → Fusée 🚀, 11 jeux de QI numérique &amp; logique, Espace Brevet sans calculatrice et Temps d'Écran.",
+                s2_cta: "🧮 Explorer Meemaw Math →",
+                s2_store: "App Store",
+                s3_pill: "Arcade Caméra 60 FPS",
+                s3_title: "Meemaw Hunter",
+                s3_body: "Ta main nue est le pistolet devant la caméra frontale : main ouverte pour viser, poing fermé pour tirer, rotation du poignet pour recharger sur iPhone, iPad et TV AirPlay 16:9.",
+                s3_cta: "🤠 Explorer Meemaw Hunter →",
+                s3_beta: "TestFlight Public"
             },
             en: {
                 ann_tag: "BACK TO SCHOOL EVENT",
@@ -738,7 +861,24 @@
                 footer_appstore: "App Store",
                 footer_contact: "Contact & Support",
                 footer_privacy: "Privacy Policy",
-                footer_terms: "Terms of Service"
+                footer_terms: "Terms of Service",
+                suite_title: "The Meemaw Family Suite on iPhone &amp; iPad 🌟",
+                suite_desc: "Three privacy-first iOS apps crafted by the same indie studio: 100% offline, zero ads, zero data collection, and built for Apple Family Sharing (up to 6 members).",
+                s1_pill: "French Dictation &amp; Spelling",
+                s1_title: "Learn French Spelling",
+                s1_body: "1,837 studio-voiced French dictations (24 kHz), full sentence then word-by-word pace, 8 game modes, 50 grammar rules explained in English/FR/ES, Screen Time Shield &amp; WhatsApp duels.",
+                s1_cta: " Download (Spelling)",
+                s1_guide: "2026 Comparison",
+                s2_pill: "Mental Math &amp; IQ Logic",
+                s2_title: "Meemaw Math",
+                s2_body: "1951 mental math shortcuts (9 times table trick, +30−1, complements to 100), Bike 🚲 → Rocket 🚀 speed scale, 11 Numerical IQ &amp; logic games, and no-calculator exam prep.",
+                s2_cta: "🧮 Explore Meemaw Math →",
+                s2_store: "App Store",
+                s3_pill: "60 FPS Camera Arcade",
+                s3_title: "Meemaw Hunter",
+                s3_body: "Your bare hand is the blaster in front of the front camera: open hand to aim, close fist to fire, flip wrist to reload across 7 Texas worlds on iPhone, iPad &amp; 16:9 AirPlay TV.",
+                s3_cta: "🤠 Explore Meemaw Hunter →",
+                s3_beta: "Public TestFlight"
             },
             es: {
                 ann_tag: "EVENTO VUELTA AL COLE",
@@ -837,7 +977,24 @@
                 footer_appstore: "App Store",
                 footer_contact: "Contacto y Soporte",
                 footer_privacy: "Política de Privacidad",
-                footer_terms: "Términos de Servicio"
+                footer_terms: "Términos de Servicio",
+                suite_title: "La Colección Familiar Meemaw en iPhone y iPad 🌟",
+                suite_desc: "Tres aplicaciones complementarias del mismo estudio independiente: 100 % sin conexión, sin publicidad, cero recopilación de datos y En Familia de Apple (hasta 6 personas).",
+                s1_pill: "Dictado y Francés (FLE)",
+                s1_title: "Ortografía Francesa",
+                s1_body: "1.837 dictados en francés con voz de estudio (24 kHz), lectura completa y palabra por palabra, 8 modos de juego, 50 fichas explicadas en español, Tiempo en Pantalla y duelos WhatsApp.",
+                s1_cta: " Descargar (Francés)",
+                s1_guide: "Comparativa 2026",
+                s2_pill: "Cálculo Mental y CI",
+                s2_title: "Meemaw Mates",
+                s2_body: "Los Trucos de Meemaw de 1951 (tabla del 9, +30−1, complemento a 100), velocidad Bici 🚲 → Cohete 🚀, 11 juegos de CI numérico y exámenes sin calculadora de Primaria y ESO.",
+                s2_cta: "🧮 Explorar Meemaw Mates →",
+                s2_store: "App Store",
+                s3_pill: "Arcade Cámara 60 FPS",
+                s3_title: "Meemaw Hunter",
+                s3_body: "Tu propia mano es la pistola frente a la cámara frontal: mano abierta para apuntar, puño cerrado para disparar y gira la muñeca para recargar en iPhone, iPad y AirPlay TV 16:9.",
+                s3_cta: "🤠 Explorar Meemaw Hunter →",
+                s3_beta: "Beta TestFlight"
             }
         };
 
@@ -847,6 +1004,18 @@
             es: "https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331"
         };
 
+        const mathAppStoreUrls = {
+            fr: "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615",
+            en: "https://apps.apple.com/us/app/mental-math-games-meemaw-math/id6824002615",
+            es: "https://apps.apple.com/es/app/c%C3%A1lculo-mental-meemaw-mates/id6824002615"
+        };
+
+        const orthoGuideUrls = {
+            fr: "/comparatif-applications-orthographe-dictee.html",
+            en: "/best-french-spelling-dictation-app.html",
+            es: "/mejor-app-ortografia-dictado-frances.html"
+        };
+
         function setLanguage(lang) {
             localStorage.setItem('meemaw_lang', lang);
             document.documentElement.lang = lang;
@@ -854,6 +1023,12 @@
             document.querySelectorAll('a[href*="id6757681331"]').forEach(link => {
                 link.href = targetStoreUrl;
             });
+            const targetMathUrl = mathAppStoreUrls[lang] || mathAppStoreUrls.fr;
+            document.querySelectorAll('a[href*="id6824002615"]').forEach(link => {
+                link.href = targetMathUrl;
+            });
+            const guideEl = document.getElementById('orthoGuideLink');
+            if (guideEl) guideEl.href = orthoGuideUrls[lang] || orthoGuideUrls.fr;
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key]) {
