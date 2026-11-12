@@ -33,4 +33,3 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://meemaw.app/sitemap.xml
-Agentmap: https://meemaw.app/.well-known/ard.json
