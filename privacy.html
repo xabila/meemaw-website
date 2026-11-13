@@ -173,10 +173,10 @@
 
     <main>
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last updated: November 11, 2026</p>
+        <p class="last-updated">Last updated: November 13, 2026</p>
         
         <div class="highlight">
-            <p><strong>Summary:</strong> Meemaw, Meemaw Math, and Meemaw Hunter respect your privacy. Learning progress and Screen Time rules stay on your device, and <strong>Meemaw Hunter collects zero data (`DATA_NOT_COLLECTED`)</strong> with 100% local in-RAM front-camera hand tracking. Full 8-language policy for Meemaw Hunter: <a href="/hunter/privacy.html" style="color: #1A1A1A; text-decoration: underline;">meemaw.app/hunter/privacy.html</a>.</p>
+            <p><strong>Summary:</strong> Meemaw, Meemaw Math, and Meemaw Hunter respect your privacy. Learning progress and Screen Time rules stay on your device, all camera/hand gesture processing in <strong>Meemaw Hunter</strong> runs 100% locally in volatile RAM (<strong>zero camera or face data collected, 0s retention</strong>), and only anonymous EU-hosted telemetry (Mixpanel EU, <code>ip=0</code>) and anonymous purchase unlocks (StoreKit 2 / RevenueCat) are used—never linked to your identity and with zero tracking. Full 8-language policy for Meemaw Hunter: <a href="/hunter/privacy.html" style="color: #1A1A1A; text-decoration: underline;">meemaw.app/hunter/privacy.html</a>.</p>
         </div>
 
         <h2>1. Introduction</h2>
@@ -206,12 +206,11 @@
         <h2>6. In-App Purchases</h2>
         <p>If you choose to purchase <strong>Meemaw PRO</strong> or <strong>Meemaw Math PRO</strong> (Monthly, Yearly, or Lifetime), the transaction is processed entirely by Apple via the App Store. We use RevenueCat solely to validate anonymous Apple purchase receipts and unlock your PRO status across devices. We do not have access to your name, payment card details, or billing address.</p>
 
-        <h2>7. Meemaw Hunter — 100% On-Device Camera Hand Tracking (Zero Data Collected)</h2>
-        <p><strong>Meemaw Hunter</strong> (Bundle ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>) uses your iPhone or iPad front camera strictly to detect 3D hand landmarks in real time at 60 FPS using an embedded on-device <strong>MediaPipeTasksVision</strong> model:</p>
+        <h2>7. Meemaw Hunter — 100% On-Device Hand Tracking &amp; Zero Face Data Collected</h2>
+        <p><strong>Meemaw Hunter</strong> (Bundle ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>) uses your iPhone or iPad front camera strictly to detect 21 hand joints in real time at 60 FPS using an embedded on-device <strong>MediaPipeTasksVision</strong> model (<code>HandLandmarker</code> / <code>hand_landmarker.task</code>):</p>
         <ul>
-            <li><strong>Zero recording, zero upload:</strong> Each video frame is processed instantaneously in volatile RAM and discarded immediately. No photo, video, face data, biometric template, or hand coordinate is ever saved to disk or transmitted over the network.</li>
-            <li><strong>Zero third-party analytics or SDK trackers:</strong> Meemaw Hunter contains zero analytics SDKs (no Mixpanel, no RevenueCat, no ad SDKs) and makes zero external telemetry calls. Its Apple App Privacy Nutrition Label is <strong>Data Not Collected</strong>.</li>
-            <li><strong>StoreKit 2 &amp; Local Preferences Only:</strong> High scores, unlocked worlds, and onboarding completion are saved locally via iOS <code>UserDefaults</code> (<code>CA92.1</code>), and the optional one-time <em>Sheriff Family Pack</em> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>) is processed directly by Apple <strong>StoreKit 2</strong> with Apple Family Sharing. See the dedicated multilingual policy at <a href="/hunter/privacy.html">meemaw.app/hunter/privacy.html</a>.</li>
+            <li><strong>Zero Face Data Collected (0s Retention, Zero Sharing):</strong> Meemaw Hunter collects zero face data. Although the front-facing camera field of view may incidentally include the player's face while tracking their hand, the app exclusively runs the on-device HandLandmarker model in volatile RAM (~16 ms per frame) to detect 21 hand joints and never detects, extracts, stores, retains, or shares any facial geometry, biometric identifiers, or video frames with any third party (retention period: 0 seconds).</li>
+            <li><strong>Anonymous Telemetry &amp; One-Time Unlock (Data Not Linked · No Tracking):</strong> High scores, unlocked worlds, and ergonomics stay local in iOS <code>UserDefaults</code> (<code>CA92.1</code>). Anonymous gameplay events are sent to <strong>Mixpanel EU</strong> (<code>https://api-eu.mixpanel.com</code>, <code>ip=0</code> IP discarded at ingestion), and the optional one-time <em>Sheriff Full Game Pack</em> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, Family Sharing supported) is unlocked via Apple <strong>StoreKit 2</strong> and <strong>RevenueCat</strong> using only a random anonymous UUID (<code>NSPrivacyTracking = false</code>, zero IDFA, zero ads). See the dedicated 8-language policy (including Section 3 Face Data Policy) at <a href="/hunter/privacy.html?lang=en#face-data">meemaw.app/hunter/privacy.html</a>.</li>
         </ul>
 
         <h2>8. Contact Us</h2>

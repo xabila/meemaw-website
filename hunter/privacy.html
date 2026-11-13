@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politique de Confidentialité — Meemaw Hunter</title>
-    <meta name="description" content="Politique de confidentialité de Meemaw Hunter sur iPhone et iPad : suivi de la main 60 FPS 100 % local en mémoire vive (caméra non collectée), achat unique StoreKit 2 / RevenueCat et télémétrie anonyme Mixpanel UE (ip=0) sans suivi publicitaire.">
+    <meta name="description" content="Politique de confidentialité de Meemaw Hunter sur iPhone et iPad : suivi main 60 FPS 100 % en RAM (zéro donnée caméra ou faciale collectée, rétention 0 s), achat StoreKit 2 / RevenueCat et télémétrie anonyme Mixpanel UE (ip=0).">
     <link rel="canonical" href="https://meemaw.app/hunter/privacy.html">
     <link rel="ard" href="/.well-known/ard.json" type="application/ai-catalog+json">
     <link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/privacy.html?lang=fr">
@@ -62,7 +62,7 @@
     <div class="summary-banner">
         <div class="summary-inner">
             <svg class="summary-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            <p id="summaryText">En bref : Le suivi gestuel de votre main à 60 FPS s’exécute 100 % localement dans la mémoire vive (RAM) de votre iPhone ou iPad — aucune image, vidéo ni coordonnée 3D de la main ne quitte jamais votre appareil (Caméra : non collectée). Seuls la validation anonyme d’achat intégré (StoreKit 2 / RevenueCat) et des événements de jeu anonymes hébergés dans l’Union européenne (Mixpanel UE, ip=0) sont traités, sans lien avec votre identité et sans aucun suivi publicitaire.</p>
+            <p id="summaryText">En bref : Le suivi gestuel de votre main à 60 FPS (HandLandmarker) s’exécute 100 % localement en mémoire vive (RAM, ~16 ms par image, rétention 0 seconde) — aucune image caméra, donnée faciale ni coordonnée 3D ne quitte jamais votre appareil (Caméra &amp; Visage : non collectés, zéro stockage, zéro partage). Seuls la validation anonyme d’achat intégré (StoreKit 2 / RevenueCat) et des événements de jeu anonymes hébergés dans l’UE (Mixpanel UE, ip=0) sont traités, sans lien avec votre identité et sans suivi publicitaire.</p>
         </div>
     </div>
 
@@ -96,9 +96,9 @@
             fr: {
                 docTitle: "Politique de Confidentialité — Meemaw Hunter",
                 pageTitle: "Politique de Confidentialité — Meemaw Hunter",
-                metaDesc: "Politique de confidentialité de Meemaw Hunter sur iPhone et iPad : suivi de la main 60 FPS 100 % local en mémoire vive (caméra non collectée), achat unique StoreKit 2 / RevenueCat et télémétrie anonyme Mixpanel UE (ip=0) sans suivi publicitaire.",
+                metaDesc: "Politique de confidentialité de Meemaw Hunter sur iPhone et iPad : suivi main 60 FPS 100 % en RAM (zéro donnée caméra ou faciale collectée, rétention 0 s), achat StoreKit 2 / RevenueCat et télémétrie anonyme Mixpanel UE (ip=0).",
                 updated: "Dernière mise à jour : 13 novembre 2026 · App Store ID 6831648316 · Données non associées à votre identité · Aucun suivi",
-                summary: "En bref : Le suivi gestuel de votre main à 60 FPS s’exécute 100 % localement dans la mémoire vive (RAM) de votre iPhone ou iPad — aucune image, vidéo ni coordonnée 3D de la main ne quitte jamais votre appareil (Caméra : non collectée). Seuls la validation anonyme d’achat intégré (StoreKit 2 / RevenueCat) et des événements de jeu anonymes hébergés dans l’Union européenne (Mixpanel UE, ip=0) sont traités, sans lien avec votre identité et sans aucun suivi publicitaire.",
+                summary: "En bref : Le suivi gestuel de votre main à 60 FPS (HandLandmarker) s’exécute 100 % localement en mémoire vive (RAM, ~16 ms par image, rétention 0 seconde) — aucune image caméra, donnée faciale ni coordonnée 3D ne quitte jamais votre appareil (Caméra & Visage : non collectés, zéro stockage, zéro partage). Seuls la validation anonyme d’achat intégré (StoreKit 2 / RevenueCat) et des événements de jeu anonymes hébergés dans l’UE (Mixpanel UE, ip=0) sont traités, sans lien avec votre identité et sans suivi publicitaire.",
                 back: "Retour au ranch Meemaw Hunter",
                 termsLink: "Conditions d’utilisation (CGU)",
                 footerCopy: "© 2026 Xavier Larrodé · Suite familiale Meemaw",
@@ -109,24 +109,33 @@
                     <section>
                         <h2>1. Champ d’application et architecture de confidentialité (RGPD &amp; App Store)</h2>
                         <p>La présente politique s’applique spécifiquement au jeu iOS et iPadOS <strong>Meemaw Hunter</strong> (identifiant de lot <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), édité par Xavier Larrodé.</p>
-                        <p>Conformément au RGPD européen et aux étiquettes de confidentialité d’Apple App Store Connect (<strong>Données non associées à votre identité · Aucun suivi</strong>), Meemaw Hunter fonctionne sans création de compte, sans publicité, sans identifiant publicitaire IDFA (<code>NSPrivacyTracking = false</code>), sans suivi inter-applications et sans aucune revente de données. Les flux de la caméra frontale ne sont <strong>jamais collectés</strong>.</p>
+                        <p>Conformément au RGPD européen et aux étiquettes de confidentialité d’Apple App Store Connect (<strong>Données non associées à votre identité · Aucun suivi</strong>), Meemaw Hunter fonctionne sans création de compte, sans publicité, sans identifiant publicitaire IDFA (<code>NSPrivacyTracking = false</code>), sans suivi inter-applications et sans aucune revente de données. Les données visuelles de la caméra frontale, de la main et du visage ne sont <strong>jamais collectées</strong>.</p>
                     </section>
                     <section>
                         <h2>2. Caméra frontale et suivi du squelette de la main à 60 FPS (100 % local · Non collecté)</h2>
                         <p>Meemaw Hunter demande l’accès à la caméra frontale uniquement afin de vous permettre de viser (main ouverte), tirer (pincement pouce + index) et recharger (rotation du poignet) sans manette. Vous pouvez également jouer à tout moment au doigt sur l’écran tactile sans activer la caméra.</p>
                         <ul>
-                            <li><strong>Traitement exclusivement en mémoire vive volatile (RAM) :</strong> Chaque image captée à 60 FPS est analysée instantanément sur le processeur et le Neural Engine de votre iPhone ou iPad via le modèle local embarqué <code>MediaPipeTasksVision</code> (squelette de la main à 21 points), puis immédiatement libérée de la mémoire vive en quelques millisecondes.</li>
+                            <li><strong>Traitement exclusivement en mémoire vive volatile (RAM) :</strong> Chaque image captée à 60 FPS est analysée instantanément sur le processeur et le Neural Engine de votre iPhone ou iPad via le modèle local embarqué <code>MediaPipeTasksVision</code> (<code>HandLandmarker</code> / <code>hand_landmarker.task</code>, squelette de la main à 21 points), puis immédiatement libérée de la mémoire vive (~16 ms par image).</li>
                             <li><strong>Zéro enregistrement, zéro sauvegarde, zéro envoi :</strong> Aucune image caméra, vidéo, numérisation de pièce, donnée TrueDepth / Face ID, empreinte biométrique ni coordonnée 3D des articulations de la main n’est jamais enregistrée sur le disque ni transmise hors de votre appareil.</li>
-                            <li><strong>100 % hors-ligne &amp; « Non collecté » :</strong> Le suivi caméra fonctionne intégralement en mode Avion. Au sens de la définition officielle d’Apple App Privacy, <strong>les données de Caméra, de Corps et de Main ne sont PAS collectées</strong>.</li>
+                            <li><strong>100 % hors-ligne &amp; « Non collecté » :</strong> Le suivi caméra fonctionne intégralement en mode Avion. Au sens de la définition officielle d’Apple App Privacy, <strong>les données de Caméra, de Visage, de Corps et de Main ne sont PAS collectées</strong>.</li>
+                        </ul>
+                    </section>
+                    <section id="face-data">
+                        <h2>3. Politique relative à la caméra frontale et aux données faciales (Zéro donnée faciale collectée, zéro stockage, zéro partage)</h2>
+                        <p>Meemaw Hunter utilisant la caméra frontale avec le framework local <code>MediaPipeTasksVision</code>, nous détaillons explicitement ci-dessous l’absence totale de traitement de données faciales conformément aux directives Apple App Store Review 2.1 et 5.1.1 :</p>
+                        <ul>
+                            <li><strong>Données faciales collectées : Aucune (Zéro donnée faciale collectée).</strong> Bien que le champ de vision de la caméra frontale puisse incidemment inclure le visage du joueur pendant le suivi de sa main, Meemaw Hunter exécute exclusivement le modèle local <code>HandLandmarker</code> (<code>hand_landmarker.task</code>) pour calculer en temps réel la position de 21 articulations de la main et des doigts. L’application n’exécute aucun modèle de détection faciale et ne détecte, n’extrait ni ne collecte jamais la géométrie du visage, les repères faciaux, les cartes TrueDepth / Face ID, les expressions faciales ou des identifiants biométriques.</li>
+                            <li><strong>Utilisation, stockage, durée de conservation et suppression :</strong> Chaque image vidéo de la caméra frontale est traitée exclusivement dans la mémoire vive volatile (RAM) de l’appareil (~16 ms par image à 60 FPS) pour piloter la visée, le tir par pincement et le rechargement du poignet, puis est immédiatement effacée de la mémoire. La durée de conservation est de <strong>0 seconde</strong> — zéro image, vidéo, donnée faciale ou coordonnée de la main n’est jamais écrite sur le stockage local, iCloud ou des serveurs externes.</li>
+                            <li><strong>Partage avec des tiers : Aucun (Zéro partage).</strong> Aucune image caméra, donnée faciale ou coordonnée de la main n’est jamais transmise hors de l’appareil ni partagée avec un tiers (RevenueCat et Mixpanel UE ne reçoivent jamais aucune donnée caméra, faciale ou gestuelle).</li>
                         </ul>
                     </section>
                     <section>
-                        <h2>3. Achats intégrés (Apple StoreKit 2 &amp; RevenueCat) — Non associés à votre identité</h2>
+                        <h2>4. Achats intégrés (Apple StoreKit 2 &amp; RevenueCat) — Non associés à votre identité</h2>
                         <p>Le téléchargement inclut gratuitement le tutoriel interactif ainsi que les Mondes 1 et 2. L’achat optionnel unique non consommable <strong>Pack Shérif Jeu Complet</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, compatible avec le Partage Familial Apple jusqu’à 6 membres) est traité de manière sécurisée par Apple via <strong>StoreKit 2</strong> et vérifié par <strong>RevenueCat</strong> uniquement afin de débloquer et restaurer votre accès complet via un identifiant applicatif aléatoire anonyme (<code>$RCAnonymousID</code> / UUID).</p>
                         <p>Aucune adresse e-mail d’identifiant Apple, aucun nom civil, aucune adresse postale ni aucune coordonnée bancaire ne nous sont jamais communiqués.</p>
                     </section>
                     <section>
-                        <h2>4. Télémétrie produit et gameplay anonyme (Mixpanel UE, ip=0) — Sans suivi</h2>
+                        <h2>5. Télémétrie produit et gameplay anonyme (Mixpanel UE, ip=0) — Sans suivi</h2>
                         <p>Afin d’équilibrer la difficulté des vagues et d’améliorer l’ergonomie gestuelle, Meemaw Hunter envoie des événements d’interaction strictement anonymes vers <strong>Mixpanel UE</strong> :</p>
                         <ul>
                             <li><strong>Hébergement dans l’Union européenne &amp; anonymisation IP (<code>ip=0</code>) :</strong> Les événements transitent exclusivement vers l’infrastructure européenne <code>https://api-eu.mixpanel.com</code> avec le paramètre <code>ip=0</code> activé — votre adresse IP cliente est immédiatement écartée à la réception et n’est jamais stockée.</li>
@@ -135,7 +144,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. Tableau récapitulatif et manifeste Apple (PrivacyInfo.xcprivacy)</h2>
+                        <h2>6. Tableau récapitulatif et manifeste Apple (PrivacyInfo.xcprivacy)</h2>
                         <p>Synthèse complète des catégories de données et des API système déclarées dans le fichier officiel <code>PrivacyInfo.xcprivacy</code> de Meemaw Hunter :</p>
                         <div class="manifest-table-wrap">
                             <table>
@@ -150,7 +159,12 @@
                                     <tr>
                                         <td><strong>Caméra frontale &amp; squelette main 21 points</strong> (<code>MediaPipeTasksVision</code>)</td>
                                         <td>Non collecté</td>
-                                        <td>100 % en mémoire vive volatile (RAM) sur l’appareil à 60 FPS. Zéro photo, vidéo, donnée Face ID/TrueDepth ou coordonnée 3D enregistrée ou transmise.</td>
+                                        <td>100 % en mémoire vive volatile (RAM) sur l’appareil à 60 FPS (~16 ms/image). Zéro photo, vidéo ou coordonnée 3D enregistrée ou transmise.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Données faciales</strong> (<code>Front Camera Field of View</code>)</td>
+                                        <td>Non collecté · Rétention 0 s · Jamais stocké ni partagé</td>
+                                        <td>Zéro géométrie du visage, repère facial, carte TrueDepth/Face ID ou donnée biométrique détectée, stockée (disque/iCloud/serveur) ou partagée avec des tiers (seul <code>HandLandmarker</code> <code>hand_landmarker.task</code> tourne en RAM).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Achats</strong> (<code>Purchase History</code>)</td>
@@ -177,12 +191,12 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. Mode Salon AirPlay TV 16:9 et protection de la famille (RGPD / COPPA)</h2>
+                        <h2>7. Mode Salon AirPlay TV 16:9 et protection de la famille (RGPD / COPPA)</h2>
                         <p>Lorsque vous projetez Meemaw Hunter sur une Apple TV ou un téléviseur compatible AirPlay, iOS affiche localement une scène western 16:9 sur votre réseau domestique ; aucune image caméra n’est jamais diffusée vers des serveurs externes.</p>
                         <p>Fonctionnant sans compte utilisateur, sans messagerie, sans publicité comportementale et sans collecte d’informations nominatives, de voix ou d’images, Meemaw Hunter protège pleinement la vie privée des familles et des mineurs conformément au RGPD et au COPPA.</p>
                     </section>
                     <section>
-                        <h2>7. Vos droits RGPD, contrôle et contact</h2>
+                        <h2>8. Vos droits RGPD, contrôle et contact</h2>
                         <p>Vous pouvez couper l’accès Caméra à tout moment dans <em>Réglages &gt; Confidentialité et sécurité &gt; Appareil photo</em> (le mode tactile reste intégralement jouable) et effacer toutes les préférences locales ainsi que l’UUID local en désinstallant l’application. Pour toute question ou demande d’effacement au titre du RGPD, contactez Xavier Larrodé à l’adresse <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
                     </section>
                 `
@@ -190,9 +204,9 @@
             en: {
                 docTitle: "Privacy Policy — Meemaw Hunter",
                 pageTitle: "Privacy Policy — Meemaw Hunter",
-                metaDesc: "Meemaw Hunter privacy policy for iPhone and iPad: 100% on-device 60 FPS hand tracking in volatile RAM (camera not collected), anonymous StoreKit 2 / RevenueCat purchase unlock, and EU-hosted Mixpanel telemetry (ip=0) with zero tracking.",
+                metaDesc: "Meemaw Hunter privacy policy for iPhone and iPad: 100% on-device 60 FPS hand tracking in volatile RAM (zero camera or face data collected, 0s retention), anonymous StoreKit 2 / RevenueCat unlock, and Mixpanel EU telemetry (ip=0).",
                 updated: "Last updated: November 13, 2026 · App Store ID 6831648316 · Data Not Linked to You · No Tracking",
-                summary: "In short: All 60 FPS front-camera hand skeleton tracking runs 100% locally in volatile RAM on your iPhone or iPad—zero camera images, videos, or 3D hand coordinates ever leave your device (Camera: Not Collected). Only anonymous in-app purchase validation (StoreKit 2 / RevenueCat) and anonymous EU-hosted gameplay telemetry (Mixpanel EU with ip=0 IP anonymization) are processed, never linked to your identity and with zero advertising or cross-app tracking.",
+                summary: "In short: All 60 FPS front-camera hand tracking (HandLandmarker) runs 100% locally in volatile RAM (~16 ms per frame, 0-second retention)—zero camera images, face data, or 3D hand coordinates are ever collected, stored, or shared (Camera & Face Data: Not Collected). Only anonymous in-app purchase validation (StoreKit 2 / RevenueCat) and anonymous EU-hosted gameplay telemetry (Mixpanel EU with ip=0 IP anonymization) are processed, never linked to your identity and with zero advertising or cross-app tracking.",
                 back: "Back to Meemaw Hunter Ranch",
                 termsLink: "Terms of Use (EULA)",
                 footerCopy: "© 2026 Xavier Larrodé · Meemaw Family Suite",
@@ -203,24 +217,34 @@
                     <section>
                         <h2>1. Scope &amp; Privacy Architecture (App Store Nutrition Labels &amp; GDPR)</h2>
                         <p>This Privacy Policy applies specifically to the iOS and iPadOS game <strong>Meemaw Hunter</strong> (Bundle ID <code>com.xlarrodeapp.meemawhunter</code>, App Store ID <code>6831648316</code>), published by Xavier Larrodé.</p>
-                        <p>In full compliance with Apple App Store Connect Privacy Nutrition Labels (<strong>Data Not Linked to You · No Tracking</strong>), GDPR, UK GDPR, and COPPA, Meemaw Hunter operates with zero user accounts, zero advertising SDKs, zero IDFA access (<code>NSPrivacyTracking = false</code>), zero cross-app tracking, and zero data resale. Front-camera visual data is <strong>never collected</strong>.</p>
+                        <p>In full compliance with Apple App Store Connect Privacy Nutrition Labels (<strong>Data Not Linked to You · No Tracking</strong>), GDPR, UK GDPR, and COPPA, Meemaw Hunter operates with zero user accounts, zero advertising SDKs, zero IDFA access (<code>NSPrivacyTracking = false</code>), zero cross-app tracking, and zero data resale. Front-camera, hand, and face data are <strong>never collected</strong>.</p>
                     </section>
                     <section>
                         <h2>2. Front Camera &amp; 60 FPS Hand Skeleton Tracking (100% On-Device · Not Collected)</h2>
                         <p>Meemaw Hunter requests front-camera permission solely so you can aim (open hand), shoot (pinch thumb + index), and reload (flip wrist) hands-free. You can also play at any time using direct touchscreen taps without enabling the camera.</p>
                         <ul>
-                            <li><strong>100% Volatile RAM Processing:</strong> Every camera frame captured at 60 FPS is processed exclusively in volatile RAM on your iPhone or iPad CPU and Neural Engine using the bundled on-device <code>MediaPipeTasksVision</code> 21-point hand skeleton model, then discarded immediately within milliseconds.</li>
+                            <li><strong>100% Volatile RAM Processing:</strong> Every camera frame captured at 60 FPS is processed exclusively in volatile RAM on your iPhone or iPad CPU and Neural Engine using the bundled on-device <code>MediaPipeTasksVision</code> <code>HandLandmarker</code> model (<code>hand_landmarker.task</code>, 21 hand joints), then discarded immediately (~16 ms per frame).</li>
                             <li><strong>Zero Recording, Zero Storage, Zero Uploads:</strong> Zero camera images, videos, room scans, TrueDepth / Face ID depth data, biometric templates, or 3D hand landmark coordinates are ever saved to disk or transmitted off the device.</li>
-                            <li><strong>100% Offline Capable &amp; Not Collected:</strong> Camera tracking works identically in Airplane Mode. Under Apple’s App Privacy definition, <strong>Camera, Body, and Hand data are NOT collected</strong>.</li>
+                            <li><strong>100% Offline Capable &amp; Not Collected:</strong> Camera tracking works identically in Airplane Mode. Under Apple’s App Privacy definition, <strong>Camera, Face, Body, and Hand data are NOT collected</strong>.</li>
+                        </ul>
+                    </section>
+                    <section id="face-data">
+                        <h2>3. Front Camera &amp; Face Data Policy (Zero Face Data Collected, Zero Storage, Zero Sharing)</h2>
+                        <p><strong>Meemaw Hunter collects zero face data. Although the front-facing camera field of view may incidentally include the player's face while tracking their hand, the app exclusively runs the on-device HandLandmarker model in volatile RAM (~16 ms per frame) to detect 21 hand joints and never detects, extracts, stores, retains, or shares any facial geometry, biometric identifiers, or video frames with any third party (retention period: 0 seconds).</strong></p>
+                        <p>In accordance with Apple App Store Review Guidelines 2.1 and 5.1.1, here is our complete breakdown regarding the front-facing camera and <code>MediaPipeTasksVision</code>:</p>
+                        <ul>
+                            <li><strong>What Face Data Is Collected: None (Zero face data collected).</strong> Meemaw Hunter only runs the local <code>HandLandmarker</code> model (<code>hand_landmarker.task</code>) to compute 21 hand/finger joint positions in real time and never detects, extracts, or collects facial geometry, facial landmarks, TrueDepth/Face ID maps, expressions, or biometric identifiers.</li>
+                            <li><strong>Use, Storage, Retention &amp; Deletion:</strong> Each front-camera video frame is processed exclusively in volatile device RAM (~16 ms per frame at 60 FPS) to drive aiming, pinch-to-shoot, and wrist-flip reload, and is immediately discarded from memory. Retention period is <strong>0 seconds</strong>—zero images, videos, face data, or hand coordinates are ever written to disk, iCloud, or external servers.</li>
+                            <li><strong>Third-Party Sharing: None (Zero sharing).</strong> No camera frames, face data, or hand coordinates are ever transmitted off the device or shared with any third party (RevenueCat and Mixpanel EU never receive any camera, face, or hand data).</li>
                         </ul>
                     </section>
                     <section>
-                        <h2>3. In-App Purchases (Apple StoreKit 2 &amp; RevenueCat) — Not Linked, No Tracking</h2>
+                        <h2>4. In-App Purchases (Apple StoreKit 2 &amp; RevenueCat) — Not Linked, No Tracking</h2>
                         <p>Downloading the game includes the interactive tutorial plus Worlds 1 and 2 for free. Unlocking and restoring the optional one-time non-consumable <strong>Sheriff Full Game Pack</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, Apple Family Sharing supported up to 6 members) is processed by Apple via <strong>StoreKit 2</strong> and verified via <strong>RevenueCat</strong> solely using an anonymous random App User ID (<code>$RCAnonymousID</code> / UUID).</p>
                         <p>No Apple ID email address, real name, billing address, or payment card details are ever shared with us.</p>
                     </section>
                     <section>
-                        <h2>4. Anonymous Product &amp; Gameplay Telemetry (Mixpanel EU, ip=0) — No Tracking</h2>
+                        <h2>5. Anonymous Product &amp; Gameplay Telemetry (Mixpanel EU, ip=0) — No Tracking</h2>
                         <p>To balance wave difficulty and improve hand-gesture ergonomics, Meemaw Hunter sends strictly anonymous product interaction events to <strong>Mixpanel EU</strong>:</p>
                         <ul>
                             <li><strong>European Union Data Residency &amp; IP Anonymization (<code>ip=0</code>):</strong> Events are sent exclusively to EU servers (<code>https://api-eu.mixpanel.com</code>) with <code>ip=0</code> enforced—client IP addresses are discarded at ingestion and never stored.</li>
@@ -229,7 +253,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. Summary Manifest Table &amp; Apple PrivacyInfo.xcprivacy</h2>
+                        <h2>6. Summary Manifest Table &amp; Apple PrivacyInfo.xcprivacy</h2>
                         <p>Complete breakdown of data categories and Required Reason APIs declared in Meemaw Hunter’s <code>PrivacyInfo.xcprivacy</code> manifest:</p>
                         <div class="manifest-table-wrap">
                             <table>
@@ -244,7 +268,12 @@
                                     <tr>
                                         <td><strong>Front Camera &amp; 21-Point Hand Skeleton</strong> (<code>MediaPipeTasksVision</code>)</td>
                                         <td>Not Collected</td>
-                                        <td>100% volatile RAM on-device (CPU &amp; Neural Engine at 60 FPS). Zero images, videos, TrueDepth/Face ID data, or 3D hand coordinates saved or transmitted.</td>
+                                        <td>100% volatile RAM on-device (CPU &amp; Neural Engine at 60 FPS, ~16 ms/frame). Zero images, videos, or 3D hand coordinates saved or transmitted.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Face Data</strong> (<code>Front Camera Field of View</code>)</td>
+                                        <td>Not Collected · 0s Retention · Never Stored or Shared</td>
+                                        <td>Zero facial geometry, facial landmarks, TrueDepth/Face ID maps, expressions, or biometric identifiers are ever detected, collected, stored (disk/iCloud/servers), or shared with third parties (only <code>HandLandmarker</code> / <code>hand_landmarker.task</code> runs in volatile RAM).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Purchases</strong> (<code>Purchase History</code>)</td>
@@ -271,12 +300,12 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. 16:9 AirPlay TV Mode &amp; Children’s / Family Privacy (GDPR &amp; COPPA)</h2>
+                        <h2>7. 16:9 AirPlay TV Mode &amp; Children’s / Family Privacy (GDPR &amp; COPPA)</h2>
                         <p>When casting Meemaw Hunter to an Apple TV or AirPlay-compatible smart TV, iOS renders a native 16:9 western stage scene locally over AirPlay; camera video is never streamed to external servers.</p>
                         <p>Because Meemaw Hunter requires no user accounts, displays zero behavioral ads, records zero camera/audio media, and collects no personally identifiable information from players of any age, it complies with GDPR, UK GDPR, and COPPA.</p>
                     </section>
                     <section>
-                        <h2>7. Your Rights, Control &amp; Contact</h2>
+                        <h2>8. Your Rights, Control &amp; Contact</h2>
                         <p>You can revoke Camera access anytime in <em>iOS Settings &gt; Privacy &amp; Security &gt; Camera</em> (touch controls remain playable) or erase all local preferences and reset your local installation UUID by deleting the app. For any privacy inquiry or GDPR erasure request, contact Xavier Larrodé at <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
                     </section>
                 `
@@ -308,12 +337,21 @@
                             <li><strong>100 % sin conexión y «No recopilado»:</strong> El seguimiento gestual funciona al 100 % en Modo Avión. Según la definición de privacidad de Apple, <strong>los datos de Cámara, Cuerpo y Mano NO se recopilan</strong>.</li>
                         </ul>
                     </section>
+                    <section id="face-data">
+                        <h2>3. Política de cámara frontal y datos faciales (Cero datos faciales recopilados, cero almacenamiento, cero cesión)</h2>
+                        <p>De conformidad con las directrices 2.1 y 5.1.1 de Apple App Store Review sobre el uso de la cámara frontal con <code>MediaPipeTasksVision</code>:</p>
+                        <ul>
+                            <li><strong>Qué datos faciales se recopilan: Ninguno (Cero datos faciales recopilados).</strong> Aunque el campo de visión de la cámara frontal pueda incluir incidentalmente el rostro del jugador mientras sigue su mano, Meemaw Hunter ejecuta únicamente el modelo local <code>HandLandmarker</code> (<code>hand_landmarker.task</code>) para calcular en tiempo real las posiciones de 21 articulaciones de la mano y los dedos, y jamás detecta, extrae ni recopila geometría facial, puntos faciales, mapas TrueDepth/Face ID, expresiones ni identificadores biométricos.</li>
+                            <li><strong>Uso, almacenamiento, retención y eliminación:</strong> Cada fotograma se procesa exclusivamente en la memoria RAM volátil del dispositivo (~16 ms por fotograma a 60 FPS) para apuntar, disparar con pellizco y recargar girando la muñeca, y se descarta de inmediato. El periodo de retención es de <strong>0 segundos</strong>: cero imágenes, vídeos, datos faciales o coordenadas de la mano se escriben en disco, iCloud o servidores externos.</li>
+                            <li><strong>Cesión a terceros: Ninguna (Cero compartición).</strong> Ningún fotograma, dato facial ni coordenada de la mano sale del dispositivo ni se comparte con terceros (RevenueCat y Mixpanel UE jamás reciben datos de cámara, rostro ni mano).</li>
+                        </ul>
+                    </section>
                     <section>
-                        <h2>3. Compras integradas (Apple StoreKit 2 y RevenueCat) — No vinculadas, sin rastreo</h2>
+                        <h2>4. Compras integradas (Apple StoreKit 2 y RevenueCat) — No vinculadas, sin rastreo</h2>
                         <p>La descarga incluye gratis el tutorial interactivo y los Mundos 1 y 2. El desbloqueo y la restauración de la compra única no consumible <strong>Pack Sheriff Juego Completo</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, compatible con En Familia hasta 6 miembros) se procesan mediante <strong>Apple StoreKit 2</strong> y se validan con <strong>RevenueCat</strong> usando únicamente un identificador aleatorio anónimo (<code>$RCAnonymousID</code> / UUID). Jamás recibimos tu correo de Apple ID, nombre ni datos de pago.</p>
                     </section>
                     <section>
-                        <h2>4. Telemetría anónima de juego (Mixpanel UE, ip=0) — Sin rastreo</h2>
+                        <h2>5. Telemetría anónima de juego (Mixpanel UE, ip=0) — Sin rastreo</h2>
                         <p>Para equilibrar la dificultad y mejorar la ergonomía gestual, Meemaw Hunter envía eventos anónimos de interacción a <strong>Mixpanel UE</strong>:</p>
                         <ul>
                             <li><strong>Residencia de datos en la Unión Europea y <code>ip=0</code>:</strong> Los eventos se envían exclusivamente a servidores europeos (<code>https://api-eu.mixpanel.com</code>) con <code>ip=0</code> activado (las direcciones IP se descartan al ingresar y nunca se almacenan).</li>
@@ -322,7 +360,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. Tabla resumen del manifiesto de privacidad (PrivacyInfo.xcprivacy)</h2>
+                        <h2>6. Tabla resumen del manifiesto de privacidad (PrivacyInfo.xcprivacy)</h2>
                         <div class="manifest-table-wrap">
                             <table>
                                 <thead>
@@ -336,7 +374,12 @@
                                     <tr>
                                         <td><strong>Cámara frontal y esqueleto de 21 puntos</strong> (<code>MediaPipeTasksVision</code>)</td>
                                         <td>No recopilado</td>
-                                        <td>100 % en memoria RAM volátil en el dispositivo a 60 FPS. Cero fotos, vídeos, datos Face ID/TrueDepth o coordenadas 3D guardadas o enviadas.</td>
+                                        <td>100 % en memoria RAM volátil en el dispositivo a 60 FPS (~16 ms/fotograma). Cero fotos, vídeos o coordenadas 3D guardadas o enviadas.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Datos faciales</strong> (<code>Front Camera Field of View</code>)</td>
+                                        <td>No recopilado · Retención 0 s · Nunca guardado ni compartido</td>
+                                        <td>Cero geometría facial, puntos faciales, mapas TrueDepth/Face ID o datos biométricos detectados, guardados (disco/iCloud/servidor) o compartidos con terceros (solo <code>HandLandmarker</code> <code>hand_landmarker.task</code> en RAM).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Compras</strong> (<code>Purchase History</code>)</td>
@@ -363,11 +406,11 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. Modo Salón AirPlay TV 16:9 y privacidad familiar (RGPD / COPPA)</h2>
+                        <h2>7. Modo Salón AirPlay TV 16:9 y privacidad familiar (RGPD / COPPA)</h2>
                         <p>Al proyectar por AirPlay TV, iOS muestra localmente el escenario western 16:9 en tu televisor sin enviar vídeo de cámara a servidores externos. Al no requerir cuentas, ni mostrar anuncios, ni recopilar información personal identificable, Meemaw Hunter cumple con el RGPD y COPPA.</p>
                     </section>
                     <section>
-                        <h2>7. Derechos, control y contacto</h2>
+                        <h2>8. Derechos, control y contacto</h2>
                         <p>Puedes revocar el permiso de Cámara en <em>Ajustes &gt; Privacidad y seguridad &gt; Cámara</em> o eliminar todos los ajustes locales y restablecer el UUID desinstalando la app. Contacto y solicitudes RGPD: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
                     </section>
                 `
@@ -399,12 +442,21 @@
                             <li><strong>100 % offlinefähig &amp; „Nicht erfasst“:</strong> Das Kameratracking funktioniert identisch im Flugmodus. Nach Apples Datenschutzdefinition gelten <strong>Kamera-, Körper- und Handdaten als NICHT erfasst</strong>.</li>
                         </ul>
                     </section>
+                    <section id="face-data">
+                        <h2>3. Richtlinie zu Frontkamera &amp; Gesichtsdaten (Keine Gesichtsdaten erfasst, keine Speicherung, keine Weitergabe)</h2>
+                        <p>Gemäß den Apple App Store Review Guidelines 2.1 und 5.1.1 zur Nutzung der Frontkamera mit <code>MediaPipeTasksVision</code>:</p>
+                        <ul>
+                            <li><strong>Welche Gesichtsdaten werden erfasst: Keine (Null Gesichtsdaten erfasst).</strong> Auch wenn das Sichtfeld der Frontkamera beim Verfolgen der Hand beiläufig das Gesicht des Spielers erfassen kann, führt Meemaw Hunter ausschließlich das lokale Modell <code>HandLandmarker</code> (<code>hand_landmarker.task</code>) aus, um 21 Hand- und Fingergelenkpunkte in Echtzeit zu berechnen, und erkennt, extrahiert oder erfasst niemals Gesichtsgeometrie, Gesichtsmerkmale, TrueDepth-/Face-ID-Karten, Mimik oder biometrische Kennungen.</li>
+                            <li><strong>Nutzung, Speicherung, Aufbewahrung &amp; Löschung:</strong> Jedes Einzelbild wird ausschließlich im flüchtigen Geräte-RAM (~16 ms pro Bild bei 60 FPS) für Zielen, Pinch-Schuss und Handgelenk-Nachladen verarbeitet und sofort aus dem Speicher verworfen. Die Aufbewahrungsdauer beträgt <strong>0 Sekunden</strong> – null Bilder, Videos, Gesichtsdaten oder Handkoordinaten werden auf Festplatte, iCloud oder externen Servern gespeichert.</li>
+                            <li><strong>Weitergabe an Dritte: Keine (Null Weitergabe).</strong> Kamerabilder, Gesichtsdaten oder Handkoordinaten verlassen niemals das Gerät und werden an keinerlei Dritte weitergegeben (weder RevenueCat noch Mixpanel EU erhalten Kamera-, Gesichts- oder Handdaten).</li>
+                        </ul>
+                    </section>
                     <section>
-                        <h2>3. In-App-Käufe (Apple StoreKit 2 &amp; RevenueCat) — Nicht verknüpft, kein Tracking</h2>
+                        <h2>4. In-App-Käufe (Apple StoreKit 2 &amp; RevenueCat) — Nicht verknüpft, kein Tracking</h2>
                         <p>Das interaktive Tutorial sowie Welt 1 und 2 sind kostenlos enthalten. Die Freischaltung und Wiederherstellung des optionalen Einmalkaufs <strong>Sheriff-Vollversion</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, inkl. Apple-Familienfreigabe für bis zu 6 Mitglieder) erfolgt über <strong>Apple StoreKit 2</strong> und <strong>RevenueCat</strong> ausschließlich anhand einer zufälligen anonymen App-Benutzer-ID (<code>$RCAnonymousID</code> / UUID). Wir erhalten niemals Ihre Apple-ID-E-Mail, Ihren Namen oder Zahlungsdaten.</p>
                     </section>
                     <section>
-                        <h2>4. Anonyme Produkt- &amp; Spiel-Telemetrie (Mixpanel EU, ip=0) — Kein Tracking</h2>
+                        <h2>5. Anonyme Produkt- &amp; Spiel-Telemetrie (Mixpanel EU, ip=0) — Kein Tracking</h2>
                         <p>Zur Abstimmung des Schwierigkeitsgrads und der Gestenergonomie sendet Meemaw Hunter rein anonyme Interaktionsereignisse an <strong>Mixpanel EU</strong>:</p>
                         <ul>
                             <li><strong>EU-Datenhaltung &amp; IP-Anonymisierung (<code>ip=0</code>):</strong> Übertragung ausschließlich an Server in der Europäischen Union (<code>https://api-eu.mixpanel.com</code>) mit aktiviertem Parameter <code>ip=0</code> – Client-IP-Adressen werden beim Empfang sofort verworfen und niemals gespeichert.</li>
@@ -413,7 +465,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. Übersichtstabelle zum Datenschutz-Manifest (PrivacyInfo.xcprivacy)</h2>
+                        <h2>6. Übersichtstabelle zum Datenschutz-Manifest (PrivacyInfo.xcprivacy)</h2>
                         <div class="manifest-table-wrap">
                             <table>
                                 <thead>
@@ -427,7 +479,12 @@
                                     <tr>
                                         <td><strong>Frontkamera &amp; 21-Punkte-Handskelett</strong> (<code>MediaPipeTasksVision</code>)</td>
                                         <td>Nicht erfasst</td>
-                                        <td>100 % flüchtiger RAM auf dem Gerät (60 FPS). Keine Fotos, Videos, Face-ID-/TrueDepth-Daten oder 3D-Handkoordinaten gespeichert oder übertragen.</td>
+                                        <td>100 % flüchtiger RAM auf dem Gerät (60 FPS, ~16 ms/Bild). Keine Fotos, Videos oder 3D-Handkoordinaten gespeichert oder übertragen.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Gesichtsdaten</strong> (<code>Front Camera Field of View</code>)</td>
+                                        <td>Nicht erfasst · 0 s Aufbewahrung · Nie gespeichert oder geteilt</td>
+                                        <td>Keine Gesichtsgeometrie, Gesichtsmerkmale, TrueDepth-/Face-ID-Daten oder Biometrie erkannt, gespeichert (Gerät/iCloud/Server) oder mit Dritten geteilt (nur <code>HandLandmarker</code> <code>hand_landmarker.task</code> im RAM).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Käufe</strong> (<code>Purchase History</code>)</td>
@@ -454,11 +511,11 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. 16:9-AirPlay-TV-Modus &amp; Familienschutz (DSGVO / COPPA)</h2>
+                        <h2>7. 16:9-AirPlay-TV-Modus &amp; Familienschutz (DSGVO / COPPA)</h2>
                         <p>Im AirPlay-TV-Modus rendert iOS lokal eine 16:9-Westernbühne auf Ihrem Fernseher, ohne Kameravideos an externe Server zu senden. Ohne Kontozwang, ohne Verhaltenswerbung und ohne Erhebung personenbezogener Daten erfüllt Meemaw Hunter die Vorgaben von DSGVO und COPPA.</p>
                     </section>
                     <section>
-                        <h2>7. Ihre Rechte, Kontrolle &amp; Kontakt</h2>
+                        <h2>8. Ihre Rechte, Kontrolle &amp; Kontakt</h2>
                         <p>Sie können den Kamerazugriff jederzeit unter <em>Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Kamera</em> widerrufen oder alle lokalen Einstellungen samt lokaler UUID durch Löschen der App entfernen. Kontakt &amp; DSGVO-Anfragen: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
                     </section>
                 `
@@ -490,12 +547,21 @@
                             <li><strong>100 % offline e «Non raccolto»:</strong> Il tracciamento gestuale funziona al 100 % in Modalità Aereo. Secondo la definizione ufficiale Apple App Privacy, <strong>i dati di Fotocamera, Corpo e Mano NON vengono raccolti</strong>.</li>
                         </ul>
                     </section>
+                    <section id="face-data">
+                        <h2>3. Politica su fotocamera frontale e dati del volto (Zero dati facciali raccolti, zero archiviazione, zero condivisione)</h2>
+                        <p>In conformità alle linee guida Apple App Store Review 2.1 e 5.1.1 sull’uso della fotocamera frontale con <code>MediaPipeTasksVision</code>:</p>
+                        <ul>
+                            <li><strong>Quali dati facciali vengono raccolti: Nessuno (Zero dati facciali raccolti).</strong> Sebbene il campo visivo della fotocamera frontale possa includere incidentalmente il volto del giocatore mentre traccia la mano, Meemaw Hunter esegue esclusivamente il modello locale <code>HandLandmarker</code> (<code>hand_landmarker.task</code>) per calcolare in tempo reale 21 articolazioni della mano e delle dita, senza mai rilevare, estrarre o raccogliere geometria facciale, punti del volto, mappe TrueDepth/Face ID, espressioni o identificatori biometrici.</li>
+                            <li><strong>Uso, archiviazione, conservazione ed eliminazione:</strong> Ogni fotogramma è elaborato esclusivamente nella memoria RAM volatile del dispositivo (~16 ms per fotogramma a 60 FPS) per mirare, sparare con pizzico e ricaricare ruotando il polso, venendo immediatamente scartato dalla memoria. Il periodo di conservazione è di <strong>0 secondi</strong>: zero immagini, video, dati facciali o coordinate della mano vengono mai scritti su disco, iCloud o server esterni.</li>
+                            <li><strong>Condivisione con terze parti: Nessuna (Zero condivisione).</strong> Nessun fotogramma, dato facciale o coordinata della mano viene trasmesso fuori dal dispositivo o condiviso con terze parti (né RevenueCat né Mixpanel UE ricevono mai dati di fotocamera, volto o mano).</li>
+                        </ul>
+                    </section>
                     <section>
-                        <h2>3. Acquisti in-app (Apple StoreKit 2 e RevenueCat) — Non collegati, nessun tracciamento</h2>
+                        <h2>4. Acquisti in-app (Apple StoreKit 2 e RevenueCat) — Non collegati, nessun tracciamento</h2>
                         <p>Il download include gratuitamente il tutorial interattivo e i Mondi 1 e 2. Lo sblocco e il ripristino dell’acquisto unico non consumabile <strong>Pacchetto Sceriffo Gioco Completo</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, compatibile con «In famiglia» fino a 6 membri) sono gestiti da <strong>Apple StoreKit 2</strong> e verificati tramite <strong>RevenueCat</strong> esclusivamente tramite un ID utente app casuale e anonimo (<code>$RCAnonymousID</code> / UUID). Non riceviamo mai email Apple ID, nome o dati della carta di pagamento.</p>
                     </section>
                     <section>
-                        <h2>4. Telemetria anonima di prodotto e di gioco (Mixpanel UE, ip=0) — Nessun tracciamento</h2>
+                        <h2>5. Telemetria anonima di prodotto e di gioco (Mixpanel UE, ip=0) — Nessun tracciamento</h2>
                         <p>Per bilanciare la difficoltà e migliorare l’ergonomia dei gesti, Meemaw Hunter invia eventi di interazione rigorosamente anonimi a <strong>Mixpanel UE</strong>:</p>
                         <ul>
                             <li><strong>Residenza dei dati nell’Unione Europea e <code>ip=0</code>:</strong> I dati vengono inviati solo a server nell’UE (<code>https://api-eu.mixpanel.com</code>) con <code>ip=0</code> attivo: gli indirizzi IP dei client vengono scartati all’ingresso e mai memorizzati.</li>
@@ -504,7 +570,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. Tabella riepilogativa del manifesto privacy (PrivacyInfo.xcprivacy)</h2>
+                        <h2>6. Tabella riepilogativa del manifesto privacy (PrivacyInfo.xcprivacy)</h2>
                         <div class="manifest-table-wrap">
                             <table>
                                 <thead>
@@ -518,7 +584,12 @@
                                     <tr>
                                         <td><strong>Fotocamera frontale e scheletro mano 21 punti</strong> (<code>MediaPipeTasksVision</code>)</td>
                                         <td>Non raccolto</td>
-                                        <td>100 % in memoria RAM volatile sul dispositivo a 60 FPS. Zero immagini, video, dati Face ID/TrueDepth o coordinate 3D salvati o trasmessi.</td>
+                                        <td>100 % in memoria RAM volatile sul dispositivo a 60 FPS (~16 ms/frame). Zero immagini, video o coordinate 3D salvati o trasmessi.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Dati facciali</strong> (<code>Front Camera Field of View</code>)</td>
+                                        <td>Non raccolto · Conservazione 0 s · Mai salvato né condiviso</td>
+                                        <td>Zero geometria facciale, punti del volto, mappe TrueDepth/Face ID o dati biometrici rilevati, salvati (disco/iCloud/server) o condivisi con terzi (solo <code>HandLandmarker</code> <code>hand_landmarker.task</code> in RAM).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Acquisti</strong> (<code>Purchase History</code>)</td>
@@ -545,11 +616,11 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. Modalità Salotto AirPlay TV 16:9 e tutela delle famiglie (GDPR / COPPA)</h2>
+                        <h2>7. Modalità Salotto AirPlay TV 16:9 e tutela delle famiglie (GDPR / COPPA)</h2>
                         <p>Durante la proiezione AirPlay TV, iOS trasmette localmente la scena western 16:9 alla TV senza mai inviare flussi della fotocamera a server esterni. Priva di account, annunci comportamentali e raccolta di dati identificativi, Meemaw Hunter rispetta pienamente GDPR e COPPA.</p>
                     </section>
                     <section>
-                        <h2>7. Diritti, controllo e contatti</h2>
+                        <h2>8. Diritti, controllo e contatti</h2>
                         <p>Puoi revocare l’accesso alla Fotocamera in qualsiasi momento in <em>Impostazioni &gt; Privacy e sicurezza &gt; Fotocamera</em> o cancellare tutti i dati locali e l’UUID disinstallando l’app. Contatti e richieste GDPR: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
                     </section>
                 `
@@ -581,12 +652,21 @@
                             <li><strong>100 % offline e «Não coletado»:</strong> O rastreamento por câmera funciona integralmente em Modo Avião. Pela definição oficial da Apple, <strong>dados de Câmera, Corpo e Mão NÃO são coletados</strong>.</li>
                         </ul>
                     </section>
+                    <section id="face-data">
+                        <h2>3. Política de câmera frontal e dados faciais (Zero dados faciais coletados, zero armazenamento, zero compartilhamento)</h2>
+                        <p>Em conformidade com as diretrizes 2.1 e 5.1.1 da Apple App Store Review sobre o uso da câmera frontal com <code>MediaPipeTasksVision</code>:</p>
+                        <ul>
+                            <li><strong>Quais dados faciais são coletados: Nenhum (Zero dados faciais coletados).</strong> Embora o campo de visão da câmera frontal possa incluir incidentalmente o rosto do jogador ao rastrear sua mão, o Meemaw Hunter executa exclusivamente o modelo local <code>HandLandmarker</code> (<code>hand_landmarker.task</code>) para calcular em tempo real 21 articulações da mão e dos dedos, e jamais detecta, extrai ou coleta geometria facial, pontos faciais, mapas TrueDepth/Face ID, expressões ou identificadores biométricos.</li>
+                            <li><strong>Uso, armazenamento, retenção e exclusão:</strong> Cada quadro é processado exclusivamente na memória RAM volátil do aparelho (~16 ms por quadro a 60 FPS) para mirar, atirar com pinça e recarregar girando o pulso, sendo descartado imediatamente da memória. O período de retenção é de <strong>0 segundos</strong> — zero imagens, vídeos, dados faciais ou coordenadas da mão são gravados em disco, iCloud ou servidores externos.</li>
+                            <li><strong>Compartilhamento com terceiros: Nenhum (Zero compartilhamento).</strong> Nenhum quadro da câmera, dado facial ou coordenada da mão é transmitido para fora do aparelho ou compartilhado com terceiros (nem RevenueCat nem Mixpanel UE recebem jamais dados de câmera, rosto ou mão).</li>
+                        </ul>
+                    </section>
                     <section>
-                        <h2>3. Compras dentro do app (Apple StoreKit 2 e RevenueCat) — Não vinculadas, sem rastreamento</h2>
+                        <h2>4. Compras dentro do app (Apple StoreKit 2 e RevenueCat) — Não vinculadas, sem rastreamento</h2>
                         <p>O download inclui gratuitamente o tutorial interativo e os Mundos 1 e 2. O desbloqueio e a restauração da compra única vitalícia <strong>Pacote Xerife Jogo Completo</strong> (<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, com Compartilhamento Familiar Apple para até 6 membros) são processados via <strong>Apple StoreKit 2</strong> e verificados pelo <strong>RevenueCat</strong> exclusivamente por meio de um ID anônimo aleatório (<code>$RCAnonymousID</code> / UUID). Nenhum e-mail de ID Apple, nome ou cartão de pagamento é compartilhado conosco.</p>
                     </section>
                     <section>
-                        <h2>4. Telemetria anônima de produto e jogabilidade (Mixpanel UE, ip=0) — Sem rastreamento</h2>
+                        <h2>5. Telemetria anônima de produto e jogabilidade (Mixpanel UE, ip=0) — Sem rastreamento</h2>
                         <p>Para equilibrar a dificuldade das ondas e aprimorar a ergonomia dos gestos, o Meemaw Hunter envia eventos anônimos de interação para o <strong>Mixpanel UE</strong>:</p>
                         <ul>
                             <li><strong>Hospedagem na União Europeia e anonimização de IP (<code>ip=0</code>):</strong> Enviado exclusivamente para servidores na UE (<code>https://api-eu.mixpanel.com</code>) com <code>ip=0</code> ativado — o endereço IP do cliente é descartado na entrada e nunca armazenado.</li>
@@ -595,7 +675,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. Tabela de resumo do manifesto de privacidade (PrivacyInfo.xcprivacy)</h2>
+                        <h2>6. Tabela de resumo do manifesto de privacidade (PrivacyInfo.xcprivacy)</h2>
                         <div class="manifest-table-wrap">
                             <table>
                                 <thead>
@@ -609,7 +689,12 @@
                                     <tr>
                                         <td><strong>Câmera frontal e esqueleto de 21 pontos</strong> (<code>MediaPipeTasksVision</code>)</td>
                                         <td>Não coletado</td>
-                                        <td>100 % em memória RAM volátil no aparelho a 60 FPS. Zero imagens, vídeos, dados Face ID/TrueDepth ou coordenadas 3D salvos ou transmitidos.</td>
+                                        <td>100 % em memória RAM volátil no aparelho a 60 FPS (~16 ms/quadro). Zero imagens, vídeos ou coordenadas 3D salvos ou transmitidos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Dados faciais</strong> (<code>Front Camera Field of View</code>)</td>
+                                        <td>Não coletado · Retenção 0 s · Nunca armazenado nem compartilhado</td>
+                                        <td>Zero geometria facial, pontos faciais, mapas TrueDepth/Face ID ou biometria detectados, armazenados (disco/iCloud/servidor) ou compartilhados com terceiros (apenas <code>HandLandmarker</code> <code>hand_landmarker.task</code> em RAM).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Compras</strong> (<code>Purchase History</code>)</td>
@@ -636,11 +721,11 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. Modo Sala AirPlay TV 16:9 e privacidade familiar (LGPD / GDPR / COPPA)</h2>
+                        <h2>7. Modo Sala AirPlay TV 16:9 e privacidade familiar (LGPD / GDPR / COPPA)</h2>
                         <p>Ao transmitir via AirPlay TV, o iOS exibe localmente o cenário western 16:9 na sua TV sem nunca transmitir vídeo da câmera para servidores externos. Sem contas, sem anúncios comportamentais e sem coleta de dados pessoais identificáveis, o Meemaw Hunter respeita integralmente a LGPD, o GDPR e a COPPA.</p>
                     </section>
                     <section>
-                        <h2>7. Seus direitos, controle e contato</h2>
+                        <h2>8. Seus direitos, controle e contato</h2>
                         <p>Você pode revogar o acesso à Câmera a qualquer momento em <em>Ajustes &gt; Privacidade e Segurança &gt; Câmera</em> ou apagar todos os dados locais e redefinir o UUID desinstalando o aplicativo. Contato e solicitações LGPD/GDPR: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a>.</p>
                     </section>
                 `
@@ -672,12 +757,21 @@
                             <li><strong>100 %オフライン動作・「収集なし」：</strong> カメラ追跡は機内モードでも100 %同じように動作します。Apple の App Privacy 定義に基づき、<strong>カメラ・身体・手のデータは「収集なし（Not Collected）」</strong>に該当します。</li>
                         </ul>
                     </section>
+                    <section id="face-data">
+                        <h2>3. フロントカメラおよび顔データに関するポリシー（顔データの収集ゼロ・保存ゼロ・共有ゼロ）</h2>
+                        <p>Apple App Store Review ガイドライン 2.1 および 5.1.1 に基づき、フロントカメラと <code>MediaPipeTasksVision</code> の取り扱いについて以下の通り明示します：</p>
+                        <ul>
+                            <li><strong>収集される顔データ：なし（顔データの収集ゼロ）。</strong> 手を追跡する際、フロントカメラの視野（画角）にプレイヤーの顔が偶発的に映り込む場合がありますが、Meemaw Hunter はローカルモデル <code>HandLandmarker</code>（<code>hand_landmarker.task</code>）のみを実行して手・指の21関節座標をリアルタイム計算するものであり、顔の形状（ジオメトリ）、顔ランドマーク、TrueDepth / Face ID深度マップ、表情、生体識別子を検出・抽出・収集することは一切ありません。</li>
+                            <li><strong>利用目的・保存・保持期間・削除：</strong> フロントカメラの各フレームは、照準・ピンチ発射・手首リロード操作のために端末の揮発性メモリ（RAM）内のみ（60 FPS・1フレーム約16ミリ秒）で処理され、直ちにメモリから破棄されます。保持期間は <strong>0秒</strong> であり、画像、動画、顔データ、手の座標がストレージ、iCloud、外部サーバーに書き込まれることは一切ありません。</li>
+                            <li><strong>第三者への共有：なし（共有ゼロ）。</strong> カメラフレーム、顔データ、手の座標が端末外へ送信されたり第三者に共有されたりすることは一切ありません（RevenueCat および Mixpanel EU にカメラ・顔・手のデータが送信されることは一切ありません）。</li>
+                        </ul>
+                    </section>
                     <section>
-                        <h2>3. アプリ内課金（Apple StoreKit 2 &amp; RevenueCat）— 身元との関連付けなし・トラッキングなし</h2>
+                        <h2>4. アプリ内課金（Apple StoreKit 2 &amp; RevenueCat）— 身元との関連付けなし・トラッキングなし</h2>
                         <p>無料ダウンロードにはインタラクティブ・チュートリアルおよびワールド1・2が含まれます。買い切り型（非消耗型）の <strong>保安官フルゲームパック</strong>（<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>、最大6名のAppleファミリー共有対応）の解除および復元には、<strong>Apple StoreKit 2</strong> と <strong>RevenueCat</strong> を使用し、ランダムな匿名AppユーザID（<code>$RCAnonymousID</code> / UUID）のみでレシート確認を行います。Apple IDのメールアドレス、氏名、請求先住所、クレジットカード情報が開発者に共有されることはありません。</p>
                     </section>
                     <section>
-                        <h2>4. 匿名プロダクト＆ゲームプレイ統計（Mixpanel EU、ip=0）— トラッキングなし</h2>
+                        <h2>5. 匿名プロダクト＆ゲームプレイ統計（Mixpanel EU、ip=0）— トラッキングなし</h2>
                         <p>ゲーム難易度バランスの調整およびハンドジェスチャーの快適性向上のため、匿名の操作イベントのみを <strong>Mixpanel EU</strong> に送信します。</p>
                         <ul>
                             <li><strong>欧州連合（EU）データレジデンシーとIP匿名化（<code>ip=0</code>）：</strong> 通信先はEU域内サーバー（<code>https://api-eu.mixpanel.com</code>）に限定され、<code>ip=0</code> 指定によりクライアントIPアドレスは受信時に即座に破棄され一切保存されません。</li>
@@ -686,7 +780,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. プライバシーマニフェスト一覧表（PrivacyInfo.xcprivacy）</h2>
+                        <h2>6. プライバシーマニフェスト一覧表（PrivacyInfo.xcprivacy）</h2>
                         <div class="manifest-table-wrap">
                             <table>
                                 <thead>
@@ -700,7 +794,12 @@
                                     <tr>
                                         <td><strong>フロントカメラ＆21点手指骨格</strong>（<code>MediaPipeTasksVision</code>）</td>
                                         <td>収集なし</td>
-                                        <td>端末内の揮発性RAM上のみで100 %処理（60 FPS）。画像、動画、TrueDepth/Face IDデータ、3D手指座標の保存・送信ゼロ。</td>
+                                        <td>端末内の揮発性RAM上のみで100 %処理（60 FPS・約16 ms/フレーム）。画像、動画、3D手指座標の保存・送信ゼロ。</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>顔データ</strong>（<code>Front Camera Field of View</code>）</td>
+                                        <td>収集なし · 保持0秒 · 保存・共有なし</td>
+                                        <td>顔の形状、顔ランドマーク、TrueDepth/Face IDデータ、生体情報の検出・収集・保存（端末/iCloud/サーバー）・第三者共有はゼロ（<code>HandLandmarker</code> <code>hand_landmarker.task</code> のみRAM実行）。</td>
                                     </tr>
                                     <tr>
                                         <td><strong>購入履歴</strong>（<code>Purchase History</code>）</td>
@@ -727,11 +826,11 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. 16:9 AirPlay TVリビングモードとお子様・ご家族の保護（GDPR / COPPA）</h2>
+                        <h2>7. 16:9 AirPlay TVリビングモードとお子様・ご家族の保護（GDPR / COPPA）</h2>
                         <p>AirPlay対応テレビやApple TVへミラーリング／出力する際、iOSはローカル通信で16:9のウエスタン画面を描画し、カメラ映像が外部サーバーに送信されることはありません。アカウント不要・広告なし・個人識別情報の収集なしのため、お子様やご家族でも安心してご利用いただけます。</p>
                     </section>
                     <section>
-                        <h2>7. お客様の権利・管理方法・お問い合わせ</h2>
+                        <h2>8. お客様の権利・管理方法・お問い合わせ</h2>
                         <p>カメラ権限は <em>iOSの「設定」&gt;「プライバシーとセキュリティ」&gt;「カメラ」</em> からいつでもオフにでき、アプリを削除すると端末内の全設定およびローカルUUIDが即座に消去されます。プライバシーやGDPR削除請求に関するお問い合わせ：<a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a></p>
                     </section>
                 `
@@ -763,12 +862,21 @@
                             <li><strong>100 % 오프라인 작동 및 ‘수집 안 함’:</strong> 카메라 추적은 비행기 모드에서도 100 % 동일하게 작동합니다. Apple의 개인정보 보호 정의에 따라 <strong>카메라·신체·손 데이터는 ‘수집 안 함(Not Collected)’</strong>에 해당합니다.</li>
                         </ul>
                     </section>
+                    <section id="face-data">
+                        <h2>3. 전면 카메라 및 얼굴 데이터 정책 (얼굴 데이터 수집 제로, 저장 제로, 공유 제로)</h2>
+                        <p>Apple App Store Review 지침 2.1 및 5.1.1에 따라 전면 카메라와 <code>MediaPipeTasksVision</code> 처리 방침을 다음과 같이 명확히 고지합니다:</p>
+                        <ul>
+                            <li><strong>수집되는 얼굴 데이터: 없음 (얼굴 데이터 수집 제로).</strong> 손을 추적하는 동안 전면 카메라 시야(화각)에 플레이어의 얼굴이 우연히 포함될 수 있으나, Meemaw Hunter는 로컬 <code>HandLandmarker</code> 모델(<code>hand_landmarker.task</code>)만 실행하여 21개 손·손가락 관절 위치만 실시간 계산하며, 얼굴 기하학 정보, 얼굴 랜드마크, TrueDepth/Face ID 맵, 표정 또는 생체 인식 식별자를 절대 감지·추출·수집하지 않습니다.</li>
+                            <li><strong>이용 목적, 저장, 보유 기간 및 파기:</strong> 전면 카메라의 각 비디오 프레임은 조준, 집기 발사, 손목 재장전 제스처 구동을 위해 기기의 휘발성 RAM 내부에서만(60 FPS 기준 프레임당 약 16 ms) 처리된 뒤 메모리에서 즉시 폐기됩니다. 보유 기간은 <strong>0초</strong>이며 사진, 동영상, 얼굴 데이터 또는 손 좌표는 디스크, iCloud 또는 외부 서버에 절대 기록되지 않습니다.</li>
+                            <li><strong>제3자 공유: 없음 (공유 제로).</strong> 어떠한 카메라 프레임, 얼굴 데이터 또는 손 좌표도 기기 밖으로 전송되거나 제3자와 공유되지 않습니다(RevenueCat 및 Mixpanel EU는 카메라·얼굴·손 데이터를 일절 수신하지 않습니다).</li>
+                        </ul>
+                    </section>
                     <section>
-                        <h2>3. 인앱 결제 (Apple StoreKit 2 및 RevenueCat) — 신원 미연결 · 추적 없음</h2>
+                        <h2>4. 인앱 결제 (Apple StoreKit 2 및 RevenueCat) — 신원 미연결 · 추적 없음</h2>
                         <p>무료 다운로드에 대화형 튜토리얼과 월드 1·2가 포함됩니다. 1회성 비소모품 상품인 <strong>보안관 전체 게임 팩</strong>(<code>com.xlarrodeapp.meemawhunter.sheriffpack</code>, 최대 6인 Apple 가족 공유 지원)의 잠금 해제 및 구매 복원은 <strong>Apple StoreKit 2</strong>와 <strong>RevenueCat</strong>을 통해 무작위 익명 앱 사용자 ID(<code>$RCAnonymousID</code> / UUID)만으로 처리됩니다. Apple ID 이메일, 실명, 청구지 주소 또는 결제 카드 정보는 당사에 절대 공유되지 않습니다.</p>
                     </section>
                     <section>
-                        <h2>4. 익명 제품 및 게임플레이 텔레메트리 (Mixpanel EU, ip=0) — 추적 없음</h2>
+                        <h2>5. 익명 제품 및 게임플레이 텔레메트리 (Mixpanel EU, ip=0) — 추적 없음</h2>
                         <p>게임 난이도 밸런스와 손 제스처 편의성을 개선하기 위해 엄격히 익명화된 상호작용 이벤트만 <strong>Mixpanel EU</strong>로 전송합니다.</p>
                         <ul>
                             <li><strong>유럽연합(EU) 데이터 레지던시 및 IP 익명화(<code>ip=0</code>):</strong> 데이터는 유럽연합 내 서버(<code>https://api-eu.mixpanel.com</code>)로만 전송되며 <code>ip=0</code> 옵션이 적용되어 클라이언트 IP 주소는 수집 즉시 폐기되고 절대 저장되지 않습니다.</li>
@@ -777,7 +885,7 @@
                         </ul>
                     </section>
                     <section>
-                        <h2>5. 개인정보 매니페스트 요약표 (PrivacyInfo.xcprivacy)</h2>
+                        <h2>6. 개인정보 매니페스트 요약표 (PrivacyInfo.xcprivacy)</h2>
                         <div class="manifest-table-wrap">
                             <table>
                                 <thead>
@@ -791,7 +899,12 @@
                                     <tr>
                                         <td><strong>전면 카메라 및 21포인트 손 골격</strong> (<code>MediaPipeTasksVision</code>)</td>
                                         <td>수집 안 함</td>
-                                        <td>기기 내 휘발성 RAM에서 100 % 실시간 처리(60 FPS). 사진, 동영상, Face ID/TrueDepth 데이터 및 3D 손 좌표 저장·전송 제로.</td>
+                                        <td>기기 내 휘발성 RAM에서 100 % 실시간 처리(60 FPS, 프레임당 ~16 ms). 사진, 동영상 및 3D 손 좌표 저장·전송 제로.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>얼굴 데이터</strong> (<code>Front Camera Field of View</code>)</td>
+                                        <td>수집 안 함 · 보유 0초 · 저장 및 공유 안 함</td>
+                                        <td>얼굴 기하학 정보, 얼굴 랜드마크, TrueDepth/Face ID 맵 및 생체 정보 감지·수집·저장(디스크/iCloud/서버)·제3자 공유 제로(<code>HandLandmarker</code> <code>hand_landmarker.task</code>만 RAM 실행).</td>
                                     </tr>
                                     <tr>
                                         <td><strong>구매 내역</strong> (<code>Purchase History</code>)</td>
@@ -818,11 +931,11 @@
                         </div>
                     </section>
                     <section>
-                        <h2>6. 16:9 AirPlay TV 거실 모드 및 아동·가족 개인정보 보호 (GDPR / COPPA)</h2>
+                        <h2>7. 16:9 AirPlay TV 거실 모드 및 아동·가족 개인정보 보호 (GDPR / COPPA)</h2>
                         <p>AirPlay TV 연결 시 iOS가 로컬 네트워크를 통해 16:9 웨스턴 스테이지 화면을 TV에 출력하며, 카메라 영상은 외부 서버로 전송되지 않습니다. 계정 생성, 맞춤형 광고, 개인 식별 정보 수집이 전혀 없으므로 어린이와 온 가족이 안심하고 이용할 수 있습니다.</p>
                     </section>
                     <section>
-                        <h2>7. 권리 행사, 제어 및 문의처</h2>
+                        <h2>8. 권리 행사, 제어 및 문의처</h2>
                         <p>언제든지 <em>iOS 설정 &gt; 개인정보 보호 및 보안 &gt; 카메라</em>에서 카메라 권한을 해제할 수 있으며, 앱을 삭제하면 모든 로컬 데이터와 익명 UUID가 즉시 초기화됩니다. 개인정보 및 GDPR 삭제 관련 문의: <a href="mailto:xlarrodeapp@gmail.com">xlarrodeapp@gmail.com</a></p>
                     </section>
                 `
