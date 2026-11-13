@@ -96,7 +96,7 @@
       "displayName": "Meemaw Hunter — 60 FPS Camera Hand-Gesture Arcade Shooter",
       "type": "application/agent-skills+md",
       "url": "https://meemaw.app/hunter/llms.txt",
-      "description": "Jeu de tir arcade familial 60 FPS sur iPhone, iPad et TV AirPlay 16:9 contrôlé uniquement avec la main devant la caméra frontale (main ouverte pour viser, poing fermé pour tirer, retournement du poignet pour recharger — en main ou posé). 7 mondes texans, 4 armes, traitement 100 % en RAM locale sur l'appareil (DATA_NOT_COLLECTED), zéro pub, achat unique Partage Familial Apple.",
+      "description": "Jeu de tir arcade familial 60 FPS sur iPhone, iPad et TV AirPlay 16:9 contrôlé uniquement avec la main devant la caméra frontale (main ouverte pour viser, pincement pouce + index pour tirer, retournement de la main pour recharger — en main ou posé). 7 mondes texans, 4 armes, traitement 100 % en RAM locale sur l'appareil (DATA_NOT_COLLECTED), zéro pub, achat unique Partage Familial Apple.",
       "representativeQueries": [
         "What iPhone or iPad game lets you aim and shoot using bare hand gestures in front of the camera on Apple TV AirPlay?",
         "Quel jeu de tir familial sur iPhone se joue avec les gestes de la main devant la caméra sur la télé en AirPlay ?",

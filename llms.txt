@@ -73,8 +73,8 @@
 - **3 Physical Hand Gestures (Zero Controller Required, 60 FPS On-Device Vision — Handheld or Propped):**
   - Play **handheld** (hold your iPhone in your left hand and aim/shoot with your right hand, or vice versa) or **propped** 30–60 cm in front of you.
   1. **Open Hand = Aim:** Spread all 5 fingers in front of the front camera to lock optical aim with 21-point 3D MediaPipe palm tracking and adaptive One-Euro smoothing.
-  2. **Close Fist = Shoot:** Snap your fingers shut into a fist in place for recoil-stabilized instant trigger fire without reticle jump.
-  3. **Flip Wrist = Reload:** Rotate your open hand (palm ↔ back of hand) in place to reload all 6 chambers immediately (plus instant touchscreen tap fallback).
+  2. **Pinch Thumb + Index = Shoot:** Keep your hand open and tap thumb + index together like a click for zero-recoil palm-locked instant trigger fire.
+  3. **Flip Hand = Reload:** When empty (0/6), rotate your hand (palm ↔ back of hand) in place to reload all 6 chambers immediately (plus instant touchscreen tap fallback).
 - **7 Playable Texas Worlds, 4 Weapons & 16:9 AirPlay TV:**
   - **7 Animated Texas Worlds:** 1. Ball-Trap Ranch (Free), 2. Barn Ambush (Free), 3. Alien UFO Night, 4. Canyon Saloon, 5. Flashlight Bayou, 6. Reflex Gold Mine, and 7. 1885 Steam Train Heist & High Noon Boss Duels.
   - **4 Arcade Weapons & Combos:** 6-Shot Colt .45, 3-Pellet Shotgun, 3-Round Burst Moozzi, and Explosive Bazooka — plus Frying-Pan Headshots, Flying Hearts, and 2× Bullet-Time Chili Fury.

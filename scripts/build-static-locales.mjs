@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const TODAY = '2026-11-12';
+const TODAY = '2026-11-13';
 
 function escAttr(str) {
     return String(str)
@@ -761,7 +761,7 @@ for (const lang of ['en', 'es', 'de', 'it', 'pt-br', 'ja', 'ko']) {
         .replace('alt="Tarte dorée bonus"', 'alt="Golden Bonus Pie"');
     p2 = p2
         .replace('alt="Main ouverte pour viser"', `alt="${escAttr(p.g1Title)}"`)
-        .replace('alt="Poing fermé pour tirer"', `alt="${escAttr(p.g2Title)}"`)
+        .replace('alt="Pincer deux doigts pour tirer"', `alt="${escAttr(p.g2Title)}"`)
         .replace('alt="Tourner la main pour recharger"', `alt="${escAttr(p.g3Title)}"`)
         .replace(
             'alt="Meemaw Hunter projeté en 16:9 sur une télévision via AirPlay, avec l’iPhone posé juste sous l’écran TV face au joueur"',

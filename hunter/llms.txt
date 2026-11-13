@@ -24,8 +24,8 @@
 ## 3-Gesture Optical Control Loop (60 FPS On-Device — Handheld or Propped)
 - **Handheld or Propped Play:** Hold your iPhone in your left hand and aim/shoot with your right hand (or vice versa for left-handed players) anywhere on the go, or prop your iPhone/iPad 30–60 cm in front of you.
 1. **Open Hand = Aim:** Hold your open hand in front of the front camera; 21-point 3D MediaPipe hand tracking and sub-pixel One-Euro optical filtering move the emerald/gold crosshair smoothly across all iPhone models (including iPhone 17 Pro's 18 MP Center Stage sensor) and iPads.
-2. **Close Fist = Fire:** Curl your fingers into a fist to fire with recoil-stabilized hit detection (zero crosshair jump during rapid fire).
-3. **Flip Wrist (Palm ↔ Back of Hand) = Reload:** Turn your hand in place to reload the 6-shot cylinder without losing your aim—plus instant touchscreen tap fallback at any time.
+2. **Pinch Thumb + Index = Fire:** Keep your hand open and simply pinch thumb + index together like a click—palm-locked tracking keeps zero crosshair jump during rapid fire.
+3. **Flip Hand (Palm ↔ Back of Hand) = Reload:** When your cylinder hits 0/6, turn your hand in place to reload the 6-shot cylinder without losing your aim—plus instant touchscreen tap fallback at any time.
 
 ## 7 Playable Texas Worlds & 4 Arcade Weapons
 - **World 1 — Ball-Trap Ranch (Free):** Flying targets and skeet plates over a Texas dusk pasture.
