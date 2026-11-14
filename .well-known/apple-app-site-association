@@ -7,8 +7,10 @@
         "paths": ["/math/challenge", "/math/challenge/*", "/math/result", "/math/result/*"],
         "components": [
           { "/": "/math/challenge", "?": { "dictationId": "*" } },
+          { "/": "/math/challenge" },
           { "/": "/math/challenge/*" },
           { "/": "/math/result", "?": { "ctx": "*" } },
+          { "/": "/math/result" },
           { "/": "/math/result/*" }
         ]
       },

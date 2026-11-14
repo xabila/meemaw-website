@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Défi Meemaw Math ⚔️🧮</title>
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/math/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/math/assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/math/assets/apple-touch-icon.png">
 
     <!-- Apple Smart App Banner for automatic iOS native app header -->
     <meta name="apple-itunes-app" content="app-id=6824002615">
@@ -15,11 +14,13 @@
     <!-- Open Graph for WhatsApp / Telegram / iMessage preview -->
     <meta property="og:title" content="⚔️ Défi Meemaw Math - Tu oses relever le défi sans calculatrice ?" />
     <meta property="og:description" content="Quelqu'un te défie en calcul mental & automatismes ! Clique pour ouvrir Meemaw Math et battre son score." />
-    <meta property="og:image" content="https://meemaw.app/assets/og-icon.jpg" />
+    <meta property="og:image" content="https://meemaw.app/math/assets/og-math-icon.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="800" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="https://meemaw.app/math/assets/og-math-icon.jpg" />
 
     <style>
         :root {
@@ -143,9 +144,10 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const challenger = params.get('challenger') || 'Un ami';
-        const score = params.get('score') || '0';
-        const title = params.get('title') || 'Défi Maths Sans Calculatrice';
+        const challenger = params.get('challenger') || params.get('c') || 'Un ami';
+        const score = params.get('score') || params.get('s') || '0';
+        const issue = params.get('d');
+        const title = params.get('title') || (issue ? ('Mathus du Jour #' + issue) : 'Défi Maths Sans Calculatrice');
 
         function buildDeepLink() {
             return 'meemawmath://challenge' + window.location.search;
