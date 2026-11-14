@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const TODAY = '2026-11-13';
+const TODAY = '2026-11-14';
 
 function escAttr(str) {
     return String(str)
@@ -134,6 +134,7 @@ const orthoAttrMap = {
         'alt="QR Code App Store Meemaw"': 'alt="App Store QR Code for Learn French Spelling: Meemaw"',
         'aria-label="Pièges d\'orthographe"': 'aria-label="French spelling traps"',
         'aria-label="Règles clés maîtrisées"': 'aria-label="Core French rules mastered"',
+        'alt="Motus Orthographe Meemaw"': 'alt="French Spelling Motus by Meemaw"',
         'alt="50 fiches de règles sans jargon"': 'alt="50 jargon-free French grammar sheets"',
         'alt="Progression d\'Apprenti à Maître"': 'alt="5 mastery ranks from Apprentice to Master"',
         'aria-label="Capture précédente"': 'aria-label="Previous screenshot"',
@@ -149,6 +150,7 @@ const orthoAttrMap = {
         'alt="QR Code App Store Meemaw"': 'alt="Código QR App Store Ortografía francesa: Meemaw"',
         'aria-label="Pièges d\'orthographe"': 'aria-label="Trampas de ortografía francesa"',
         'aria-label="Règles clés maîtrisées"': 'aria-label="Reglas clave dominadas"',
+        'alt="Motus Orthographe Meemaw"': 'alt="Motus Ortografía Francesa de Meemaw"',
         'alt="50 fiches de règles sans jargon"': 'alt="50 fichas de reglas sin jerga"',
         'alt="Progression d\'Apprenti à Maître"': 'alt="Progresión de Aprendiz a Maestro"',
         'aria-label="Capture précédente"': 'aria-label="Captura anterior"',
@@ -214,9 +216,10 @@ function buildOrthoJsonLd(lang, d) {
             {
                 '@type': 'SoftwareApplication',
                 name: isEn ? 'Learn French Spelling: Meemaw' : 'Ortografía francesa: Meemaw',
-                alternateName: ['Meemaw', 'Orthographe & Dictée : Meemaw', 'Learn French Spelling: Meemaw', 'Ortografía francesa: Meemaw'],
+                alternateName: ['Meemaw', 'Orthographe & Dictée : Meemaw', 'Learn French Spelling: Meemaw', 'Ortografía francesa: Meemaw', 'Meemaw French Motus'],
                 operatingSystem: 'iOS, iPadOS',
                 applicationCategory: 'EducationalApplication',
+                softwareVersion: '1.0.45',
                 inLanguage: ['fr', 'en', 'es'],
                 url: pageUrl,
                 downloadUrl: oStore,
@@ -226,8 +229,8 @@ function buildOrthoJsonLd(lang, d) {
                     price: '0',
                     priceCurrency: isEn ? 'USD' : 'EUR',
                     description: isEn
-                        ? 'Free download with daily French dictation & spelling practice, free PRO trial, and Apple Family Sharing for up to 6 family members.'
-                        : 'Descarga gratuita con práctica diaria de dictado y ortografía en francés, prueba PRO gratuita y En Familia de Apple para hasta 6 personas.'
+                        ? 'Free download with 5-second express onboarding, daily French dictation & Motus practice, free PRO trial, and Apple Family Sharing for up to 6 family members.'
+                        : 'Descarga gratuita con inicio exprés en 5 segundos, práctica diaria de dictado y Motus en francés, prueba PRO gratuita y En Familia de Apple para hasta 6 personas.'
                 },
                 aggregateRating: {
                     '@type': 'AggregateRating',
@@ -237,6 +240,25 @@ function buildOrthoJsonLd(lang, d) {
                     worstRating: '1'
                 },
                 author: { '@id': 'https://meemaw.app/#organization' },
+                featureList: isEn
+                    ? [
+                        '1,837 studio 24 kHz French voice dictations read full-sentence then phrase-by-phrase with interactive Mini-Map',
+                        'New French Spelling Motus (Wordle-style grid): 300 curated 5-to-9-letter French words in 6 tries with 1st letter revealed, grammar clue, and English rule breakdown (100% silent play)',
+                        '620 French Anagrams & Word-by-Word lexical spelling mode',
+                        '50 jargon-free French grammar & agreement rule sheets explained in English, French, and Spanish',
+                        '9 game modes across 5 ranks with 1-tap mid-game difficulty switching',
+                        'Apple Screen Time Parental Shield & 1-tap WhatsApp / iMessage Family Duels',
+                        '100% offline, zero ads, zero data collected, and Apple Family Sharing for up to 6 members'
+                    ]
+                    : [
+                        '1.837 dictados en francés con voz de estudio a 24 kHz leídos frase entera y tramo a tramo con Mini-Mapa interactivo',
+                        'Nuevo modo Motus Ortografía: 300 palabras francesas de 5 a 9 letras en 6 intentos con 1.ª letra revelada, pista gramatical y regla explicada en español (100 % sin sonido)',
+                        '620 Anagramas en francés y modo Palabra por Palabra',
+                        '50 fichas de gramática y ortografía francesa explicadas sin jerga en español, francés e inglés',
+                        '9 modos de juego en 5 niveles con cambio de dificultad en 1 toque en plena partida',
+                        'Escudo Tiempo en Pantalla de Apple y duelos familiares por WhatsApp e iMessage',
+                        '100 % sin conexión, cero anuncios, cero datos recopilados y En Familia de Apple para 6 personas'
+                    ],
                 description: d.meta_desc
             },
             {
@@ -248,14 +270,14 @@ function buildOrthoJsonLd(lang, d) {
                 numberOfItems: 5,
                 itemListElement: isEn
                     ? [
-                        { '@type': 'ListItem', position: 1, name: 'Learn French Spelling: Meemaw — 24 kHz French voice dictation, 50 rules explained in English, 8 game modes, 100% offline & Family Sharing', url: oStore },
+                        { '@type': 'ListItem', position: 1, name: 'Learn French Spelling: Meemaw — 1,837 24 kHz French voice dictations, 300-word Spelling Motus, 620 Anagrams, 50 rules explained in English, 9 game modes, 100% offline & Family Sharing', url: oStore },
                         { '@type': 'ListItem', position: 2, name: 'Kwiziq / Lawless French — Detailed browser grammar quizzes (~$150+/yr, online-only)' },
                         { '@type': 'ListItem', position: 3, name: 'Projet Voltaire — Corporate French-only error-clicking drills (~$60/yr per user)' },
                         { '@type': 'ListItem', position: 4, name: 'Babbel — Beginner conversation lessons without dedicated word-by-word French dictation' },
                         { '@type': 'ListItem', position: 5, name: 'Duolingo (French) — Pre-spelled word bubbles without true dictation writing mastery' }
                     ]
                     : [
-                        { '@type': 'ListItem', position: 1, name: 'Ortografía francesa: Meemaw — Dictado en francés 24 kHz palabra por palabra, 50 reglas explicadas en español, 8 juegos, 100 % sin conexión', url: oStore },
+                        { '@type': 'ListItem', position: 1, name: 'Ortografía francesa: Meemaw — 1.837 dictados en francés 24 kHz, Motus de 300 palabras, 620 anagramas, 50 reglas explicadas en español, 9 juegos, 100 % sin conexión', url: oStore },
                         { '@type': 'ListItem', position: 2, name: 'Busuu / TV5MONDE — Comprensión general en línea sin dictado guiado sin conexión' },
                         { '@type': 'ListItem', position: 3, name: 'Projet Voltaire — Entrenamiento corporativo exclusivamente en francés' },
                         { '@type': 'ListItem', position: 4, name: 'Babbel — Diálogos básicos sin entrenamiento profundo de ortografía francesa' },
@@ -267,7 +289,8 @@ function buildOrthoJsonLd(lang, d) {
                 mainEntity: [
                     { '@type': 'Question', name: stripTags(d.q1), acceptedAnswer: { '@type': 'Answer', text: stripTags(d.a1) } },
                     { '@type': 'Question', name: stripTags(d.q2), acceptedAnswer: { '@type': 'Answer', text: stripTags(d.a2) } },
-                    { '@type': 'Question', name: stripTags(d.q3), acceptedAnswer: { '@type': 'Answer', text: stripTags(d.a3) } }
+                    { '@type': 'Question', name: stripTags(d.q3), acceptedAnswer: { '@type': 'Answer', text: stripTags(d.a3) } },
+                    { '@type': 'Question', name: stripTags(d.q4), acceptedAnswer: { '@type': 'Answer', text: stripTags(d.a4) } }
                 ]
             }
         ]
@@ -278,8 +301,8 @@ for (const lang of ['en', 'es']) {
     const d = ORTHO_I18N[lang];
     const canonicalUrl = `https://meemaw.app/${lang}/`;
     const keywords = lang === 'en'
-        ? 'learn French spelling app, French voice dictation iPhone, French grammar rules in English, DELF DALF dictation practice, AP French writing, Meemaw vs Duolingo French, Meemaw vs Kwiziq'
-        : 'aprender ortografía francesa, app dictado en francés iPhone, gramática francesa explicada en español, preparar DELF DALF EOI francés, Meemaw vs Duolingo francés';
+        ? 'learn French spelling app, French voice dictation iPhone, French Wordle Motus game, French word puzzle app, French grammar rules in English, DELF DALF dictation practice, AP French writing, Meemaw vs Duolingo French'
+        : 'aprender ortografía francesa, app dictado en francés iPhone, juego Motus palabras francés, gramática francesa explicada en español, preparar DELF DALF EOI francés, Meemaw vs Duolingo francés';
 
     const head = updateHeadMeta(orthoHeadTop, {
         htmlLang: lang,
@@ -337,7 +360,7 @@ for (const lang of ['en', 'es']) {
     body = replaceAttrById(body, 'footerCompLink', 'href', d.comp_guide_url);
 
     // Localized screenshots & alt text
-    body = body.replace(/<img\b([^>]*\bdata-shot="(\d)"[^>]*)>/gi, (_, attrs, idx) => {
+    body = body.replace(/<img\b([^>]*\bdata-shot="([a-z0-9]+)"[^>]*)>/gi, (_, attrs, idx) => {
         const cap = d['cap_' + idx] || '';
         const newAlt = escAttr(`${cap} — ${d.brand}`);
         let updated = attrs

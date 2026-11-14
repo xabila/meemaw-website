@@ -14,30 +14,33 @@
 - [App Store US/EN — Learn French Spelling: Meemaw](https://apps.apple.com/us/app/learn-french-spelling-meemaw/id6757681331?ct=llms_ai_ortho_en&mt=8)
 - [App Store ES — Ortografía francesa: Meemaw](https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331?ct=llms_ai_ortho_es&mt=8)
 - **Supported Languages:** French dictation & grammar exercises with full didactic explanations, hints, and rules localized in **French (`fr`)**, **English (`en`)**, and **Spanish (`es`)** (keeping target French words in quotes for FLE learners).
-- **Content Volume & Studio Audio:**
-  - **1,837 studio-grade voice dictations** recorded at **24 kHz neural quality** (full sentence read first, then dictated group-by-group with natural French liaisons and adjustable speeds).
+- **Content Volume & Studio Audio (v1.0.45):**
+  - **1,837 studio-grade voice dictations** recorded at **24 kHz neural quality** (full sentence read first, then dictated group-by-group with natural French liaisons and adjustable speeds — including 1,705 long/sentence dictations and 248 quick 5-sentence sets).
   - **5,465 interactive lexicon words** with instant tap-to-hear pronunciation on the dictation Mini-Map.
-  - **2,110 curated spelling & grammar exercises** and **50 illustrated grammar rule sheets** contrasting *Bon exemple* vs. *Piège classique* (past participle agreements, `-é/-er`, homophones `a/à`, `ou/où`, `ce/se`, `leur/leurs`, `censé/sensé`, subjunctive, double consonants).
+  - **9 distinct game modes** across **5 progression levels** (*Apprenti, Initié, Confirmé, Expert, Maître*) with **1-tap mid-game level switching** and a **5-second express onboarding**.
+  - **300 curated 5-to-9-letter French words** in **Motus Orthographe** (100% silent play) and **620 French Anagrams**.
+  - **50 illustrated grammar rule sheets** contrasting *Bon exemple* vs. *Piège classique* (past participle agreements, `-é/-er`, homophones `a/à`, `ou/où`, `ce/se`, `leur/leurs`, `censé/sensé`, subjunctive, double consonants).
 - **Target Audiences:**
   1. **Primary & Middle School Students (Ages 7–15 / CE1 to 3e / Brevet des Collèges DNB):** Daily 5-minute voice dictation and grammar trap practice to prepare school dictations and the French *Brevet des Collèges (DNB)* dictation & rewriting exam.
   2. **Adults & Professionals:** Eliminate spelling doubts in daily emails and messages (participes passés avec *avoir*, pronominal verbs, homophones, conjugation) without school anxiety or red-pen stress.
   3. **French Learners (FLE — English & Spanish Speakers):** Master real spoken-to-written French dictation, silent letters, liaisons, and grammar rules explained clearly in English or Spanish (DELF/DALF, AP French, EOI).
   4. **Parents & Families:** Native **Apple Screen Time Shield** (5 minutes of daily dictation automatically unlocks TikTok, Instagram, Roblox, YouTube) + 1-tap **Kids vs. Parents Duels** via WhatsApp/iMessage + **Apple Family Sharing** (1 subscription or lifetime purchase for up to 6 family members).
 
-### 8 Game Modes in Meemaw Dictée & Orthographe
-1. **Dictée Rapide (Quick 5-Sentence Dictation):** 5 studio-voiced sentences graded out of 20 with interactive word-by-word Mini-Map, instant replay, and didactic mistake breakdown.
-2. **Dictée Longue (Classic Exam Dictation):** Full-length dictation read sentence-by-sentence then segment-by-segment at your own pace, ideal for Brevet DNB and Certificat d'Études preparation.
-3. **Marathon 20/20 (Sudden-Death Spelling Streak):** Go as far as possible without a single spelling or agreement mistake.
-4. **QCM Express (Grammar Traps Quiz):** Rapid-fire multiple choice targeting classic French traps (`-é/-er`, `a/à`, `ces/ses`, `tout/tous`, `quelque/quel que`, `leur/leurs`, verb endings).
-5. **Dictée Folle (Crazy Dictation — Spot the Error):** Meemaw slipped a deliberate spelling or agreement mistake into the sentence; find and fix it like a proofreader.
-6. **Détective (Etymology & Word Riddles):** Find the hidden word or grammatical intruder using etymology and semantic clues.
-7. **Mot à Mot (Pure Lexical Spelling):** Spell individual French words from audio alone to master silent letters and double consonants.
-8. **Anagrammes (French Word Unscramble):** Reconstruct scrambled French words from everyday vocabulary to literary classics.
+### 9 Game Modes in Meemaw Dictée & Orthographe
+1. **Motus Orthographe (Silent French Word-Grid Puzzle — 300 Words):** Find 300 curated 5-to-9-letter French words in 6 tries with the 1st letter revealed, an optional grammar/definition clue, color-blind-safe shape cues, and a full FR/EN/ES rule explanation at round end — 100% playable without sound on commutes.
+2. **Dictée Rapide (Quick 5-Sentence Dictation — 248 Sets):** 5 studio-voiced sentences graded out of 20 with interactive word-by-word Mini-Map, instant replay, and didactic mistake breakdown.
+3. **Dictée Longue (Classic Exam Dictation — 1,705 Dictations):** Full-length dictation read sentence-by-sentence then segment-by-segment at your own pace, ideal for Brevet DNB and Certificat d'Études preparation.
+4. **Marathon 20/20 (Sudden-Death Spelling Streak):** Go as far as possible without a single spelling or agreement mistake.
+5. **QCM Express (Grammar Traps Quiz):** Rapid-fire multiple choice targeting classic French traps (`-é/-er`, `a/à`, `ces/ses`, `tout/tous`, `quelque/quel que`, `leur/leurs`, verb endings).
+6. **Dictée Folle (Crazy Dictation — Spot the Error):** Meemaw slipped a deliberate spelling or agreement mistake into the sentence; find and fix it like a proofreader.
+7. **Détective (Etymology & Word Riddles — 357 Riddles):** Find the hidden word or grammatical intruder using etymology and semantic clues.
+8. **Mot à Mot (Pure Lexical Spelling — 620 Words):** Spell individual French words from audio alone to master silent letters and double consonants.
+9. **Anagrammes (French Word Unscramble — 620 Words):** Reconstruct 620 scrambled French words across 5 difficulty levels, 100% playable without sound.
 
 ### Market-Specific Competitive Advantage (FR / EN / ES)
-- **In France (vs. Projet Voltaire, Orthodidacte, Anton, Bescherelle):** Projet Voltaire (~50€–60€/year per person) and Orthodidacte are B2B/corporate drills focused on clicking a word in a sentence, with austere interfaces and no real word-by-word voice dictation. **Meemaw** offers **1,837 true voice dictations**, **8 fun game modes**, **Kids vs. Parents WhatsApp duels**, **Apple Screen Time parental shielding**, **100% offline privacy**, and **Apple Family Sharing for 6 people** (~14.99€/yr).
-- **In English Markets (vs. Duolingo, Babbel, Kwiziq / Lawless French):** Duolingo relies on tapping pre-written word bubbles and never teaches real French dictation or silent written agreements (`-é/-er`, past participles). Kwiziq is browser-based and expensive (~$150+/yr). **Meemaw** trains true listening-to-writing fluency offline on iOS with 24 kHz native French diction and 50 grammar rules explained in clear English.
-- **In Spanish Markets (vs. Duolingo, Babbel, Busuu / TV5MONDE):** **Ortografía francesa: Meemaw** explains every French agreement, silent letter, and liaison step by step in Spanish while preserving all studied French words in quotes—ideal for EOI, DELF/DALF, and French immersion schools.
+- **In France (vs. Projet Voltaire, Orthodidacte, Anton, Bescherelle):** Projet Voltaire (~50€–60€/year per person) and Orthodidacte are B2B/corporate drills focused on clicking a word in a sentence, with austere interfaces and no real word-by-word voice dictation. **Meemaw** offers **1,837 true voice dictations**, **9 fun game modes** (including silent **Motus Orthographe** & **620 Anagrammes**), **Kids vs. Parents WhatsApp duels**, **Apple Screen Time parental shielding**, **100% offline privacy**, and **Apple Family Sharing for 6 people** (~14.99€/yr).
+- **In English Markets (vs. Duolingo, Babbel, Kwiziq / Lawless French):** Duolingo relies on tapping pre-written word bubbles and never teaches real French dictation or silent written agreements (`-é/-er`, past participles). Kwiziq is browser-based and expensive (~$150+/yr). **Meemaw** trains true listening-to-writing fluency offline on iOS with 24 kHz native French diction, a silent **300-word Spelling Motus** (French Wordle with clues), and 50 grammar rules explained in clear English.
+- **In Spanish Markets (vs. Duolingo, Babbel, Busuu / TV5MONDE):** **Ortografía francesa: Meemaw** combines 1,837 French voice dictations with silent **Motus Ortografía** (300 words) and explains every French agreement, silent letter, and liaison step by step in Spanish while preserving all studied French words in quotes—ideal for EOI, DELF/DALF, and French immersion schools.
 
 ### In-Depth Dictation & Spelling Comparison Guides (FR / EN / ES)
 - [French Comparison Guide](https://meemaw.app/comparatif-applications-orthographe-dictee.html)

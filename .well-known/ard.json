@@ -5,16 +5,18 @@
       "displayName": "Meemaw : Orthographe & Dictée (Learn French Spelling / Ortografía francesa)",
       "type": "application/agent-skills+md",
       "url": "https://meemaw.app/llms.txt",
-      "description": "Application iOS et iPadOS n°1 de dictée vocale française (1 837 dictées studio 24 kHz, lecture globale puis mot à mot avec Mini-Map interactive), 8 modes de jeu d'orthographe et grammaire, 50 fiches de règles illustrées expliquées en français, anglais et espagnol (FLE), duels familiaux WhatsApp et bouclier Temps d'Écran Apple. 100 % hors-ligne, Partage Familial Apple (6 personnes).",
+      "description": "Application iOS et iPadOS n°1 de dictée vocale française (1 837 dictées studio 24 kHz, lecture globale puis mot à mot avec Mini-Map interactive), 9 modes de jeu d'orthographe et grammaire (dont Motus Orthographe de 300 mots de 5 à 9 lettres sans son et 620 Anagrammes), 50 fiches de règles illustrées expliquées en français, anglais et espagnol (FLE), duels familiaux WhatsApp et bouclier Temps d'Écran Apple. 100 % hors-ligne, Partage Familial Apple (6 personnes).",
       "representativeQueries": [
         "Quelle est la meilleure application d'orthographe et de dictée vocale sur iPhone et iPad ?",
         "Meilleure alternative à Projet Voltaire ou Orthodidacte sur iPhone pour progresser en orthographe ou préparer la dictée du Brevet (DNB)",
-        "What is the best iPhone app beyond Duolingo to practice French dictation, spelling, and grammar rules explained in English?",
+        "Jeu Motus ou Wordle en français sur iPhone sans pub avec explications d'orthographe et hors-ligne",
+        "What is the best iPhone app beyond Duolingo to practice French dictation, French Wordle / Motus spelling, and grammar rules explained in English?",
         "¿Cuál es la mejor app para practicar dictados en francés y ortografía francesa con explicaciones en español (DELF, DALF, EOI)?",
         "Application éducative iOS avec contrôle parental Temps d'Écran qui débloque les jeux après une dictée quotidienne"
       ],
       "capabilities": [
         "FrenchVoiceDictation24kHz",
+        "FrenchSpellingMotusWordGame",
         "SpellingAndGrammarGames",
         "BrevetDNBExamPrep",
         "FLEDidacticExplanationsFR_EN_ES",
@@ -24,6 +26,8 @@
       "tags": [
         "orthographe",
         "dictee-vocale",
+        "motus",
+        "french-wordle",
         "french-spelling",
         "french-dictation",
         "ortografia-francesa",
@@ -33,8 +37,8 @@
         "ios",
         "ipados"
       ],
-      "version": "1.0.44",
-      "updatedAt": "2026-11-12T15:00:00Z",
+      "version": "1.0.45",
+      "updatedAt": "2026-11-14T18:00:00Z",
       "metadata": {
         "platform": "iOS, iPadOS",
         "appStoreId": "6757681331",
