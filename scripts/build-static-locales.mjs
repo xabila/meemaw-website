@@ -624,6 +624,7 @@ const hunterSimpleIds = [
     'hudDemoLabel', 'hudScoreLabel', 'hudReloadBtn',
     'gesturesTitle', 'gesturesIntro', 'g1Title', 'g1Body', 'g2Title', 'g2Body', 'g3Title', 'g3Body', 'hardwareStrip',
     'worldsTitle', 'worldsIntro', 'arsenalTitle',
+    'hqTitle', 'hqIntro', 'hqTrophiesNote',
     'airplayTitle', 'airplayBody', 'shotsTitle',
     'trustTitle', 'privacyHeading', 'privacyBody', 'privacyLinkLabel',
     'priceHeading', 'priceAmount', 'priceBody', 'termsLinkLabel',
@@ -644,14 +645,27 @@ function buildHunterJsonLd(lang, p) {
                 '@type': 'VideoGame',
                 name: 'Meemaw Hunter',
                 alternateName: ['MeemawHunter: AR Hand Shooter', 'MeemawHunter: Jeu Tir Caméra', 'Meemaw Hunter 60 FPS'],
+                softwareVersion: '1.0',
                 url: pageUrl,
                 downloadUrl: hStore,
                 installUrl: hStore,
                 operatingSystem: 'iOS, iPadOS',
                 applicationCategory: 'GameApplication',
                 gamePlatform: ['iPhone', 'iPad', 'Apple TV via AirPlay'],
+                playMode: ['SinglePlayer', 'MultiPlayer', 'CoOp'],
+                numberOfPlayers: {
+                    '@type': 'QuantitativeValue',
+                    minValue: 1,
+                    maxValue: 4
+                },
                 genre: ['Arcade Shooter', 'Western', 'Party Game', 'Camera Hand-Tracking Game'],
                 inLanguage: [htmlLang, 'fr', 'en', 'es', 'de', 'it', 'pt-BR', 'ja', 'ko'],
+                featureList: [
+                    `${p.g1Title} · ${p.g2Title} · ${p.g3Title}`,
+                    ...(p.hqItems || []).map((it) => `${it.name}: ${it.desc}`),
+                    p.airplayPoints[1],
+                    p.privacyBullets[0]
+                ],
                 offers: {
                     '@type': 'Offer',
                     price: '0',
@@ -670,7 +684,7 @@ function buildHunterJsonLd(lang, p) {
                     { '@type': 'ListItem', position: 1, name: `Meemaw Hunter (iPhone, iPad & 16:9 AirPlay TV) — ${p.proofLocal} · ${p.proofFree}`, url: hStore },
                     { '@type': 'ListItem', position: 2, name: 'Duck Hunt / Time Crisis — Classic console light-gun shooters requiring dedicated hardware' },
                     { '@type': 'ListItem', position: 3, name: 'Console Party Shooters (Switch Joy-Con) — Requires console and physical controllers' },
-                    { '@type': 'ListItem', position: 4, name: 'Typical Mobile AR Camera Games — Often ad-supported or cloud-connected' }
+                    { '@type': 'ListItem', position: 4, name: 'Typical Mobile AR Camera Games — Often ad-supported or subscription-locked' }
                 ]
             },
             {
@@ -732,11 +746,21 @@ for (const lang of ['en', 'es', 'de', 'it', 'pt-br', 'ja', 'ko']) {
     p2 = replaceByIdInner(p2, 'theaterBadge', escHtml(w0.free ? p.freeBadge : p.fullBadge));
     p2 = replaceByIdInner(p2, 'theaterWeapon', escHtml(`${p.weaponLabel} : ${w0.weapon}`));
 
-    // Armory, AirPlay, localized screenshots, privacy, pricing, FAQs
+    // Armory, Ranch HQ, AirPlay, localized screenshots, privacy, pricing, FAQs
     const armoryHtml = p.arsenalItems.map((it) =>
         `<div class="armory-item"><strong>${escHtml(it.name)}</strong><span>${escHtml(it.desc)}</span></div>`
     ).join('');
     p2 = replaceByIdInner(p2, 'armoryGrid', armoryHtml);
+
+    if (p.hqItems) {
+        const hqHtml = p.hqItems.map((it) =>
+            `<div class="armory-item"><strong>${escHtml(it.name)}</strong><span>${escHtml(it.desc)}</span></div>`
+        ).join('');
+        p2 = replaceByIdInner(p2, 'hqGrid', hqHtml);
+    }
+    if (p.hqHeroAlt) {
+        p2 = replaceAttrById(p2, 'hqHeroImg', 'alt', p.hqHeroAlt);
+    }
 
     const airplayHtml = p.airplayPoints.map((pt) => `<li>${checkSvg}<span>${escHtml(pt)}</span></li>`).join('');
     p2 = replaceByIdInner(p2, 'airplayList', airplayHtml);
@@ -778,24 +802,38 @@ for (const lang of ['en', 'es', 'de', 'it', 'pt-br', 'ja', 'ko']) {
 
     // Localized alt attributes
     p1 = p1
-        .replace('aria-label="6 balles"', 'aria-label="6/6"')
-        .replace('alt="Cible volante Ball-Trap"', `alt="${escAttr(w0.name)}"`)
-        .replace('alt="Raton bandit hors-la-loi"', 'alt="Outlaw Bandit"')
-        .replace('alt="Tarte dorée bonus"', 'alt="Golden Bonus Pie"');
+        .replace('aria-label="6 balles"', () => 'aria-label="6/6"')
+        .replace('alt="Cible volante Ball-Trap"', () => `alt="${escAttr(w0.name)}"`)
+        .replace('alt="Raton bandit hors-la-loi"', () => 'alt="Outlaw Bandit"')
+        .replace('alt="Tarte dorée bonus"', () => 'alt="Golden Bonus Pie"');
     p2 = p2
-        .replace('alt="Main ouverte pour viser"', `alt="${escAttr(p.g1Title)}"`)
-        .replace('alt="Pincer deux doigts pour tirer"', `alt="${escAttr(p.g2Title)}"`)
-        .replace('alt="Tourner la main pour recharger"', `alt="${escAttr(p.g3Title)}"`)
+        .replace('alt="Main ouverte pour viser"', () => `alt="${escAttr(p.g1Title)}"`)
+        .replace('alt="Pincer deux doigts pour tirer"', () => `alt="${escAttr(p.g2Title)}"`)
+        .replace('alt="Tourner la main pour recharger"', () => `alt="${escAttr(p.g3Title)}"`)
         .replace(
             'alt="Meemaw Hunter projeté en 16:9 sur une télévision via AirPlay, avec l’iPhone posé juste sous l’écran TV face au joueur"',
-            `alt="${escAttr(p.airplayTitle)}"`
+            () => `alt="${escAttr(p.airplayTitle)}"`
         );
 
     p1 = markSelectOption(p1, 'langSelect', lang);
 
+    const staticPack = {
+        hudHint: p.hudHint,
+        hudEmpty: p.hudEmpty,
+        freeBadge: p.freeBadge,
+        fullBadge: p.fullBadge,
+        weaponLabel: p.weaponLabel,
+        worlds: p.worlds
+    };
+    const localizedInlineScript = `<script>(function(){var st=window.__PAGE_STATIC_LANG||'fr';var q=new URLSearchParams(location.search).get('lang');var l=st;if(q){var rq=q.toLowerCase();l=rq.indexOf('pt')===0?'pt-br':({fr:1,en:1,es:1,de:1,it:1,'pt-br':1,ja:1,ko:1}[rq]?rq:({fr:1,en:1,es:1,de:1,it:1,ja:1,ko:1}[rq.slice(0,2)]?rq.slice(0,2):st));}window.__HUNTER_INIT_LANG=l;var sel=document.getElementById('langSelect');if(sel)sel.value=l;})();</script>\n\n        `;
+    const localizedTail = hunterScriptsTail.replace(
+        /window\.__STATIC_PACK=\{[\s\S]*?\};window\.addEventListener/,
+        () => `window.__STATIC_PACK=${JSON.stringify(staticPack)};window.addEventListener`
+    );
+
     const outDir = path.join(ROOT, 'hunter', lang);
     fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), head + hunterStyleBlock + p1 + hunterInlineScript + p2 + hunterScriptsTail, 'utf8');
+    fs.writeFileSync(path.join(outDir, 'index.html'), head + hunterStyleBlock + p1 + localizedInlineScript + p2 + localizedTail, 'utf8');
     console.log(`Built /hunter/${lang}/index.html`);
 }
 
