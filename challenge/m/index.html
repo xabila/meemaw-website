@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Défi Motus — Meemaw Orthographe &amp; Dictée</title>
+    <meta name="description" content="Relève ce défi Motus sans spoiler sur Meemaw : démasque le mot français caché en 6 essais maximum grâce à l'indice grammatical de Meemaw.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <!-- Apple Smart App Banner for automatic iOS native app header -->
+    <meta name="apple-itunes-app" content="app-id=6757681331">
+
+    <!-- Open Graph for WhatsApp / Telegram / iMessage preview -->
+    <meta property="og:title" content="🟩 Défi Motus — Démasque le mot secret en 6 essais !" />
+    <meta property="og:description" content="Indices verts et oranges sans spoiler : ouvre Meemaw pour jouer exactement le même mot français et battre ce score !" />
+    <meta property="og:image" content="https://meemaw.app/assets/og-icon.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="🟩 Défi Motus — Meemaw" />
+    <meta name="twitter:description" content="Démasque le mot français caché en 6 essais maximum sur Meemaw !" />
+    <meta name="twitter:image" content="https://meemaw.app/assets/og-icon.jpg" />
+
+    <style>
+        :root {
+            --emerald: #15803D;
+            --emerald-soft: #DCFCE7;
+            --ink: #1A1A1A;
+            --cream: #FFF8F0;
+            --yellow: #FFD700;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background: var(--cream);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            border: 3px solid var(--ink);
+            box-shadow: 6px 6px 0 var(--ink);
+            max-width: 420px;
+            width: 100%;
+            padding: 34px 26px;
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 84px;
+            height: 84px;
+            border-radius: 20px;
+            border: 3px solid var(--ink);
+            box-shadow: 3px 3px 0 var(--ink);
+            margin: 0 auto 16px;
+            display: block;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--emerald-soft);
+            color: var(--ink);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 999px;
+            border: 2px solid var(--ink);
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #3D3833;
+            margin-bottom: 22px;
+            line-height: 1.45;
+        }
+
+        .challenger-info {
+            background: var(--cream);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 22px;
+            border: 2px solid var(--ink);
+        }
+
+        .challenger-name {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--emerald);
+        }
+
+        .score {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--ink);
+            margin: 6px 0 4px;
+        }
+
+        .score-label {
+            font-size: 12px;
+            font-weight: 800;
+            color: #57504A;
+            text-transform: uppercase;
+        }
+
+        .btn-open {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: var(--emerald);
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 800;
+            border: 3px solid var(--ink);
+            border-radius: 14px;
+            text-decoration: none;
+            margin-bottom: 12px;
+            cursor: pointer;
+            box-shadow: 4px 4px 0 var(--ink);
+        }
+
+        .btn-download {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--yellow);
+            color: var(--ink);
+            font-size: 14px;
+            font-weight: 800;
+            border: 2.5px solid var(--ink);
+            border-radius: 14px;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .link-site {
+            display: inline-block;
+            margin-top: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--emerald);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <main class="card">
+        <img src="/assets/apple-touch-icon.png" alt="Meemaw" class="app-icon" width="84" height="84">
+        <div class="badge" id="badgeLabel">🟩🟧⬛ Défi Motus</div>
+        <h1 id="pageHeading">DÉFI MOTUS REÇU !</h1>
+        <p class="subtitle" id="pageSubtitle">Démasque exactement le même mot français secret en 6 essais grâce à l'indice grammatical de Meemaw.</p>
+
+        <div class="challenger-info">
+            <p id="dictationTitle" class="score-label" style="margin-bottom: 8px;">🟩 Mot secret Motus</p>
+            <p class="challenger-name" id="challengerName">Un ami</p>
+            <p class="score" id="challengerScore">0 PTS</p>
+            <p class="score-label" id="scoreToBeatLabel">Score à battre</p>
+        </div>
+
+        <a id="openAppBtn" href="meemaw://challenge/m" class="btn-open">⚔️ RELEVER LE DÉFI DANS L'APP</a>
+        <a id="downloadBtn" href="https://apps.apple.com/app/id6757681331" class="btn-download">📲 Télécharger Meemaw (Gratuit)</a>
+        <a id="siteLink" href="/" class="link-site">Découvrir Meemaw →</a>
+    </main>
+
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var lang = (navigator.language || 'fr').toLowerCase().slice(0, 2);
+            var copy = {
+                fr: {
+                    friend: 'Un ami',
+                    badge: '🟩🟧⬛ Défi Motus',
+                    heading: 'DÉFI MOTUS REÇU !',
+                    subtitle: "Démasque exactement le même mot français secret en 6 essais grâce à l'indice grammatical de Meemaw.",
+                    dailyPrefix: 'Motus du Jour #',
+                    seriesFmt: 'Série Motus ({n} mots)',
+                    singleWord: 'Mot secret Motus',
+                    scoreLabel: 'Score à battre',
+                    openBtn: "⚔️ RELEVER LE DÉFI DANS L'APP",
+                    downloadBtn: '📲 Télécharger Meemaw (Gratuit)',
+                    siteLink: 'Découvrir Meemaw →',
+                    siteHref: '/'
+                },
+                en: {
+                    friend: 'A friend',
+                    badge: '🟩🟧⬛ Motus Duel',
+                    heading: 'MOTUS CHALLENGE!',
+                    subtitle: "Uncover the exact same secret French word in 6 tries using Meemaw's grammar clue.",
+                    dailyPrefix: 'Daily Motus #',
+                    seriesFmt: 'Motus Series ({n} words)',
+                    singleWord: 'Secret Motus Word',
+                    scoreLabel: 'Score to beat',
+                    openBtn: '⚔️ ACCEPT IN THE APP',
+                    downloadBtn: '📲 Download Meemaw (Free)',
+                    siteLink: 'Discover Meemaw →',
+                    siteHref: '/en/'
+                },
+                es: {
+                    friend: 'Un amigo',
+                    badge: '🟩🟧⬛ Duelo Motus',
+                    heading: '¡DESAFÍO MOTUS!',
+                    subtitle: 'Descubre exactamente la misma palabra francesa secreta en 6 intentos con la pista de Meemaw.',
+                    dailyPrefix: 'Motus del Día #',
+                    seriesFmt: 'Serie Motus ({n} palabras)',
+                    singleWord: 'Palabra secreta Motus',
+                    scoreLabel: 'Puntuación a batir',
+                    openBtn: '⚔️ ACEPTAR EN LA APP',
+                    downloadBtn: '📲 Descargar Meemaw (Gratis)',
+                    siteLink: 'Descubrir Meemaw →',
+                    siteHref: '/es/'
+                }
+            };
+            var t = copy[lang] || copy.fr;
+            if (lang === 'en' || lang === 'es') {
+                document.documentElement.lang = lang;
+            }
+
+            var challenger = params.get('c') || params.get('challenger') || t.friend;
+            var score = params.get('s') || params.get('score') || '0';
+            var issue = params.get('d');
+            var rawWords = params.get('e') || '';
+            var wordCount = rawWords ? rawWords.split('.').filter(Boolean).length : 1;
+
+            var computedTitle = params.get('title')
+                || (issue ? (t.dailyPrefix + issue) : (wordCount > 1 ? t.seriesFmt.replace('{n}', String(wordCount)) : t.singleWord));
+
+            document.getElementById('badgeLabel').textContent = t.badge;
+            document.getElementById('pageHeading').textContent = t.heading;
+            document.getElementById('pageSubtitle').textContent = t.subtitle;
+            document.getElementById('challengerName').textContent = challenger;
+            document.getElementById('challengerScore').textContent = score + ' PTS';
+            document.getElementById('dictationTitle').textContent = '🟩 ' + computedTitle;
+            document.getElementById('scoreToBeatLabel').textContent = t.scoreLabel;
+
+            var openBtn = document.getElementById('openAppBtn');
+            openBtn.textContent = t.openBtn;
+            openBtn.href = 'meemaw://challenge/m' + window.location.search;
+
+            document.getElementById('downloadBtn').textContent = t.downloadBtn;
+            var siteLink = document.getElementById('siteLink');
+            siteLink.textContent = t.siteLink;
+            siteLink.href = t.siteHref;
+        })();
+    </script>
+</body>
+</html>
