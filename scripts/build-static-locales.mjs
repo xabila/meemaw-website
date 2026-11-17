@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const TODAY = '2026-11-14';
+const TODAY = '2026-11-17';
 
 function escAttr(str) {
     return String(str)

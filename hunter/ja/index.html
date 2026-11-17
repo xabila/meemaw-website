@@ -96,13 +96,13 @@
         "2〜4人サルーン・パーティー: ニックネーム登録＆自動ハンド補正で、家族や友人と交互に盛り上がれるローカル対戦。",
         "武器庫スキン＆10種の実績: ゴールデンパイで5種の照準スキンと3種の強化を解放。Game Centerトロフィー10種収録。",
         "iOSネイティブ2画面描画＋オプションで選べる720p・60 FPS／1080p Full HDテレビ画質",
-        "カメラ＆顔データ：収集なし — 端末内RAMで完結するMediaPipeTasksVision（機内モード対応）"
+        "カメラ＆顔データ：収集なし — 端末内RAMで完結するMediaPipe＋Apple Vision（機内モード対応）"
       ],
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD",
-        "description": "クイックプレイ、ワールド1＆2、デイリー60秒チャレンジ、2〜4人サルーン対戦は無料でプレイ可能。 ($3.99 / 3,99 € · 1回買い切り（追加課金なし）)"
+        "description": "クイックプレイ、チュートリアル、ワールド1＆2、デイリー60秒チャレンジ、2人サルーン対決は無料でプレイ可能。 ($3.99 / 3,99 € · 1回買い切り（追加課金なし）)"
       },
       "author": {
         "@type": "Person",
@@ -119,7 +119,7 @@
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Meemaw Hunter (iPhone, iPad & 16:9 AirPlay TV) — 100 % RAM内60 FPSカメラ処理・画像収集ゼロ · ワールド1〜2・毎日60秒・2〜4人対戦が無料",
+          "name": "Meemaw Hunter (iPhone, iPad & 16:9 AirPlay TV) — 100 % RAM内60 FPSカメラ処理・画像収集ゼロ · ワールド1〜2・毎日60秒・2人サルーン対決が無料",
           "url": "https://apps.apple.com/app/id6831648316?ct=web_schema_hunter_ja&mt=8"
         },
         {
@@ -147,7 +147,7 @@
           "name": "どのiPhone・iPadで60 FPSハンドトラッキングが動きますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "iOS 16以降のiPhone SEからiPhone 17 Pro（18 MPセンターフレーム対応）およびiPadで60 FPS動作します。オプションから画面タップ操作も常時利用できます。"
+            "text": "iOS 17以降のiPhone SEからiPhone 17 Pro（18 MPセンターフレーム対応）およびiPadで動作します。オプションから画面タップ操作も常時利用できます。"
           }
         },
         {
@@ -155,7 +155,7 @@
           "name": "カメラ映像の録画や顔データの収集はありますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "一切ありません。端末内RAM（約16 ms・保持0秒）で手の21関節のみを計算し、画像・動画・顔データは保存も送信もされません。機内モードでも同じように遊べます。"
+            "text": "一切ありません。端末内RAM（約16 ms・保持0秒）でMediaPipe HandLandmarker（手の21関節）とApple Vision（TV立ちプレイ時の肩・手首ガイド）のみを計算し、画像・動画・顔ジオメトリは保存も送信もされません。機内モードでも同じように遊べます。"
           }
         },
         {
@@ -187,7 +187,7 @@
           "name": "定期購読（サブスク）やアイテム課金はありますか？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "ありません。ワールド1＆2や60秒チャレンジ、2〜4人対戦は無料で、保安官パックは家族6人まで共有できる1回限りの買い切りです。"
+            "text": "ありません。ワールド1＆2、60秒チャレンジ、2人サルーン対決は無料で、保安官パック（ワールド3〜7・3〜4人対戦・全武器庫・無制限コンティニュー）は家族6人まで共有できる1回限りの買い切りです。"
           }
         }
       ]
@@ -268,7 +268,7 @@
                         </div>
                         <div class="proof-item">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                            <span id="proofFree">ワールド1〜2・毎日60秒・2〜4人対戦が無料</span>
+                            <span id="proofFree">ワールド1〜2・毎日60秒・2人サルーン対決が無料</span>
                         </div>
                     </div>
                 </article>
@@ -399,7 +399,7 @@
 
                 <div class="armory-ledger">
                     <h3 id="arsenalTitle">武器クレート＆チリ・フィーバー</h3>
-                    <div class="armory-grid" id="armoryGrid"><div class="armory-item"><strong>コルト .45</strong><span>正確な6連発リボルバー。</span></div><div class="armory-item"><strong>ショットガン</strong><span>素早い飛行ターゲットに強い3way散弾。</span></div><div class="armory-item"><strong>ムージー</strong><span>フライパン装甲を砕く3点バースト銃。</span></div><div class="armory-item"><strong>バズーカ＆2倍チリ</strong><span>広範囲爆発＋スローモーション得点2倍モード。</span></div></div><div class="armory-item"><strong>Fusil à pompe</strong><span>Salve à 3 plombs idéale sur les cibles rapides.</span></div><div class="armory-item"><strong>Moozzi</strong><span>Rafale nerveuse de 3 tirs pour briser les casques-poêles.</span></div><div class="armory-item"><strong>Bazooka &amp; Piment ×2</strong><span>Souffle de zone explosif et ralenti Bullet-Time doublant les points.</span></div></div><div class="armory-item"><strong>Fusil à pompe</strong><span>Salve à 3 plombs idéale sur les cibles rapides.</span></div><div class="armory-item"><strong>Moozzi</strong><span>Rafale nerveuse de 3 tirs pour briser les casques-poêles.</span></div><div class="armory-item"><strong>Bazooka &amp; Piment ×2</strong><span>Souffle de zone explosif et ralenti Bullet-Time doublant les points.</span></div></div>
+                    <div class="armory-grid" id="armoryGrid"><div class="armory-item"><strong>コルト .45</strong><span>正確な6連発リボルバー。</span></div><div class="armory-item"><strong>ショットガン</strong><span>素早い飛行ターゲットに強い3way散弾。</span></div><div class="armory-item"><strong>ムージー</strong><span>フライパン装甲を砕く3点バースト銃。</span></div><div class="armory-item"><strong>バズーカ＆2倍チリ</strong><span>広範囲爆発＋スローモーション得点2倍モード。</span></div></div><div class="armory-item"><strong>Fusil à pompe</strong><span>Salve à 3 plombs idéale sur les cibles rapides.</span></div><div class="armory-item"><strong>Moozzi</strong><span>Rafale nerveuse de 3 tirs pour briser les casques-poêles.</span></div><div class="armory-item"><strong>Bazooka &amp; Piment ×2</strong><span>Souffle de zone explosif et ralenti Bullet-Time doublant les points.</span></div></div><div class="armory-item"><strong>Fusil à pompe</strong><span>Salve à 3 plombs idéale sur les cibles rapides.</span></div><div class="armory-item"><strong>Moozzi</strong><span>Rafale nerveuse de 3 tirs pour briser les casques-poêles.</span></div><div class="armory-item"><strong>Bazooka &amp; Piment ×2</strong><span>Souffle de zone explosif et ralenti Bullet-Time doublant les points.</span></div></div><div class="armory-item"><strong>Fusil à pompe</strong><span>Salve à 3 plombs idéale sur les cibles rapides.</span></div><div class="armory-item"><strong>Moozzi</strong><span>Rafale nerveuse de 3 tirs pour briser les casques-poêles.</span></div><div class="armory-item"><strong>Bazooka &amp; Piment ×2</strong><span>Souffle de zone explosif et ralenti Bullet-Time doublant les points.</span></div></div>
                 </div>
 
                 <div class="hq-ledger" id="qg">
@@ -420,7 +420,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="armory-grid" id="hqGrid"><div class="armory-item"><strong>21★コンプリート＆3難易度</strong><span>ノーマル（×1.0）・シャープシューター（×1.25）・テキサスレジェンド（×1.60）と保安官XPランク。</span></div><div class="armory-item"><strong>デイリー60秒バウンティ</strong><span>世界中が毎日まったく同じシード配置に挑む60秒間のスコアアタック。</span></div><div class="armory-item"><strong>2〜4人サルーン・パーティー</strong><span>ニックネーム登録＆自動ハンド補正で、家族や友人と交互に盛り上がれるローカル対戦。</span></div><div class="armory-item"><strong>武器庫スキン＆10種の実績</strong><span>ゴールデンパイで5種の照準スキンと3種の強化を解放。Game Centerトロフィー10種収録。</span></div></div><div class="armory-item"><strong>Défi Quotidien 60 s</strong><span>Un tirage déterministe identique dans le monde entier chaque jour pour battre le record en 60 secondes.</span></div><div class="armory-item"><strong>Mode Saloon 2 à 4 Joueurs</strong><span>Tournoi local chacun son tour avec pseudos Saloon dédiés et auto-calibration rapide devant la télé.</span></div><div class="armory-item"><strong>Armurerie &amp; 10 Trophées</strong><span>5 viseurs optiques et 3 améliorations débloqués aux Tartes Dorées, plus classements et trophées Game Center.</span></div></div>
+                    <div class="armory-grid" id="hqGrid"><div class="armory-item"><strong>21★コンプリート＆3難易度</strong><span>ノーマル（×1.0）・シャープシューター（×1.25）・テキサスレジェンド（×1.60）と保安官XPランク。</span></div><div class="armory-item"><strong>デイリー60秒バウンティ</strong><span>世界中が毎日まったく同じシード配置に挑む60秒間のスコアアタック。</span></div><div class="armory-item"><strong>2〜4人サルーン・パーティー</strong><span>ニックネーム登録＆自動ハンド補正で、家族や友人と交互に盛り上がれるローカル対戦。</span></div><div class="armory-item"><strong>武器庫スキン＆10種の実績</strong><span>ゴールデンパイで5種の照準スキンと3種の強化を解放。Game Centerトロフィー10種収録。</span></div></div><div class="armory-item"><strong>Défi Quotidien 60 s</strong><span>Même tirage mondial chaque jour et vrai classement Game Center récurrent remis à zéro toutes les 24h à minuit.</span></div><div class="armory-item"><strong>Mode Saloon 2 à 4 Joueurs</strong><span>Tournoi local chacun son tour avec pseudos Saloon dédiés et auto-calibration rapide devant la télé.</span></div><div class="armory-item"><strong>Armurerie &amp; 10 Trophées</strong><span>5 viseurs optiques et 3 améliorations débloqués aux Tartes Dorées, plus classements et trophées Game Center.</span></div></div>
                 </div>
             </div>
         </section>
@@ -466,8 +466,8 @@
                 <div class="trust-ledger">
                     <div class="ledger-col">
                         <h3 id="privacyHeading">録画ゼロ。カメラ映像は100 % RAM内処理。</h3>
-                        <p id="privacyBody">毎秒60フレームの映像は端末の揮発性RAM内（約16ミリ秒・保持0秒）で手の21関節座標に変換された瞬間に破棄されます。写真・動画・顔データが外部へ送信されることは一切なく、広告やトラッキングもゼロです。</p>
-                        <ul class="ledger-list" id="privacyList"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>カメラ＆顔データ：収集なし — 端末内RAMで完結するMediaPipeTasksVision（機内モード対応）</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>App Store公式表記：「あなたに関連付けられないデータ・トラッキングなし」（IDFA・広告ゼロ）</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>匿名のStoreKit 2 / RevenueCat購入復元、EU拠点Mixpanel匿名統計（ip=0）、Game Center対応</span></li></ul>
+                        <p id="privacyBody">カメラ映像は端末の揮発性RAM内（約16ミリ秒・保持0秒）で手の21関節座標（およびTV立ちプレイ時のApple Visionによる肩・手首ガイド）に変換された瞬間に破棄されます。写真・動画・顔データが外部へ送信されることは一切ありません。</p>
+                        <ul class="ledger-list" id="privacyList"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>カメラ＆顔データ：収集なし — 端末内RAMで完結するMediaPipe＋Apple Vision（機内モード対応）</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>App Store公式表記：「あなたに関連付けられないデータ・トラッキングなし」（IDFA・広告ゼロ）</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>匿名のStoreKit 2 / RevenueCat購入復元、EU拠点Mixpanel匿名統計（ip=0）、Game Center対応</span></li></ul>
                         <a href="/hunter/privacy.html?lang=ja" class="text-action-link" id="privacyLink">
                             <span id="privacyLinkLabel">プライバシーポリシー全文を読む</span>
                             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -477,8 +477,8 @@
                     <div class="ledger-col">
                         <h3 id="priceHeading">まずは無料でたっぷり体験、気に入ったら1回買い切り。</h3>
                         <div class="price-stamp" id="priceAmount">$3.99 / 3,99 € · 1回買い切り（追加課金なし）</div>
-                        <p id="priceBody">クイックプレイ、ワールド1＆2、デイリー60秒チャレンジ、2〜4人サルーン対戦は無料でプレイ可能。</p>
-                        <ul class="ledger-list" id="priceList"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ワールド3〜7、テキサスレジェンド（21★）、照準スキン全5種、ボス決闘、無制限コンティニューを永久解放</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Appleファミリー共有対応（家族6人まで追加料金なしで共有）</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>月額サブスクなし・課金ガチャなし（スキンや強化はゲーム内のゴールデンパイで解放）・広告ゼロ</span></li></ul>
+                        <p id="priceBody">クイックプレイ、チュートリアル、ワールド1＆2、デイリー60秒チャレンジ、2人サルーン対決は無料でプレイ可能。</p>
+                        <ul class="ledger-list" id="priceList"><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>ワールド3〜7、3〜4人サルーンパーティー、テキサスレジェンド（21★）、照準スキン全5種、ボス決闘、無制限コンティニューを永久解放</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Appleファミリー共有対応（家族6人まで追加料金なしで共有）</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>月額サブスクなし・課金ガチャなし（スキンや強化はゲーム内のゴールデンパイで解放）・広告ゼロ</span></li></ul>
                         <a href="/hunter/terms.html?lang=ja" class="text-action-link" id="termsLink">
                             <span id="termsLinkLabel">利用規約（EULA）を確認する</span>
                             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -492,13 +492,13 @@
         <section class="closing-chapter" id="faq" aria-labelledby="faqTitle">
             <div class="faq-block">
                 <h2 id="faqTitle">よくある質問</h2>
-                <div class="faq-list" id="faqList"><details open><summary><span>どのiPhone・iPadで60 FPSハンドトラッキングが動きますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>iOS 16以降のiPhone SEからiPhone 17 Pro（18 MPセンターフレーム対応）およびiPadで60 FPS動作します。オプションから画面タップ操作も常時利用できます。</p></details><details><summary><span>カメラ映像の録画や顔データの収集はありますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>一切ありません。端末内RAM（約16 ms・保持0秒）で手の21関節のみを計算し、画像・動画・顔データは保存も送信もされません。機内モードでも同じように遊べます。</p></details><details><summary><span>どんなゲームモードやマルチプレイ、Game Center機能がありますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>クイックプレイ、3難易度で21★を目指す牧場本部、世界共通シードのデイリー60秒チャレンジ、2〜4人交代制のサルーン対戦に加え、Game Center世界ランキング2種・ローカルランキング・描き下ろし実績10種を搭載しています。</p></details><details><summary><span>片手でiPhoneを持って撃てますか？AirPlay TVの設定方法は？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>はい！片手で持って反対の手で撃つ（右利き・左利き対応）ことも、30〜60 cm前に置くことも可能です。AirPlay TVではテレビ真下中央にiPhoneを置き、オプションで720p・60 FPSまたは1080p Full HDを選べます。</p></details><details><summary><span>リロード方法と武器庫スキンの解放方法は？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>弾切れ（0/6）時にその場で手首をクルッと返すだけで6発即リロードされます。5種の照準スキンと3種の強化はゴールデンパイを集めて無料で解放できます。</p></details><details><summary><span>定期購読（サブスク）やアイテム課金はありますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>ありません。ワールド1＆2や60秒チャレンジ、2〜4人対戦は無料で、保安官パックは家族6人まで共有できる1回限りの買い切りです。</p></details></div>
+                <div class="faq-list" id="faqList"><details open><summary><span>どのiPhone・iPadで60 FPSハンドトラッキングが動きますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>iOS 17以降のiPhone SEからiPhone 17 Pro（18 MPセンターフレーム対応）およびiPadで動作します。オプションから画面タップ操作も常時利用できます。</p></details><details><summary><span>カメラ映像の録画や顔データの収集はありますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>一切ありません。端末内RAM（約16 ms・保持0秒）でMediaPipe HandLandmarker（手の21関節）とApple Vision（TV立ちプレイ時の肩・手首ガイド）のみを計算し、画像・動画・顔ジオメトリは保存も送信もされません。機内モードでも同じように遊べます。</p></details><details><summary><span>どんなゲームモードやマルチプレイ、Game Center機能がありますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>クイックプレイ、3難易度で21★を目指す牧場本部、世界共通シードのデイリー60秒チャレンジ、2〜4人交代制のサルーン対戦に加え、Game Center世界ランキング2種・ローカルランキング・描き下ろし実績10種を搭載しています。</p></details><details><summary><span>片手でiPhoneを持って撃てますか？AirPlay TVの設定方法は？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>はい！片手で持って反対の手で撃つ（右利き・左利き対応）ことも、30〜60 cm前に置くことも可能です。AirPlay TVではテレビ真下中央にiPhoneを置き、オプションで720p・60 FPSまたは1080p Full HDを選べます。</p></details><details><summary><span>リロード方法と武器庫スキンの解放方法は？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>弾切れ（0/6）時にその場で手首をクルッと返すだけで6発即リロードされます。5種の照準スキンと3種の強化はゴールデンパイを集めて無料で解放できます。</p></details><details><summary><span>定期購読（サブスク）やアイテム課金はありますか？</span><svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><p>ありません。ワールド1＆2、60秒チャレンジ、2人サルーン対決は無料で、保安官パック（ワールド3〜7・3〜4人対戦・全武器庫・無制限コンティニュー）は家族6人まで共有できる1回限りの買い切りです。</p></details></div>
             </div>
 
             <div class="final-cta-banner">
                 <div class="final-cta-copy">
                     <h2 id="closingTitle">シェリフ・ミーマウの牧場を守る準備はいい？</h2>
-                    <p id="closingSub">iPhone・iPad対応 — ワールド1＆2、毎日60秒、2〜4人サルーン対戦を今すぐ無料プレイ。</p>
+                    <p id="closingSub">iPhone・iPad（iOS 17以降）対応 — ワールド1＆2、毎日60秒、2人サルーン対決を今すぐ無料プレイ。</p>
                 </div>
                 <div class="cta-row" style="margin-bottom: 0;">
                     <a href="https://apps.apple.com/app/id6831648316?ct=web_hunter_final_ja&amp;mt=8" class="btn-primary" target="_blank" rel="noopener">
