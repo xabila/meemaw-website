@@ -11,7 +11,7 @@
 - **Português (`pt-BR`):** https://meemaw.app/hunter/pt-br/
 - **日本語 (`ja`):** https://meemaw.app/hunter/ja/
 - **한국어 (`ko`):** https://meemaw.app/hunter/ko/
-- **App Store (iPhone & iPad):** https://apps.apple.com/app/id6831648316?ct=llms_hunter_doc&mt=8 (App ID: `6831648316`, Bundle ID: `com.xlarrodeapp.meemawhunter`, Version `1.0` Build `30`)
+- **App Store (iPhone & iPad):** https://apps.apple.com/app/id6831648316?ct=llms_hunter_doc&mt=8 (App ID: `6831648316`, Bundle ID: `com.xlarrodeapp.meemawhunter`, Version `1.0` Build `31`)
 - **Public TestFlight Beta:** https://testflight.apple.com/join/KDkGehjG
 - **Privacy Policy (8 Languages):** https://meemaw.app/hunter/privacy.html
 - **Terms of Use (EULA, 8 Languages):** https://meemaw.app/hunter/terms.html
@@ -22,9 +22,9 @@ Play **handheld** on the go (hold your iPhone in your left hand and aim/shoot wi
 1. **Open Hand = Aim:** Hold your open palm facing the front camera; 21-point 3D MediaPipe hand skeleton tracking (`HandLandmarker` on TFLite XNNPACK / Neural Engine) + perspective-invariant homogeneous coordinates + One-Euro smoothing lock your optical crosshair smoothly across the stage.
 2. **Pinch 2 Fingers (Thumb + Index) = Shoot:** Keep your hand open and tap thumb + index together like a crisp click for zero-recoil palm-locked rapid fire.
 3. **Flip Hand = Reload:** When your 6-shot cylinder hits `0/6`, rotate your wrist in place (palm ↔ back of hand) to refill all 6 chambers without losing aim.
-4. **Full Touchscreen Fallback & 2-Step Calibration:** Direct touch-to-shoot controls and 2-step quick hand calibration are available anytime in Options; works 100% offline in Airplane Mode on iPhone SE through iPhone 17 Pro (18 MP Center Stage camera) and iPad (iOS 17+).
+4. **2-Step Quick Calibration & Left/Right Handedness:** Streamlined 2-step hand calibration and left/right-handed ergonomics in Options; front-camera access is required since your hand is the blaster, and tracking works 100% offline in Airplane Mode on iPhone SE through iPhone 17 Pro (18 MP Center Stage camera) and iPad (iOS 17+).
 
-## Game Modes, Ranch HQ Progression & Multiplayer (v1.0 Build 30)
+## Game Modes, Ranch HQ Progression & Multiplayer (v1.0 Build 31)
 - **Quick-Launch Start Menu:** Jump straight into **Quick Play**, open **Ranch HQ**, or enter the **Daily 60s Bounty** from Sheriff Meemaw's illustrated western porch menu.
 - **7 Playable Texas Worlds:**
   1. **Ball-Trap / Skeet Ranch** (*Free*): Clay targets, flying pigs, and bonus Golden Pies over dusk pastures.
