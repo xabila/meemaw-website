@@ -122,8 +122,8 @@ const orthoStoreUrls = {
     es: 'https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331'
 };
 const mathStoreUrls = {
-    en: 'https://apps.apple.com/us/app/mental-math-games-meemaw-math/id6824002615',
-    es: 'https://apps.apple.com/es/app/c%C3%A1lculo-mental-meemaw-mates/id6824002615'
+    en: 'https://apps.apple.com/app/id6824002615',
+    es: 'https://apps.apple.com/app/id6824002615'
 };
 
 const orthoAttrMap = {
@@ -465,14 +465,14 @@ function buildMathJsonLd(lang, d) {
                 numberOfItems: 5,
                 itemListElement: isEn
                     ? [
-                        { '@type': 'ListItem', position: 1, name: 'Meemaw Math — 13 guided 2-step mental math secrets, Dr. Kawashima-style Brain Age, Numerical IQ, 11 games, Apple Screen Time Shield & Family Sharing', url: mStore },
+                        { '@type': 'ListItem', position: 1, name: 'Meemaw Math — Mathus (secret equation in 6 tries), 13 guided 2-step mental math secrets, Dr. Kawashima-style Brain Age, Numerical IQ, 11 games, Apple Screen Time Shield & Family Sharing', url: mStore },
                         { '@type': 'ListItem', position: 2, name: 'Elevate / Smartick — General cognitive mini-games or expensive monthly kid subscriptions without offline Family Sharing' },
                         { '@type': 'ListItem', position: 3, name: 'King of Math — Fast 4-choice multiple choice drills without step-by-step shortcut explanations' },
                         { '@type': 'ListItem', position: 4, name: 'Duolingo Math — Visual elementary basics without advanced mental math shortcuts' },
                         { '@type': 'ListItem', position: 5, name: 'Photomath — Camera equation solver that gives away answers instead of training mental reflexes' }
                     ]
                     : [
-                        { '@type': 'ListItem', position: 1, name: 'Meemaw Mates — 13 secretos de cálculo mental en 2 pasos, Edad Cerebral estilo Dr. Kawashima, Retos de CI, 11 juegos, Tiempo en Pantalla y En Familia', url: mStore },
+                        { '@type': 'ListItem', position: 1, name: 'Meemaw Mates — Mathus (ecuación secreta en 6 intentos), 13 secretos de cálculo mental en 2 pasos, Edad Cerebral estilo Dr. Kawashima, Retos de CI, 11 juegos, Tiempo en Pantalla y En Familia', url: mStore },
                         { '@type': 'ListItem', position: 2, name: 'Smartick / Anton — Plataformas escolares en línea (~39 €/mes por niño en Smartick)' },
                         { '@type': 'ListItem', position: 3, name: 'Rey de las Matemáticas — Test de 4 opciones sin explicación de métodos ni borrador' },
                         { '@type': 'ListItem', position: 4, name: 'Duolingo Math — Ejercicios visuales básicos de primaria' },
@@ -537,15 +537,15 @@ for (const lang of ['en', 'es']) {
     const mBase = mathStoreUrls[lang];
     body = body
         .replace(
-            'https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_nav_fr&amp;mt=8',
+            'https://apps.apple.com/app/id6824002615?ct=web_math_nav_fr&amp;mt=8',
             `${mBase}?ct=web_math_nav_${lang}&amp;mt=8`
         )
         .replace(
-            'https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_hero_fr&amp;mt=8',
+            'https://apps.apple.com/app/id6824002615?ct=web_math_hero_fr&amp;mt=8',
             `${mBase}?ct=web_math_hero_${lang}&amp;mt=8`
         )
         .replace(
-            'https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_final_fr&amp;mt=8',
+            'https://apps.apple.com/app/id6824002615?ct=web_math_final_fr&amp;mt=8',
             `${mBase}?ct=web_math_final_${lang}&amp;mt=8`
         );
 
