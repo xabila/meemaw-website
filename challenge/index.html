@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Défi Meemaw ⚔️</title>
+    <title>Meemaw — Défi &amp; Invitation d'ami</title>
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Apple Smart App Banner for automatic iOS native app header -->
     <meta name="apple-itunes-app" content="app-id=6757681331">
 
     <!-- Open Graph for WhatsApp / Telegram / iMessage preview -->
-    <meta property="og:title" content="⚔️ Défi Meemaw - Tu oses relever le défi ?" />
-    <meta property="og:description" content="Quelqu'un te défie en dictée ! Clique pour ouvrir Meemaw et prouver que tu es le meilleur." />
+    <meta property="og:title" content="Meemaw — Rejoins-moi en duel ou en ami !" />
+    <meta property="og:description" content="Ouvre ce lien sur ton iPhone ou iPad pour accepter l'invitation ou relever le défi dans Meemaw." />
     <meta property="og:image" content="https://meemaw.app/assets/og-icon.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="800" />
@@ -23,154 +26,314 @@
 
     <style>
         :root {
-            --orange: #FF8C42;
-            --ink: #1A1A2E;
-            --cream: #FFF8F0;
-            --white: #FFFFFF;
+            --paper-cool: #EFF3F9;
+            --crisp-paper: #FFFFFF;
+            --emerald-tint: #E9F6F0;
+            --ink: #1A120B;
+            --ink-secondary: #483626;
+            --chili-red: #C93B2B;
+            --armed-emerald: #136B42;
+            --pop-gold: #FFD13B;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
-            background: var(--cream);
+            background: var(--paper-cool);
+            color: var(--ink);
+            font-family: 'Nunito', 'Hiragino Sans', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 1.5rem;
         }
 
         .card {
-            background: var(--white);
-            border-radius: 20px;
+            background: var(--crisp-paper);
+            border-radius: 16px;
             border: 3px solid var(--ink);
-            box-shadow: 6px 6px 0 var(--ink);
-            max-width: 400px;
+            max-width: 420px;
             width: 100%;
-            padding: 40px 30px;
+            padding: 2.25rem 1.5rem;
             text-align: center;
         }
 
-        .emoji { font-size: 64px; margin-bottom: 16px; }
+        .mascot-avatar {
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 0.9rem;
+            border-radius: 999px;
+            background: var(--emerald-tint);
+            border: 2.5px solid var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .mascot-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
 
         h1 {
-            font-size: 24px;
+            font-family: 'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif;
+            font-size: 1.4rem;
             font-weight: 800;
             color: var(--ink);
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
+            line-height: 1.18;
+            letter-spacing: -0.02em;
         }
 
         .subtitle {
-            font-size: 14px;
-            color: var(--ink);
-            opacity: 0.6;
-            margin-bottom: 24px;
+            font-size: 1.0625rem;
+            font-weight: 600;
+            color: var(--ink-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.55;
         }
 
         .challenger-info {
-            background: var(--cream);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 24px;
+            background: var(--paper-cool);
+            border-radius: 16px;
+            padding: 1.1rem;
+            margin-bottom: 1.5rem;
             border: 2px solid var(--ink);
         }
 
         .challenger-name {
-            font-size: 18px;
+            font-family: 'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif;
+            font-size: 1.4rem;
             font-weight: 800;
-            color: var(--orange);
+            color: var(--chili-red);
+            line-height: 1.18;
+        }
+
+        .challenger-name.is-friend {
+            color: var(--armed-emerald);
         }
 
         .score {
-            font-size: 32px;
+            font-family: 'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif;
+            font-size: 2.55rem;
             font-weight: 800;
             color: var(--ink);
-            margin: 8px 0 4px;
+            margin: 0.5rem 0 0.25rem;
+            line-height: 1.12;
         }
 
         .score-label {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--ink);
-            opacity: 0.5;
+            font-family: 'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: var(--ink-secondary);
             text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .friend-note {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--ink-secondary);
+            margin-top: 0.5rem;
+            line-height: 1.45;
         }
 
         .btn-open {
             display: block;
             width: 100%;
-            padding: 16px;
-            background: var(--orange);
-            color: var(--white);
-            font-size: 16px;
+            padding: 0.95rem 1rem;
+            background: var(--pop-gold);
+            color: var(--ink);
+            font-family: 'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif;
+            font-size: 0.92rem;
             font-weight: 800;
-            border: 3px solid var(--ink);
-            border-radius: 14px;
+            border: 2.5px solid var(--ink);
+            border-radius: 12px;
             text-decoration: none;
-            margin-bottom: 12px;
+            margin-bottom: 0.75rem;
             cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn-open.is-friend {
+            background: var(--armed-emerald);
+            color: var(--crisp-paper);
         }
 
         .btn-download {
             display: block;
             width: 100%;
-            padding: 14px;
-            background: var(--white);
+            padding: 0.9rem 1rem;
+            background: var(--crisp-paper);
             color: var(--ink);
-            font-size: 14px;
-            font-weight: 700;
+            font-family: 'Bricolage Grotesque', 'Hiragino Sans', 'Apple SD Gothic Neo', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 800;
             border: 2px solid var(--ink);
-            border-radius: 14px;
+            border-radius: 12px;
             text-decoration: none;
+        }
+
+        .helper-hint {
+            margin-top: 0.9rem;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--ink-secondary);
+            line-height: 1.45;
         }
     </style>
 
     <script>
-        // Extract challenge params from URL
         const params = new URLSearchParams(window.location.search);
-        const challenger = params.get('challenger') || 'Un ami';
-        const score = params.get('score') || '0';
-        const title = params.get('title') || 'Dictée';
+        const path = window.location.pathname.replace(/\/+$/, '');
+        const isFriendInvite = params.get('dictationId') === 'ami' || path.endsWith('/challenge/ami');
 
-        // Build custom scheme deep link (fallback for when Universal Link didn't fire)
+        const lang = ((navigator.language || 'fr').toLowerCase().startsWith('es'))
+            ? 'es'
+            : (((navigator.language || 'fr').toLowerCase().startsWith('en')) ? 'en' : 'fr');
+
+        const COPY = {
+            fr: {
+                friendPageTitle: "Invitation d'ami Meemaw",
+                friendHeading: "INVITATION D'AMI",
+                friendSubtitle: "T'invite à devenir amis sur Meemaw pour jouer en duel Motus Tour par Tour !",
+                friendLabel: "Joueur Meemaw",
+                friendNote: "Ouvre ce lien dans Meemaw pour vous ajouter mutuellement en amis.",
+                friendOpenBtn: "Accepter dans Meemaw",
+                friendDownloadBtn: "Installer ou mettre à jour Meemaw",
+                friendHint: "Astuce : si ce lien s'ouvre dans WhatsApp ou Yahoo Mail, touche « Ouvrir dans Safari » ou le bouton vert ci-dessus.",
+                duelPageTitle: "Défi Meemaw",
+                duelHeading: "DÉFI REÇU !",
+                duelSubtitle: "Quelqu'un te défie sur Meemaw",
+                duelFallbackSender: "Un ami",
+                duelFallbackTitle: "Dictée",
+                duelScoreLabel: "Score à battre",
+                duelOpenBtn: "Relever le défi",
+                duelDownloadBtn: "Télécharger Meemaw"
+            },
+            en: {
+                friendPageTitle: "Meemaw Friend Invite",
+                friendHeading: "FRIEND INVITE",
+                friendSubtitle: "Invites you to become friends on Meemaw for Turn-Based Motus duels!",
+                friendLabel: "Meemaw Player",
+                friendNote: "Open this link in Meemaw to add each other to your friends list.",
+                friendOpenBtn: "Accept in Meemaw",
+                friendDownloadBtn: "Install or update Meemaw",
+                friendHint: "Tip: if opened inside WhatsApp or Mail, tap 'Open in Safari' or the green button above.",
+                duelPageTitle: "Meemaw Challenge",
+                duelHeading: "CHALLENGE RECEIVED!",
+                duelSubtitle: "Someone challenged you on Meemaw",
+                duelFallbackSender: "A friend",
+                duelFallbackTitle: "Dictation",
+                duelScoreLabel: "Score to beat",
+                duelOpenBtn: "Accept challenge",
+                duelDownloadBtn: "Download Meemaw"
+            },
+            es: {
+                friendPageTitle: "Invitación de amigo — Meemaw",
+                friendHeading: "INVITACIÓN DE AMIGO",
+                friendSubtitle: "¡Te invita a ser amigos en Meemaw para jugar duelos de Motus por turnos!",
+                friendLabel: "Jugador de Meemaw",
+                friendNote: "Abre este enlace en Meemaw para añadiros directamente como amigos.",
+                friendOpenBtn: "Aceptar en Meemaw",
+                friendDownloadBtn: "Instalar o actualizar Meemaw",
+                friendHint: "Consejo: si abres este enlace desde WhatsApp o Correo, toca «Abrir en Safari» o el botón verde de arriba.",
+                duelPageTitle: "Desafío Meemaw",
+                duelHeading: "¡DESAFÍO RECIBIDO!",
+                duelSubtitle: "Alguien te desafía en Meemaw",
+                duelFallbackSender: "Un amigo",
+                duelFallbackTitle: "Dictado",
+                duelScoreLabel: "Puntuación a batir",
+                duelOpenBtn: "Aceptar el desafío",
+                duelDownloadBtn: "Descargar Meemaw"
+            }
+        }[lang];
+
+        const challenger = params.get('challenger') || params.get('n') || COPY.duelFallbackSender;
+        const score = params.get('score') || '0';
+        const title = params.get('title') || COPY.duelFallbackTitle;
+
         function buildDeepLink() {
+            if (path.endsWith('/challenge/ami')) {
+                return 'meemaw://challenge/ami' + window.location.search;
+            }
             return 'meemaw://challenge' + window.location.search;
         }
 
-        // Try to open the app via custom scheme
         function openApp() {
             window.location.href = buildDeepLink();
         }
 
-        // On page load, fill dynamic content (but don't auto-redirect)
         window.addEventListener('DOMContentLoaded', function() {
-            // Fill dynamic content
-            document.getElementById('challengerName').textContent = challenger;
-            document.getElementById('challengerScore').textContent = score + ' PTS';
-            document.getElementById('dictationTitle').textContent = '📖 ' + title;
+            document.documentElement.lang = lang;
+            const headingEl = document.getElementById('headingText');
+            const subtitleEl = document.getElementById('subtitleText');
+            const topLabelEl = document.getElementById('dictationTitle');
+            const nameEl = document.getElementById('challengerName');
+            const scoreEl = document.getElementById('challengerScore');
+            const scoreLabelEl = document.getElementById('scoreLabel');
+            const friendNoteEl = document.getElementById('friendNote');
+            const openBtnEl = document.getElementById('openBtn');
+            const downloadBtnEl = document.getElementById('downloadBtn');
+            const hintEl = document.getElementById('helperHint');
+
+            nameEl.textContent = challenger;
+
+            if (isFriendInvite) {
+                document.title = COPY.friendPageTitle;
+                headingEl.textContent = COPY.friendHeading;
+                subtitleEl.textContent = COPY.friendSubtitle;
+                topLabelEl.textContent = COPY.friendLabel;
+                nameEl.classList.add('is-friend');
+                scoreEl.style.display = 'none';
+                scoreLabelEl.style.display = 'none';
+                friendNoteEl.style.display = 'block';
+                friendNoteEl.textContent = COPY.friendNote;
+                openBtnEl.textContent = COPY.friendOpenBtn;
+                openBtnEl.classList.add('is-friend');
+                downloadBtnEl.textContent = COPY.friendDownloadBtn;
+                hintEl.style.display = 'block';
+                hintEl.textContent = COPY.friendHint;
+            } else {
+                document.title = COPY.duelPageTitle;
+                headingEl.textContent = COPY.duelHeading;
+                subtitleEl.textContent = COPY.duelSubtitle;
+                topLabelEl.textContent = title;
+                scoreEl.textContent = score + ' PTS';
+                scoreLabelEl.textContent = COPY.duelScoreLabel;
+                openBtnEl.textContent = COPY.duelOpenBtn;
+                downloadBtnEl.textContent = COPY.duelDownloadBtn;
+            }
         });
     </script>
 </head>
 <body>
-    <div class="card">
-        <div class="emoji">⚔️</div>
-        <h1>DÉFI REÇU !</h1>
-        <p class="subtitle">Quelqu'un te défie en dictée sur Meemaw</p>
+    <main class="card">
+        <div class="mascot-avatar">
+            <img src="/assets/meemaw-salut-240.webp" srcset="/assets/meemaw-salut-240.webp 1x, /assets/meemaw-salut-480.webp 2x" width="84" height="84" alt="Meemaw">
+        </div>
+        <h1 id="headingText">DÉFI REÇU !</h1>
+        <p class="subtitle" id="subtitleText">Quelqu'un te défie sur Meemaw</p>
 
         <div class="challenger-info">
-            <p id="dictationTitle" class="score-label" style="margin-bottom: 8px;">📖 Dictée</p>
+            <p id="dictationTitle" class="score-label" style="margin-bottom: 0.45rem;">Dictée</p>
             <p class="challenger-name" id="challengerName">Un ami</p>
             <p class="score" id="challengerScore">0 PTS</p>
-            <p class="score-label">Score à battre</p>
+            <p class="score-label" id="scoreLabel">Score à battre</p>
+            <p class="friend-note" id="friendNote" style="display: none;"></p>
         </div>
 
-        <a href="javascript:openApp()" class="btn-open">⚔️ RELEVER LE DÉFI</a>
-        <a href="https://apps.apple.com/app/id6757681331" class="btn-download">📲 Télécharger Meemaw</a>
-    </div>
+        <a href="javascript:openApp()" class="btn-open" id="openBtn">Relever le défi</a>
+        <a href="https://apps.apple.com/app/id6757681331" class="btn-download" id="downloadBtn">Télécharger Meemaw</a>
+        <p class="helper-hint" id="helperHint" style="display: none;"></p>
+    </main>
 </body>
 </html>
