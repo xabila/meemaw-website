@@ -11,6 +11,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/assets/videos/poster-fr.webp</video:thumbnail_loc>
+      <video:title>25 secondes au cœur d’une vraie partie. — Meemaw</video:title>
+      <video:description>Zéro mise en scène : écrivez en direct sur le cahier Seyès à votre rythme, remportez un duel Motus au tour par tour en 2 manches contre un ami, grimpez au podium 24h et retenez la règle d’accord immédiatement.</video:description>
+      <video:content_loc>https://meemaw.app/assets/videos/trailer-fr.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/en/</loc>
@@ -21,6 +30,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>25 seconds inside a real French session. — Meemaw</video:title>
+      <video:description>Zero staging or static slides: type live on the French Seyès notebook, win a 2-round turn-based Motus duel, climb the 24-hour leaderboard, and read every grammar rule in plain English.</video:description>
+      <video:content_loc>https://meemaw.app/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/es/</loc>
@@ -31,6 +49,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/assets/videos/poster-es.webp</video:thumbnail_loc>
+      <video:title>25 segundos dentro de una partida real. — Meemaw</video:title>
+      <video:description>Sin diapositivas estáticas: escribe en vivo sobre el cuaderno francés Seyès, gana un duelo Motus por turnos a 2 rondas, sube al podio 24h y lee cada regla explicada en español claro.</video:description>
+      <video:content_loc>https://meemaw.app/assets/videos/trailer-es.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/math/</loc>
@@ -41,6 +68,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/math/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/math/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/math/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/math/assets/videos/poster-fr.webp</video:thumbnail_loc>
+      <video:title>26 secondes de vrai calcul mental en jeu. — Meemaw Math</video:title>
+      <video:description>Sans calculatrice ni QCM passif : percez l’équation secrète du Mathus en 6 essais, décomposez 15 % ou 100 − 37 en 2 étapes dans le Dojo, et dérouillez votre Âge Cérébral au pavé auto-validant.</video:description>
+      <video:content_loc>https://meemaw.app/math/assets/videos/trailer-fr.mp4</video:content_loc>
+      <video:duration>27</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/math/en/</loc>
@@ -51,6 +87,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/math/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/math/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/math/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/math/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>26 seconds of real mental math gameplay. — Meemaw Math</video:title>
+      <video:description>No calculator and no passive multiple choice: crack the 6-try Mathus equation, break down 15% or 100 − 37 in 2 visual steps inside the Dojo, and sharpen your Brain Age on an auto-validating keypad.</video:description>
+      <video:content_loc>https://meemaw.app/math/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>27</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/math/es/</loc>
@@ -61,6 +106,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://meemaw.app/math/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://meemaw.app/math/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/math/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/math/assets/videos/poster-es.webp</video:thumbnail_loc>
+      <video:title>26 segundos de cálculo mental real en juego. — Meemaw Mates</video:title>
+      <video:description>Sin calculadora ni test pasivos: descubre la ecuación oculta del Mathus en 6 intentos, domina el 15 % o 100 − 37 en 2 pasos visuales en el Dojo y entrena tu Edad Cerebral con validación instantánea.</video:description>
+      <video:content_loc>https://meemaw.app/math/assets/videos/trailer-es.mp4</video:content_loc>
+      <video:duration>27</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/</loc>

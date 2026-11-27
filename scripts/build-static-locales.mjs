@@ -27,6 +27,25 @@ function stripTags(str) {
     return String(str).replace(/<[^>]+>/g, '');
 }
 
+function buildYtShortsHtml(d) {
+    if (!d || !d.yt_shorts) return '';
+    const prefix = d.yt_play_prefix || 'Play';
+    return d.yt_shorts.map((s) => {
+        const t = escAttr(s.title);
+        const lbl = escAttr(`${prefix} : ${s.title}`);
+        const tb = escAttr(s.thumbBase);
+        return `<figure class="yt-short-item">
+                        <div class="yt-short-stage">
+                            <button type="button" class="yt-short-btn" data-ytid="${escAttr(s.id)}" data-yttitle="${t}" aria-label="${lbl}">
+                                <img src="${tb}-360.webp" srcset="${tb}-360.webp 360w, ${tb}.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="${t}" width="540" height="960" loading="lazy" decoding="async">
+                                <span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            </button>
+                        </div>
+                        <figcaption>${escHtml(s.title)}</figcaption>
+                    </figure>`;
+    }).join('\n                    ');
+}
+
 function replaceByIdInner(html, id, innerHtml) {
     const openRe = new RegExp(`<([a-z0-9]+)\\b[^>]*\\bid="${id}"[^>]*>`, 'i');
     const m = openRe.exec(html);
@@ -237,11 +256,12 @@ function buildOrthoJsonLd(lang, d) {
                 alternateName: ['Meemaw', 'Orthographe & Dictée : Meemaw', 'Learn French Spelling: Meemaw', 'Ortografía francesa: Meemaw', 'Meemaw French Motus'],
                 operatingSystem: 'iOS, iPadOS',
                 applicationCategory: 'EducationalApplication',
-                softwareVersion: '1.0.45',
+                softwareVersion: '1.0.49',
                 inLanguage: ['fr', 'en', 'es'],
                 url: pageUrl,
                 downloadUrl: oStore,
                 installUrl: oStore,
+                trailer: { '@id': `${pageUrl}#trailer-video` },
                 offers: {
                     '@type': 'Offer',
                     price: '0',
@@ -261,23 +281,36 @@ function buildOrthoJsonLd(lang, d) {
                 featureList: isEn
                     ? [
                         '1,837 studio 24 kHz French voice dictations read full-sentence then phrase-by-phrase with interactive Mini-Map',
-                        'New French Spelling Motus (Wordle-style grid): 300 curated 5-to-9-letter French words in 6 tries with 1st letter revealed, grammar clue, and English rule breakdown (100% silent play)',
+                        'French Spelling Motus & 2-Round Turn-Based Duels: 1,000 curated 5-to-9-letter French words via Game Center or private rooms with English rule breakdowns',
                         '620 French Anagrams & Word-by-Word lexical spelling mode',
                         '50 jargon-free French grammar & agreement rule sheets explained in English, French, and Spanish',
                         '9 game modes across 5 ranks with 1-tap mid-game difficulty switching',
-                        'Apple Screen Time Parental Shield & 1-tap WhatsApp / iMessage Family Duels',
+                        'Apple Screen Time Parental Shield & 1-tap WhatsApp / iMessage / Game Center Duels',
                         '100% offline, zero ads, zero data collected, and Apple Family Sharing for up to 6 members'
                     ]
                     : [
                         '1.837 dictados en francés con voz de estudio a 24 kHz leídos frase entera y tramo a tramo con Mini-Mapa interactivo',
-                        'Nuevo modo Motus Ortografía: 300 palabras francesas de 5 a 9 letras en 6 intentos con 1.ª letra revelada, pista gramatical y regla explicada en español (100 % sin sonido)',
+                        'Motus Ortografía y Duelos por Turnos a 2 Rondas: 1.000 palabras francesas en Game Center o sala privada con explicación en español',
                         '620 Anagramas en francés y modo Palabra por Palabra',
                         '50 fichas de gramática y ortografía francesa explicadas sin jerga en español, francés e inglés',
                         '9 modos de juego en 5 niveles con cambio de dificultad en 1 toque en plena partida',
-                        'Escudo Tiempo en Pantalla de Apple y duelos familiares por WhatsApp e iMessage',
+                        'Escudo Tiempo en Pantalla de Apple y duelos con amigos en Game Center, WhatsApp e iMessage',
                         '100 % sin conexión, cero anuncios, cero datos recopilados y En Familia de Apple para 6 personas'
                     ],
                 description: d.meta_desc
+            },
+            {
+                '@type': 'VideoObject',
+                '@id': `${pageUrl}#trailer-video`,
+                name: `${d.video_title} — ${isEn ? 'Learn French Spelling: Meemaw' : 'Ortografía francesa: Meemaw'}`,
+                description: d.video_lead,
+                thumbnailUrl: [`https://meemaw.app${d.video_poster}`],
+                uploadDate: '2026-11-27T08:00:00+01:00',
+                duration: 'PT26S',
+                contentUrl: `https://meemaw.app${d.video_file}`,
+                embedUrl: `${pageUrl}#video`,
+                inLanguage: lang,
+                isFamilyFriendly: true
             },
             {
                 '@type': 'ItemList',
@@ -367,7 +400,14 @@ for (const lang of ['en', 'es']) {
     const storeBase = orthoStoreUrls[lang];
     body = replaceAttrById(body, 'navStoreBtn', 'href', `${storeBase}?ct=web_ortho_nav_${lang}&mt=8`);
     body = replaceAttrById(body, 'heroStoreBtn', 'href', `${storeBase}?ct=web_ortho_hero_${lang}&mt=8`);
+    body = replaceAttrById(body, 'videoStoreBtn', 'href', `${storeBase}?ct=web_ortho_video_${lang}&mt=8`);
     body = replaceAttrById(body, 'finalStoreBtn', 'href', `${storeBase}?ct=web_ortho_final_${lang}&mt=8`);
+    body = replaceByIdInner(body, 'videoSoundLabel', escHtml(d.video_sound_off));
+    body = replaceAttrById(body, 'orthoTrailerVideo', 'poster', d.video_poster);
+    body = replaceAttrById(body, 'orthoTrailerVideo', 'aria-label', d.video_poster_alt);
+    body = replaceAttrById(body, 'orthoTrailerSource', 'data-src', d.video_file);
+    body = replaceByIdInner(body, 'ytShortsGrid', buildYtShortsHtml(d));
+    body = replaceAttrById(body, 'ytChannelLink', 'href', d.yt_channel_url);
     body = replaceAttrById(body, 'brandHomeLink', 'href', `/${lang}/`);
     body = replaceAttrById(body, 'suiteOrthoPill', 'href', `/${lang}/`);
     body = replaceAttrById(body, 'suiteMathPill', 'href', `/math/${lang}/`);
@@ -470,6 +510,7 @@ function buildMathJsonLd(lang, d) {
                 url: pageUrl,
                 downloadUrl: mStore,
                 installUrl: mStore,
+                trailer: { '@id': `${pageUrl}#trailer-video` },
                 offers: {
                     '@type': 'Offer',
                     price: '0',
@@ -487,6 +528,19 @@ function buildMathJsonLd(lang, d) {
                 },
                 author: { '@type': 'Person', name: 'Xavier Larrodé' },
                 description: d.meta_desc
+            },
+            {
+                '@type': 'VideoObject',
+                '@id': `${pageUrl}#trailer-video`,
+                name: `${d.video_title} — ${isEn ? 'Mental Math Games: Meemaw Math' : 'Cálculo Mental : Meemaw Mates'}`,
+                description: d.video_lead,
+                thumbnailUrl: [`https://meemaw.app${d.video_poster}`],
+                uploadDate: '2026-11-27T08:00:00+01:00',
+                duration: 'PT27S',
+                contentUrl: `https://meemaw.app${d.video_file}`,
+                embedUrl: `${pageUrl}#video`,
+                inLanguage: lang,
+                isFamilyFriendly: true
             },
             {
                 '@type': 'ItemList',
@@ -577,9 +631,20 @@ for (const lang of ['en', 'es']) {
             `${mBase}?ct=web_math_hero_${lang}&amp;mt=8`
         )
         .replace(
+            'https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_video_fr&amp;mt=8',
+            `${mBase}?ct=web_math_video_${lang}&amp;mt=8`
+        )
+        .replace(
             'https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_final_fr&amp;mt=8',
             `${mBase}?ct=web_math_final_${lang}&amp;mt=8`
         );
+
+    body = replaceByIdInner(body, 'videoSoundLabel', escHtml(d.video_sound_off));
+    body = replaceAttrById(body, 'mathTrailerVideo', 'poster', d.video_poster);
+    body = replaceAttrById(body, 'mathTrailerVideo', 'aria-label', d.video_poster_alt);
+    body = replaceAttrById(body, 'mathTrailerSource', 'data-src', d.video_file);
+    body = replaceByIdInner(body, 'ytShortsGrid', buildYtShortsHtml(d));
+    body = replaceAttrById(body, 'ytChannelLink', 'href', d.yt_channel_url);
 
     body = replaceAttrById(body, 'brandHomeLink', 'href', `/math/${lang}/`);
     body = replaceAttrById(body, 'suiteMathPill', 'href', `/math/${lang}/`);
@@ -969,7 +1034,29 @@ for (const c of clusters) {
 
     for (const item of c.alternates) {
         let videoXml = '';
-        if (c.xDefault === 'https://meemaw.app/hunter/') {
+        if (c.xDefault === 'https://meemaw.app/') {
+            const op = ORTHO_I18N[item.hreflang] || ORTHO_I18N.fr;
+            videoXml = `\n    <video:video>
+      <video:thumbnail_loc>https://meemaw.app${op.video_poster}</video:thumbnail_loc>
+      <video:title>${escHtml(`${op.video_title} — Meemaw`)}</video:title>
+      <video:description>${escHtml(op.video_lead)}</video:description>
+      <video:content_loc>https://meemaw.app${op.video_file}</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>`;
+        } else if (c.xDefault === 'https://meemaw.app/math/') {
+            const mp = MATH_I18N[item.hreflang] || MATH_I18N.fr;
+            videoXml = `\n    <video:video>
+      <video:thumbnail_loc>https://meemaw.app${mp.video_poster}</video:thumbnail_loc>
+      <video:title>${escHtml(`${mp.video_title} — ${mp.brand}`)}</video:title>
+      <video:description>${escHtml(mp.video_lead)}</video:description>
+      <video:content_loc>https://meemaw.app${mp.video_file}</video:content_loc>
+      <video:duration>27</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>`;
+        } else if (c.xDefault === 'https://meemaw.app/hunter/') {
             const lk = item.hreflang === 'pt-BR' ? 'pt-br' : item.hreflang;
             const hp = HUNTER_I18N[lk] || HUNTER_I18N.fr;
             videoXml = `\n    <video:video>

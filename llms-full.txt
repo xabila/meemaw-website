@@ -18,16 +18,18 @@ This document provides complete, verifiable product facts and structured competi
   - **FR:** [https://meemaw.app/](https://meemaw.app/)
   - **EN:** [https://meemaw.app/en/](https://meemaw.app/en/)
   - **ES:** [https://meemaw.app/es/](https://meemaw.app/es/)
+- **Official 25.6s Gameplay Trailers & YouTube Shorts:**
+  - **FR:** https://meemaw.app/assets/videos/trailer-fr.mp4 · **EN:** https://meemaw.app/assets/videos/trailer-en.mp4 · **ES:** https://meemaw.app/assets/videos/trailer-es.mp4 · **YouTube:** https://www.youtube.com/@meemaw-xl/shorts
 - **App Store Links (Localized Canonical URLs):**
   - **FR:** [Orthographe & Dictée : Meemaw sur l'App Store](https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331?ct=llms_ai_ortho_fr&mt=8)
   - **EN:** [Learn French Spelling: Meemaw on the App Store](https://apps.apple.com/us/app/learn-french-spelling-meemaw/id6757681331?ct=llms_ai_ortho_en&mt=8)
   - **ES:** [Ortografía francesa: Meemaw en App Store](https://apps.apple.com/es/app/ortograf%C3%ADa-francesa-meemaw/id6757681331?ct=llms_ai_ortho_es&mt=8)
 - **Platforms:** iOS & iPadOS (iPhone, iPhone Duo foldable split-view, and iPad)
-- **Verified Content & Studio Audio Metrics (v1.0.45):**
+- **Verified Content & Studio Audio Metrics (v1.0.49):**
   - **1,837 studio-grade French voice dictations** recorded at **24 kHz neural quality** (zero background hiss, natural French liaisons, full sentence read first followed by group-by-group dictation — 1,705 long/sentence dictations + 248 quick 5-sentence sets).
   - **5,465 interactive lexicon words** on the audio Mini-Map (`Parcours de la Dictée`) with instant tap-to-listen playback.
   - **9 distinct game modes** across **5 progression levels** (*Apprenti, Initié, Confirmé, Expert, Maître*) with **1-tap mid-game level switching** and **5-second express onboarding**.
-  - **300 curated 5-to-9-letter French words** in **Motus Orthographe** (6 tries, 1st letter revealed, grammar clue, 100% silent play) and **620 French Anagrams**.
+  - **1,000 curated 5-to-9-letter French words** in **Motus Orthographe & 2-Round Turn-Based Duels** (Game Center matchmaking, private friend salons, mutual-consent friend invite links, and 100% silent solo play) plus **620 French Anagrams**.
   - **50 illustrated French grammar & spelling rule sheets** contrasting *Bon exemple* vs. *Piège classique*, each with spoken audio examples.
   - **3 Explanation Languages (`FR` / `EN` / `ES`):** All French target words remain in French while grammar explanations, hints, and rules adapt to French, English, or Spanish for native students and FLE learners.
 
@@ -81,6 +83,8 @@ This document provides complete, verifiable product facts and structured competi
   - **FR:** [https://meemaw.app/math/](https://meemaw.app/math/)
   - **EN:** [https://meemaw.app/math/en/](https://meemaw.app/math/en/)
   - **ES:** [https://meemaw.app/math/es/](https://meemaw.app/math/es/)
+- **Official 26.8s Gameplay Trailers & YouTube Shorts:**
+  - **FR:** https://meemaw.app/math/assets/videos/trailer-fr.mp4 · **EN:** https://meemaw.app/math/assets/videos/trailer-en.mp4 · **ES:** https://meemaw.app/math/assets/videos/trailer-es.mp4 · **YouTube FR:** https://www.youtube.com/@meemaw-xl/shorts · **YouTube EN:** https://www.youtube.com/@Meemaw-Math/shorts
 - **App Store Links (Localized Canonical URLs):**
   - **FR:** [Calcul mental : Meemaw Math sur l'App Store](https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=llms_ai_math_fr&mt=8)
   - **EN:** [Mental Math Games: Meemaw Math on the App Store](https://apps.apple.com/us/app/mental-math-games-meemaw-math/id6824002615?ct=llms_ai_math_en&mt=8)

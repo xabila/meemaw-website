@@ -50,6 +50,9 @@
           "url": "https://meemaw.app/math/",
           "downloadUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_schema_math_fr&mt=8",
           "installUrl": "https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_schema_math_fr&mt=8",
+          "trailer": {
+            "@id": "https://meemaw.app/math/#trailer-video"
+          },
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -78,6 +81,19 @@
             "Duels Parents vs Enfants sur WhatsApp et iMessage via Universal Links sans création de compte"
           ],
           "description": "Meemaw Math aide enfants, ados et adultes à oublier leur calculatrice en 5 minutes par jour grâce à 13 secrets de calcul mental guidés en 2 étapes, au suivi de l'Âge Cérébral, à 11 jeux de réflexion et au bouclier Temps d'Écran sur iPhone et iPad."
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://meemaw.app/math/#trailer-video",
+          "name": "26 secondes de vrai calcul mental en jeu — Meemaw Math",
+          "description": "Capture vidéo en jeu sur iPhone montrant le défi quotidien Mathus en 6 essais, les 13 secrets guidés en 2 étapes du Dojo, le Calcul Flash DS et les défis de QI numérique.",
+          "thumbnailUrl": ["https://meemaw.app/math/assets/videos/poster-fr.webp"],
+          "uploadDate": "2026-11-27T08:00:00+01:00",
+          "duration": "PT27S",
+          "contentUrl": "https://meemaw.app/math/assets/videos/trailer-fr.mp4",
+          "embedUrl": "https://meemaw.app/math/#video",
+          "inLanguage": "fr",
+          "isFamilyFriendly": true
         },
         {
           "@type": "ItemList",
@@ -752,6 +768,247 @@
             border-top: 3px solid var(--ink);
             border-bottom: 3px solid var(--ink);
             padding: 3.5rem 1.5rem;
+        }
+
+        section[id] {
+            scroll-margin-top: 4.5rem;
+        }
+
+        /* Chapter 2B: Official 26s In-Game Gameplay Showcase */
+        .trailer-chapter {
+            background-color: var(--emerald-poche);
+            color: var(--crisp-paper);
+            border-bottom: 3px solid var(--pop-gold);
+            padding: 4.25rem max(1.5rem, env(safe-area-inset-right)) 4.25rem max(1.5rem, env(safe-area-inset-left));
+        }
+
+        .trailer-split {
+            display: grid;
+            grid-template-columns: 308px minmax(0, 1fr);
+            gap: 2.75rem;
+            align-items: center;
+        }
+
+        .trailer-stage {
+            position: relative;
+            width: 100%;
+            max-width: 308px;
+            margin: 0 auto;
+            aspect-ratio: 886 / 1920;
+            border-radius: var(--radius-surface);
+            border: 3px solid var(--pop-gold);
+            background: var(--emerald-slate);
+            overflow: hidden;
+        }
+
+        .trailer-video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            background: var(--emerald-slate);
+        }
+
+        .trailer-sound-pill {
+            position: absolute;
+            left: 0.75rem;
+            right: 0.75rem;
+            bottom: 0.75rem;
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--pop-gold);
+            color: var(--ink);
+            border: 2px solid var(--ink);
+            border-radius: var(--radius-control);
+            padding: 0.6rem 0.9rem;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 800;
+            cursor: pointer;
+            touch-action: manipulation;
+            transition: transform 0.18s var(--ease-out-expo), background-color 0.18s ease;
+        }
+
+        .trailer-sound-pill:hover {
+            background: var(--pop-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .trailer-sound-pill[aria-pressed="true"] {
+            background: #136B42;
+            color: var(--crisp-paper);
+            border-color: var(--crisp-paper);
+        }
+
+        .trailer-copy h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 3vw, 2.55rem);
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -0.025em;
+            color: var(--crisp-paper);
+            text-wrap: balance;
+            margin-bottom: 0.85rem;
+        }
+
+        .trailer-copy > p {
+            color: var(--mint-cream);
+            font-size: 1.0625rem;
+            line-height: 1.62;
+            max-width: 60ch;
+            text-wrap: pretty;
+            margin-bottom: 1.35rem;
+        }
+
+        .trailer-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        /* Bottom YouTube Shorts Showcase (Zero-Cookie Facade) */
+        .yt-showcase {
+            max-width: 1120px;
+            margin: 0 auto 3.5rem;
+            padding-top: 3.25rem;
+            border-top: 1.5px solid rgba(232, 245, 239, 0.2);
+        }
+
+        .yt-header {
+            max-width: 720px;
+            margin-bottom: 1.75rem;
+        }
+
+        .yt-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2.7vw, 2.55rem);
+            font-weight: 800;
+            line-height: 1.14;
+            letter-spacing: -0.024em;
+            color: var(--crisp-paper);
+            text-wrap: balance;
+            margin-bottom: 0.5rem;
+        }
+
+        .yt-header p {
+            color: var(--mint-cream);
+            font-size: 1.0625rem;
+            line-height: 1.58;
+            max-width: 62ch;
+            text-wrap: pretty;
+        }
+
+        .yt-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .yt-short-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .yt-short-stage {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            border-radius: var(--radius-surface);
+            border: 2px solid rgba(255, 209, 59, 0.45);
+            background: var(--emerald-slate);
+            overflow: hidden;
+        }
+
+        .yt-short-stage iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .yt-short-btn {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            border: 0;
+            background: var(--emerald-slate);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .yt-short-btn img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.28s var(--ease-out-expo);
+        }
+
+        .yt-short-btn:hover img {
+            transform: scale(1.03);
+        }
+
+        .yt-play-badge {
+            position: relative;
+            z-index: 2;
+            width: 58px;
+            height: 58px;
+            border-radius: var(--radius-pill);
+            background: var(--pop-gold);
+            color: var(--ink);
+            border: 2.5px solid var(--ink);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s var(--ease-out-expo), background-color 0.16s ease;
+        }
+
+        .yt-short-btn:hover .yt-play-badge {
+            background: var(--pop-gold-hover);
+            transform: scale(1.08);
+        }
+
+        .yt-short-item figcaption {
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 1.38;
+            color: var(--mint-cream);
+            text-wrap: pretty;
+        }
+
+        .yt-channel-row {
+            margin-top: 1.35rem;
+        }
+
+        .yt-channel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            color: var(--pop-gold);
+            font-family: var(--font-display);
+            font-size: 0.96rem;
+            font-weight: 800;
+            text-decoration: underline;
+            min-height: 44px;
+        }
+
+        .yt-channel-link:hover {
+            color: var(--crisp-paper);
         }
 
         .section-header {
@@ -1430,6 +1687,33 @@
                 border-left: none;
                 border-top: 1.5px solid rgba(232, 245, 239, 0.2);
             }
+
+            .trailer-split {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .trailer-stage {
+                max-width: 296px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .yt-grid {
+                grid-template-columns: none;
+                grid-auto-flow: column;
+                grid-auto-columns: 224px;
+                gap: 1rem;
+                overflow-x: auto;
+                margin-inline: -1.5rem;
+                padding: 0.2rem 1.5rem 0.85rem;
+                scroll-padding-inline-start: 1.5rem;
+                scroll-snap-type: x mandatory;
+            }
+
+            .yt-short-item {
+                scroll-snap-align: start;
+            }
         }
 
         /* Mobile-First Responsive Comparison Table -> Stacked Ledger Cards */
@@ -1547,6 +1831,22 @@
                 padding: 3rem 1rem;
             }
 
+            .trailer-chapter {
+                padding: 3rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left));
+            }
+
+            .trailer-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .yt-grid {
+                margin-inline: -1rem;
+                padding-inline: 1rem;
+                scroll-padding-inline-start: 1rem;
+                grid-auto-columns: 212px;
+            }
+
             .closing-chapter {
                 padding: 3rem 1rem max(2rem, env(safe-area-inset-bottom));
             }
@@ -1607,6 +1907,7 @@
             </nav>
 
             <nav class="page-anchors" aria-label="Sections">
+                <a href="#video" class="anchor-link" data-i18n="nav_video">En action</a>
                 <a href="#secrets" class="anchor-link" data-i18n="nav_secrets">13 Secrets</a>
                 <a href="#famille" class="anchor-link" data-i18n="nav_family">Temps d’Écran</a>
                 <a href="#comparatif" class="anchor-link" data-i18n="nav_comp">Comparatif</a>
@@ -1642,9 +1943,9 @@
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
                             <span data-i18n="cta_download">Télécharger sur l’App Store</span>
                         </a>
-                        <a href="#apercu" class="btn-secondary">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                            <span data-i18n="cta_preview">Voir l’application en action</span>
+                        <a href="#video" class="btn-secondary" id="heroWatchBtn">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>
+                            <span data-i18n="cta_preview">Voir la vidéo gameplay (26 s)</span>
                         </a>
                     </div>
                     <div class="proof-strip">
@@ -1743,6 +2044,47 @@
                             <h3 data-i18n="w3_t">Zéro conflit à la maison &amp; examens sereins</h3>
                         </div>
                         <p data-i18n="w3_d">5 minutes débloquent automatiquement TikTok ou les jeux via Apple Temps d’Écran, et l’application active un espace examens sans calculatrice si votre ado prépare le Brevet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 2B: Official 26s In-Game Gameplay Showcase -->
+        <section class="trailer-chapter" id="video" aria-labelledby="videoTitle">
+            <div class="section-shell">
+                <div class="trailer-split">
+                    <div class="trailer-stage">
+                        <video id="mathTrailerVideo" class="trailer-video" width="590" height="1280" poster="/math/assets/videos/poster-fr.webp" muted loop playsinline preload="none" aria-label="Capture vidéo en jeu de Meemaw Math montrant le défi Mathus en 6 essais, le Dojo des 13 astuces et le Calcul Flash DS">
+                            <source id="mathTrailerSource" data-src="/math/assets/videos/trailer-fr.mp4" type="video/mp4">
+                        </video>
+                        <button type="button" class="trailer-sound-pill" id="videoSoundBtn" aria-pressed="false">
+                            <svg id="videoSoundIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                            <span id="videoSoundLabel">Activer le son Meemaw</span>
+                        </button>
+                    </div>
+                    <div class="trailer-copy">
+                        <h2 id="videoTitle" data-i18n="video_title">26 secondes de vrai calcul mental en jeu.</h2>
+                        <p data-i18n="video_lead">Sans calculatrice ni QCM passif : percez l’équation secrète du Mathus en 6 essais, décomposez 15 % ou 100 − 37 en 2 étapes dans le Dojo, et dérouillez votre Âge Cérébral au pavé auto-validant.</p>
+                        <ul class="check-list">
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span data-i18n="video_p1">Défi quotidien Mathus 24h : trouvez l’équation exacte en 6 essais logiques avec priorités opératoires</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span data-i18n="video_p2">Dojo des 13 Astuces &amp; Caisse du Boulanger : raccourcis visuels en 2 étapes et monnaie au centime</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span data-i18n="video_p3">Calcul Flash DS ×20 &amp; Défis QI : pavé instantané façon Dr Kawashima, suites Mensa et brouillon tactile</span>
+                            </li>
+                        </ul>
+                        <div class="trailer-actions">
+                            <a href="https://apps.apple.com/fr/app/calcul-mental-meemaw-math/id6824002615?ct=web_math_video_fr&amp;mt=8" class="btn-primary" id="videoStoreBtn" target="_blank" rel="noopener">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
+                                <span data-i18n="cta_download">Télécharger sur l’App Store</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1996,7 +2338,7 @@
                 <div class="comp-foot">
                     <a href="/math/comparatif-applications-calcul-mental-brevet.html" class="text-action-link" id="compGuideLink">
                         <span data-i18n="comp_guide_cta">Lire notre guide comparatif complet 2026</span>
-                        <span aria-hidden="true">→</span>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
@@ -2028,6 +2370,48 @@
                         </summary>
                         <p data-i18n="a3">Le téléchargement est gratuit avec un entraînement quotidien libre et un essai offert pour découvrir tous les modes PRO. Avec le Partage Familial Apple (Family Sharing), un seul abonnement ou achat à vie débloque Meemaw Math PRO pour jusqu’à 6 membres de la famille, chacun avec sa propre progression sur son iPhone ou iPad.</p>
                     </details>
+                </div>
+            </div>
+
+            <div class="yt-showcase" id="youtube" aria-labelledby="ytHeading">
+                <div class="yt-header">
+                    <h2 id="ytHeading" data-i18n="yt_title">Défis Mathus du jour sur YouTube</h2>
+                    <p data-i18n="yt_sub">Mettez pause avant le dernier essai et trouvez l’équation exacte de tête — zéro cookie publicitaire avant votre clic.</p>
+                </div>
+                <div class="yt-grid" id="ytShortsGrid">
+                    <figure class="yt-short-item">
+                        <div class="yt-short-stage">
+                            <button type="button" class="yt-short-btn" data-ytid="A-dqP_EDh6Y" data-yttitle="Mathus n°20 — Quelle équation donne 65 en 6 essais ?" aria-label="Lire la vidéo : Mathus n°20 — Quelle équation donne 65 en 6 essais ?">
+                                <img src="/math/assets/youtube/A-dqP_EDh6Y-360.webp" srcset="/math/assets/youtube/A-dqP_EDh6Y-360.webp 360w, /math/assets/youtube/A-dqP_EDh6Y.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="Mathus n°20 — Quelle équation donne 65 en 6 essais ?" width="540" height="960" loading="lazy" decoding="async">
+                                <span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            </button>
+                        </div>
+                        <figcaption>Mathus n°20 — Quelle équation donne 65 en 6 essais ?</figcaption>
+                    </figure>
+                    <figure class="yt-short-item">
+                        <div class="yt-short-stage">
+                            <button type="button" class="yt-short-btn" data-ytid="6ixXk-MxDos" data-yttitle="Mathus n°21 — Trouver le calcul = 31 sans calculatrice" aria-label="Lire la vidéo : Mathus n°21 — Trouver le calcul = 31 sans calculatrice">
+                                <img src="/math/assets/youtube/6ixXk-MxDos-360.webp" srcset="/math/assets/youtube/6ixXk-MxDos-360.webp 360w, /math/assets/youtube/6ixXk-MxDos.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="Mathus n°21 — Trouver le calcul = 31 sans calculatrice" width="540" height="960" loading="lazy" decoding="async">
+                                <span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            </button>
+                        </div>
+                        <figcaption>Mathus n°21 — Trouver le calcul = 31 sans calculatrice</figcaption>
+                    </figure>
+                    <figure class="yt-short-item">
+                        <div class="yt-short-stage">
+                            <button type="button" class="yt-short-btn" data-ytid="VV7Fe6n3FKA" data-yttitle="Mathus n°23 — 90 % hésitent sur cette priorité = 19" aria-label="Lire la vidéo : Mathus n°23 — 90 % hésitent sur cette priorité = 19">
+                                <img src="/math/assets/youtube/VV7Fe6n3FKA-360.webp" srcset="/math/assets/youtube/VV7Fe6n3FKA-360.webp 360w, /math/assets/youtube/VV7Fe6n3FKA.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="Mathus n°23 — 90 % hésitent sur cette priorité = 19" width="540" height="960" loading="lazy" decoding="async">
+                                <span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            </button>
+                        </div>
+                        <figcaption>Mathus n°23 — 90 % hésitent sur cette priorité = 19</figcaption>
+                    </figure>
+                </div>
+                <div class="yt-channel-row">
+                    <a href="https://www.youtube.com/@meemaw-xl/shorts" id="ytChannelLink" class="yt-channel-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#0B4634"/></svg>
+                        <span id="ytChannelCta" data-i18n="yt_channel_cta">Voir tous les défis sur notre chaîne YouTube @meemaw-xl</span>
+                    </a>
                 </div>
             </div>
 
@@ -2083,6 +2467,7 @@
                 suite_ortho_pill: "Meemaw",
                 meta_title: "Meemaw Math — Oubliez votre calculatrice en 5 min par jour sur iPhone & iPad",
                 meta_desc: "Découvrez les 13 secrets de calcul mental que l’école ne vous a jamais appris (15 % de tête, 100 − 37 sans retenue, table de 9, rendre la monnaie), dérouillez votre Âge Cérébral et relevez nos défis de QI numérique sur iPhone et iPad.",
+                nav_video: "En action",
                 nav_secrets: "13 Secrets",
                 nav_family: "Temps d’Écran",
                 nav_comp: "Comparatif",
@@ -2090,7 +2475,27 @@
                 hero_title: "Oubliez votre calculatrice <span class='gold-ink'>en 5 minutes par jour.</span>",
                 hero_lead: "Découvrez les 13 secrets de calcul mental que l’école ne vous a jamais appris — calculer 15 % d’une addition de tête, faire 100 − 37 sans retenue ou rendre la monnaie au centime — et dérouillez votre Âge Cérébral sur iPhone et iPad.",
                 cta_download: "Télécharger sur l’App Store",
-                cta_preview: "Voir l’application en action",
+                cta_preview: "Voir la vidéo gameplay (26 s)",
+                video_title: "26 secondes de vrai calcul mental en jeu.",
+                video_lead: "Sans calculatrice ni QCM passif : percez l’équation secrète du Mathus en 6 essais, décomposez 15 % ou 100 − 37 en 2 étapes dans le Dojo, et dérouillez votre Âge Cérébral au pavé auto-validant.",
+                video_p1: "Défi quotidien Mathus 24h : trouvez l’équation exacte en 6 essais logiques avec priorités opératoires",
+                video_p2: "Dojo des 13 Astuces & Caisse du Boulanger : raccourcis visuels en 2 étapes et monnaie au centime",
+                video_p3: "Calcul Flash DS ×20 & Défis QI : pavé instantané façon Dr Kawashima, suites Mensa et brouillon tactile",
+                video_sound_off: "Activer le son Meemaw",
+                video_sound_on: "Son Meemaw activé",
+                video_file: "/math/assets/videos/trailer-fr.mp4",
+                video_poster: "/math/assets/videos/poster-fr.webp",
+                video_poster_alt: "Capture vidéo en jeu de Meemaw Math montrant le défi Mathus en 6 essais, le Dojo des 13 astuces et le Calcul Flash DS",
+                yt_title: "Défis Mathus du jour sur YouTube",
+                yt_sub: "Mettez pause avant le dernier essai et trouvez l’équation exacte de tête — zéro cookie publicitaire avant votre clic.",
+                yt_channel_cta: "Voir tous les défis sur notre chaîne YouTube @meemaw-xl",
+                yt_channel_url: "https://www.youtube.com/@meemaw-xl/shorts",
+                yt_play_prefix: "Lire la vidéo",
+                yt_shorts: [
+                    { id: "A-dqP_EDh6Y", thumbBase: "/math/assets/youtube/A-dqP_EDh6Y", title: "Mathus n°20 — Quelle équation donne 65 en 6 essais ?" },
+                    { id: "6ixXk-MxDos", thumbBase: "/math/assets/youtube/6ixXk-MxDos", title: "Mathus n°21 — Trouver le calcul = 31 sans calculatrice" },
+                    { id: "VV7Fe6n3FKA", thumbBase: "/math/assets/youtube/VV7Fe6n3FKA", title: "Mathus n°23 — 90 % hésitent sur cette priorité = 19" }
+                ],
                 proof_1: "13 secrets guidés en 2 étapes\u00A0· 11 modes de jeu\u00A0· Âge Cérébral & QI",
                 proof_2: "100\u00A0% hors-ligne\u00A0· Zéro publicité\u00A0· Partage Familial Apple (jusqu’à 6)",
                 qr_label: "Sur Mac ou PC ? Scannez avec l’appareil photo de votre iPhone",
@@ -2228,6 +2633,7 @@
                 suite_ortho_pill: "Meemaw",
                 meta_title: "Meemaw Math — Forget Your Calculator in 5 Minutes a Day on iPhone & iPad",
                 meta_desc: "Master 13 mental math secrets school never taught you (15% in your head, 100 − 37 with zero borrowing, 9 times table, exact change), sharpen your Brain Age, and solve Numerical IQ puzzles on iPhone & iPad.",
+                nav_video: "Gameplay",
                 nav_secrets: "13 Secrets",
                 nav_family: "Screen Time",
                 nav_comp: "Comparison",
@@ -2235,7 +2641,27 @@
                 hero_title: "Forget your calculator <span class='gold-ink'>in 5 minutes a day.</span>",
                 hero_lead: "Master 13 mental math secrets school never taught you—figuring out 15% of a bill in your head, solving 100 − 37 with zero borrowing, or counting exact change—and sharpen your Brain Age on iPhone and iPad.",
                 cta_download: "Download on the App Store",
-                cta_preview: "See the app in action",
+                cta_preview: "Watch 26s Gameplay",
+                video_title: "26 seconds of real mental math gameplay.",
+                video_lead: "No calculator and no passive multiple choice: crack the 6-try Mathus equation, break down 15% or 100 − 37 in 2 visual steps inside the Dojo, and sharpen your Brain Age on an auto-validating keypad.",
+                video_p1: "Daily 24h Mathus equation puzzle: deduce the hidden calculation in 6 tries with order of operations",
+                video_p2: "13-Secret Dojo & Baker’s Register: 2-step mental shortcuts and exact change to the cent",
+                video_p3: "Speed Mental ×20 & Numerical IQ: Dr. Kawashima-style sprint, Mensa sequences, and built-in scratchpad",
+                video_sound_off: "Unmute Meemaw Audio",
+                video_sound_on: "Meemaw Audio ON",
+                video_file: "/math/assets/videos/trailer-en.mp4",
+                video_poster: "/math/assets/videos/poster-en.webp",
+                video_poster_alt: "In-game iPhone video of Meemaw Math showing the 6-try Mathus equation puzzle, the 13-Secret Dojo, and Speed Mental Brain Age",
+                yt_title: "Daily Mental Math Challenges on YouTube",
+                yt_sub: "Pause before the final try and solve the 6-tile equation in your head—zero tracking cookies loaded until you press play.",
+                yt_channel_cta: "Watch all mental math Shorts on YouTube @Meemaw-Math",
+                yt_channel_url: "https://www.youtube.com/@Meemaw-Math/shorts",
+                yt_play_prefix: "Play video",
+                yt_shorts: [
+                    { id: "iuWrJMTCRWA", thumbBase: "/math/assets/youtube/iuWrJMTCRWA", title: "Target = 19 — 90% hesitate on order of operations" },
+                    { id: "bXxfFILdwR8", thumbBase: "/math/assets/youtube/bXxfFILdwR8", title: "Target = 49 — Pause before the final try" },
+                    { id: "a0HHtyYZjO4", thumbBase: "/math/assets/youtube/a0HHtyYZjO4", title: "Target = 65 — Solve the 6-tile equation with no calculator" }
+                ],
                 proof_1: "13 two-step mental shortcuts\u00A0· 11 game modes\u00A0· Brain Age & IQ",
                 proof_2: "100% offline\u00A0· Zero ads\u00A0· Apple Family Sharing (up to 6 members)",
                 qr_label: "On Mac or PC? Scan with your iPhone camera",
@@ -2373,6 +2799,7 @@
                 suite_ortho_pill: "Meemaw",
                 meta_title: "Meemaw Mates — Olvida tu calculadora en 5 min al día en iPhone y iPad",
                 meta_desc: "Descubre los 13 secretos de cálculo mental que la escuela nunca te enseñó (15 % de cabeza, 100 − 37 sin llevadas, tabla del 9, dar el cambio), despierta tu Edad Cerebral y supera retos de CI numérico en iPhone y iPad.",
+                nav_video: "Gameplay",
                 nav_secrets: "13 Secretos",
                 nav_family: "Tiempo en Pantalla",
                 nav_comp: "Comparativa",
@@ -2380,7 +2807,27 @@
                 hero_title: "Olvida tu calculadora <span class='gold-ink'>en 5 minutos al día.</span>",
                 hero_lead: "Descubre los 13 secretos de cálculo mental que la escuela nunca te enseñó —calcular el 15 % de cabeza, restar 100 − 37 sin llevadas o dar el cambio exacto— y despierta tu Edad Cerebral en iPhone y iPad.",
                 cta_download: "Descargar en el App Store",
-                cta_preview: "Ver la aplicación en acción",
+                cta_preview: "Ver vídeo en juego (26 s)",
+                video_title: "26 segundos de cálculo mental real en juego.",
+                video_lead: "Sin calculadora ni test pasivos: descubre la ecuación oculta del Mathus en 6 intentos, domina el 15 % o 100 − 37 en 2 pasos visuales en el Dojo y entrena tu Edad Cerebral con validación instantánea.",
+                video_p1: "Reto diario Mathus 24h: deduce la operación exacta en 6 intentos con jerarquía matemática",
+                video_p2: "Dojo de los 13 Secretos y Caja de la Panadería: atajos en 2 pasos y cambio exacto al céntimo",
+                video_p3: "Cálculo Flash DS ×20 y Retos de CI: teclado instantáneo estilo Dr. Kawashima, series Mensa y borrador",
+                video_sound_off: "Activar el sonido Meemaw",
+                video_sound_on: "Sonido Meemaw activado",
+                video_file: "/math/assets/videos/trailer-es.mp4",
+                video_poster: "/math/assets/videos/poster-es.webp",
+                video_poster_alt: "Captura de vídeo en juego de Meemaw Mates mostrando el reto Mathus en 6 intentos, el Dojo de los 13 secretos y Cálculo Flash DS",
+                yt_title: "Retos diarios de cálculo mental en YouTube",
+                yt_sub: "Pon pausa antes del último intento y resuelve la ecuación de cabeza — cero cookies publicitarias antes de pulsar reproducir.",
+                yt_channel_cta: "Ver todos los retos de cálculo en YouTube @Meemaw-Math",
+                yt_channel_url: "https://www.youtube.com/@Meemaw-Math/shorts",
+                yt_play_prefix: "Reproducir vídeo",
+                yt_shorts: [
+                    { id: "iuWrJMTCRWA", thumbBase: "/math/assets/youtube/iuWrJMTCRWA", title: "Objetivo = 19 — El 90 % duda con la jerarquía de operaciones" },
+                    { id: "bXxfFILdwR8", thumbBase: "/math/assets/youtube/bXxfFILdwR8", title: "Objetivo = 49 — Pon pausa antes del último intento" },
+                    { id: "a0HHtyYZjO4", thumbBase: "/math/assets/youtube/a0HHtyYZjO4", title: "Objetivo = 65 — Ecuación de 6 fichas sin calculadora" }
+                ],
                 proof_1: "13 secretos guiados en 2 pasos\u00A0· 11 modos de juego\u00A0· Edad Cerebral y CI",
                 proof_2: "100\u00A0% sin conexión\u00A0· Cero anuncios\u00A0· En Familia de Apple (hasta 6)",
                 qr_label: "¿En Mac o PC? Escanea con la cámara de tu iPhone",
@@ -2540,6 +2987,149 @@
         const staticLang = window.__PAGE_STATIC_LANG || 'fr';
         let activeLang = staticLang;
         let activeTrickIdx = 0;
+        let videoHydratedSrc = '';
+        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const iconMuted = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
+        const iconUnmuted = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>';
+        const videoEl = document.getElementById('mathTrailerVideo');
+        const videoSrcEl = document.getElementById('mathTrailerSource');
+        const soundBtn = document.getElementById('videoSoundBtn');
+        const soundLabel = document.getElementById('videoSoundLabel');
+        const soundIcon = document.getElementById('videoSoundIcon');
+        const ytGridEl = document.getElementById('ytShortsGrid');
+
+        function escHtmlClient(s) {
+            return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        }
+
+        function syncSoundUi() {
+            if (!videoEl || !soundBtn) return;
+            const dict = i18n[activeLang] || i18n.fr || {};
+            const on = !videoEl.muted && !videoEl.paused;
+            soundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            if (soundLabel) soundLabel.textContent = on ? (dict.video_sound_on || 'Audio ON') : (dict.video_sound_off || 'Unmute');
+            if (soundIcon) soundIcon.innerHTML = on ? iconUnmuted : iconMuted;
+        }
+
+        function hydrateVideoSource(targetSrc, forceReload) {
+            if (!videoEl || !videoSrcEl) return;
+            const desired = targetSrc || videoSrcEl.getAttribute('data-src') || '/math/assets/videos/trailer-fr.mp4';
+            videoSrcEl.setAttribute('data-src', desired);
+            if (videoHydratedSrc === desired && !forceReload) return;
+            const wasUnmuted = !videoEl.muted;
+            const wasPlaying = !videoEl.paused;
+            videoHydratedSrc = desired;
+            videoEl.src = desired;
+            videoEl.muted = !wasUnmuted;
+            videoEl.load();
+            if (wasPlaying) videoEl.play().catch(function () {});
+        }
+
+        function playTrailerWithSound(restart) {
+            if (!videoEl) return;
+            const desired = videoSrcEl ? videoSrcEl.getAttribute('data-src') : '/math/assets/videos/trailer-fr.mp4';
+            if (!videoHydratedSrc || videoHydratedSrc !== desired) {
+                videoHydratedSrc = desired;
+                videoEl.src = desired;
+            }
+            if (restart) videoEl.currentTime = 0;
+            videoEl.muted = false;
+            const pr = videoEl.play();
+            if (pr && pr.then) {
+                pr.then(syncSoundUi).catch(function () {
+                    videoEl.muted = true;
+                    videoEl.play().catch(function () {});
+                    syncSoundUi();
+                });
+            } else {
+                syncSoundUi();
+            }
+        }
+
+        function renderYtShorts(dict) {
+            if (!ytGridEl || !dict || !dict.yt_shorts) return;
+            const prefix = dict.yt_play_prefix || 'Play';
+            ytGridEl.innerHTML = dict.yt_shorts.map(function (s) {
+                const t = escHtmlClient(s.title);
+                const lbl = escHtmlClient(prefix + ' : ' + s.title);
+                return '<figure class="yt-short-item"><div class="yt-short-stage"><button type="button" class="yt-short-btn" data-ytid="' + escHtmlClient(s.id) + '" data-yttitle="' + t + '" aria-label="' + lbl + '"><img src="' + escHtmlClient(s.thumbBase) + '-360.webp" srcset="' + escHtmlClient(s.thumbBase) + '-360.webp 360w, ' + escHtmlClient(s.thumbBase) + '.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="' + t + '" width="540" height="960" loading="lazy" decoding="async"><span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button></div><figcaption>' + t + '</figcaption></figure>';
+            }).join('');
+            const chLink = document.getElementById('ytChannelLink');
+            if (chLink && dict.yt_channel_url) chLink.href = dict.yt_channel_url;
+        }
+
+        if (videoEl) {
+            if ('IntersectionObserver' in window) {
+                const vObs = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            hydrateVideoSource();
+                            if (!prefersReducedMotion && videoEl.paused) {
+                                videoEl.play().then(syncSoundUi).catch(function () {});
+                            }
+                        } else if (!videoEl.paused && videoEl.muted) {
+                            videoEl.pause();
+                        }
+                    });
+                }, { rootMargin: '280px 0px' });
+                vObs.observe(videoEl);
+            }
+            if (soundBtn) {
+                soundBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    if (videoEl.muted || videoEl.paused) {
+                        playTrailerWithSound(false);
+                    } else {
+                        videoEl.muted = true;
+                        syncSoundUi();
+                    }
+                });
+            }
+            videoEl.addEventListener('click', function () {
+                if (videoEl.muted || videoEl.paused) {
+                    playTrailerWithSound(false);
+                } else {
+                    videoEl.pause();
+                    syncSoundUi();
+                }
+            });
+        }
+
+        const heroWatchBtn = document.getElementById('heroWatchBtn');
+        if (heroWatchBtn) {
+            heroWatchBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const sec = document.getElementById('video');
+                if (sec) sec.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+                playTrailerWithSound(true);
+            });
+        }
+
+        if (ytGridEl) {
+            ytGridEl.addEventListener('click', function (e) {
+                const btn = e.target.closest('.yt-short-btn');
+                if (!btn) return;
+                const ytid = btn.getAttribute('data-ytid');
+                const yttitle = btn.getAttribute('data-yttitle') || 'Meemaw Math YouTube Short';
+                if (!ytid) return;
+                if (videoEl && !videoEl.paused) {
+                    videoEl.pause();
+                    syncSoundUi();
+                }
+                const dict = i18n[activeLang] || i18n.fr;
+                if (dict) renderYtShorts(dict);
+                const targetBtn = ytGridEl.querySelector('.yt-short-btn[data-ytid="' + ytid + '"]');
+                if (targetBtn && targetBtn.parentElement) {
+                    const ifr = document.createElement('iframe');
+                    ifr.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(ytid) + '?rel=0&autoplay=1&playsinline=1';
+                    ifr.title = yttitle;
+                    ifr.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                    ifr.referrerPolicy = 'strict-origin-when-cross-origin';
+                    ifr.allowFullscreen = true;
+                    targetBtn.parentElement.replaceChild(ifr, targetBtn);
+                }
+            });
+        }
 
         function isCrawlerAgent() {
             const ua = navigator.userAgent || '';
@@ -2550,7 +3140,7 @@
             const base = mathStoreUrls[lang] || mathStoreUrls.fr;
             const storeLinks = document.querySelectorAll('a[href*="id6824002615"]');
             storeLinks.forEach((a, idx) => {
-                const slot = a.classList.contains('nav-cta') ? 'nav' : (idx === storeLinks.length - 1 ? 'final' : 'hero');
+                const slot = a.classList.contains('nav-cta') ? 'nav' : (a.id === 'videoStoreBtn' ? 'video' : (idx === storeLinks.length - 1 ? 'final' : 'hero'));
                 a.href = buildMathStoreUrl(base, `web_math_${slot}_${lang}`);
             });
             const brandHome = document.getElementById('brandHomeLink');
@@ -2645,6 +3235,19 @@
                 const key = el.getAttribute('data-i18n');
                 if (dict[key]) el.innerHTML = dict[key];
             });
+
+            if (videoEl && dict.video_poster) {
+                videoEl.poster = dict.video_poster;
+                if (dict.video_poster_alt) videoEl.setAttribute('aria-label', dict.video_poster_alt);
+                if (videoSrcEl && dict.video_file) {
+                    videoSrcEl.setAttribute('data-src', dict.video_file);
+                    if (videoHydratedSrc && videoHydratedSrc !== dict.video_file) {
+                        hydrateVideoSource(dict.video_file, true);
+                    }
+                }
+            }
+            syncSoundUi();
+            renderYtShorts(dict);
 
             renderTrick(activeTrickIdx, false);
         }

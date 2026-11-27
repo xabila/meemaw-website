@@ -97,11 +97,14 @@
           "alternateName": ["Meemaw", "Learn French Spelling: Meemaw", "Ortografía francesa: Meemaw", "Meemaw Motus Orthographe"],
           "operatingSystem": "iOS, iPadOS",
           "applicationCategory": "EducationalApplication",
-          "softwareVersion": "1.0.45",
+          "softwareVersion": "1.0.49",
           "inLanguage": ["fr", "en", "es"],
           "url": "https://meemaw.app/",
           "downloadUrl": "https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331?ct=web_schema_ortho_fr&mt=8",
           "installUrl": "https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331?ct=web_schema_ortho_fr&mt=8",
+          "trailer": {
+            "@id": "https://meemaw.app/#trailer-video"
+          },
           "offers": {
             "@type": "Offer",
             "price": "0",
@@ -120,16 +123,29 @@
           },
           "featureList": [
             "1 837 dictées vocales studio 24 kHz lues phrase entière puis segment par segment avec ponctuation parlée et Mini-Map interactive",
-            "Nouveau mode Motus Orthographe : 300 mots de 5 à 9 lettres à deviner en 6 essais avec 1re lettre offerte, indice grammatical et règle expliquée en fin de manche (100 % sans son)",
+            "Motus Orthographe & Duels au tour par tour (2 manches) : 1 000 mots de 5 à 9 lettres sur Game Center ou en salon privé avec règle expliquée en fin de manche",
             "620 Anagrammes et mode Mot à Mot pour maîtriser les doubles consonnes, accents et lettres muettes",
             "50 fiches de règles d'orthographe et de grammaire sans jargon scolaire, expliquées en français, anglais ou espagnol (FLE)",
             "9 modes de jeu : Motus Orthographe, Dictée Longue (1 705 textes), Dictée Rapide (248 séries), Marathon 20/20, QCM Express (700+ questions), Dictée Folle, Détective (357 énigmes), Mot à Mot et 620 Anagrammes",
             "5 rangs de maîtrise progressifs (Apprenti à Maître) avec changement de niveau en 1 geste en pleine partie",
             "Bouclier Temps d'Écran Apple (FamilyControls) : 5 minutes d'entraînement débloquent automatiquement TikTok, Roblox ou YouTube",
-            "Duels Parents-Enfants et entre amis sur WhatsApp et iMessage via Universal Links sans création de compte",
+            "Duels entre amis et en famille sur Game Center, WhatsApp et iMessage via liens d'invitation sécurisés",
             "100 % hors-ligne, zéro publicité, aucune donnée collectée (DATA_NOT_COLLECTED) et Partage Familial Apple jusqu'à 6 personnes"
           ],
-          "description": "Meemaw aide enfants, étudiants, adultes et apprenants de français (FLE) à ne plus refaire les mêmes fautes d'orthographe en 5 minutes par jour grâce à 1 837 vraies dictées vocales 24 kHz, au nouveau jeu Motus Orthographe (300 mots sans son), à 620 anagrammes et à 50 règles sans jargon sur iPhone et iPad."
+          "description": "Meemaw aide enfants, étudiants, adultes et apprenants de français (FLE) à ne plus refaire les mêmes fautes d'orthographe en 5 minutes par jour grâce à 1 837 vraies dictées vocales 24 kHz, au jeu Motus Orthographe (1 000 mots & duels en 2 manches), à 620 anagrammes et à 50 règles sans jargon sur iPhone et iPad."
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://meemaw.app/#trailer-video",
+          "name": "25 secondes au cœur d’une vraie partie — Orthographe & Dictée : Meemaw",
+          "description": "Capture vidéo en jeu sur iPhone montrant la dictée vocale 24 kHz sur cahier Seyès, un duel Motus au tour par tour en 2 manches, le podium 24h et l'explication d'accord.",
+          "thumbnailUrl": ["https://meemaw.app/assets/videos/poster-fr.webp"],
+          "uploadDate": "2026-11-27T08:00:00+01:00",
+          "duration": "PT26S",
+          "contentUrl": "https://meemaw.app/assets/videos/trailer-fr.mp4",
+          "embedUrl": "https://meemaw.app/#video",
+          "inLanguage": "fr",
+          "isFamilyFriendly": true
         },
         {
           "@type": "ItemList",
@@ -812,6 +828,247 @@
             border-top: 3px solid var(--ink);
             border-bottom: 3px solid var(--ink);
             padding: 3.5rem 1.5rem;
+        }
+
+        section[id] {
+            scroll-margin-top: 4.5rem;
+        }
+
+        /* Chapter 2B: Official 25s In-Game Gameplay Showcase */
+        .trailer-chapter {
+            background-color: var(--sapphire-poche);
+            color: var(--crisp-paper);
+            border-bottom: 3px solid var(--pop-gold);
+            padding: 4.25rem max(1.5rem, env(safe-area-inset-right)) 4.25rem max(1.5rem, env(safe-area-inset-left));
+        }
+
+        .trailer-split {
+            display: grid;
+            grid-template-columns: 308px minmax(0, 1fr);
+            gap: 2.75rem;
+            align-items: center;
+        }
+
+        .trailer-stage {
+            position: relative;
+            width: 100%;
+            max-width: 308px;
+            margin: 0 auto;
+            aspect-ratio: 886 / 1920;
+            border-radius: var(--radius-surface);
+            border: 3px solid var(--pop-gold);
+            background: var(--sapphire-slate);
+            overflow: hidden;
+        }
+
+        .trailer-video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            background: var(--sapphire-slate);
+        }
+
+        .trailer-sound-pill {
+            position: absolute;
+            left: 0.75rem;
+            right: 0.75rem;
+            bottom: 0.75rem;
+            min-height: 46px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--pop-gold);
+            color: var(--ink);
+            border: 2px solid var(--ink);
+            border-radius: var(--radius-control);
+            padding: 0.6rem 0.9rem;
+            font-family: var(--font-display);
+            font-size: 0.9rem;
+            font-weight: 800;
+            cursor: pointer;
+            touch-action: manipulation;
+            transition: transform 0.18s var(--ease-out-expo), background-color 0.18s ease;
+        }
+
+        .trailer-sound-pill:hover {
+            background: var(--pop-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .trailer-sound-pill[aria-pressed="true"] {
+            background: #136B42;
+            color: var(--crisp-paper);
+            border-color: var(--crisp-paper);
+        }
+
+        .trailer-copy h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 3vw, 2.55rem);
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -0.025em;
+            color: var(--crisp-paper);
+            text-wrap: balance;
+            margin-bottom: 0.85rem;
+        }
+
+        .trailer-copy > p {
+            color: var(--sky-cream);
+            font-size: 1.0625rem;
+            line-height: 1.62;
+            max-width: 60ch;
+            text-wrap: pretty;
+            margin-bottom: 1.35rem;
+        }
+
+        .trailer-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        /* Bottom YouTube Shorts Showcase (Zero-Cookie Facade) */
+        .yt-showcase {
+            max-width: 1120px;
+            margin: 0 auto 3.5rem;
+            padding-top: 3.25rem;
+            border-top: 1.5px solid rgba(234, 242, 255, 0.22);
+        }
+
+        .yt-header {
+            max-width: 720px;
+            margin-bottom: 1.75rem;
+        }
+
+        .yt-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 2.7vw, 2.55rem);
+            font-weight: 800;
+            line-height: 1.14;
+            letter-spacing: -0.024em;
+            color: var(--crisp-paper);
+            text-wrap: balance;
+            margin-bottom: 0.5rem;
+        }
+
+        .yt-header p {
+            color: var(--sky-cream);
+            font-size: 1.0625rem;
+            line-height: 1.58;
+            max-width: 62ch;
+            text-wrap: pretty;
+        }
+
+        .yt-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .yt-short-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .yt-short-stage {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            border-radius: var(--radius-surface);
+            border: 2px solid rgba(255, 209, 59, 0.45);
+            background: var(--sapphire-slate);
+            overflow: hidden;
+        }
+
+        .yt-short-stage iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        .yt-short-btn {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            border: 0;
+            background: var(--sapphire-slate);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .yt-short-btn img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.28s var(--ease-out-expo);
+        }
+
+        .yt-short-btn:hover img {
+            transform: scale(1.03);
+        }
+
+        .yt-play-badge {
+            position: relative;
+            z-index: 2;
+            width: 58px;
+            height: 58px;
+            border-radius: var(--radius-pill);
+            background: var(--pop-gold);
+            color: var(--ink);
+            border: 2.5px solid var(--ink);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s var(--ease-out-expo), background-color 0.16s ease;
+        }
+
+        .yt-short-btn:hover .yt-play-badge {
+            background: var(--pop-gold-hover);
+            transform: scale(1.08);
+        }
+
+        .yt-short-item figcaption {
+            font-size: 0.9rem;
+            font-weight: 700;
+            line-height: 1.38;
+            color: var(--sky-cream);
+            text-wrap: pretty;
+        }
+
+        .yt-channel-row {
+            margin-top: 1.35rem;
+        }
+
+        .yt-channel-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            color: var(--pop-gold);
+            font-family: var(--font-display);
+            font-size: 0.96rem;
+            font-weight: 800;
+            text-decoration: underline;
+            min-height: 44px;
+        }
+
+        .yt-channel-link:hover {
+            color: var(--crisp-paper);
         }
 
         .section-header {
@@ -1573,6 +1830,33 @@
                 border-left: none;
                 border-top: 1.5px solid rgba(234, 242, 255, 0.2);
             }
+
+            .trailer-split {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .trailer-stage {
+                max-width: 296px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .yt-grid {
+                grid-template-columns: none;
+                grid-auto-flow: column;
+                grid-auto-columns: 224px;
+                gap: 1rem;
+                overflow-x: auto;
+                margin-inline: -1.5rem;
+                padding: 0.2rem 1.5rem 0.85rem;
+                scroll-padding-inline-start: 1.5rem;
+                scroll-snap-type: x mandatory;
+            }
+
+            .yt-short-item {
+                scroll-snap-align: start;
+            }
         }
 
         /* Mobile-First Responsive Comparison Table -> Stacked Ledger Rows */
@@ -1690,6 +1974,22 @@
                 padding: 3rem 1rem;
             }
 
+            .trailer-chapter {
+                padding: 3rem max(1rem, env(safe-area-inset-right)) 3rem max(1rem, env(safe-area-inset-left));
+            }
+
+            .trailer-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .yt-grid {
+                margin-inline: -1rem;
+                padding-inline: 1rem;
+                scroll-padding-inline-start: 1rem;
+                grid-auto-columns: 212px;
+            }
+
             .closing-chapter {
                 padding: 3rem 1rem max(2rem, env(safe-area-inset-bottom));
             }
@@ -1770,6 +2070,7 @@
             </nav>
 
             <nav class="page-anchors" aria-label="Sections">
+                <a href="#video" class="anchor-link" data-i18n="nav_video">En action</a>
                 <a href="#jeux" class="anchor-link" data-i18n="nav_dictation">Dictée, Motus &amp; 9 Jeux</a>
                 <a href="#famille" class="anchor-link" data-i18n="nav_family">Temps d’Écran</a>
                 <a href="#comparatif" class="anchor-link" data-i18n="nav_comp">Comparatif</a>
@@ -1799,21 +2100,21 @@
             <div class="section-shell hero-grid">
                 <div class="hero-copy">
                     <h1 id="heroTitle" data-i18n="hero_title">Ne refaites plus les mêmes fautes. <span class="gold-ink">5 minutes par jour suffisent.</span></h1>
-                    <p class="hero-lead" data-i18n="hero_lead">Comprenez enfin pourquoi ça prend un « e » ou pas : vraie dictée vocale studio 24 kHz lue phrase entière puis mot à mot, 50 règles limpides sans jargon et 9 jeux malins — dont le nouveau Motus Orthographe — sur iPhone et iPad.</p>
+                    <p class="hero-lead" data-i18n="hero_lead">Comprenez enfin pourquoi ça prend un « e » ou pas : vraie dictée vocale studio 24 kHz lue phrase entière puis mot à mot, 50 règles limpides sans jargon et 9 jeux malins — dont le Motus Orthographe et ses duels au tour par tour — sur iPhone et iPad.</p>
                     <div class="cta-row">
                         <a href="https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331?ct=web_ortho_hero_fr&amp;mt=8" class="btn-primary" id="heroStoreBtn" target="_blank" rel="noopener">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
                             <span data-i18n="cta_download">Télécharger sur l’App Store</span>
                         </a>
-                        <a href="#apercu" class="btn-secondary">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                            <span data-i18n="cta_preview">Voir l’application en action</span>
+                        <a href="#video" class="btn-secondary" id="heroWatchBtn">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.14v13.72a1 1 0 0 0 1.52.85l11-6.86a1 1 0 0 0 0-1.7l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>
+                            <span data-i18n="cta_preview">Voir la vidéo gameplay (25 s)</span>
                         </a>
                     </div>
                     <div class="proof-strip">
                         <div class="proof-item">
                             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            <span data-i18n="proof_1">Note 5,0 ★ sur l’App Store&nbsp;· 1 837 dictées 24 kHz&nbsp;· 9 modes dont Motus</span>
+                            <span data-i18n="proof_1">Note 5,0 ★ sur l’App Store&nbsp;· 1 837 dictées 24 kHz&nbsp;· Motus 1 000 mots &amp; Duels</span>
                         </div>
                         <div class="proof-item">
                             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
@@ -1865,7 +2166,7 @@
 
                     <div class="trainer-foot">
                         <span id="trainerFootTag">Règle : Infinitif « -er » ou participe « -é »</span>
-                        <span data-i18n="tr_more">+ Motus 300 mots, 620 anagrammes &amp; 50 fiches</span>
+                        <span data-i18n="tr_more">+ Motus 1 000 mots, 620 anagrammes &amp; 50 fiches</span>
                     </div>
                 </aside>
             </div>
@@ -1911,6 +2212,47 @@
             </div>
         </section>
 
+        <!-- Chapter 2B: Official 25s In-Game Gameplay Video Showcase -->
+        <section class="trailer-chapter" id="video" aria-labelledby="videoTitle">
+            <div class="section-shell">
+                <div class="trailer-split">
+                    <div class="trailer-stage">
+                        <video id="orthoTrailerVideo" class="trailer-video" width="590" height="1280" poster="/assets/videos/poster-fr.webp" muted loop playsinline preload="none" aria-label="Capture vidéo en jeu de Meemaw montrant la dictée sur cahier Seyès, un duel Motus en 2 manches et l’explication d’accord">
+                            <source id="orthoTrailerSource" data-src="/assets/videos/trailer-fr.mp4" type="video/mp4">
+                        </video>
+                        <button type="button" class="trailer-sound-pill" id="videoSoundBtn" aria-pressed="false">
+                            <svg id="videoSoundIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                            <span id="videoSoundLabel">Activer le son Meemaw</span>
+                        </button>
+                    </div>
+                    <div class="trailer-copy">
+                        <h2 id="videoTitle" data-i18n="video_title">25 secondes au cœur d’une vraie partie.</h2>
+                        <p data-i18n="video_lead">Zéro mise en scène : écrivez en direct sur le cahier Seyès à votre rythme, remportez un duel Motus au tour par tour en 2 manches contre un ami, grimpez au podium 24h et retenez la règle d’accord immédiatement.</p>
+                        <ul class="check-list">
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span data-i18n="video_p1">Dictée vocale studio 24 kHz : lecture complète puis mot à mot avec correction bienveillante sur 20</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span data-i18n="video_p2">Duels Motus en 2 manches sur Game Center ou en salon privé : 1 000 mots triés et explication du piège</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                <span data-i18n="video_p3">QCM Express &amp; 50 fiches limpides : comprenez chaque accord en français, anglais ou espagnol (FLE)</span>
+                            </li>
+                        </ul>
+                        <div class="trailer-actions">
+                            <a href="https://apps.apple.com/fr/app/orthographe-dict%C3%A9e-meemaw/id6757681331?ct=web_ortho_video_fr&amp;mt=8" class="btn-primary" id="videoStoreBtn" target="_blank" rel="noopener">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.32c.64-.78 1.08-1.86.96-2.94-.93.04-2.06.62-2.72 1.4-.58.68-1.1 1.79-.96 2.84 1.04.08 2.08-.52 2.72-1.3"/></svg>
+                                <span data-i18n="cta_download">Télécharger sur l’App Store</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Chapter 3: Crisp Paper — 50 Rules & 9 Game Modes -->
         <section class="paper-chapter" id="jeux" aria-labelledby="modesHeading">
             <div class="section-shell">
@@ -1920,7 +2262,7 @@
                 </div>
 
                 <div class="secrets-strip" id="secretsStrip" aria-label="Règles clés maîtrisées">
-                    <span class="secret-chip"><strong>Motus Orthographe</strong> · 300 mots de 5 à 9 lettres</span>
+                    <span class="secret-chip"><strong>Motus Orthographe</strong> · 1 000 mots &amp; duels 2 manches</span>
                     <span class="secret-chip"><strong>-é / -er</strong> · test « vendre / vendu »</span>
                     <span class="secret-chip"><strong>Participes passés</strong> · être, avoir &amp; pronominaux</span>
                     <span class="secret-chip"><strong>leur / leurs</strong> · pronom ou déterminant</span>
@@ -1933,9 +2275,9 @@
                 <div class="modes-ledger">
                     <article class="mode-row mode-featured">
                         <div class="mode-body">
-                            <h3 data-i18n="m0_t">Motus Orthographe — 300 mots de 5 à 9 lettres</h3>
-                            <p data-i18n="m0_d">Démasquez le mot caché en 6 essais grâce à la 1re lettre offerte et à l’indice grammatical de Meemaw, puis retenez la règle expliquée en fin de manche — sur un grand clavier AZERTY confortable avec changement de niveau en 1 geste.</p>
-                            <span class="mode-tag" data-i18n="m0_tag">Nouveau · 100 % sans son · 5 niveaux réglables en partie</span>
+                            <h3 data-i18n="m0_t">Motus Orthographe &amp; Duels — 1 000 mots de 5 à 9 lettres</h3>
+                            <p data-i18n="m0_d">Démasquez le mot caché en 6 essais grâce à la 1re lettre offerte et à l’indice grammatical de Meemaw, défiez vos amis au tour par tour en 2 manches, puis retenez la règle expliquée en fin de manche — sur un grand clavier AZERTY confortable.</p>
+                            <span class="mode-tag" data-i18n="m0_tag">1 000 mots · Duels 2 manches · 100 % sans son</span>
                         </div>
                         <div class="motus-preview">
                             <div class="motus-tiles" aria-hidden="true">
@@ -2179,7 +2521,7 @@
                 <div class="comp-foot">
                     <a href="/comparatif-applications-orthographe-dictee.html" class="text-action-link" id="compGuideLink">
                         <span data-i18n="comp_guide_cta">Lire notre comparatif complet 2026 des applications d’orthographe</span>
-                        <span aria-hidden="true">→</span>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                 </div>
             </div>
@@ -2218,6 +2560,48 @@
                         </summary>
                         <p data-i18n="a4">Le téléchargement est gratuit avec un accès libre chaque jour et un essai gratuit de Meemaw PRO. Grâce à l’API Apple Screen Time, 5 minutes d’entraînement lèvent automatiquement le blocage des applications de divertissement sur l’iPhone de votre enfant. Et avec le Partage Familial Apple, un seul abonnement ou achat famille couvre jusqu’à 6 proches, 100 % hors-ligne et sans aucune donnée collectée.</p>
                     </details>
+                </div>
+            </div>
+
+            <div class="yt-showcase" id="youtube" aria-labelledby="ytHeading">
+                <div class="yt-header">
+                    <h2 id="ytHeading" data-i18n="yt_title">Défis du jour en vidéo sur YouTube</h2>
+                    <p data-i18n="yt_sub">Mettez pause avant le 4e essai : testez nos vrais tirages Motus Orthographe en moins d’une minute, directement ici sans cookie publicitaire avant votre clic.</p>
+                </div>
+                <div class="yt-grid" id="ytShortsGrid">
+                    <figure class="yt-short-item">
+                        <div class="yt-short-stage">
+                            <button type="button" class="yt-short-btn" data-ytid="D9j4k5BSTbM" data-yttitle="Mot du jour en A (7 lettres) — Piège double consonne" aria-label="Lire la vidéo : Mot du jour en A (7 lettres) — Piège double consonne">
+                                <img src="/assets/youtube/D9j4k5BSTbM-360.webp" srcset="/assets/youtube/D9j4k5BSTbM-360.webp 360w, /assets/youtube/D9j4k5BSTbM.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="Mot du jour en A (7 lettres) — Piège double consonne" width="540" height="960" loading="lazy" decoding="async">
+                                <span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            </button>
+                        </div>
+                        <figcaption>Mot du jour en A (7 lettres) — Piège double consonne</figcaption>
+                    </figure>
+                    <figure class="yt-short-item">
+                        <div class="yt-short-stage">
+                            <button type="button" class="yt-short-btn" data-ytid="ru_kWVY75pY" data-yttitle="Défi Motus n°6 — Trouver ce mot en F en 6 essais" aria-label="Lire la vidéo : Défi Motus n°6 — Trouver ce mot en F en 6 essais">
+                                <img src="/assets/youtube/ru_kWVY75pY-360.webp" srcset="/assets/youtube/ru_kWVY75pY-360.webp 360w, /assets/youtube/ru_kWVY75pY.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="Défi Motus n°6 — Trouver ce mot en F en 6 essais" width="540" height="960" loading="lazy" decoding="async">
+                                <span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            </button>
+                        </div>
+                        <figcaption>Défi Motus n°6 — Trouver ce mot en F en 6 essais</figcaption>
+                    </figure>
+                    <figure class="yt-short-item">
+                        <div class="yt-short-stage">
+                            <button type="button" class="yt-short-btn" data-ytid="hyThel2Pd6I" data-yttitle="Défi Motus n°7 — Le piège d’orthographe sur ce mot en C" aria-label="Lire la vidéo : Défi Motus n°7 — Le piège d’orthographe sur ce mot en C">
+                                <img src="/assets/youtube/hyThel2Pd6I-360.webp" srcset="/assets/youtube/hyThel2Pd6I-360.webp 360w, /assets/youtube/hyThel2Pd6I.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="Défi Motus n°7 — Le piège d’orthographe sur ce mot en C" width="540" height="960" loading="lazy" decoding="async">
+                                <span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+                            </button>
+                        </div>
+                        <figcaption>Défi Motus n°7 — Le piège d’orthographe sur ce mot en C</figcaption>
+                    </figure>
+                </div>
+                <div class="yt-channel-row">
+                    <a href="https://www.youtube.com/@meemaw-xl/shorts" id="ytChannelLink" class="yt-channel-link" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><path d="M9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#0B3068"/></svg>
+                        <span id="ytChannelCta" data-i18n="yt_channel_cta">Voir tous les défis sur notre chaîne YouTube @meemaw-xl</span>
+                    </a>
                 </div>
             </div>
 
@@ -2284,6 +2668,149 @@
             const staticLang = window.__PAGE_STATIC_LANG || 'fr';
             let activeLang = staticLang;
             let activeTrapIdx = 0;
+            let videoHydratedSrc = '';
+            const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const iconMuted = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
+            const iconUnmuted = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>';
+            const videoEl = document.getElementById('orthoTrailerVideo');
+            const videoSrcEl = document.getElementById('orthoTrailerSource');
+            const soundBtn = document.getElementById('videoSoundBtn');
+            const soundLabel = document.getElementById('videoSoundLabel');
+            const soundIcon = document.getElementById('videoSoundIcon');
+            const ytGridEl = document.getElementById('ytShortsGrid');
+
+            function escHtmlClient(s) {
+                return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+            }
+
+            function syncSoundUi() {
+                if (!videoEl || !soundBtn) return;
+                const dict = i18n[activeLang] || i18n.fr || {};
+                const on = !videoEl.muted && !videoEl.paused;
+                soundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+                if (soundLabel) soundLabel.textContent = on ? (dict.video_sound_on || 'Audio ON') : (dict.video_sound_off || 'Unmute');
+                if (soundIcon) soundIcon.innerHTML = on ? iconUnmuted : iconMuted;
+            }
+
+            function hydrateVideoSource(targetSrc, forceReload) {
+                if (!videoEl || !videoSrcEl) return;
+                const desired = targetSrc || videoSrcEl.getAttribute('data-src') || '/assets/videos/trailer-fr.mp4';
+                videoSrcEl.setAttribute('data-src', desired);
+                if (videoHydratedSrc === desired && !forceReload) return;
+                const wasUnmuted = !videoEl.muted;
+                const wasPlaying = !videoEl.paused;
+                videoHydratedSrc = desired;
+                videoEl.src = desired;
+                videoEl.muted = !wasUnmuted;
+                videoEl.load();
+                if (wasPlaying) videoEl.play().catch(function () {});
+            }
+
+            function playTrailerWithSound(restart) {
+                if (!videoEl) return;
+                const desired = videoSrcEl ? videoSrcEl.getAttribute('data-src') : '/assets/videos/trailer-fr.mp4';
+                if (!videoHydratedSrc || videoHydratedSrc !== desired) {
+                    videoHydratedSrc = desired;
+                    videoEl.src = desired;
+                }
+                if (restart) videoEl.currentTime = 0;
+                videoEl.muted = false;
+                const pr = videoEl.play();
+                if (pr && pr.then) {
+                    pr.then(syncSoundUi).catch(function () {
+                        videoEl.muted = true;
+                        videoEl.play().catch(function () {});
+                        syncSoundUi();
+                    });
+                } else {
+                    syncSoundUi();
+                }
+            }
+
+            function renderYtShorts(dict) {
+                if (!ytGridEl || !dict || !dict.yt_shorts) return;
+                const prefix = dict.yt_play_prefix || 'Play';
+                ytGridEl.innerHTML = dict.yt_shorts.map(function (s) {
+                    const t = escHtmlClient(s.title);
+                    const lbl = escHtmlClient(prefix + ' : ' + s.title);
+                    return '<figure class="yt-short-item"><div class="yt-short-stage"><button type="button" class="yt-short-btn" data-ytid="' + escHtmlClient(s.id) + '" data-yttitle="' + t + '" aria-label="' + lbl + '"><img src="' + escHtmlClient(s.thumbBase) + '-360.webp" srcset="' + escHtmlClient(s.thumbBase) + '-360.webp 360w, ' + escHtmlClient(s.thumbBase) + '.webp 540w" sizes="(max-width: 760px) 224px, 300px" alt="' + t + '" width="540" height="960" loading="lazy" decoding="async"><span class="yt-play-badge" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span></button></div><figcaption>' + t + '</figcaption></figure>';
+                }).join('');
+                const chLink = document.getElementById('ytChannelLink');
+                if (chLink && dict.yt_channel_url) chLink.href = dict.yt_channel_url;
+            }
+
+            if (videoEl) {
+                if ('IntersectionObserver' in window) {
+                    const vObs = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                hydrateVideoSource();
+                                if (!prefersReducedMotion && videoEl.paused) {
+                                    videoEl.play().then(syncSoundUi).catch(function () {});
+                                }
+                            } else if (!videoEl.paused && videoEl.muted) {
+                                videoEl.pause();
+                            }
+                        });
+                    }, { rootMargin: '280px 0px' });
+                    vObs.observe(videoEl);
+                }
+                if (soundBtn) {
+                    soundBtn.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        if (videoEl.muted || videoEl.paused) {
+                            playTrailerWithSound(false);
+                        } else {
+                            videoEl.muted = true;
+                            syncSoundUi();
+                        }
+                    });
+                }
+                videoEl.addEventListener('click', function () {
+                    if (videoEl.muted || videoEl.paused) {
+                        playTrailerWithSound(false);
+                    } else {
+                        videoEl.pause();
+                        syncSoundUi();
+                    }
+                });
+            }
+
+            const heroWatchBtn = document.getElementById('heroWatchBtn');
+            if (heroWatchBtn) {
+                heroWatchBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const sec = document.getElementById('video');
+                    if (sec) sec.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'center' });
+                    playTrailerWithSound(true);
+                });
+            }
+
+            if (ytGridEl) {
+                ytGridEl.addEventListener('click', function (e) {
+                    const btn = e.target.closest('.yt-short-btn');
+                    if (!btn) return;
+                    const ytid = btn.getAttribute('data-ytid');
+                    const yttitle = btn.getAttribute('data-yttitle') || 'Meemaw YouTube Short';
+                    if (!ytid) return;
+                    if (videoEl && !videoEl.paused) {
+                        videoEl.pause();
+                        syncSoundUi();
+                    }
+                    const dict = i18n[activeLang] || i18n.fr;
+                    if (dict) renderYtShorts(dict);
+                    const targetBtn = ytGridEl.querySelector('.yt-short-btn[data-ytid="' + ytid + '"]');
+                    if (targetBtn && targetBtn.parentElement) {
+                        const ifr = document.createElement('iframe');
+                        ifr.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(ytid) + '?rel=0&autoplay=1&playsinline=1';
+                        ifr.title = yttitle;
+                        ifr.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                        ifr.referrerPolicy = 'strict-origin-when-cross-origin';
+                        ifr.allowFullscreen = true;
+                        targetBtn.parentElement.replaceChild(ifr, targetBtn);
+                    }
+                });
+            }
 
             function isCrawlerAgent() {
                 const ua = navigator.userAgent || '';
@@ -2317,9 +2844,11 @@
                 const base = orthoStoreBase[lang] || orthoStoreBase.fr;
                 const navBtn = document.getElementById('navStoreBtn');
                 const heroBtn = document.getElementById('heroStoreBtn');
+                const videoBtn = document.getElementById('videoStoreBtn');
                 const finalBtn = document.getElementById('finalStoreBtn');
                 if (navBtn) navBtn.href = buildUrl(base, 'web_ortho_nav_' + lang);
                 if (heroBtn) heroBtn.href = buildUrl(base, 'web_ortho_hero_' + lang);
+                if (videoBtn) videoBtn.href = buildUrl(base, 'web_ortho_video_' + lang);
                 if (finalBtn) finalBtn.href = buildUrl(base, 'web_ortho_final_' + lang);
 
                 const homeLink = document.getElementById('brandHomeLink');
@@ -2402,6 +2931,19 @@
                     const key = el.getAttribute('data-i18n');
                     if (dict[key]) el.innerHTML = dict[key];
                 });
+
+                if (videoEl && dict.video_poster) {
+                    videoEl.poster = dict.video_poster;
+                    if (dict.video_poster_alt) videoEl.setAttribute('aria-label', dict.video_poster_alt);
+                    if (videoSrcEl && dict.video_file) {
+                        videoSrcEl.setAttribute('data-src', dict.video_file);
+                        if (videoHydratedSrc && videoHydratedSrc !== dict.video_file) {
+                            hydrateVideoSource(dict.video_file, true);
+                        }
+                    }
+                }
+                syncSoundUi();
+                renderYtShorts(dict);
 
                 renderTrap(activeTrapIdx, false);
             }
