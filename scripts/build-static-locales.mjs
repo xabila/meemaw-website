@@ -232,13 +232,6 @@ function buildOrthoJsonLd(lang, d) {
                         ? 'Free download with 5-second express onboarding, daily French dictation & Motus practice, free PRO trial, and Apple Family Sharing for up to 6 family members.'
                         : 'Descarga gratuita con inicio exprés en 5 segundos, práctica diaria de dictado y Motus en francés, prueba PRO gratuita y En Familia de Apple para hasta 6 personas.'
                 },
-                aggregateRating: {
-                    '@type': 'AggregateRating',
-                    ratingValue: '5.0',
-                    ratingCount: '5',
-                    bestRating: '5',
-                    worstRating: '1'
-                },
                 author: { '@id': 'https://meemaw.app/#organization' },
                 featureList: isEn
                     ? [
@@ -459,13 +452,6 @@ function buildMathJsonLd(lang, d) {
                     description: isEn
                         ? 'Free download with daily mental math workout, free PRO trial, and Apple Family Sharing for up to 6 family members.'
                         : 'Descarga gratuita con entrenamiento diario de cálculo mental, prueba PRO gratis y En Familia de Apple para hasta 6 personas.'
-                },
-                aggregateRating: {
-                    '@type': 'AggregateRating',
-                    ratingValue: '4.9',
-                    ratingCount: '94',
-                    bestRating: '5',
-                    worstRating: '1'
                 },
                 author: { '@type': 'Person', name: 'Xavier Larrodé' },
                 description: d.meta_desc
