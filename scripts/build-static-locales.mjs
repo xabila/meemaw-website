@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const TODAY = '2026-11-18';
+const TODAY = '2026-11-27';
 
 function escAttr(str) {
     return String(str)
@@ -28,11 +28,29 @@ function stripTags(str) {
 }
 
 function replaceByIdInner(html, id, innerHtml) {
-    const re = new RegExp(`(<([a-z0-9]+)\\b[^>]*\\bid="${id}"[^>]*>)([\\s\\S]*?)(<\\/\\2>)`, 'i');
-    if (!re.test(html)) {
+    const openRe = new RegExp(`<([a-z0-9]+)\\b[^>]*\\bid="${id}"[^>]*>`, 'i');
+    const m = openRe.exec(html);
+    if (!m) {
         throw new Error(`Missing element id="${id}"`);
     }
-    return html.replace(re, (_, open, _tag, _old, close) => `${open}${innerHtml}${close}`);
+    const tag = m[1].toLowerCase();
+    const startInner = m.index + m[0].length;
+    const tokenRe = new RegExp(`<(\\/)?${tag}\\b[^>]*>`, 'gi');
+    tokenRe.lastIndex = startInner;
+    let depth = 1;
+    let tok;
+    while ((tok = tokenRe.exec(html)) !== null) {
+        if (tok[1]) {
+            depth -= 1;
+            if (depth === 0) {
+                const closeStart = tok.index;
+                return html.slice(0, startInner) + innerHtml + html.slice(closeStart);
+            }
+        } else if (!tok[0].endsWith('/>')) {
+            depth += 1;
+        }
+    }
+    throw new Error(`Unbalanced closing </${tag}> for id="${id}"`);
 }
 
 function replaceAttrById(html, id, attr, value) {
@@ -619,10 +637,11 @@ const checkSvg = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" st
 const chevronSvg = '<svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
 
 const hunterSimpleIds = [
-    'navGestures', 'navWorlds', 'navAirplay', 'navPrivacy', 'navDownload',
+    'navGestures', 'navVideo', 'navWorlds', 'navAirplay', 'navPrivacy', 'navDownload',
     'heroTitle', 'heroLead', 'ctaAppStore', 'ctaTestFlight', 'proofLocal', 'proofFree',
     'hudDemoLabel', 'hudScoreLabel', 'hudReloadBtn',
     'gesturesTitle', 'gesturesIntro', 'g1Title', 'g1Body', 'g2Title', 'g2Body', 'g3Title', 'g3Body', 'hardwareStrip',
+    'videoTitle', 'videoLead',
     'worldsTitle', 'worldsIntro', 'arsenalTitle',
     'hqTitle', 'hqIntro', 'hqTrophiesNote',
     'airplayTitle', 'airplayBody', 'shotsTitle',
@@ -636,7 +655,8 @@ function buildHunterJsonLd(lang, p) {
     const htmlLang = lang === 'pt-br' ? 'pt-BR' : lang;
     const pageUrl = `https://meemaw.app/hunter/${lang}/`;
     const hStore = `https://apps.apple.com/app/id6831648316?ct=web_schema_hunter_${lang}&mt=8`;
-    const currencyMap = { en: 'USD', ja: 'USD', ko: 'USD', 'pt-br': 'USD', es: 'EUR', de: 'EUR', it: 'EUR' };
+    const currencyMap = { en: 'USD', ja: 'JPY', ko: 'KRW', 'pt-br': 'BRL', es: 'EUR', de: 'EUR', it: 'EUR' };
+    const videoLang = lang === 'es' ? 'es' : 'en';
 
     return {
         '@context': 'https://schema.org',
@@ -645,7 +665,7 @@ function buildHunterJsonLd(lang, p) {
                 '@type': 'VideoGame',
                 name: 'Meemaw Hunter',
                 alternateName: ['MeemawHunter: AR Hand Shooter', 'MeemawHunter: Jeu Tir Caméra', 'Meemaw Hunter 60 FPS'],
-                softwareVersion: '1.0',
+                softwareVersion: '1.0.3',
                 url: pageUrl,
                 downloadUrl: hStore,
                 installUrl: hStore,
@@ -660,6 +680,7 @@ function buildHunterJsonLd(lang, p) {
                 },
                 genre: ['Arcade Shooter', 'Western', 'Party Game', 'Camera Hand-Tracking Game'],
                 inLanguage: [htmlLang, 'fr', 'en', 'es', 'de', 'it', 'pt-BR', 'ja', 'ko'],
+                trailer: { '@id': `${pageUrl}#trailer-video` },
                 featureList: [
                     `${p.g1Title} · ${p.g2Title} · ${p.g3Title}`,
                     ...(p.hqItems || []).map((it) => `${it.name}: ${it.desc}`),
@@ -674,6 +695,19 @@ function buildHunterJsonLd(lang, p) {
                 },
                 author: { '@type': 'Person', name: 'Xavier Larrodé' },
                 description: p.metaDesc
+            },
+            {
+                '@type': 'VideoObject',
+                '@id': `${pageUrl}#trailer-video`,
+                name: `${p.videoTitle} — Meemaw Hunter`,
+                description: p.videoLead,
+                thumbnailUrl: [`https://meemaw.app${p.videoPoster}`],
+                uploadDate: '2026-11-27T08:00:00+01:00',
+                duration: 'PT26S',
+                contentUrl: `https://meemaw.app${p.videoFile}`,
+                embedUrl: `${pageUrl}#video`,
+                inLanguage: videoLang,
+                isFamilyFriendly: true
             },
             {
                 '@type': 'ItemList',
@@ -731,6 +765,15 @@ for (const lang of ['en', 'es', 'de', 'it', 'pt-br', 'ja', 'ko']) {
     }
 
     p1 = replaceByIdInner(p1, 'hudHint', escHtml(p.hudHint));
+    p2 = replaceByIdInner(p2, 'videoSoundLabel', escHtml(p.videoSoundOff));
+    p2 = replaceByIdInner(p2, 'videoAppStore', escHtml(p.ctaAppStore));
+    p2 = replaceAttrById(p2, 'hunterTrailerVideo', 'poster', p.videoPoster);
+    p2 = replaceAttrById(p2, 'hunterTrailerVideo', 'aria-label', p.videoPosterAlt);
+    p2 = replaceAttrById(p2, 'hunterTrailerSource', 'data-src', p.videoFile);
+    if (p.videoPoints) {
+        const vListHtml = p.videoPoints.map((pt) => `<li>${checkSvg}<span>${escHtml(pt)}</span></li>`).join('');
+        p2 = replaceByIdInner(p2, 'videoList', vListHtml);
+    }
     p2 = replaceByIdInner(p2, 'closingAppStore', escHtml(p.ctaAppStore));
     p2 = replaceByIdInner(p2, 'closingTestFlight', escHtml(p.ctaTestFlight));
 
@@ -798,7 +841,14 @@ for (const lang of ['en', 'es', 'de', 'it', 'pt-br', 'ja', 'ko']) {
     p2 = replaceAttrById(p2, 'footerTerms', 'href', `/hunter/terms.html?lang=${lang}`);
     p2 = replaceAttrById(p2, 'suiteOrth', 'href', orthoSibling);
     p2 = replaceAttrById(p2, 'suiteMath', 'href', mathSibling);
-    p2 = p2.replace('ct=web_hunter_final_fr&amp;mt=8', `ct=web_hunter_final_${lang}&amp;mt=8`);
+    p2 = p2
+        .replace('ct=web_hunter_video_fr&amp;mt=8', `ct=web_hunter_video_${lang}&amp;mt=8`)
+        .replace('ct=web_hunter_final_fr&amp;mt=8', `ct=web_hunter_final_${lang}&amp;mt=8`);
+
+    const localizedHead = head.replace(
+        'app-argument=https://meemaw.app/hunter/',
+        `app-argument=${canonicalUrl}`
+    );
 
     // Localized alt attributes
     p1 = p1
@@ -823,6 +873,10 @@ for (const lang of ['en', 'es', 'de', 'it', 'pt-br', 'ja', 'ko']) {
         freeBadge: p.freeBadge,
         fullBadge: p.fullBadge,
         weaponLabel: p.weaponLabel,
+        videoSoundOff: p.videoSoundOff,
+        videoSoundOn: p.videoSoundOn,
+        videoFile: p.videoFile,
+        videoPoster: p.videoPoster,
         worlds: p.worlds
     };
     const localizedInlineScript = `<script>(function(){var st=window.__PAGE_STATIC_LANG||'fr';var q=new URLSearchParams(location.search).get('lang');var l=st;if(q){var rq=q.toLowerCase();l=rq.indexOf('pt')===0?'pt-br':({fr:1,en:1,es:1,de:1,it:1,'pt-br':1,ja:1,ko:1}[rq]?rq:({fr:1,en:1,es:1,de:1,it:1,ja:1,ko:1}[rq.slice(0,2)]?rq.slice(0,2):st));}window.__HUNTER_INIT_LANG=l;var sel=document.getElementById('langSelect');if(sel)sel.value=l;})();</script>\n\n        `;
@@ -833,7 +887,7 @@ for (const lang of ['en', 'es', 'de', 'it', 'pt-br', 'ja', 'ko']) {
 
     const outDir = path.join(ROOT, 'hunter', lang);
     fs.mkdirSync(outDir, { recursive: true });
-    fs.writeFileSync(path.join(outDir, 'index.html'), head + hunterStyleBlock + p1 + localizedInlineScript + p2 + localizedTail, 'utf8');
+    fs.writeFileSync(path.join(outDir, 'index.html'), localizedHead + hunterStyleBlock + p1 + localizedInlineScript + p2 + localizedTail, 'utf8');
     console.log(`Built /hunter/${lang}/index.html`);
 }
 
@@ -902,7 +956,8 @@ const standaloneUrls = [
     { loc: 'https://meemaw.app/privacy.html', priority: '0.4', changefreq: 'yearly' },
     { loc: 'https://meemaw.app/terms.html', priority: '0.4', changefreq: 'yearly' },
     { loc: 'https://meemaw.app/hunter/privacy.html', priority: '0.4', changefreq: 'yearly' },
-    { loc: 'https://meemaw.app/hunter/terms.html', priority: '0.4', changefreq: 'yearly' }
+    { loc: 'https://meemaw.app/hunter/terms.html', priority: '0.4', changefreq: 'yearly' },
+    { loc: 'https://meemaw.app/support/', priority: '0.4', changefreq: 'yearly' }
 ];
 
 const xmlEntries = [];
@@ -913,12 +968,26 @@ for (const c of clusters) {
     ].join('\n');
 
     for (const item of c.alternates) {
+        let videoXml = '';
+        if (c.xDefault === 'https://meemaw.app/hunter/') {
+            const lk = item.hreflang === 'pt-BR' ? 'pt-br' : item.hreflang;
+            const hp = HUNTER_I18N[lk] || HUNTER_I18N.fr;
+            videoXml = `\n    <video:video>
+      <video:thumbnail_loc>https://meemaw.app${hp.videoPoster}</video:thumbnail_loc>
+      <video:title>${escHtml(`${hp.videoTitle} — Meemaw Hunter`)}</video:title>
+      <video:description>${escHtml(hp.videoLead)}</video:description>
+      <video:content_loc>https://meemaw.app${hp.videoFile}</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>`;
+        }
         xmlEntries.push(`  <url>
     <loc>${item.loc}</loc>
     <lastmod>${TODAY}</lastmod>
     <changefreq>${c.changefreq}</changefreq>
     <priority>${c.priority}</priority>
-${linksBlock}
+${linksBlock}${videoXml}
   </url>`);
     }
 }
@@ -934,7 +1003,8 @@ for (const s of standaloneUrls) {
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 ${xmlEntries.join('\n')}
 </urlset>
 `;

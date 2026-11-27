@@ -114,6 +114,17 @@ components:
     textColor: "{colors.crisp-paper}"
     rounded: "{rounded.surface}"
     padding: "1.65rem 1.75rem"
+  stage-trailer:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.crisp-paper}"
+    rounded: "{rounded.surface}"
+    padding: "0"
+  pill-trailer-sound:
+    backgroundColor: "{colors.sheriff-gold}"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.control}"
+    padding: "0.62rem 0.95rem"
 ---
 
 # Design System: Meemaw Hunter & Family Suite Web

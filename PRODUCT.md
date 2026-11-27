@@ -14,7 +14,7 @@ web
 
 ## Product Purpose
 
-`meemaw.app` is the official web home of the **Meemaw** iOS & iPadOS family suite created by Xavier Larrodé, with `/hunter/` serving as the dedicated showcase and legal/privacy hub for **Meemaw Hunter** (App Store ID `6831648316`, Bundle ID `com.xlarrodeapp.meemawhunter`). Success on `/hunter/` means a visitor understands the 3-gesture camera mechanism within seconds, trusts that 100% of camera processing stays on their iPhone, and installs via the App Store or joins the public TestFlight beta in their own language.
+`meemaw.app` is the official web home of the **Meemaw** iOS & iPadOS family suite created by Xavier Larrodé, with `/hunter/` serving as the dedicated showcase and legal/privacy hub for **Meemaw Hunter** (App Store ID `6831648316`, Bundle ID `com.xlarrodeapp.meemawhunter`, live on the App Store at `v1.0.3`). Success on `/hunter/` means a visitor understands the 3-gesture camera mechanism within seconds, watches the localized 25s 60 FPS gameplay trailer with original Meemaw music and sound effects, trusts that 100% of camera processing stays on their iPhone, and installs via the App Store in their own language.
 
 ## Positioning
 
@@ -34,13 +34,13 @@ Unlike touch-tap gallery shooters or VR games requiring headsets and plastic per
 - **7 Playable Texas Worlds, 21★ Ranch HQ & Multiplayer**: Ball-Trap Ranch, Barn Ambush, UFO Night, Canyon Saloon, Flashlight Swamp, Reflex Gold Mine, and 1885 Steam Train Heist across 3 difficulty tiers (*Normal*, *Sharpshooter ×1.25*, *Texas Legend ×1.60*), plus a deterministic **Daily 60s Bounty**, **2–4P Saloon Pass-and-Play Party Mode**, **Meemaw's Armory** (5 optical reticle skins & 3 perks), and **Apple Game Center** (2 global leaderboards + 10 illustrated achievements).
 - **4 Arcade Weapons & Sharpshooter Streaks**: Classic 6-Shot Colt, 3-Pellet Shotgun, 3-Round Burst Moozzi, Area Bazooka, Frying-Pan Headshots, Flying Dynamite, and Chili Fury (`2×` slow-motion streak).
 - **AirPlay TV 16:9 Living-Room Mode**: Native dual-screen `UIWindowScene` rendering a full 16:9 stage on the TV (`720p · 60 FPS` or `1080p Full HD` selectable in Options) while the iPhone sits centered directly underneath the television (facing the player) as a dedicated hand-tracking cockpit.
-- **Honest Family Monetization**: Free download including Quick Play, Interactive Tutorial, Worlds 1 & 2, Daily 60s, and 2-Player Saloon Duel; optional one-time Lifetime **Sheriff Pack** (`com.xlarrodeapp.meemawhunter.sheriffpack`, `3,99 €` EU / `$4.99` US) with Apple Family Sharing (up to 6 family members) and zero subscriptions or ads.
+- **Honest Family Monetization**: Free download including unlimited Interactive Tutorial plus daily free sessions across Quick Play (Worlds 1 & 2), 3-Heart Daily 60s Bounty, and 2-Player Saloon Duel; optional one-time Lifetime **Sheriff Pack** (`com.xlarrodeapp.meemawhunter.sheriffpack`, `3,99 €` EU / `$4.99` US) unlocking unlimited play, Worlds 3–7, 3–4P Saloon Mode, and Apple Family Sharing (up to 6 family members) with zero subscriptions or ads.
 - **Verifiable Volatile-RAM Camera Privacy**: `MediaPipeTasksVision` (`HandLandmarker`) runs 100% locally in volatile RAM (~16 ms/frame, 0s retention — **Camera & Face Data: Not Collected**). Official App Store label **Data Not Linked to You · No Tracking** (`NSPrivacyTracking = false`, zero ads, zero IDFA; anonymous StoreKit 2 / RevenueCat purchase restore + EU-hosted Mixpanel `ip=0` + optional Apple Game Center).
 
 ## Brand Commitments
 
-- Extend the established `meemaw.app` family identity with a dedicated **Texas Sunset & Sheriff Gold** chapter palette (`#F7B928` Sheriff Gold, `#C93B2B` Barn Chili Red, `#18794E` Armed Emerald, `#1F130C` Espresso Saloon Timber, `#FFFDF9` Sunlit Paper) and cross-app navigation linking *Meemaw*, *Meemaw Math*, and *Meemaw Hunter*.
-- Primary CTA targets the official App Store listing (`https://apps.apple.com/app/id6831648316`), paired with a secondary public TestFlight beta CTA (`https://testflight.apple.com/join/KDkGehjG`).
+- Extend the established `meemaw.app` family identity with a dedicated **Texas Sunset & Sheriff Gold** chapter palette (`#F7B928` Sheriff Gold, `#C93B2B` Barn Chili Red, `#136B42` Armed Emerald, `#1F130C` Espresso Saloon Timber, `#FFFFFF` Crisp Paper) and cross-app navigation linking *Meemaw*, *Meemaw Math*, and *Meemaw Hunter*.
+- Primary CTA targets the official App Store listing (`https://apps.apple.com/app/id6831648316`), paired with a secondary `Watch 25s Trailer` CTA (`#video`) launching localized 60 FPS gameplay footage (`FR`, `EN`, `ES`) with original Meemaw music and SFX.
 - Zero fabricated ratings, fake press quotes, or unverified customer counts on *Meemaw Hunter* (which is in active v1.0 launch / TestFlight).
 
 ## Evidence on Hand

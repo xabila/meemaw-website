@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://meemaw.app/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/"/>
@@ -13,7 +14,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/en/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/"/>
@@ -23,7 +24,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/es/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/"/>
@@ -33,7 +34,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/"/>
@@ -43,7 +44,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/en/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/"/>
@@ -53,7 +54,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/es/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/"/>
@@ -63,7 +64,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/hunter/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -75,10 +76,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-fr.webp</video:thumbnail_loc>
+      <video:title>25 secondes de vrai gameplay à mains nues. — Meemaw Hunter</video:title>
+      <video:description>Zéro manette, zéro trucage : le sas « Montre ta main ! » attend ta paume ouverte avant de lancer le chrono, puis chaque pincement pouce-index tire à 60 FPS sur la vraie musique country de Sheriff Meemaw.</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-fr.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/en/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -90,10 +100,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>25 seconds of real bare-hand arcade gameplay. — Meemaw Hunter</video:title>
+      <video:description>Zero controllers, zero camera tricks: the “Show Your Hand!” start gate waits for your open palm before timers begin, then every thumb-index pinch fires at 60 FPS set to Sheriff Meemaw’s banjo soundtrack.</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/es/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -105,10 +124,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-es.webp</video:thumbnail_loc>
+      <video:title>25 segundos de gameplay real con tu propia mano. — Meemaw Hunter</video:title>
+      <video:description>Sin mandos ni trucos: el inicio «¡Muestra tu mano!» espera a detectar tu palma abierta antes de arrancar el reloj, y cada pinza pulgar-índice dispara a 60 FPS al ritmo de la música de Sheriff Meemaw.</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-es.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/de/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -120,10 +148,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>25 Sekunden echtes 60-FPS-Handgesten-Gameplay. — Meemaw Hunter</video:title>
+      <video:description>Kein Controller, keine Tricks: Der „Zeig deine Hand!“-Start wartet auf deine offene Handfläche, bevor der Timer läuft – jeder Daumen-Zeigefinger-Pinch feuert verzögerungsfrei zum Banjo-Soundtrack von Sheriff Meemaw.</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/it/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -135,10 +172,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>25 secondi di vero gameplay a mani nude. — Meemaw Hunter</video:title>
+      <video:description>Zero controller, zero trucchi: la partenza «Mostra la mano!» attende il palmo aperto prima di avviare il timer, poi ogni pizzico pollice-indice spara a 60 FPS sulla colonna sonora country di Sheriff Meemaw.</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/pt-br/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -150,10 +196,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>25 segundos de gameplay real com as mãos. — Meemaw Hunter</video:title>
+      <video:description>Sem controles externos: o início «Mostre a mão!» espera sua palma aberta antes de disparar o cronômetro, e cada pinça polegar-indicador atira a 60 FPS ao som da trilha country da Sheriff Meemaw.</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/ja/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -165,10 +220,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>素手が銃になる！実機プレイ25秒トレーラー。 — Meemaw Hunter</video:title>
+      <video:description>コントローラー不要：「手を見せてスタート」機能が手のひらを認識するまでタイマーが待機し、親指と人差し指をつまむたびにシェリフ・ミーマウの軽快なバンジョーBGMに合わせて60 FPSで爽快ショット！</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/ko/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/hunter/"/>
@@ -180,10 +244,19 @@
     <xhtml:link rel="alternate" hreflang="ja" href="https://meemaw.app/hunter/ja/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://meemaw.app/hunter/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://meemaw.app/hunter/"/>
+    <video:video>
+      <video:thumbnail_loc>https://meemaw.app/hunter/assets/videos/poster-en.webp</video:thumbnail_loc>
+      <video:title>맨손이 곧 권총! 25초 실제 플레이 트레일러. — Meemaw Hunter</video:title>
+      <video:description>컨트롤러 제로: '손을 보여주세요!' 시작 게이트가 열린 손바닥을 인식할 때까지 타이머가 대기하며, 엄지와 검지를 집을 때마다 Sheriff Meemaw의 경쾌한 밴조 사운드트랙과 함께 60 FPS로 발사됩니다.</video:description>
+      <video:content_loc>https://meemaw.app/hunter/assets/videos/trailer-en.mp4</video:content_loc>
+      <video:duration>26</video:duration>
+      <video:publication_date>2026-11-27T08:00:00+01:00</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
   </url>
   <url>
     <loc>https://meemaw.app/comparatif-applications-orthographe-dictee.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
@@ -193,7 +266,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/best-french-spelling-dictation-app.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
@@ -203,7 +276,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/mejor-app-ortografia-dictado-frances.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/comparatif-applications-orthographe-dictee.html"/>
@@ -213,7 +286,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html"/>
@@ -223,7 +296,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/best-mental-math-app-comparison.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html"/>
@@ -233,7 +306,7 @@
   </url>
   <url>
     <loc>https://meemaw.app/math/mejor-app-calculo-mental-matematicas.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://meemaw.app/math/comparatif-applications-calcul-mental-brevet.html"/>
@@ -243,25 +316,25 @@
   </url>
   <url>
     <loc>https://meemaw.app/privacy.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://meemaw.app/terms.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/privacy.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://meemaw.app/hunter/terms.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>

@@ -3,6 +3,16 @@
     "apps": [],
     "details": [
       {
+        "appIDs": ["5WJLNQMPLH.com.xlarrodeapp.meemawhunter"],
+        "paths": ["/hunter", "/hunter/*"],
+        "components": [
+          { "/": "/hunter", "?": { "event": "*" } },
+          { "/": "/hunter/*", "?": { "event": "*" } },
+          { "/": "/hunter" },
+          { "/": "/hunter/*" }
+        ]
+      },
+      {
         "appIDs": ["5WJLNQMPLH.com.xlarrodeapp.meemawmath"],
         "paths": ["/math/challenge", "/math/challenge/*", "/math/result", "/math/result/*"],
         "components": [
@@ -29,7 +39,8 @@
   "webcredentials": {
     "apps": [
       "5WJLNQMPLH.com.xlarrodeapp.meemaw",
-      "5WJLNQMPLH.com.xlarrodeapp.meemawmath"
+      "5WJLNQMPLH.com.xlarrodeapp.meemawmath",
+      "5WJLNQMPLH.com.xlarrodeapp.meemawhunter"
     ]
   }
 }

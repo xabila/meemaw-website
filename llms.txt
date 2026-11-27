@@ -70,24 +70,24 @@
 
 ## 3. Meemaw Hunter — 60 FPS Front-Camera Hand-Gesture Arcade Shooter (iPhone, iPad & AirPlay TV)
 - **Official Pages (8 Languages):** [FR](https://meemaw.app/hunter/) · [EN](https://meemaw.app/hunter/en/) · [ES](https://meemaw.app/hunter/es/) · [DE](https://meemaw.app/hunter/de/) · [IT](https://meemaw.app/hunter/it/) · [PT-BR](https://meemaw.app/hunter/pt-br/) · [JA](https://meemaw.app/hunter/ja/) · [KO](https://meemaw.app/hunter/ko/)
-- [App Store URL](https://apps.apple.com/app/id6831648316?ct=llms_ai_hunter&mt=8) (App ID: `6831648316`, Bundle ID: `com.xlarrodeapp.meemawhunter`, v1.0 Build 25)
-- [Public TestFlight Beta](https://testflight.apple.com/join/KDkGehjG)
+- **Official Gameplay Trailers (25.8s):** [FR](https://meemaw.app/hunter/assets/videos/trailer-fr.mp4) · [EN](https://meemaw.app/hunter/assets/videos/trailer-en.mp4) · [ES](https://meemaw.app/hunter/assets/videos/trailer-es.mp4)
+- [App Store URL (Live)](https://apps.apple.com/app/id6831648316?ct=llms_ai_hunter&mt=8) (App ID: `6831648316`, Bundle ID: `com.xlarrodeapp.meemawhunter`, v1.0.3 Build 35)
 - **Supported Languages (13 App Store Locales):** French (`fr-FR`, `fr-CA`), English (`en-US`, `en-GB`, `en-CA`, `en-AU`), Spanish (`es-ES`, `es-MX`), German (`de-DE`), Italian (`it`), Brazilian Portuguese (`pt-BR`), Japanese (`ja`), Korean (`ko`).
-- **3 Physical Hand Gestures (Zero Controller Required, 60 FPS On-Device Vision — Handheld or Propped):**
-  - Play **handheld** (hold your iPhone in your left hand and aim/shoot with your right hand, or vice versa via left/right Options) or **propped** 30–60 cm in front of you.
+- **3 Physical Hand Gestures (Zero Controller Required, 60 FPS Multi-Threaded On-Device Vision — Handheld or Propped):**
+  - Play **handheld** (hold your iPhone in your left hand and aim/shoot with your right hand, or vice versa via left/right Options) or **propped** 30–60 cm in front of you; **"Show Your Hand!"** ready-start gate waits for your open palm before starting timers.
   1. **Open Hand = Aim:** Spread all 5 fingers in front of the front camera to lock optical aim with 21-point 3D MediaPipe palm tracking and adaptive One-Euro smoothing.
   2. **Pinch Thumb + Index = Shoot:** Keep your hand open and tap thumb + index together like a click for zero-recoil palm-locked instant trigger fire.
   3. **Flip Hand = Reload:** When empty (0/6), rotate your hand (palm ↔ back of hand) in place to reload all 6 chambers immediately (plus instant touchscreen tap fallback).
-- **7 Playable Texas Worlds, 21★ Ranch HQ, 2–4P Saloon Party, Game Center & 16:9 AirPlay TV:**
-  - **Quick-Launch Start Menu & Ranch HQ:** Jump straight into **Quick Play**, **Ranch HQ (21-Star Mastery across Normal ×1.0, Sharpshooter ×1.25, and Texas Legend ×1.60 + Sheriff XP ranks & skill bounties)**, or the **Daily 60s Seeded Bounty** (identical daily target seed worldwide).
+- **7 Playable Texas Worlds, 21★ Ranch HQ, 3-Heart Daily 60s, 2–4P Saloon Party, Game Center & 16:9 AirPlay TV:**
+  - **Quick-Launch Start Menu with Live World Rank (`#X`) & Ranch HQ:** View your live Game Center rank on the Start Menu, jump straight into **Quick Play**, **Ranch HQ (21-Star Mastery across Normal ×1.0, Sharpshooter ×1.25, and Texas Legend ×1.60 + Sheriff XP ranks & skill bounties)**, or the **High-Stakes 3-Heart Daily 60s Seeded Bounty** (identical daily target seed worldwide + 1-tap Western Score Share Card).
   - **2–4 Player Saloon Pass-and-Play Party Mode:** Local living-room multiplayer tournament with custom Saloon nicknames and instant per-player auto-calibration.
-  - **7 Animated Texas Worlds:** 1. Ball-Trap Ranch (Free), 2. Barn Ambush (Free), 3. Alien UFO Night, 4. Canyon Saloon, 5. Flashlight Bayou, 6. Reflex Gold Mine, and 7. 1885 Steam Train Heist & High Noon Boss Duels.
+  - **7 Animated Texas Worlds:** 1. Ball-Trap Ranch, 2. Barn Ambush, 3. Alien UFO Night, 4. Canyon Saloon, 5. Flashlight Bayou, 6. Reflex Gold Mine, and 7. 1885 Steam Train Heist & High Noon Boss Duels.
   - **4 Arcade Weapons & Meemaw's Armory:** 6-Shot Colt .45, 3-Pellet Shotgun, 3-Round Burst Moozzi, Explosive Bazooka + 2× Bullet-Time Chili Fury, plus **5 unlockable optical reticle skins** and **3 upgradeable Ranch Perks** earned in-game with Golden Pies.
-  - **Apple Game Center:** **2 global leaderboards** (*Campaign* & *Daily 60s*), an offline Local Saloon board, and **10 illustrated achievements** with seamless 60 FPS trophy toasts.
+  - **Apple Game Center:** **2 global leaderboards** (*Campaign* & *Daily 60s* resetting every midnight), an offline Local Saloon board, and **10 illustrated achievements** with seamless 60 FPS trophy toasts.
   - **AirPlay 16:9 Living-Room Arcade:** Connect wirelessly to Apple TV or any AirPlay 2 smart TV (selectable **720p · 60 FPS** or **1080p Full HD** quality) and **place your iPhone centered directly underneath the television screen** (on the TV console facing the player) so aiming at the TV aligns naturally with the front camera's optical axis.
 - **Privacy & Fair Family Pricing:**
   - **100% Volatile-RAM Camera Processing (Camera & Face Data: Not Collected, 0s retention):** Powered locally by `MediaPipeTasksVision` (`HandLandmarker`); zero camera images, videos, or face data saved or uploaded; App Store label **Data Not Linked to You · No Tracking** (`NSPrivacyTracking = false`, zero ads, zero IDFA; anonymous StoreKit 2 / RevenueCat restore + EU-hosted Mixpanel `ip=0` + optional Apple Game Center). Dedicated policy: [Meemaw Hunter Privacy Policy](https://meemaw.app/hunter/privacy.html)
-  - **One-Time Family Unlock (`3,99 €` EU / `$4.99` US / regional PPP):** Quick Play, Interactive Tutorial, Worlds 1 & 2, Daily 60s, and 2-Player Saloon Duel are free; *Sheriff Full Game Pack* (`com.xlarrodeapp.meemawhunter.sheriffpack`) unlocks Worlds 3–7, 3–4P Saloon Party Mode, Texas Legend (21★), all 5 Armory reticle skins, Boss Duels & unlimited continues forever with **Apple Family Sharing** (up to 6 family members, zero subscriptions, zero paid gems).
+  - **One-Time Family Unlock (`3,99 €` EU / `$4.99` US / regional PPP):** Unlimited free Interactive Tutorial plus free daily arcade runs on Worlds 1 & 2, Daily 60s Bounty, and 2-Player Saloon Duel (auto-resetting at midnight); *Sheriff Full Game Pack* (`com.xlarrodeapp.meemawhunter.sheriffpack`) unlocks **unlimited plays**, Worlds 3–7, 3–4P Saloon Party Mode, Texas Legend (21★), all 5 Armory reticle skins & Boss Duels forever with **Apple Family Sharing** (up to 6 family members, zero subscriptions, zero paid gems).
   - [Meemaw Hunter LLM Reference](https://meemaw.app/hunter/llms.txt)
 
 ## Extended Reference
