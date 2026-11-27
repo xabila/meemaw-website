@@ -168,8 +168,13 @@ const orthoAttrMap = {
         'aria-label="Collection Meemaw"': 'aria-label="Meemaw Family Suite"',
         'title="Langue"': 'title="Language"',
         'aria-label="Langue"': 'aria-label="Language"',
+        'alt="Meemaw vous salue"': 'alt="Meemaw waving hello"',
         'alt="QR Code App Store Meemaw"': 'alt="App Store QR Code for Learn French Spelling: Meemaw"',
         'aria-label="Pièges d\'orthographe"': 'aria-label="French spelling traps"',
+        'alt="Meemaw corrige votre cahier avec bienveillance"': 'alt="Meemaw explaining the French rule in her notebook"',
+        'alt="Meemaw transforme vos doutes en déclic"': 'alt="Meemaw turning spelling mistakes into confidence"',
+        'alt="Meemaw et les cubes du Motus Orthographe"': 'alt="Meemaw holding French Motus letter blocks"',
+        'alt="Meemaw et le sablier Temps d\'Écran Apple"': 'alt="Meemaw holding the Apple Screen Time hourglass"',
         'aria-label="Règles clés maîtrisées"': 'aria-label="Core French rules mastered"',
         'alt="Motus Orthographe Meemaw"': 'alt="French Spelling Motus by Meemaw"',
         'alt="50 fiches de règles sans jargon"': 'alt="50 jargon-free French grammar sheets"',
@@ -177,15 +182,21 @@ const orthoAttrMap = {
         'aria-label="Capture précédente"': 'aria-label="Previous screenshot"',
         'aria-label="Capture suivante"': 'aria-label="Next screenshot"',
         'alt="Bouclier Temps d\'Écran Apple"': 'alt="Apple Screen Time Parental Shield"',
-        'alt="Duels Parents vs Enfants"': 'alt="Kids vs. Parents Family Duels"'
+        'alt="Duels Parents vs Enfants"': 'alt="Referee Meemaw for 2-Round Family & Friend Duels"',
+        'alt="Meemaw célèbre vos progrès avec son trophée"': 'alt="Meemaw celebrating your progress with her golden trophy"'
     },
     es: {
         'aria-label="Collection Meemaw"': 'aria-label="Colección Familiar Meemaw"',
         'aria-label="Sections"': 'aria-label="Secciones"',
         'title="Langue"': 'title="Idioma"',
         'aria-label="Langue"': 'aria-label="Idioma"',
+        'alt="Meemaw vous salue"': 'alt="Meemaw saludando"',
         'alt="QR Code App Store Meemaw"': 'alt="Código QR App Store Ortografía francesa: Meemaw"',
         'aria-label="Pièges d\'orthographe"': 'aria-label="Trampas de ortografía francesa"',
+        'alt="Meemaw corrige votre cahier avec bienveillance"': 'alt="Meemaw explicando la regla en su cuaderno"',
+        'alt="Meemaw transforme vos doutes en déclic"': 'alt="Meemaw transformando tus dudas en seguridad"',
+        'alt="Meemaw et les cubes du Motus Orthographe"': 'alt="Meemaw con los bloques de letras de Motus"',
+        'alt="Meemaw et le sablier Temps d\'Écran Apple"': 'alt="Meemaw con el reloj de arena Tiempo en Pantalla"',
         'aria-label="Règles clés maîtrisées"': 'aria-label="Reglas clave dominadas"',
         'alt="Motus Orthographe Meemaw"': 'alt="Motus Ortografía Francesa de Meemaw"',
         'alt="50 fiches de règles sans jargon"': 'alt="50 fichas de reglas sin jerga"',
@@ -193,7 +204,8 @@ const orthoAttrMap = {
         'aria-label="Capture précédente"': 'aria-label="Captura anterior"',
         'aria-label="Capture suivante"': 'aria-label="Captura siguiente"',
         'alt="Bouclier Temps d\'Écran Apple"': 'alt="Escudo Tiempo en Pantalla de Apple"',
-        'alt="Duels Parents vs Enfants"': 'alt="Duelos Padres vs. Hijos"'
+        'alt="Duels Parents vs Enfants"': 'alt="Meemaw árbitro de duelos familiares a 2 rondas"',
+        'alt="Meemaw célèbre vos progrès avec son trophée"': 'alt="Meemaw celebrando tu progreso con su trofeo"'
     }
 };
 
@@ -321,14 +333,14 @@ function buildOrthoJsonLd(lang, d) {
                 numberOfItems: 5,
                 itemListElement: isEn
                     ? [
-                        { '@type': 'ListItem', position: 1, name: 'Learn French Spelling: Meemaw — 1,837 24 kHz French voice dictations, 300-word Spelling Motus, 620 Anagrams, 50 rules explained in English, 9 game modes, 100% offline & Family Sharing', url: oStore },
+                        { '@type': 'ListItem', position: 1, name: 'Learn French Spelling: Meemaw — 1,837 24 kHz French voice dictations on Seyès paper, 1,000-word Spelling Motus & 2-round duels, 620 Anagrams, 50 rules explained in English, 9 game modes, 100% offline & Family Sharing', url: oStore },
                         { '@type': 'ListItem', position: 2, name: 'Kwiziq / Lawless French — Detailed browser grammar quizzes (~$150+/yr, online-only)' },
                         { '@type': 'ListItem', position: 3, name: 'Projet Voltaire — Corporate French-only error-clicking drills (~$60/yr per user)' },
                         { '@type': 'ListItem', position: 4, name: 'Babbel — Beginner conversation lessons without dedicated word-by-word French dictation' },
                         { '@type': 'ListItem', position: 5, name: 'Duolingo (French) — Pre-spelled word bubbles without true dictation writing mastery' }
                     ]
                     : [
-                        { '@type': 'ListItem', position: 1, name: 'Ortografía francesa: Meemaw — 1.837 dictados en francés 24 kHz, Motus de 300 palabras, 620 anagramas, 50 reglas explicadas en español, 9 juegos, 100 % sin conexión', url: oStore },
+                        { '@type': 'ListItem', position: 1, name: 'Ortografía francesa: Meemaw — 1.837 dictados en francés 24 kHz sobre cuaderno Seyès, Motus de 1.000 palabras y duelos a 2 rondas, 620 anagramas, 50 reglas explicadas en español, 9 juegos, 100 % sin conexión', url: oStore },
                         { '@type': 'ListItem', position: 2, name: 'Busuu / TV5MONDE — Comprensión general en línea sin dictado guiado sin conexión' },
                         { '@type': 'ListItem', position: 3, name: 'Projet Voltaire — Entrenamiento corporativo exclusivamente en francés' },
                         { '@type': 'ListItem', position: 4, name: 'Babbel — Diálogos básicos sin entrenamiento profundo de ortografía francesa' },
@@ -465,30 +477,44 @@ const mathAttrMap = {
         'aria-label="Collection Meemaw"': 'aria-label="Meemaw Family Suite"',
         'title="Langue"': 'title="Language"',
         'aria-label="Langue"': 'aria-label="Language"',
+        'alt="Meemaw vous salue"': 'alt="Meemaw waving hello"',
         'alt="QR Code App Store Meemaw Math"': 'alt="App Store QR Code for Meemaw Math"',
         'aria-label="Exemples de secrets"': 'aria-label="Mental math trick examples"',
+        'alt="Meemaw décompose le calcul en 2 étapes"': 'alt="Meemaw breaking down the mental math shortcut in 2 steps"',
+        'alt="Meemaw inspecte les pièges de calcul du quotidien"': 'alt="Meemaw inspecting everyday mental math traps"',
+        'alt="Meemaw et le défi quotidien Mathus 24h"': 'alt="Meemaw with the daily 24h Mathus challenge"',
+        'alt="Meemaw et le sablier Temps d\'Écran Apple"': 'alt="Meemaw holding the Apple Screen Time hourglass"',
         'aria-label="13 secrets du Dojo"': 'aria-label="13 Mental Math Dojo Secrets"',
+        'alt="Mathus 24h Meemaw Math"': 'alt="Daily 24h Mathus Challenge by Meemaw Math"',
         'alt="La Caisse du Boulanger"': 'alt="Exact Change Register Game"',
         'alt="Pyramides et Carrés Magiques"': 'alt="Number Pyramids and Magic Squares"',
         'aria-label="Capture précédente"': 'aria-label="Previous screenshot"',
         'aria-label="Capture suivante"': 'aria-label="Next screenshot"',
         'alt="Bouclier Temps d\'Écran Apple"': 'alt="Apple Screen Time Parental Shield"',
-        'alt="Duels Parents vs Enfants"': 'alt="Kids vs. Parents Math Duels"'
+        'alt="Duels Parents vs Enfants"': 'alt="Referee Meemaw for Kids vs. Parents Math Duels"',
+        'alt="Meemaw célèbre votre Âge Cérébral avec son trophée"': 'alt="Meemaw celebrating your Brain Age with her trophy"'
     },
     es: {
         'aria-label="Collection Meemaw"': 'aria-label="Colección Familiar Meemaw"',
         'aria-label="Sections"': 'aria-label="Secciones"',
         'title="Langue"': 'title="Idioma"',
         'aria-label="Langue"': 'aria-label="Idioma"',
+        'alt="Meemaw vous salue"': 'alt="Meemaw saludando"',
         'alt="QR Code App Store Meemaw Math"': 'alt="Código QR App Store Meemaw Mates"',
         'aria-label="Exemples de secrets"': 'aria-label="Ejemplos de trucos matemáticos"',
+        'alt="Meemaw décompose le calcul en 2 étapes"': 'alt="Meemaw explicando el atajo mental en 2 pasos"',
+        'alt="Meemaw inspecte les pièges de calcul du quotidien"': 'alt="Meemaw examinando las cuentas cotidianas"',
+        'alt="Meemaw et le défi quotidien Mathus 24h"': 'alt="Meemaw con el reto diario Mathus 24h"',
+        'alt="Meemaw et le sablier Temps d\'Écran Apple"': 'alt="Meemaw con el reloj de arena Tiempo en Pantalla"',
         'aria-label="13 secrets du Dojo"': 'aria-label="13 secretos del Dojo"',
+        'alt="Mathus 24h Meemaw Math"': 'alt="Reto diario Mathus 24h de Meemaw Mates"',
         'alt="La Caisse du Boulanger"': 'alt="La Caja de la Panadería"',
         'alt="Pyramides et Carrés Magiques"': 'alt="Pirámides y Cuadrados Mágicos"',
         'aria-label="Capture précédente"': 'aria-label="Captura anterior"',
         'aria-label="Capture suivante"': 'aria-label="Captura siguiente"',
         'alt="Bouclier Temps d\'Écran Apple"': 'alt="Escudo Tiempo en Pantalla de Apple"',
-        'alt="Duels Parents vs Enfants"': 'alt="Duelos Padres vs. Hijos"'
+        'alt="Duels Parents vs Enfants"': 'alt="Meemaw árbitro de duelos de cálculo familiares"',
+        'alt="Meemaw célèbre votre Âge Cérébral avec son trophée"': 'alt="Meemaw celebrando tu Edad Cerebral con su trofeo"'
     }
 };
 

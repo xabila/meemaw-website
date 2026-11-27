@@ -28,6 +28,8 @@ colors:
   sky-cream: "#EAF2FF"
   sky-muted: "#BDD1F2"
   crisp-paper: "#FFFFFF"
+  seyes-paper: "#FCFBF7"
+  seyes-margin: "#C92A3E"
   paper-stone: "#F3F0EA"
   paper-cool: "#EFF3F9"
   ink: "#1A120B"
